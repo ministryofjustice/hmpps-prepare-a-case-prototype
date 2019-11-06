@@ -1,0 +1,87 @@
+// global styles for <a> and <p> tags
+$govuk-global-styles: true;
+
+// We can't mount GOV.UK Frontend's assets at root as it's done automatically by the extensions framework.
+$govuk-assets-path: '/govuk/assets/';
+
+// Import GOV.UK Frontend and any extension styles if extensions have been configured
+@import "lib/extensions/extensions";
+
+// Patterns that aren't in Frontend
+@import "patterns/step-by-step-navigation";
+@import "patterns/task-list";
+@import "patterns/related-items";
+
+// Components that aren't in Frontend
+@import "components/cookie-banner";
+
+// Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
+
+// Search toggle image
+.moj-search-toggle__button:after {
+    background-image: url(/public/images/icon-search-blue.svg) !important;
+}
+
+// Container max width
+.govuk-width-container, .moj-primary-navigation__container, .moj-header__container {
+    max-width: 1200px;
+}
+
+// Case list overrides 
+td ol {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 1.4em;
+}
+td ul {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    list-style-type:none;
+}
+
+
+// Tag modifiers 
+.moj-tag--grey, .moj-tag--green {
+    border: none;
+}
+.govuk-tag {
+    white-space: nowrap;
+}
+
+// Prototype index page styles
+.prototype-index {
+    margin-bottom: 80px;
+}
+.prototype-write-up .govuk-heading-s {
+    margin-bottom: 10px;
+}
+.prototype-write-up .govuk-grid-column-one-third:first-child {
+    padding-left: 0;
+}
+@media (min-width: 641px) {
+    .most-recent {
+      padding-bottom: 0px;
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-top: 30px;
+    }
+  }
+.most-recent {
+    border: 1px solid $govuk-border-colour;
+    margin-bottom: 60px;
+    margin-top: 15px;
+    overflow: hidden;
+    position: relative;
+  }
+.prototype-index summary{
+    color: $govuk-link-colour;
+    font-family: "GDS Transport", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    font-size: 19px;
+}
+.panel .grid-row {
+margin-top: 32px;
+}

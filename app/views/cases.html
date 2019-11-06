@@ -1,0 +1,126 @@
+{% extends "layout.html" %}
+
+
+{% block pageTitle %}
+  Cases
+{% endblock %}
+
+
+
+{% block beforeContent %}
+
+  <!-- <a class="govuk-back-link" href="/url/of/previous/page">Back</a> -->
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      <div class="moj-page-header-actions">
+
+        <div class="moj-page-header-actions__title">
+        <h1 class="govuk-heading-xl">
+          <h1 class="govuk-heading-xl">Cases</h1>
+        </h1>
+        </div>
+        
+        <div class="moj-page-header-actions__actions">
+        
+        <div class="moj-button-menu">
+          <div class="moj-button-menu__wrapper">
+        
+            <button type="submit" class="govuk-button moj-button-menu__item govuk-button--secondary moj-page-header-actions__action" data-module="govuk-button">
+              Add case
+            </button>
+        
+            <button type="submit" class="govuk-button moj-button-menu__item govuk-button--secondary moj-page-header-actions__action" data-module="govuk-button">
+              Action
+            </button>
+        
+          </div>
+        </div>
+        
+        </div>
+        
+        </div> 
+
+      <p>This is a paragraph of text. It explains in more detail what has happened and wraps across several lines.</p>
+
+      
+      
+      <table class="govuk-table">
+
+        <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+        
+          <th scope="col" class="govuk-table__header" aria-sort="none">Name</th>
+        
+          <th scope="col" class="govuk-table__header" aria-sort="none">Delius record</th>
+
+          <th scope="col" class="govuk-table__header" aria-sort="none">Libra marker</th>
+        
+          <th scope="col" class="govuk-table__header" aria-sort="none">Offence</th>
+
+          <th scope="col" class="govuk-table__header" aria-sort="none">Listing</th>
+        
+          <th scope="col" class="govuk-table__header" aria-sort="none">Sitting</th>
+
+          <th scope="col" class="govuk-table__header govuk-table__header--numeric" aria-sort="none">Court</th>
+        
+        </tr>
+        </thead>
+        
+        <tbody class="govuk-table__body">
+        
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a href="">Mary Rodgers</a></td>
+          <td class="govuk-table__cell"><span class="govuk-tag moj-tag--green">Current</span></td>
+          <td class="govuk-table__cell">
+            <ul>
+              <li>Domestic violence</li>
+              <li>Violent</li>
+            </td>
+          <td class="govuk-table__cell"><ol>
+            <li>Possess a class C controlled drug</li>
+            <li>Possess a controlled drug of Class A - Heroin</li>
+          </ol></td>
+          <td class="govuk-table__cell">1st listing</td>
+          <td class="govuk-table__cell">10:00 to 10:30</td>
+          <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="1">1</td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a href="">Trevor Rob Johns</a></td>
+          <td class="govuk-table__cell"><span class="govuk-tag">Previously known</span>
+            25/07/2019</td>
+          <td class="govuk-table__cell">Violent</td>            
+          <td class="govuk-table__cell"><ol>
+            <li>Fail to provide specimen for analysis - vehicle driver</li>
+            <li>Drive a motor vehicle otherwise than in accordance with a license - endorsable offence</li>
+            <li>Use a motor vehicle on a road / public place without third party insurance</li>
+          </ol></td>
+          <td class="govuk-table__cell">2nd listing Adjourned from 04/10/2019</td>
+          <td class="govuk-table__cell">10:00 to 10:40</td>
+          <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="1">1</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a href="">Ali Armmy</a></td>
+          <td class="govuk-table__cell" ><span class="govuk-tag moj-tag--grey">Not known</span></td>
+          <td class="govuk-table__cell"></td>
+          <td class="govuk-table__cell">Assault by beating of an emergency worker</td>
+          <td class="govuk-table__cell">1st listing </td>
+          <td class="govuk-table__cell">10:00 to 12:00</td>
+          <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="2">2</td>
+        </tr>
+        
+        
+        </tbody>
+        </table> 
+
+      <p>This paragraph has a link to <a href="/url/of/onward/page">find out more about this subject</a>.</p>
+
+    </div>
+  </div>
+
+{% endblock %}

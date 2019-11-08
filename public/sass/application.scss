@@ -27,6 +27,11 @@ $govuk-assets-path: '/govuk/assets/';
     max-width: 1200px;
 }
 
+.case-list-timestamp {
+    float: right;
+    margin-right: 0;
+}
+
 // Case list overrides 
 td ol {
     margin-top: 0;
@@ -45,9 +50,25 @@ td ul {
 .moj-tag--grey, .moj-tag--green {
     border: none;
 }
-.govuk-tag {
+.moj-tag--small--nowrap {
     white-space: nowrap;
+    font-size: 0.875rem;
+    padding-bottom: 5px;
 }
+.moj-badge-wrapper {
+    display: block;
+    margin-bottom: 5px;
+}
+.moj-badge-wrapper .moj-badge {
+    margin-right: 5px;
+}
+
+
+
+
+
+
+
 
 // Prototype index page styles
 .prototype-index {

@@ -48,9 +48,19 @@ td ul {
     padding-left: 0;
     list-style-type:none;
 }
-.custom-case-no-width {
-    width: 75px;
-}
+
+
+@media screen and (min-width: 40.0625em) {
+    .custom-delius-record-width {
+      min-width: 145px;
+    }
+    .custom-case-no-width {
+      min-width: 75px;
+    }
+    .custom-session-width {
+        min-width: 110px;
+    }
+  }
 
 // Tag modifiers 
 .moj-tag--grey, .moj-tag--green {

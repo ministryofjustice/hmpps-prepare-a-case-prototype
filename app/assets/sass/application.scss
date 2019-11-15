@@ -22,6 +22,12 @@ $govuk-assets-path: '/govuk/assets/';
     background-image: url(/public/images/icon-search-blue.svg) !important;
 }
 
+
+.moj-timeline__document-link {
+    background-image: url(/public/images/icon-document.svg) !important;
+}
+
+
 // Container max width
 .govuk-width-container, .moj-primary-navigation__container, .moj-header__container {
     max-width: 1220px;

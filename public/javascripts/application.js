@@ -19,6 +19,11 @@ $(document).ready(function () {
     }
   });
 
+
+
+
+  new MOJFrontend.AddAnother($('.moj-add-another'));
+
 // new MOJFrontend.SortableTable({
 // table: $('table')[0]
 // });

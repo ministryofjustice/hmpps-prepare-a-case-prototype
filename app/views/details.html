@@ -1,0 +1,135 @@
+{% extends "layout.html" %}
+
+
+{% block pageTitle %}
+Case details
+{% endblock %}
+
+{% block beforeContent %}
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <a href="match.html" class="govuk-back-link">Back</a>
+    <h1 class="govuk-heading-xl">
+      <span class="govuk-caption-xl">Step 3 of 4</span>
+      Case details
+    </h1>
+    <!-- <p class="govuk-body-l">These details will be ...</p> -->
+
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset" aria-describedby="cps-pack-hint">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+          <h2 class="govuk-fieldset__heading">
+            Is there an associated CPS pack?
+          </h2>
+        </legend>
+        <!-- <span id="cps-pack-included-hint how-contacted-conditional-hint" class="govuk-hint">
+          Select one option.
+        </span> -->
+        <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="cps-pack-conditional" name="cps-pack" type="radio" value="Yes"
+              data-aria-controls="conditional-cps-pack-conditional">
+            <label class="govuk-label govuk-radios__label" for="cps-pack-conditional">
+              Yes
+            </label>
+          </div>
+          <div class="govuk-radios__conditional govuk-radios__conditional--hidden"
+            id="conditional-cps-pack-conditional">
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="file-upload-1">
+                Upload a file
+              </label>
+              <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
+            </div>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="cps-pack-conditional-2" name="cps-pack" type="radio" value="phone"
+              data-aria-controls="conditional-cps-pack-conditional-2">
+            <label class="govuk-label govuk-radios__label" for="cps-pack-conditional-2">
+              No
+            </label>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+
+
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset" aria-describedby="cps-pack-hint">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+          <h2 class="govuk-fieldset__heading">
+            Appearing in courtroom
+          </h2>
+        </legend>
+        <!-- <label class="govuk-label" for="surname">
+          Appearing in courtroom
+        </label> -->
+        <input class="govuk-input govuk-input--width-2" id="surname" name="surname" type="text">
+      </fieldset>
+    </div>
+
+
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+
+    <div class="moj-add-another">
+      <h2 class="govuk-heading-m moj-add-another__heading" tabindex="-1">Add an offence</h1>
+        <form method="post">
+
+          <fieldset class="govuk-fieldset moj-add-another__item">
+            <legend class="govuk-fieldset__legend moj-add-another__title govuk-fieldset__legend--s">
+              Offence
+            </legend>
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="person[0][first_name]">
+                Offence title
+              </label>
+              <input class="govuk-input" id="person[0][first_name]" name="person[0][first_name]" type="text"
+                data-name="person[%index%][first_name]" data-id="person[%index%][first_name]">
+            </div>
+          </fieldset>
+
+          <div class="moj-button-action">
+            <button type="submit"
+              class="govuk-button govuk-button--secondary moj-add-another__add-button govuk-!-margin-bottom-8"
+              data-module="govuk-button">
+              Add another offence
+            </button>
+          </div>
+
+          <!-- <div class="moj-button-action">
+            <button type="submit" class="govuk-button" data-module="govuk-button">
+              Submit
+            </button>
+          </div> -->
+
+          <a href="check-details.html" role="button" draggable="false" class="govuk-button moj-button-menu__item  "
+            data-module="govuk-button">
+            Continue
+          </a>
+
+        </form>
+
+    </div>
+
+    <!-- <p><a class="govuk-link moj-timeline__document-link" href="/psr-link">Draft report</a></p> -->
+
+    <!-- <a href="check-details.html" role="button" draggable="false" class="govuk-button moj-button-menu__item  "
+      data-module="govuk-button">
+      Search nDelius records
+    </a> -->
+
+
+
+  </div>
+</div>
+
+{% endblock %}

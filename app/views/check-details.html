@@ -1,0 +1,141 @@
+{% extends "layout.html" %}
+
+
+{% block pageTitle %}
+Check case details
+{% endblock %}
+
+{% block beforeContent %}
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <a href="details.html" class="govuk-back-link">Back</a>
+    <h1 class="govuk-heading-xl">
+      <span class="govuk-caption-xl">Step 4 of 4</span>
+      Check case details
+    </h1>
+    <!-- <p class="govuk-body-l">These details will be ...</p> -->
+    <h2 class="govuk-heading-m">
+      Defendant's details
+    </h2>
+    <dl class="govuk-summary-list  govuk-!-margin-bottom-9">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Name
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Michael Jones
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">
+            Change<span class="govuk-visually-hidden"> name</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Date of birth
+        </dt>
+        <dd class="govuk-summary-list__value">
+          2 June 1979
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">
+            Change<span class="govuk-visually-hidden"> date of birth</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          PNC
+        </dt>
+        <dd class="govuk-summary-list__value">
+          A1234560BA
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">
+            Change<span class="govuk-visually-hidden"> pnc</span>
+          </a>
+        </dd>
+      </div>
+    </dl>
+    <h2 class="govuk-heading-m">
+      Offender record
+    </h2>
+    <dl class="govuk-summary-list  govuk-!-margin-bottom-9">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Offender record
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Current offender
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">
+            Change<span class="govuk-visually-hidden"> offender record</span>
+          </a>
+        </dd>
+      </div>
+    </dl>
+    <h2 class="govuk-heading-m">
+      Case details
+    </h2>
+    <dl class="govuk-summary-list  govuk-!-margin-bottom-9">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          CPS pack
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <a class="govuk-link moj-timeline__document-link" href="/psr-link">Filename.pdf</a>
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">
+            Change<span class="govuk-visually-hidden"> cps pack</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Courtroom
+        </dt>
+        <dd class="govuk-summary-list__value">
+          3
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">
+            Change<span class="govuk-visually-hidden"> courtroom</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Offence
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Offence title
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">
+            Change<span class="govuk-visually-hidden"> offence</span>
+          </a>
+        </dd>
+      </div>
+    </dl>
+
+    <!-- <p><a class="govuk-link moj-timeline__document-link" href="/psr-link">Draft report</a></p> -->
+
+    <a href="check-details.html" role="button" draggable="false" class="govuk-button moj-button-menu__item  "
+      data-module="govuk-button">
+      Accept and create new case
+    </a>
+
+
+
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,168 @@
+{% extends "layout.html" %}
+
+
+{% block pageTitle %}
+Match defendant
+{% endblock %}
+
+{% block beforeContent %}
+<a href="add.html" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+    <h1 class="govuk-heading-xl">
+      Confirm offender record
+    </h1>
+    <div class="govuk-!-margin-bottom-9">
+      <h2 class="govuk-heading-m">Defendant's details:</h2>
+      </h2>
+      <p class="govuk-body-l govuk-!-margin-bottom-3">Michael Jones</p>
+      <ul class="govuk-list" style="list-style:none;">
+        <li>Date of birth: 02/06/1979</li>
+        <li>PNC: Not available</li>
+      </ul>
+
+    </div>
+
+    <div class="govuk-!-margin-bottom-9">
+      <h2 class="govuk-heading-m">3 records found:</h2>
+      <p class="govuk-body govuk-!-margin-bottom-3">Confirm if one of the nDelius offender records matches the defendant
+        details.</p>
+
+
+
+      <div class="card">
+        <span class="card__heading">
+          Michael Jones <span class="moj-badge govuk-!-margin-left-1">Current
+            offender</span>
+        </span>
+        <div class="card__attributes ">
+          <dt>Date of birth:</dt>
+          <dd>02/06/1979</dd>
+          <dt>CRN:</dt>
+          <dd>DX12340A</dd>
+          <dt>PNC:</dt>
+          <dd>A1234560BA</dd>
+          <dd><a href="match-record.html" class="govuk-link--no-visited-state">View offender summary</a></dd>
+        </div>
+        <details class="govuk-details govuk-!-margin-bottom-0 govuk-!-margin-top-1" data-module="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              Aliases
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+          </div>
+        </details>
+        <!-- <strong class="govuk-tag">Racist</strong>
+        <strong class="govuk-tag">Risk to LGBT</strong>
+        <strong class="govuk-tag">Care leaver</strong> -->
+        <div class="moj-button-menu">
+          <div class="moj-button-menu__wrapper">
+            <a href="#" role="button" draggable="false" class="govuk-button moj-button-menu__item"
+              data-module="govuk-button">
+              Confirm match
+            </a>
+            <a href="#" role="button" draggable="false"
+              class="govuk-button moj-button-menu__item govuk-button--secondary reject-btn" data-module="govuk-button">
+              Reject
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <span class="card__heading">
+          Michael Jones 
+        </span>
+        <div class="card__attributes">
+          <dt>Date of birth:</dt>
+          <dd>02/06/1979</dd>
+          <dt>CRN:</dt>
+          <dd>DX12340A</dd>
+          <dt>PNC:</dt>
+          <dd>A1234560BA</dd>
+          <dd><a href="match-record.html" class="govuk-link--no-visited-state">View offender summary</a></dd>
+        </div>
+        <details class="govuk-details govuk-!-margin-bottom-0 govuk-!-margin-top-1" data-module="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              Aliases
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+          </div>
+        </details>
+        <!-- <strong class="govuk-tag">Racist</strong>
+          <strong class="govuk-tag">Risk to LGBT</strong>
+          <strong class="govuk-tag">Care leaver</strong> -->
+        <div class="moj-button-menu">
+          <div class="moj-button-menu__wrapper">
+            <a href="#" role="button" draggable="false" class="govuk-button moj-button-menu__item  "
+              data-module="govuk-button">
+              Confirm match
+            </a>
+            <a href="#" role="button" draggable="false"
+              class="govuk-button moj-button-menu__item govuk-button--secondary reject-btn" data-module="govuk-button">
+              Reject
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <span class="card__heading">
+          Michael Jones 
+        </span>
+        <div class="card__attributes govuk-!-margin-bottom-1">
+          <dt>Date of birth:</dt>
+          <dd>02/06/1979</dd>
+          <dt>CRN:</dt>
+          <dd>DX12340A</dd>
+          <dt>PNC:</dt>
+          <dd>A1234560BA</dd>
+          <dd><a href="match-record.html" class="govuk-link--no-visited-state">View offender summary</a></dd>
+        </div>
+        <details class="govuk-details govuk-!-margin-bottom-0" data-module="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              Aliases
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+          </div>
+        </details>
+        <!-- <strong class="govuk-tag">Racist</strong>
+            <strong class="govuk-tag">Risk to LGBT</strong>
+            <strong class="govuk-tag">Care leaver</strong> -->
+        <div class="moj-button-menu">
+          <div class="moj-button-menu__wrapper">
+            <a href="#" role="button" draggable="false" class="govuk-button moj-button-menu__item  "
+              data-module="govuk-button">
+              Confirm match
+            </a>
+            <a href="#" role="button" draggable="false"
+              class="govuk-button moj-button-menu__item govuk-button--secondary reject-btn" data-module="govuk-button">
+              Reject
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="">
+      <h2 class="govuk-heading-m">Can't find a matching record?</h2>
+      <p class="govuk-body">If the offender is not known to probation and therefore has no matching record in nDelius;
+        you can continue.</p>
+      <p class="govuk-body"><a class="govuk-link govuk-link--no-visited-state" href="/details.html">This is a new
+          offender</a></p>
+    </div>
+
+  </div>
+</div>
+
+{% endblock %}

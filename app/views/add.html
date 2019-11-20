@@ -6,19 +6,18 @@ Defendant details
 {% endblock %}
 
 {% block beforeContent %}
-
+<a href="cases.html" class="govuk-back-link">Back</a>
 {% endblock %}
 
 {% block content %}
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <a href="cases.html" class="govuk-back-link">Back</a>
-    <h1 class="govuk-heading-xl">
-      <span class="govuk-caption-xl">Step 1 of 4</span>
-      Defendant's details
+
+    <h1 class="govuk-heading-xl">Defendant's details
     </h1>
-    <p class="govuk-body-l">These details will be searched against offender records in nDelius to see if the defendant is known to probation.</p>
+    <p class="govuk-body-l">These details will be searched against offender records in nDelius to see if the defendant
+      is known to probation.</p>
     <div class="govuk-form-group">
       <label class="govuk-label" for="surname">
         Surname
@@ -79,10 +78,12 @@ Defendant details
       <span id="event-name-hint" class="govuk-hint">
         If available
       </span>
-      <input class="govuk-input govuk-input--width-10" id="event-name" name="event-name" type="text" aria-describedby="event-name-hint">
+      <input class="govuk-input govuk-input--width-10" id="event-name" name="event-name" type="text"
+        aria-describedby="event-name-hint">
     </div>
-    <a href="match.html" role="button" draggable="false" class="govuk-button moj-button-menu__item  " data-module="govuk-button">
-        Search nDelius records
+    <a href="match.html" role="button" draggable="false" class="govuk-button moj-button-menu__item  "
+      data-module="govuk-button">
+      Search probation records
     </a>
 
 

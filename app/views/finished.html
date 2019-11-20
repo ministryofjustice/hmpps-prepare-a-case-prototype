@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+
+{% block pageTitle %}
+Check case details
+{% endblock %}
+
+{% block beforeContent %}
+
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-panel govuk-panel--confirmation">
+      <h1 class="govuk-panel__title">
+        New remand case added
+      </h1>
+      <div class="govuk-panel__body">
+        Your new case has been added to the <br>case list for Thursday 21 November
+      </div>
+    </div>
+
+    <!-- <p class="govuk-body">We have sent you a confirmation email.</p> -->
+
+    <h2 class="govuk-heading-m">Next steps</h2>
+
+    <p class="govuk-body">
+      <a href="add.html" class="govuk-link--no-visited-state">Add another case</a>
+    </p>
+    <p class="govuk-body">
+      <a href="cases.html" class="govuk-link--no-visited-state">Return to case list</a>
+    </p>
+
+  </div>
+</div>
+
+
+{% endblock %}

@@ -6,18 +6,15 @@ Case details
 {% endblock %}
 
 {% block beforeContent %}
-
+<a href="match-cards.html" class="govuk-back-link">Back</a>
 {% endblock %}
 
 {% block content %}
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <a href="match.html" class="govuk-back-link">Back</a>
-    <h1 class="govuk-heading-xl">
-      <span class="govuk-caption-xl">Step 3 of 4</span>
-      Case details
-    </h1>
+
+    <h1 class="govuk-heading-xl">Case details</h1>
     <!-- <p class="govuk-body-l">These details will be ...</p> -->
 
     <div class="govuk-form-group">
@@ -63,7 +60,7 @@ Case details
 
 
     <div class="govuk-form-group">
-      <fieldset class="govuk-fieldset" aria-describedby="cps-pack-hint">
+      <fieldset class="govuk-fieldset" aria-describedby="">
         <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
           <h2 class="govuk-fieldset__heading">
             Appearing in courtroom
@@ -74,13 +71,44 @@ Case details
         </label> -->
         <input class="govuk-input govuk-input--width-2" id="surname" name="surname" type="text">
       </fieldset>
+
     </div>
 
 
+    <!-- <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible"> -->
+
+
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset" aria-describedby="">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+          <h2 class="govuk-fieldset__heading">
+            Session
+          </h2>
+        </legend>
+        <!-- <label class="govuk-label" for="surname">
+            Appearing in courtroom
+          </label> -->
+        <div class="govuk-radios govuk-radios--inline">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="morning">
+            <label class="govuk-label govuk-radios__label" for="changed-name">
+              Morning
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="afternoon">
+            <label class="govuk-label govuk-radios__label" for="changed-name-2">
+              Afternoon
+            </label>
+          </div>
+        </div>
+      </fieldset>
+
+    </div>
+
     <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
-
-    <div class="moj-add-another">
+    <div class="moj-add-another govuk-!-width-three-quarters">
       <h2 class="govuk-heading-m moj-add-another__heading" tabindex="-1">Add an offence</h1>
         <form method="post">
 

@@ -17,23 +17,34 @@ Match defendant
     <h1 class="govuk-heading-xl">
       Confirm offender record
     </h1>
+    <p class="govuk-body-l">Confirm if one of the offender records matches the defendant
+      details.</p>
     <div class="govuk-!-margin-bottom-9">
       <h2 class="govuk-heading-m">Defendant's details:</h2>
       </h2>
-      <p class="govuk-body-l govuk-!-margin-bottom-3">Michael Jones</p>
+      <div class="card">
+        <span class="card__heading">
+          Michael Jones
+        </span>
+        <div class="card__attributes">
+          <dt>Date of birth:</dt>
+          <dd>02/06/1979</dd>
+          <dt>PNC:</dt>
+          <dd>Not available</dd>
+        </div>
+      </div>
+      <!-- <p class="govuk-body-l govuk-!-margin-bottom-3">Michael Jones</p>
       <ul class="govuk-list" style="list-style:none;">
-        <li>Date of birth: 02/06/1979</li>
-        <li>PNC: Not available</li>
-      </ul>
+        <li><strong>Date of birth:</strong> 02/06/1979</li>
+        <li><strong>PNC:</strong> Not available</li>
+      </ul> -->
 
     </div>
 
     <div class="govuk-!-margin-bottom-9">
       <h2 class="govuk-heading-m">3 records found:</h2>
-      <p class="govuk-body govuk-!-margin-bottom-3">Confirm if one of the nDelius offender records matches the defendant
-        details.</p>
-
-
+      <!-- <p class="govuk-body govuk-!-margin-bottom-3">Confirm if one of the nDelius offender records matches the defendant
+        details.</p> -->
 
       <div class="card">
         <span class="card__heading">
@@ -49,7 +60,7 @@ Match defendant
           <dd>A1234560BA</dd>
           <dd><a href="match-record.html" class="govuk-link--no-visited-state">View offender summary</a></dd>
         </div>
-        <details class="govuk-details govuk-!-margin-bottom-0 govuk-!-margin-top-1" data-module="govuk-details">
+        <!-- <details class="govuk-details govuk-!-margin-bottom-0 govuk-!-margin-top-1" data-module="govuk-details">
           <summary class="govuk-details__summary">
             <span class="govuk-details__summary-text">
               Aliases
@@ -57,13 +68,13 @@ Match defendant
           </summary>
           <div class="govuk-details__text">
           </div>
-        </details>
+        </details> -->
         <!-- <strong class="govuk-tag">Racist</strong>
         <strong class="govuk-tag">Risk to LGBT</strong>
         <strong class="govuk-tag">Care leaver</strong> -->
         <div class="moj-button-menu">
           <div class="moj-button-menu__wrapper">
-            <a href="#" role="button" draggable="false" class="govuk-button moj-button-menu__item"
+            <a href="details.html" role="button" draggable="false" class="govuk-button moj-button-menu__item"
               data-module="govuk-button">
               Confirm match
             </a>
@@ -77,18 +88,18 @@ Match defendant
 
       <div class="card">
         <span class="card__heading">
-          Michael Jones 
+          Michael Jones
         </span>
         <div class="card__attributes">
           <dt>Date of birth:</dt>
-          <dd>02/06/1979</dd>
+          <dd>06/02/1979</dd>
           <dt>CRN:</dt>
-          <dd>DX12340A</dd>
+          <dd>DX12341A</dd>
           <dt>PNC:</dt>
-          <dd>A1234560BA</dd>
+          <dd>Not recorded</dd>
           <dd><a href="match-record.html" class="govuk-link--no-visited-state">View offender summary</a></dd>
         </div>
-        <details class="govuk-details govuk-!-margin-bottom-0 govuk-!-margin-top-1" data-module="govuk-details">
+        <!-- <details class="govuk-details govuk-!-margin-bottom-0 govuk-!-margin-top-1" data-module="govuk-details">
           <summary class="govuk-details__summary">
             <span class="govuk-details__summary-text">
               Aliases
@@ -96,7 +107,7 @@ Match defendant
           </summary>
           <div class="govuk-details__text">
           </div>
-        </details>
+        </details> -->
         <!-- <strong class="govuk-tag">Racist</strong>
           <strong class="govuk-tag">Risk to LGBT</strong>
           <strong class="govuk-tag">Care leaver</strong> -->
@@ -116,15 +127,15 @@ Match defendant
 
       <div class="card">
         <span class="card__heading">
-          Michael Jones 
+          Michael Bones
         </span>
         <div class="card__attributes govuk-!-margin-bottom-1">
           <dt>Date of birth:</dt>
           <dd>02/06/1979</dd>
           <dt>CRN:</dt>
-          <dd>DX12340A</dd>
+          <dd>DX12342A</dd>
           <dt>PNC:</dt>
-          <dd>A1234560BA</dd>
+          <dd>A1234562BA</dd>
           <dd><a href="match-record.html" class="govuk-link--no-visited-state">View offender summary</a></dd>
         </div>
         <details class="govuk-details govuk-!-margin-bottom-0" data-module="govuk-details">
@@ -134,6 +145,13 @@ Match defendant
             </span>
           </summary>
           <div class="govuk-details__text">
+            <ul class="govuk-list" style="list-style:none;">
+              <li>Alan Parker</li>
+              <li>Ollie Morgan</li>
+              <li>Solomon Read</li>
+              <li>Benjamin Kelly</li>
+              <li>Marcus Thomas</li>
+            </ul>
           </div>
         </details>
         <!-- <strong class="govuk-tag">Racist</strong>
@@ -156,7 +174,7 @@ Match defendant
     </div>
     <div class="">
       <h2 class="govuk-heading-m">Can't find a matching record?</h2>
-      <p class="govuk-body">If the offender is not known to probation and therefore has no matching record in nDelius;
+      <p class="govuk-body">If the defendant is not known to probation and therefore has no matching record in nDelius;
         you can continue.</p>
       <p class="govuk-body"><a class="govuk-link govuk-link--no-visited-state" href="/details.html">This is a new
           offender</a></p>

@@ -1,67 +1,79 @@
-
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Prototypes | Prepare a case | HMPPS
+Prototypes | Prepare a case | HMPPS
 {% endblock %}
 
 {% block content %}
 
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds prototype-index">
-      <span class="govuk-caption-xl">Prepare a case for court</span>
-      <h1 class="govuk-heading-xl">
-        Prototypes
-      </h1>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds prototype-index">
+    <span class="govuk-caption-xl">Prepare a case for court</span>
+    <h1 class="govuk-heading-xl">
+      Prototypes
+    </h1>
 
-          {# Start of most recent box #}
-          <div class="most-recent">
-            <p><strong class="govuk-tag">Most recent</strong></p>
-            {# Start of prototype write up #}
-            <div class="prototype-write-up">
-              <div class="grid-row">
-                <div class="govuk-grid-column-one-third">
-                    <h3 class="govuk-heading-s">Date of release</h3>
-                    <p>DD Month YYYY</p>
-                </div>
-    
-                <div class="govuk-grid-column-one-third">
-                    <h3 class="govuk-heading-s">Feature</h3>
-                    <p>Feature name</p>
-                </div>
-    
-                <div class="govuk-grid-column-one-third">
-                    <h3 class="govuk-heading-s">Related stories</h3>
-                    <p>PIC-123</p>
-                </div>
-              </div>
-              <h3 class="govuk-heading-s">Changes</h3>
-              <p>
-                In this version, we added X into Y, on the Z.
-              </p>
-              <h3 class="govuk-heading-s">Hypothesis</h3>
-              <p>
-                If... then... because.
-              </p>
-              <h3 class="govuk-heading-s">Research notes</h3>
-              <p>
-                ...
-              </p>
-              <a href="/cases.html" role="button" draggable="false" class="govuk-button govuk-button--start" data-module="govuk-button">
-                View prototype
-                <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" role="presentation" focusable="false">
-                  <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z" />
-                </svg>
-              </a>
-
-            </div>
-            {# End of prototype write up #}
-    
+    {# Start of most recent box #}
+    <div class="most-recent">
+      <p><strong class="govuk-tag">Most recent</strong></p>
+      {# Start of prototype write up #}
+      <div class="prototype-write-up">
+        <div class="grid-row">
+          <div class="govuk-grid-column-one-third">
+            <h3 class="govuk-heading-s">Version</h3>
+            <p>0.1</p>
           </div>
-          {# End of most recent box #}
-    
-    
-          <h2 class="govuk-heading-l">All versions</h2>
+
+          <div class="govuk-grid-column-one-third">
+            <h3 class="govuk-heading-s">Feature</h3>
+            <p>'Matching cases'</p>
+          </div>
+
+          <div class="govuk-grid-column-one-third">
+            <h3 class="govuk-heading-s">Related stories</h3>
+            <p>PIC-96, PIC-113, PIC-117, PIC-158, PIC-160</p>
+          </div>
+        </div>
+        <h3 class="govuk-heading-s">Changes</h3>
+        <p>
+          This version is the initial design prototype of the case list, for a single court.
+        </p>
+        <p>
+          We've added anonymised / dummy Libra case list data for two days in advance. For each case users can view name, probation record, offences, case
+          number, session (am/pm), courtroom.
+        </p>
+        <p>
+          The case list includes a filter component to allow defining a subset of cases. The user can segment cases by
+          courtroom, session (am/pm), probation record.
+        </p>
+        <p>
+          We've added a flow for adding overnight / remand cases. This includes a screen for matching defendant details against possible records found in nDelius. One of the records on the 'Confirm offender record' (matching) screen links to an offender summary screen (dummy nDelius data). 
+        </p>
+        <h3 class="govuk-heading-s">Hypothesis</h3>
+        <p>
+          If... then... because.
+        </p>
+        <h3 class="govuk-heading-s">Research notes</h3>
+        <p>
+          t.b.c.
+        </p>
+        <a href="/cases.html" role="button" draggable="false" class="govuk-button govuk-button--start"
+          data-module="govuk-button">
+          View prototype
+          <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19"
+            viewBox="0 0 33 40" role="presentation" focusable="false">
+            <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z" />
+          </svg>
+        </a>
+
+      </div>
+      {# End of prototype write up #}
+
+    </div>
+    {# End of most recent box #}
+
+
+    <!-- <h2 class="govuk-heading-l">All versions</h2>
           {# Start of hidden panel #}
           <details>
             <summary><span class="summary">Show all versions</span></summary>
@@ -152,9 +164,9 @@
     
             </div>
           </details>
-          {# End of hidden panel #}
-    
-        </div> 
-      </div>
+          {# End of hidden panel #} -->
+
+  </div>
+</div>
 
 {% endblock %}

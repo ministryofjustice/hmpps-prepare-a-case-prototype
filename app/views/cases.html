@@ -74,7 +74,7 @@ Cases
               <div class="govuk-form-group">
                 <fieldset class="govuk-fieldset">
                   <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-                    Courtroom
+                    Court
                   </legend>
                   <div class="govuk-checkboxes govuk-checkboxes--small">
                     <div class="govuk-checkboxes__item">
@@ -219,13 +219,17 @@ Cases
           <div class="moj-scrollable-pane__wrapper">
             <table class="govuk-table">
               <thead class="govuk-table__head">
-                <tr class="govuk-table__row">
-                  <th scope="col" class="govuk-table__header" aria-sort="none">Defendant</th>
+                <tr class="govuk-table__row govuk-table__row govuk-!-font-size-16">
+                  <th scope="col" class="govuk-table__header custom-defendant-width" aria-sort="none">Defendant</th>
                   <th scope="col" class="govuk-table__header custom-delius-record-width" aria-sort="none">Probation
                     record
                   </th>
-                  <!-- <th scope="col" class="govuk-table__header" aria-sort="none">Libra marker</th> -->
+                  <!-- <th scope="col" class="govuk-table__header" aria-sort="none">Last sentenced</th> -->
+                  <th scope="col" class="govuk-table__header custom-termination-width" aria-sort="none">Last in care of probation</th>
                   <th scope="col" class="govuk-table__header" aria-sort="none">Offence</th>
+                  <th scope="col" class="govuk-table__header" aria-sort="none">Listing</th>
+                  <th scope="col" class="govuk-table__header" aria-sort="none">Listing information</th>
+                  <th scope="col" class="govuk-table__header" aria-sort="none">Action</th>
                   <th scope="col" class="govuk-table__header govuk-table__header--numeric custom-case-no-width"
                     aria-sort="none">Case no.</th>
                   <th scope="col" class="govuk-table__header custom-session-width" aria-sort="none">Session</th>
@@ -234,108 +238,168 @@ Cases
               </thead>
               <tbody class="govuk-table__body">
                 <!-- COURT ROOM ONE (North Tyneside Mags | 27/8/19 | Guilty Anticipated | Session: 10:00-13:00 | Courtroom 01)-->
-                <tr class="govuk-table__row">
-                  <th scope="row" class="govuk-table__header"><a href="/cases/details/123456">Dylan Adam Davis</a></td>
-                  <td class="govuk-table__cell"><span class="moj-badge-wrapper"><span
-                        class="moj-badge moj-badge--black">Breach</span></span>Current
+                <tr class="govuk-table__row govuk-table__row govuk-!-font-size-16">
+                  <td class="govuk-table__cell">
+                    <!-- <a href="/cases/details/123456"> -->
+                    Dylan Adam Davis
+                  <!-- </a> -->
                   </td>
-                  <!-- <td class="govuk-table__cell"></td> -->
+                  <td class="govuk-table__cell">Current
+                  </td>
+                  <td class="govuk-table__cell"></td>
                   <td class="govuk-table__cell">Burglary other than dweling - theft</td>
+                  <td class="govuk-table__cell">2nd listing</td>
+                  <td class="govuk-table__cell">Adjourned from 18/11/2019, non-standard reason: [1]</td>
+                  <td class="govuk-table__cell"><a href="" class="govuk-link--no-visited-state">View case</a></td>
                   <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="1">1</td>
                   <td class="govuk-table__cell">Morning</td>
                   <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="1">1</td>
                 </tr>
-                <tr>
-                  <th scope="row" class="govuk-table__header"><a href="/cases/details/123456">Tony Armstrong</a></td>
+                <tr class="govuk-table__row govuk-table__row govuk-!-font-size-16">
+                  <td class="govuk-table__cell">
+                    <!-- <a href="/cases/details/123456"> -->
+                      Tony Armstrong
+                    <!-- </a> -->
+                  </td>
                   <td class="govuk-table__cell">
                     <ul>
                       <li>Previously known</li>
-                      <li>05/07/2019</li>
+                      <li></li>
                     </ul>
                   </td>
-                  <!-- <td class="govuk-table__cell"></td> -->
+                  <td class="govuk-table__cell">05/07/2019</td>
                   <td class="govuk-table__cell">
                     <ol>
                       <li>Possess a class C controlled drug</li>
                       <li>Possess a controlled drug of Class A - heroin</li>
                     </ol>
                   </td>
+                  <td class="govuk-table__cell">1st listing</td>
+                  <td class="govuk-table__cell"></td>
+                  <td class="govuk-table__cell"><a href="" class="govuk-link--no-visited-state">View case</a></td>
                   <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="2">2</td>
                   <td class="govuk-table__cell"> Morning</td>
                   <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="1">1</td>
                 </tr>
-                <tr>
-                  <th scope="row" class="govuk-table__header"><a href="/cases/details/123456">Klara Marie McDonald</a>
-                    </td>
-                  <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state"
-                      href="match-cards.html">Confirm record</a>
+                <tr class="govuk-table__row govuk-table__row govuk-!-font-size-16">
+                  <td class="govuk-table__cell">
+                    <!-- <a href="/cases/details/123456"> -->
+                      Klara Marie McDonald
+                    <!-- </a> -->
                   </td>
-                  <!-- <td class="govuk-table__cell"></td> -->
+                  <td class="govuk-table__cell">
+                    <!-- <a class="govuk-link govuk-link--no-visited-state"
+                      href="match-cards.html">Confirm record</a> -->
+                    <span class="moj-badge moj-badge--red">Multiple possible records</span>
+                  </td>
+                  <td class="govuk-table__cell"></td>
                   <td class="govuk-table__cell">Fail to provide specimen for analysis - vehicle driver</td>
+                  <td class="govuk-table__cell">1st listing</td>
+                  <td class="govuk-table__cell"></td>
+                  <td class="govuk-table__cell"><a href="" class="govuk-link--no-visited-state">Manually match probation record</a></td>
                   <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="3">3</td>
                   <td class="govuk-table__cell"> Morning</td>
                   <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="1">1</td>
                 </tr>
-                <tr>
-                  <th scope="row" class="govuk-table__header"><a href="/cases/details/123456">Hannah Francis</a></td>
+                <tr class="govuk-table__row govuk-table__row govuk-!-font-size-16">
+                  <td class="govuk-table__cell">
+                    <!-- <a href="/cases/details/123456"> -->
+                      Hannah Francis
+                    <!-- </a> -->
+                  </td>
                   <td class="govuk-table__cell">Not known</span>
-                    <!-- <td class="govuk-table__cell"></td> -->
+                  <td class="govuk-table__cell"></td>
                   <td class="govuk-table__cell">Drive motor vehicle when alcohol level above limit</td>
+                  <td class="govuk-table__cell">1st listing</td>
+                  <td class="govuk-table__cell"></td>
+                  <td class="govuk-table__cell"><a href="" class="govuk-link--no-visited-state">View case</a></td>
                   <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="4">4</td>
                   <td class="govuk-table__cell"> Morning</td>
                   <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="1">1</td>
                 </tr>
-                <tr>
-                  <th scope="row" class="govuk-table__header"><a href="/cases/details/123456">Andrei Edwards</a></td>
+                <tr class="govuk-table__row govuk-table__row govuk-!-font-size-16">
+                  <td class="govuk-table__cell">
+                    <!-- <a href="/cases/details/123456"> -->
+                      Andrei Edwards
+                    <!-- </a> -->
+                  </td>
                   <td class="govuk-table__cell">
                     <ul>
                       <li>Previously known</li>
-                      <li>11/09/2019</li>
+                      <li></li>
                     </ul>
                   </td>
-                  <!-- <td class="govuk-table__cell"></td> -->
+                  <td class="govuk-table__cell">11/09/2016</td>
                   <td class="govuk-table__cell">Possess a class C controlled drug</td>
+                  <td class="govuk-table__cell">1st listing</td>
+                  <td class="govuk-table__cell"></td>
+                  <td class="govuk-table__cell"><a href="" class="govuk-link--no-visited-state">View case</a></td>
                   <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="5">5</td>
                   <td class="govuk-table__cell"> Morning</td>
                   <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="1">1</td>
                 </tr>
-                <tr>
-                  <th scope="row" class="govuk-table__header"><a href="/cases/details/123456">Rhys John Houghton</a>
-                    </td>
-                  <td class="govuk-table__cell"><span class="moj-badge-wrapper"><span
-                        class="moj-badge moj-badge--black">Breach</span><span
-                        class="moj-badge moj-badge--black">Sso</span></span>Current</td>
-                  <!-- <td class="govuk-table__cell"></td> -->
+                <tr class="govuk-table__row govuk-table__row govuk-!-font-size-16">
+                  <td class="govuk-table__cell">
+                    <!-- <a href="/cases/details/123456"> -->
+                      Rhys John Houghton
+                    <!-- </a> -->
+                  </td>
+                  <td class="govuk-table__cell">
+                    <span class="moj-badge-wrapper">
+                      <span class="moj-badge moj-badge--black">Breach</span>
+                      <span class="moj-badge moj-badge--black">Sso</span>
+                    </span>Current
+                  </td>
+                  <td class="govuk-table__cell"></td>
                   <td class="govuk-table__cell">Assault by beating of an emergency worker</td>
+                  <td class="govuk-table__cell">1st listing</td>
+                  <td class="govuk-table__cell"></td>
+                  <td class="govuk-table__cell"><a href="" class="govuk-link--no-visited-state">View case</a></td>
                   <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="6">6</td>
                   <td class="govuk-table__cell"> Morning</td>
                   <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="1">1</td>
                 </tr>
-                <tr>
-                  <th scope="row" class="govuk-table__header"><a href="/cases/details/123456">Ava Ryan</a></td>
+                <tr class="govuk-table__row govuk-table__row govuk-!-font-size-16">
+                  <td class="govuk-table__cell">
+                    <!-- <a href="/cases/details/123456"> -->
+                      Ava Ryan
+                    <!-- </a> -->
+                  </td>
                   <td class="govuk-table__cell">Current</td>
-                  <!-- <td class="govuk-table__cell"></td> -->
-                  <td class="govuk-table__cell">Dishonestly fail notify change of circumstances affecting entitlement to
-                    social security benefit / advantage / payment</td>
+                  <td class="govuk-table__cell"></td>
+                  <td class="govuk-table__cell">Sexual assault on a male</td>
+                  <td class="govuk-table__cell">1st listing</td>
+                  <td class="govuk-table__cell"></td>
+                  <td class="govuk-table__cell"><a href="" class="govuk-link--no-visited-state">Request OM update</a></td>
                   <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="7">7</td>
                   <td class="govuk-table__cell"> Morning</td>
                   <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="1">1</td>
                 </tr>
-                <tr>
-                  <th scope="row" class="govuk-table__header"><a href="/cases/details/123456">Vinnie Robert Anderson</a>
-                    </td>
-                  <td class="govuk-table__cell">Not known</span>
+                <tr class="govuk-table__row govuk-table__row govuk-!-font-size-16">
+                  <td class="govuk-table__cell">
+                    <!-- <a href="/cases/details/123456"> -->
+                      Vinnie Robert Anderson
+                    <!-- </a> -->
                   </td>
-                  <!-- <td class="govuk-table__cell"></td> -->
-                  <td class="govuk-table__cell">Possess a controlled drug of Class A - Cocaine</td>
+                  <td class="govuk-table__cell">Previously known</span>
+                  </td>
+                  <td class="govuk-table__cell">07/08/2019</td>
+                  <td class="govuk-table__cell">Attempt theft from shop</td>
+                  <td class="govuk-table__cell">2nd listing</td>
+                  <td class="govuk-table__cell">Adjourned from 20/11/2019, to attend or warrant to issue</td>
+                  <td class="govuk-table__cell"><a href="" class="govuk-link--no-visited-state">View case</a></td>
                   <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="8">8</td>
                   <td class="govuk-table__cell"> Morning</td>
                   <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="1">1</td>
                 </tr>
-                <tr>
-                  <th scope="row" class="govuk-table__header"><a href="/cases/details/123456">Aiden Hill</a></td>
-                  <td class="govuk-table__cell">Current</td>
-                  <!-- <td class="govuk-table__cell"></td> -->
+                <tr class="govuk-table__row govuk-table__row govuk-!-font-size-16">
+                  <td class="govuk-table__cell">
+                    <!-- <a href="/cases/details/123456"> -->
+                      Aiden Hill
+                    <!-- </a> -->
+                  </td>
+                  <td class="govuk-table__cell">Not known</td>
+                  <td class="govuk-table__cell"></td>
                   <td class="govuk-table__cell">
                     <ol>
                       <li>Fail to provide specimen for analysis - vehicle driver</li>
@@ -343,30 +407,48 @@ Cases
                       <li>Use a motor vehicle on a road / public place without third party insurance</li>
                     </ol>
                   </td>
+                  <td class="govuk-table__cell">2nd listing</td>
+                  <td class="govuk-table__cell">Adjourned from 20/11/2019, for a pre-sentence report to be prepared</td>
+                  <td class="govuk-table__cell"><a href="" class="govuk-link--no-visited-state">Check PSR is ready</a></td>
                   <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="9">9</td>
                   <td class="govuk-table__cell"> Morning</td>
                   <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="1">1</td>
                 </tr>
-                <tr>
-                  <th scope="row" class="govuk-table__header"><a href="/cases/details/123456">Noah Harvey</a></td>
-                  <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state"
-                      href="match-cards.html">Confirm record</a></td>
-                  <!-- <td class="govuk-table__cell"></td> -->
+                <tr class="govuk-table__row govuk-table__row govuk-!-font-size-16">
+                  <td class="govuk-table__cell">
+                    <!-- <a href="/cases/details/123456"> -->
+                      Noah Harvey
+                    <!-- </a> -->
+                  </td>
+                  <td class="govuk-table__cell">
+                    <!-- <a class="govuk-link govuk-link--no-visited-state" href="match-cards.html">
+                      Confirm record</a> -->
+
+                    <span class="moj-badge moj-badge--red">Multiple possible records</span>
+
+                  </td>
+                  <td class="govuk-table__cell"></td>
                   <td class="govuk-table__cell">
                     <ol>
                       <li>Possess a controlled drug of Class B - Amphetamine</li>
                       <li>Drunk and disorderly in a public place</li>
                     </ol>
                   </td>
-                  <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="10">10</td>
-                  <td class="govuk-table__cell"> Morning</td>
+                  <td class="govuk-table__cell">1st listing</td>
+                  <td class="govuk-table__cell"></td>
+                  <td class="govuk-table__cell"><a href="" class="govuk-link--no-visited-state">Manually match probation record</a></td>
                   <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="1">1</td>
+                  <td class="govuk-table__cell"> Morning</td>
+                  <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="1">2</td>
                 </tr>
-                <tr>
-                  <th scope="row" class="govuk-table__header"><a href="/cases/details/123456">Declan Dennis Bradley</a>
-                    </td>
+                <tr class="govuk-table__row govuk-table__row govuk-!-font-size-16">
+                  <td class="govuk-table__cell">
+                    <!-- <a href="/cases/details/123456"> -->
+                      Declan Dennis Bradley
+                    <!-- </a> -->
+                  </td>
                   <td class="govuk-table__cell">Not known</td>
-                  <!-- <td class="govuk-table__cell"></td> -->
+                  <td class="govuk-table__cell"></td>
                   <td class="govuk-table__cell">
                     <ol>
                       <li>Obstruct/resist a constable in execution of duty</li>
@@ -377,42 +459,52 @@ Cases
                       <li>Drive a motor vehicle otherwise than in accordance with a licence - endorsable offence</li>
                     </ol>
                   </td>
-                  <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="11">11</td>
+                  <td class="govuk-table__cell">1st listing</td>
+                  <td class="govuk-table__cell"></td>
+                  <td class="govuk-table__cell"><a href="" class="govuk-link--no-visited-state">View case</a></td>
+                  <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="2">2</td>
                   <td class="govuk-table__cell"> Morning</td>
-                  <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="1">1</td>
+                  <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="2">2</td>
                 </tr>
-                <tr>
-                  <th scope="row" class="govuk-table__header"><a href="/cases/details/123456">Zane Harris Smith</a></td>
+                <tr class="govuk-table__row govuk-table__row govuk-!-font-size-16">
+                  <td class="govuk-table__cell">
+                    <!-- <a href="/cases/details/123456"> -->
+                      Zane Harris Smith
+                    <!-- </a> -->
+                  </td>
                   <td class="govuk-table__cell">
                     <ul>
                       <li>Previously known</li>
-                      <li>22/06/2019</li>
+                      <!-- <li></li> -->
                     </ul>
                   </td>
-                  <!-- <td class="govuk-table__cell"></td> -->
-                  <td class="govuk-table__cell">Assault by beating of an emergency worker</td>
-                  <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="12">12</td>
+                  <td class="govuk-table__cell">22/06/2019</td>
+                  <td class="govuk-table__cell">Use threatening / abusive / insulting words / behaviour with intent to
+                    cause fear of / provoke
+                    unlawful violence</td>
+                  <td class="govuk-table__cell">1st listing</td>
+                  <td class="govuk-table__cell"></td>
+                  <td class="govuk-table__cell"><a href="" class="govuk-link--no-visited-state">View case</a></td>
+                  <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="3">3</td>
                   <td class="govuk-table__cell"> Morning</td>
-                  <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="1">1</td>
+                  <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="2">2</td>
                 </tr>
-                <tr>
-                  <th scope="row" class="govuk-table__header"><a href="/cases/details/123456">Gabriela Newman</a></td>
+                <!-- <tr class="govuk-table__row govuk-table__row govuk-!-font-size-16">
+                  <td class="govuk-table__cell"><a href="/cases/details/123456">Gabriela Newman</a></td>
                   <td class="govuk-table__cell">
                     <ul>
                       <li>Previously known</li>
                       <li>25/10/2019</li>
                     </ul>
                   </td>
-                  <!-- <td class="govuk-table__cell"></td> -->
                   <td class="govuk-table__cell">Attempt theft from shop</td>
                   <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="13">13</td>
                   <td class="govuk-table__cell"> Morning</td>
                   <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="1">1</td>
                 </tr>
-                <tr>
-                  <th scope="row" class="govuk-table__header"><a href="/cases/details/123456">Shiv Patel</a></td>
+                <tr class="govuk-table__row govuk-table__row govuk-!-font-size-16">
+                  <td class="govuk-table__cell"><a href="/cases/details/123456">Shiv Patel</a></td>
                   <td class="govuk-table__cell">Current</td>
-                  <!-- <td class="govuk-table__cell"></td> -->
                   <td class="govuk-table__cell">
                     <ol>
                       <li>Possess a controlled drug of Class B - Other</li>
@@ -423,36 +515,33 @@ Cases
                   <td class="govuk-table__cell"> Morning</td>
                   <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="1">1</td>
                 </tr>
-                <tr>
-                  <th scope="row" class="govuk-table__header"><a href="/cases/details/123456">Muhammad Hussain</a></td>
+                <tr class="govuk-table__row govuk-table__row govuk-!-font-size-16">
+                  <td class="govuk-table__cell"><a href="/cases/details/123456">Muhammad Hussain</a></td>
                   <td class="govuk-table__cell">Not known</span>
                   </td>
-                  <!-- <td class="govuk-table__cell"></td> -->
                   <td class="govuk-table__cell">Urinate in a street / public place in contravention of a byelaw</td>
                   <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="15">15</td>
                   <td class="govuk-table__cell"> Morning</td>
                   <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="1">1</td>
                 </tr>
-                <tr>
-                  <th scope="row" class="govuk-table__header"><a href="/cases/details/123456">Michael William Stone</a>
+                <tr class="govuk-table__row govuk-table__row govuk-!-font-size-16">
+                  <td class="govuk-table__cell"><a href="/cases/details/123456">Michael William Stone</a>
                     </td>
                   <td class="govuk-table__cell">Current</td>
-                  <!-- <td class="govuk-table__cell"></td> -->
                   <td class="govuk-table__cell">Theft from a motor vehicle</td>
                   <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="15">16</td>
                   <td class="govuk-table__cell"> Morning</td>
                   <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="1">1</td>
-                </tr>
+                </tr> -->
                 <!-- COURT ROOM TWO (Thames Mags | 5/11/19 | New custody cases | Session: 10:00-13:00 | Courtroom 07)-->
-                <tr class="govuk-table__row">
-                  <th scope="row" class="govuk-table__header"><a href="/cases/details/123456">Maxwell Lee</a></td>
+                <!-- <tr class="govuk-table__row govuk-table__row govuk-!-font-size-16">
+                  <td class="govuk-table__cell"><a href="/cases/details/123456">Maxwell Lee</a></td>
                   <td class="govuk-table__cell">
                     <ul>
                       <li>Previously known</li>
                       <li>17/08/2019</li>
                     </ul>
                   </td>
-                  <!-- <td class="govuk-table__cell"></td> -->
                   <td class="govuk-table__cell">
                     <ol>
                       <li>Conspire to steal motor vehicle</li>
@@ -469,25 +558,23 @@ Cases
                   <td class="govuk-table__cell">Morning</td>
                   <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="2">2</td>
                 </tr>
-                <tr>
-                  <th scope="row" class="govuk-table__header"><a href="/cases/details/123456">Leah Jane Atkinson</a>
+                <tr class="govuk-table__row govuk-table__row govuk-!-font-size-16">
+                  <td class="govuk-table__cell"><a href="/cases/details/123456">Leah Jane Atkinson</a>
                     </td>
                   <td class="govuk-table__cell">Current</td>
-                  <!-- <td class="govuk-table__cell"></td> -->
                   <td class="govuk-table__cell">Possess a controlled drug of Class A - Cocaine</td>
                   <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="2">2</td>
                   <td class="govuk-table__cell"> Morning</td>
                   <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="2">2</td>
                 </tr>
-                <tr class="govuk-table__row">
-                  <th scope="row" class="govuk-table__header"><a href="/cases/details/123456">Lennox Reed</a></td>
+                <tr class="govuk-table__row govuk-table__row govuk-!-font-size-16">
+                  <td class="govuk-table__cell"><a href="/cases/details/123456">Lennox Reed</a></td>
                   <td class="govuk-table__cell">
                     <ul>
                       <li>Previously known</li>
                       <li>02/08/2019</li>
                     </ul>
                   </td>
-                  <!-- <td class="govuk-table__cell"></td> -->
                   <td class="govuk-table__cell">
                     <ol>
                       <li>Conspire to steal motor vehicle</li>
@@ -501,8 +588,8 @@ Cases
                   <td class="govuk-table__cell">Morning</td>
                   <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="2">2</td>
                 </tr>
-                <tr class="govuk-table__row">
-                  <th scope="row" class="govuk-table__header"><a href="/cases/details/123456">Alexander Lee Moss</a>
+                <tr class="govuk-table__row govuk-table__row govuk-!-font-size-16">
+                  <td class="govuk-table__cell"><a href="/cases/details/123456">Alexander Lee Moss</a>
                     </td>
                   <td class="govuk-table__cell">
                     <ul>
@@ -510,7 +597,6 @@ Cases
                       <li>05/09/2019</li>
                     </ul>
                   </td>
-                  <!-- <td class="govuk-table__cell"></td> -->
                   <td class="govuk-table__cell">
                     <ol>
                       <li>Conspire to steal motor vehicle</li>
@@ -524,13 +610,12 @@ Cases
                   <td class="govuk-table__cell">Morning</td>
                   <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="2">2</td>
                 </tr>
-                <tr class="govuk-table__row">
-                  <th scope="row" class="govuk-table__header"><a href="/cases/details/123456">Evandro Álves Vidal</a>
+                <tr class="govuk-table__row govuk-table__row govuk-!-font-size-16">
+                  <td class="govuk-table__cell"><a href="/cases/details/123456">Evandro Álves Vidal</a>
                     </td>
                   <td class="govuk-table__cell">
                     Not known
                   </td>
-                  <!-- <td class="govuk-table__cell"></td> -->
                   <td class="govuk-table__cell">
                     Possess / control identity documents with intent
                   </td>
@@ -538,13 +623,12 @@ Cases
                   <td class="govuk-table__cell">Morning</td>
                   <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="2">2</td>
                 </tr>
-                <tr class="govuk-table__row">
-                  <th scope="row" class="govuk-table__header"><a href="/cases/details/123456">Camile Sirgediene</a>
+                <tr class="govuk-table__row govuk-table__row govuk-!-font-size-16">
+                  <td class="govuk-table__cell"><a href="/cases/details/123456">Camile Sirgediene</a>
                     </td>
                   <td class="govuk-table__cell">
                     Not known
                   </td>
-                  <!-- <td class="govuk-table__cell"></td> -->
                   <td class="govuk-table__cell">
                     Dishonestly make a false statement to obtain a benefit / advantage / payment
                   </td>
@@ -552,13 +636,12 @@ Cases
                   <td class="govuk-table__cell">Morning</td>
                   <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="2">2</td>
                 </tr>
-                <tr class="govuk-table__row">
-                  <th scope="row" class="govuk-table__header"><a href="/cases/details/123456">Oliver Gardner</a>
+                <tr class="govuk-table__row govuk-table__row govuk-!-font-size-16">
+                  <td class="govuk-table__cell"><a href="/cases/details/123456">Oliver Gardner</a>
                     </td>
                   <td class="govuk-table__cell">
                     Current
                   </td>
-                  <!-- <td class="govuk-table__cell"></td> -->
                   <td class="govuk-table__cell">
                     Failing to comply with the requirements of a community order
                   </td>
@@ -566,13 +649,12 @@ Cases
                   <td class="govuk-table__cell">Morning</td>
                   <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="2">2</td>
                 </tr>
-                <tr class="govuk-table__row">
-                  <th scope="row" class="govuk-table__header"><a href="/cases/details/123456">Merkelis Kuzminskas</a>
+                <tr class="govuk-table__row govuk-table__row govuk-!-font-size-16">
+                  <td class="govuk-table__cell"><a href="/cases/details/123456">Merkelis Kuzminskas</a>
                     </td>
                   <td class="govuk-table__cell">
                     Not known
                   </td>
-                  <!-- <td class="govuk-table__cell"></td> -->
                   <td class="govuk-table__cell">
                     Drive a mechanically propelled vehicle on a road / in a public place without due care and attention
                   </td>
@@ -580,8 +662,8 @@ Cases
                   <td class="govuk-table__cell">Morning</td>
                   <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="2">2</td>
                 </tr>
-                <tr class="govuk-table__row">
-                  <th scope="row" class="govuk-table__header"><a href="/cases/details/123456">Ankur Kapadia</a>
+                <tr class="govuk-table__row govuk-table__row govuk-!-font-size-16">
+                  <td class="govuk-table__cell"><a href="/cases/details/123456">Ankur Kapadia</a>
                     </td>
                   <td class="govuk-table__cell">
                     <ul>
@@ -589,7 +671,6 @@ Cases
                       <li>28/07/2019</li>
                     </ul>
                   </td>
-                  <!-- <td class="govuk-table__cell"></td> -->
                   <td class="govuk-table__cell">
                     Use threatening / abusive / insulting words / behaviour with intent to cause fear of / provoke
                     unlawful violence
@@ -597,7 +678,7 @@ Cases
                   <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="">9</td>
                   <td class="govuk-table__cell">Morning</td>
                   <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="2">2</td>
-                </tr>
+                </tr> -->
               </tbody>
             </table>
           </div>
@@ -621,7 +702,7 @@ Cases
           <a class="moj-pagination__link" href="">Next<span class="govuk-visually-hidden"> set of pages</span></a>
         </li>
       </ul>
-      <p class="moj-pagination__results">Showing <b>1</b> to <b>25</b> of <b>187</b> cases</p>
+      <p class="moj-pagination__results">Showing <b>1</b> to <b>12</b> of <b>187</b> cases</p>
     </nav>
   </div>
 </div>

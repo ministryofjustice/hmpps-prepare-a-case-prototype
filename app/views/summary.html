@@ -1,0 +1,296 @@
+{% extends "layout.html" %}
+
+
+{% block pageTitle %}
+Offender record summary
+{% endblock %}
+
+{% block bodyStart %}
+<section class="key-details-bar" aria-label="Key details">
+  <div class="key-details-bar__key-details">
+    <div class="key-details-bar__top-block">
+      <span class="govuk-visually-hidden">Name:</span>
+      <span class="key-details-bar__name">Dylan Adam DAVIS</span>
+      <span class="key-details-bar__nino"></span>
+      <span class="govuk-visually-hidden">Status from nDelius:</span>
+      <span class="key-details-bar__status">Current offender</span>
+      <span class="govuk-visually-hidden">Status from nDelius:</span>
+      <span class="key-details-bar__status govuk-!-margin-right-2">Low Risk of Serious Harm</span>
+    </div>
+    <div class="key-details-bar__bottom-block">
+      <span class="govuk-body govuk-!-margin-right-6">Date of birth: 27/09/1984</span> <span class="govuk-body govuk-!-margin-right-6">CRN: DX12340A</span><span class="govuk-body">PNC: A1234560BA</span>
+      <p class="govuk-body govuk-!-margin-0 app-!-float-right">
+        <!-- <a class="govuk-link govuk-link--no-visited-state govuk-link--text-colour" href="/cases/details/9168463">View
+            case details</a> -->
+      </p>
+    </div>
+  </div>
+</section>
+{% endblock %}
+
+
+{% block beforeContent %}
+<a href="match.html" class="govuk-back-link">Back</a>
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl govuk-!-margin-bottom-8">
+      Offender summary
+    </h1>
+    <div class="govuk-!-margin-bottom-9">
+      <h2 class="govuk-heading-m">Registers and warnings</h2>
+      </h2>
+      <table class="govuk-table app-table app-table--split-rows">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header" aria-sort="none" style="width: 220px;">Type</th>
+            <th scope="col" class="govuk-table__header" aria-sort="none" style="width: 130px;">Status</th>
+            <th scope="col" class="govuk-table__header" aria-sort="none">Description</th>
+            <th scope="col" class="govuk-table__header" aria-sort="none" style="width: 130px;">Date</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Public protection</td>
+            <td class="govuk-table__cell"><span class="moj-badge">medium</span>
+            </td>
+            <td class="govuk-table__cell">Domestic violence</td>
+            <td class="govuk-table__cell">11/06/2019</td>
+          </tr>
+          <!-- <tr class="govuk-table__row">
+            <td class="govuk-table__cell">RoSH</td>
+            <td class="govuk-table__cell"><span class="moj-badge moj-badge--green">low</span></td>
+            <td class="govuk-table__cell"> Children</td>
+            <td class="govuk-table__cell">11/06/2018</td>
+          </tr> -->
+        </tbody>
+      </table>
+    </div>
+
+    <div class="govuk-!-margin-bottom-9">
+      <h2 class="govuk-heading-m">National Standards (NS) summary</h2>
+      <!-- class="govuk-hint govuk-!-display-inline-block govuk-!-margin-0" -->
+      <p>Current order: ORA Suspended Sentence Order (24 months)</p>
+
+      <table class=" govuk-table govuk-!-margin-top-4">
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header" style="width: 30%;">Status</th>
+            <td class="govuk-table__cell app-!-color-red govuk-!-font-weight-bold"> Breached</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Weeks</th>
+            <td class="govuk-table__cell">84</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Next appointment</th>
+            <td class="govuk-table__cell">02/12/2019</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Last appointment</th>
+            <td class="govuk-table__cell">04/11/2019</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Last home visit</th>
+            <td class="govuk-table__cell">None available</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header"> Last OASys assessment</th>
+            <td class="govuk-table__cell">18/11/2018</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Breaches initiated</th>
+            <td class="govuk-table__cell">3</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Failures to comply <span
+                class="govuk-hint govuk-!-display-inline-block govuk-!-margin-0">since
+                27/06/2018</span></th>
+            <td class="govuk-table__cell">20</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Offered</th>
+            <td class="govuk-table__cell"> 110</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Attended OK</th>
+            <td class="govuk-table__cell">19</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Attended failed to comply</th>
+            <td class="govuk-table__cell">0</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Failed to attend <span
+                class="govuk-hint govuk-!-display-inline-block govuk-!-margin-0">(AA)</span></th>
+            <td class="govuk-table__cell">70</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Failed to attend <span
+                class="govuk-hint govuk-!-display-inline-block govuk-!-margin-0">(UA)</span></th>
+            <td class="govuk-table__cell">20</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Hours offered</th>
+            <td class="govuk-table__cell">515:45</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Hours credited</th>
+            <td class="govuk-table__cell">44:15</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="govuk-!-margin-bottom-9">
+      <h2 class="govuk-heading-m">Events (5)</h2>
+      <p class="govuk-heading-s govuk-!-margin-bottom-1"><a class="govuk-link govuk-link--no-visited-state"
+          href="/delius/events/1">ORA Suspended Sentence Order (24 months)</a></p>
+      <table class="govuk-table app-table govuk-!-margin-top-0">
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Common assault and battery - 10501</td>
+            <td class="govuk-table__cell" style="width: 125px;">27/06/2018</td>
+            <td class=" govuk-table__cell govuk-!-font-weight-bold" style="width: 125px;">
+              Breached</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="govuk-heading-s govuk-!-margin-bottom-1"><a class="govuk-link govuk-link--no-visited-state"
+          href="/delius/events/1">CJA Community Order (12 months)</a></p>
+      <table class="govuk-table app-table govuk-!-margin-top-0">
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Assault by beating - CJ88116</td>
+            <td class="govuk-table__cell" style="width: 125px;">18/02/2017</td>
+            <td class=" govuk-table__cell" style="width: 125px;">
+              Terminated</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="govuk-body"><a href="" class="govuk-link govuk-link--no-visited-state">Show more</a></p>
+    </div>
+
+
+    <div class="govuk-!-margin-bottom-9">
+      <h2 class="govuk-heading-m">Offender manager</h2>
+
+
+      <table class=" govuk-table govuk-!-margin-top-4">
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header" style="width: 30%;">Provider</th>
+            <td class="govuk-table__cell">CPA Hampshire and Isle of Wight</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Cluster</th>
+            <td class="govuk-table__cell">CRC SW and SC Cluster</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">LDU and team</th>
+            <td class="govuk-table__cell">West hub <span
+                class="govuk-hint govuk-!-display-inline-block govuk-!-margin-0">(West engagement)</span></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Officer</th>
+            <td class="govuk-table__cell">Francis, Sarah</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Team Telephone</th>
+            <td class="govuk-table__cell">Unknown</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Date allocated</th>
+            <td class="govuk-table__cell"> 27/06/2018</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Reason for allocation</th>
+            <td class="govuk-table__cell">Offender moved</td>
+          </tr>
+        </tbody>
+      </table>
+      <details class="govuk-details govuk-!-margin-bottom-4" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            Personal circumstances
+          </span>
+        </summary>
+        <!-- <div class="govuk-details__text">
+            We need to know your nationality so we can work out which elections you’re entitled to vote in. If you cannot provide your nationality, you’ll have to send copies of identity documents through the post.
+          </div> -->
+      </details>
+      <details class="govuk-details" data-module="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+             Next appointment details
+            </span>
+          </summary>
+          <!-- <div class="govuk-details__text">
+            We need to know your nationality so we can work out which elections you’re entitled to vote in. If you cannot provide your nationality, you’ll have to send copies of identity documents through the post.
+          </div> -->
+        </details>
+
+
+
+
+
+    </div>
+
+    <div class="govuk-!-margin-bottom-9">
+      <h2 class="govuk-heading-m">Offender details</h2>
+
+      <table class=" govuk-table govuk-!-margin-top-4">
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header" style="width: 30%;">Aliases</th>
+            <td class="govuk-table__cell">Yes (5)</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Gender</th>
+            <td class="govuk-table__cell">Male</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">NI Number</th>
+            <td class="govuk-table__cell">JB 12 34 56 B</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Nationality</th>
+            <td class="govuk-table__cell">British</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Ethnicity</th>
+            <td class="govuk-table__cell">Unknown</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Interpreter required</th>
+            <td class="govuk-table__cell">No</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Disability status</th>
+            <td class="govuk-table__cell">No disabilies recorded</td>
+          </tr>
+        </tbody>
+      </table>
+      <details class="govuk-details" data-module="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+             Contact details
+            </span>
+          </summary>
+          <!-- <div class="govuk-details__text">
+            We need to know your nationality so we can work out which elections you’re entitled to vote in. If you cannot provide your nationality, you’ll have to send copies of identity documents through the post.
+          </div> -->
+        </details>
+
+    </div>
+
+
+  </div>
+</div>
+
+{% endblock %}

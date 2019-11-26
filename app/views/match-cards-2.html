@@ -6,7 +6,7 @@ Choose probation record
 {% endblock %}
 
 {% block beforeContent %}
-<a href="add.html" class="govuk-back-link">Back</a>
+<a href="cases.html" class="govuk-back-link">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -23,13 +23,13 @@ Choose probation record
       </h2>
       <div class="card">
         <span class="card__heading">
-          Michael Jones
+          Klara McDonald
         </span>
         <div class="card__attributes">
           <dt>Date of birth:</dt>
-          <dd>02/06/1979</dd>
-          <dt>PNC:</dt>
-          <dd>Not available</dd>
+          <dd>24/08/1992</dd>
+          <dt>PNC: </dt>
+          <dd>A1237890BA</dd>
         </div>
       </div>
       <!-- <p class="govuk-body-l govuk-!-margin-bottom-3">Michael Jones</p>
@@ -47,26 +47,27 @@ Choose probation record
 
       <div class="card">
         <span class="card__heading">
-          <span class="highlight">Michael</span> <span class="highlight">Jones</span> <span
-            class="moj-badge govuk-!-margin-left-1">Current
+          <span class="highlight">Klara</span> <span class="highlight">McDonald</span> <span class="moj-badge govuk-!-margin-left-1">Current
             offender</span>
         </span>
         <div class="card__attributes ">
           <dt>Date of birth:</dt>
-          <dd><span class="highlight">02/06/1979</span></dd>
+          <dd><span class="highlight">24/08/1992</span></dd>
           <dt>PNC:</dt>
-          <dd>A1234560BA</dd>
+          <dd><span class="highlight">A1237890BA</span></dd>
           <dt>CRN:</dt>
-          <dd>DX04994</dd>
-          <dd><a href="match-record.html" class="govuk-link--no-visited-state">View offender summary</a></dd>
+          <dd>EX17528</dd>
+
+          <dd><a href="" class="govuk-link--no-visited-state">View offender summary</a></dd>
         </div>
         <div class="govuk-inset-text govuk-!-margin-bottom-1 govuk-!-margin-top-2">
           <h4 class="govuk-!-margin-bottom-1">Aliases</h3>
-            <ul class="govuk-list" style="list-style:none;">
-              <li>Ollie Morgan</li>
-              <li><span class="highlight">Michael</span> Travers</li>
-              <li>Marcus Thomas</li>
-            </ul>
+          <ul class="govuk-list" style="list-style:none;">
+            <li><span class="highlight">Klara</span> Williams</li>
+            <li>Sara Morgan</li>
+            <li><span class="highlight">Klara</span> Reed</li>
+            <li>Rebecca Munro</li>
+          </ul>
         </div>
         <!-- <details class="govuk-details govuk-!-margin-bottom-0 govuk-!-margin-top-1" data-module="govuk-details">
           <summary class="govuk-details__summary">
@@ -82,7 +83,7 @@ Choose probation record
         <strong class="govuk-tag">Care leaver</strong> -->
         <div class="moj-button-menu">
           <div class="moj-button-menu__wrapper">
-            <a href="details.html" role="button" draggable="false" class="govuk-button moj-button-menu__item"
+            <a href="" role="button" draggable="false" class="govuk-button moj-button-menu__item"
               data-module="govuk-button">
               Confirm match
             </a>
@@ -96,16 +97,16 @@ Choose probation record
 
       <div class="card">
         <span class="card__heading">
-          <span class="highlight">Michael</span> <span class="highlight">Jones</span>
+            <span class="highlight">Klara</span> Reed
         </span>
         <div class="card__attributes">
           <dt>Date of birth:</dt>
-          <dd>06/02/<span class="highlight">1979</span></dd>
+          <dd>06/03/1991</span></dd>
           <dt>PNC:</dt>
-          <dd>Not recorded</dd>
+          <dd><span class="highlight">A1237890BA</span></dd>
           <dt>CRN:</dt>
-          <dd>SG53949</dd>
-          <dd><a href="match-record.html" class="govuk-link--no-visited-state">View offender summary</a></dd>
+          <dd>DZ02952</dd>
+          <dd><a href="" class="govuk-link--no-visited-state">View offender summary</a></dd>
         </div>
         <!-- <details class="govuk-details govuk-!-margin-bottom-0 govuk-!-margin-top-1" data-module="govuk-details">
           <summary class="govuk-details__summary">
@@ -135,17 +136,34 @@ Choose probation record
 
       <div class="card">
         <span class="card__heading">
-          <span class="highlight">Michael</span> Travers
+          Rebecca Munro
         </span>
         <div class="card__attributes govuk-!-margin-bottom-1">
           <dt>Date of birth:</dt>
-          <dd><span class="highlight">02/06/1979</span></dd>
+          <dd>02/06/<span class="highlight">1992</span></dd>
           <dt>PNC:</dt>
-          <dd>A1234562BA</dd>
+          <dd><span class="highlight">A1237890BA</span></dd>
           <dt>CRN:</dt>
-          <dd>VK104567</dd>
-          <dd><a href="match-record.html" class="govuk-link--no-visited-state">View offender summary</a></dd>
+          <dd>SD20884</dd>
+
+          <dd><a href="" class="govuk-link--no-visited-state">View offender summary</a></dd>
         </div>
+        <!-- <details class="govuk-details govuk-!-margin-bottom-0" data-module="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              Aliases
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+            <ul class="govuk-list" style="list-style:none;">
+              <li>Alan Parker</li>
+              <li>Ollie Morgan</li>
+              <li>Solomon Read</li>
+              <li>Benjamin Kelly</li>
+              <li>Marcus Thomas</li>
+            </ul>
+          </div>
+        </details> -->
         <!-- <strong class="govuk-tag">Racist</strong>
             <strong class="govuk-tag">Risk to LGBT</strong>
             <strong class="govuk-tag">Care leaver</strong> -->
@@ -166,9 +184,9 @@ Choose probation record
     </div>
     <div class="">
       <h2 class="govuk-heading-m">Can't find a matching record?</h2>
-      <p class="govuk-body">If the defendant is not known to probation and therefore has no matching record in nDelius;
+      <p class="govuk-body">If the defendant is not known to probation and therefore has no matching probation record;
         you can continue.</p>
-      <p class="govuk-body"><a class="govuk-link govuk-link--no-visited-state" href="/details.html">This is a new
+      <p class="govuk-body"><a class="govuk-link govuk-link--no-visited-state" href="">This is a new
           offender</a></p>
     </div>
 

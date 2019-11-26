@@ -117,7 +117,7 @@ td ul {
 
 @media screen and (min-width: 40.0625em) {
     .custom-delius-record-width {
-      min-width: 150px;
+      min-width: 135px;
     }
     .custom-case-no-width {
       min-width: 75px;
@@ -129,7 +129,7 @@ td ul {
         min-width: 120px;
     }
     .custom-action-width {
-        min-width: 150px;
+        min-width: 125px;
     }
   }
 
@@ -156,12 +156,18 @@ td ul {
 
 
 
+.card .govuk-inset-text {
+    border-left: 5px solid #b1b4b6;
+    padding: 0 15px;
+}
+
+
 // Filter
 @media (min-width: 48.0625em) {
     .moj-filter-layout__filter {
         float: left;
         margin-right: 40px;
-        max-width: 260px;
+        max-width: 250px;
     }
 }
 

@@ -1,0 +1,128 @@
+<section class="app-filter-card" style="max-width: 100%; border: 0;">
+  <p class="govuk-heading-s">Filters</p>
+
+  <div class="app-filter-container">
+    <button type="button" class="app-filter-button" data-controls="probation-record-selection" onclick="openFilter(this)" style="width: 244px;">Probation record</button>
+    <div id="probation-record-selection" class="app-filter-selection govuk-visually-hidden">
+
+      {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
+
+      {{ govukCheckboxes({
+        idPrefix: "record",
+        name: "record",
+        classes: "govuk-checkboxes--small",
+        fieldset: {
+          legend: {
+            text: "Probation record",
+            isPageHeading: false,
+            classes: "govuk-fieldset__legend govuk-visually-hidden"
+          }
+        },
+        items: [
+          {
+            value: "current",
+            text: "Current"
+          },
+          {
+            value: "known",
+            text: "Previously known"
+          },
+          {
+            value: "unknown",
+            text: "Not known"
+          }
+        ]
+      }) }}
+
+    </div>
+  </div>
+
+  <div class="app-filter-container">
+    <button type="button" class="app-filter-button" data-controls="courtroom-selection" onclick="openFilter(this)" style="width: 200px;">Courtroom</button>
+    <div id="courtroom-selection" class="app-filter-selection govuk-visually-hidden">
+
+      {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
+
+      {{ govukCheckboxes({
+        idPrefix: "court",
+        name: "court",
+        classes: "govuk-checkboxes--small",
+        fieldset: {
+            legend: {
+            text: "Courtroom",
+            isPageHeading: false,
+            classes: "govuk-fieldset__legend govuk-visually-hidden"
+          }
+        },
+        items: [
+          {
+            value: "1",
+            text: "1"
+          },
+          {
+            value: "2",
+            text: "2"
+          },
+          {
+            value: "3",
+            text: "3"
+          },
+          {
+            value: "4",
+            text: "4"
+          },
+          {
+            value: "5",
+            text: "5"
+          },
+          {
+            value: "6",
+            text: "6"
+          },
+          {
+            value: "7",
+            text: "7"
+          },
+          {
+            value: "8",
+            text: "8"
+          }
+        ]
+      }) }}
+
+    </div>
+  </div>
+
+  <div class="app-filter-container">
+    <button type="button" class="app-filter-button" data-controls="session-selection" onclick="openFilter(this)" style="width: 250px;">Session</button>
+    <div id="session-selection" class="app-filter-selection govuk-visually-hidden">
+
+      {{ govukCheckboxes({
+        idPrefix: "session",
+        name: "session",
+        classes: "govuk-checkboxes--small",
+        fieldset: {
+          legend: {
+            text: "Session",
+            isPageHeading: false,
+            classes: "govuk-fieldset__legend govuk-visually-hidden"
+          }
+        },
+        items: [
+          {
+            value: "morning",
+            text: "Morning"
+          },
+          {
+            value: "afternoon",
+            text: "Afternoon"
+          }
+        ]
+      }) }}
+
+    </div>
+  </div>
+
+  <button type="button" class="govuk-button app-apply-filters-button" onclick="resetFilterUI()">Apply filters</button>
+
+</section>

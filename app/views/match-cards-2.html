@@ -45,9 +45,100 @@ Choose probation record
       <!-- <p class="govuk-body govuk-!-margin-bottom-3">Confirm if one of the nDelius offender records matches the defendant
         details.</p> -->
 
-      <div class="card">
+      <div class="moj-scrollable-pane">
+        <div class="moj-scrollable-pane__wrapper">
+          <table class="govuk-table match-record-table">
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header" aria-sort="none"></th>
+                <th scope="col" class="govuk-table__header" aria-sort="none">Name</th>
+                <th scope="col" class="govuk-table__header" aria-sort="none">Date of birth</th>
+                <th scope="col" class="govuk-table__header" aria-sort="none">Gender</th>
+                <th scope="col" class="govuk-table__header" aria-sort="none">PNC</th>
+                <th scope="col" class="govuk-table__header" aria-sort="none">Offender summary
+                </th>
+                <th scope="col" class="govuk-table__header" aria-sort="none"></th>
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">
+                  <div class="govuk-radios">
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="yes">
+                      <label class="govuk-label govuk-radios__label" for="changed-name"></label>
+                    </div>
+                  </div>
+                </td>
+                <td class="govuk-table__cell">Klara MCDONALD<span class="moj-badge-wrapper"><span
+                      class="moj-badge">Current
+                      offender</span></span>
+                </td>
+                <td class="govuk-table__cell">24/08/1992</td>
+                <td class="govuk-table__cell">Female</td>
+                <td class="govuk-table__cell">A1237890BA</td>
+                <td class="govuk-table__cell"><a class="govuk-link--no-visited-state" href="">View
+                    summary</a></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">
+                  <div class="govuk-radios">
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="yes">
+                      <label class="govuk-label govuk-radios__label" for="changed-name"></label>
+                    </div>
+                  </div>
+                </td>
+                <td class="govuk-table__cell">Klara Olivia MCDONALD</td>
+                <td class="govuk-table__cell">24/08/1992</td>
+                <td class="govuk-table__cell">Female</td>
+                <td class="govuk-table__cell">A1237890BA</td>
+                <td class="govuk-table__cell"><a class="govuk-link--no-visited-state" href="">View
+                    summary</a></td>
+              </tr>
+              <tr>
+                <td class="govuk-table__cell">
+                  <div class="govuk-radios">
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="yes">
+                      <label class="govuk-label govuk-radios__label" for="changed-name"></label>
+                    </div>
+                  </div>
+                </td>
+                <td class="govuk-table__cell">Klara REED</td>
+                <td class="govuk-table__cell">06/03/1991</td>
+                <td class="govuk-table__cell">Female</td>
+                <td class="govuk-table__cell">A1237890BA</td>
+                <td class="govuk-table__cell"><a class="govuk-link--no-visited-state" href="">View summary</a></td>
+              </tr>
+              <tr>
+                <td class="govuk-table__cell">
+                  <div class="govuk-radios">
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="yes">
+                      <label class="govuk-label govuk-radios__label" for="changed-name"></label>
+                    </div>
+                  </div>
+                </td>
+                <td class="govuk-table__cell">Rebecca MUNRO</td>
+                <td class="govuk-table__cell">02/06/1992</td>
+                <td class="govuk-table__cell">Female</td>
+                <td class="govuk-table__cell">A1237890BA</td>
+                <td class="govuk-table__cell"><a class="govuk-link--no-visited-state" href="">View summary</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+
+
+
+
+      <!-- <div class="card">
         <span class="card__heading">
-          <span class="highlight">Klara</span> <span class="highlight">McDonald</span> <span class="moj-badge govuk-!-margin-left-1">Current
+          <span class="highlight">Klara</span> <span class="highlight">McDonald</span> <span
+            class="moj-badge govuk-!-margin-left-1">Current
             offender</span>
         </span>
         <div class="card__attributes ">
@@ -62,42 +153,26 @@ Choose probation record
         </div>
         <div class="govuk-inset-text govuk-!-margin-bottom-1 govuk-!-margin-top-2">
           <h4 class="govuk-!-margin-bottom-1">Aliases</h3>
-          <ul class="govuk-list" style="list-style:none;">
-            <li><span class="highlight">Klara</span> Williams</li>
-            <li>Sara Morgan</li>
-            <li><span class="highlight">Klara</span> Reed</li>
-            <li>Rebecca Munro</li>
-          </ul>
+            <ul class="govuk-list" style="list-style:none;">
+              <li><span class="highlight">Klara</span> Williams</li>
+              <li>Sara Morgan</li>
+              <li><span class="highlight">Klara</span> Reed</li>
+              <li>Rebecca Munro</li>
+            </ul>
         </div>
-        <!-- <details class="govuk-details govuk-!-margin-bottom-0 govuk-!-margin-top-1" data-module="govuk-details">
-          <summary class="govuk-details__summary">
-            <span class="govuk-details__summary-text">
-              Aliases
-            </span>
-          </summary>
-          <div class="govuk-details__text">
-          </div>
-        </details> -->
-        <!-- <strong class="govuk-tag">Racist</strong>
-        <strong class="govuk-tag">Risk to LGBT</strong>
-        <strong class="govuk-tag">Care leaver</strong> -->
         <div class="moj-button-menu">
           <div class="moj-button-menu__wrapper">
             <a href="cases-2.html" role="button" draggable="false" class="govuk-button moj-button-menu__item"
               data-module="govuk-button">
               Confirm match
             </a>
-            <!-- <a href="#" role="button" draggable="false"
-              class="govuk-button moj-button-menu__item govuk-button--secondary reject-btn" data-module="govuk-button">
-              Reject
-            </a> -->
           </div>
         </div>
       </div>
 
       <div class="card">
         <span class="card__heading">
-            <span class="highlight">Klara</span> Reed
+          <span class="highlight">Klara</span> Reed
         </span>
         <div class="card__attributes">
           <dt>Date of birth:</dt>
@@ -108,28 +183,12 @@ Choose probation record
           <dd>DZ02952</dd>
           <dd><a href="" class="govuk-link--no-visited-state">View offender summary</a></dd>
         </div>
-        <!-- <details class="govuk-details govuk-!-margin-bottom-0 govuk-!-margin-top-1" data-module="govuk-details">
-          <summary class="govuk-details__summary">
-            <span class="govuk-details__summary-text">
-              Aliases
-            </span>
-          </summary>
-          <div class="govuk-details__text">
-          </div>
-        </details> -->
-        <!-- <strong class="govuk-tag">Racist</strong>
-          <strong class="govuk-tag">Risk to LGBT</strong>
-          <strong class="govuk-tag">Care leaver</strong> -->
         <div class="moj-button-menu">
           <div class="moj-button-menu__wrapper">
             <a href="#" role="button" draggable="false" class="govuk-button moj-button-menu__item  "
               data-module="govuk-button">
               Confirm match
             </a>
-            <!-- <a href="#" role="button" draggable="false"
-              class="govuk-button moj-button-menu__item govuk-button--secondary reject-btn" data-module="govuk-button">
-              Reject
-            </a> -->
           </div>
         </div>
       </div>
@@ -148,43 +207,20 @@ Choose probation record
 
           <dd><a href="" class="govuk-link--no-visited-state">View offender summary</a></dd>
         </div>
-        <!-- <details class="govuk-details govuk-!-margin-bottom-0" data-module="govuk-details">
-          <summary class="govuk-details__summary">
-            <span class="govuk-details__summary-text">
-              Aliases
-            </span>
-          </summary>
-          <div class="govuk-details__text">
-            <ul class="govuk-list" style="list-style:none;">
-              <li>Alan Parker</li>
-              <li>Ollie Morgan</li>
-              <li>Solomon Read</li>
-              <li>Benjamin Kelly</li>
-              <li>Marcus Thomas</li>
-            </ul>
-          </div>
-        </details> -->
-        <!-- <strong class="govuk-tag">Racist</strong>
-            <strong class="govuk-tag">Risk to LGBT</strong>
-            <strong class="govuk-tag">Care leaver</strong> -->
         <div class="moj-button-menu">
           <div class="moj-button-menu__wrapper">
             <a href="#" role="button" draggable="false" class="govuk-button moj-button-menu__item  "
               data-module="govuk-button">
               Confirm match
             </a>
-            <!-- <a href="#" role="button" draggable="false"
-              class="govuk-button moj-button-menu__item govuk-button--secondary reject-btn" data-module="govuk-button">
-              Reject
-            </a> -->
           </div>
         </div>
-      </div>
+      </div> -->
 
     </div>
     <div class="">
       <h2 class="govuk-heading-m">Can't find a matching record?</h2>
-      <p class="govuk-body">If the defendant is not known to probation and therefore has no matching probation record;
+      <p class="govuk-body">If the defendant is not known to probation and has no matching probation record;
         you can continue.</p>
       <p class="govuk-body"><a class="govuk-link govuk-link--no-visited-state" href="">This is a new
           offender</a></p>

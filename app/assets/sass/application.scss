@@ -117,19 +117,10 @@ td ul {
 
 @media screen and (min-width: 40.0625em) {
     .custom-delius-record-width {
-      min-width: 135px;
-    }
-    .custom-case-no-width {
-      min-width: 75px;
-    }
-    .custom-termination-width {
-    min-width: 90px;
+      min-width: 180px;
     }
     .custom-defendant-width {
-        min-width: 120px;
-    }
-    .custom-action-width {
-        min-width: 125px;
+        min-width: 160px;
     }
   }
 
@@ -179,6 +170,12 @@ td ul {
     background-color: #fff2d3;
     padding: 2px 0px 0px;
   }
+
+
+// Secondary text colour
+.secondary-text-col {
+    color: $govuk-secondary-text-colour;
+}
 
 
 // Key details bar
@@ -249,7 +246,13 @@ td ul {
     }
 }
 
-
+// Match table
+.match-record-table {
+    max-width: 960px;
+}
+.govuk-table__cell .govuk-radios__label {
+    padding: 0;
+}
 
 
 // Match cards

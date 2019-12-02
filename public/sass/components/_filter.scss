@@ -1,0 +1,28 @@
+.app-filter-card {
+  width: 100%;
+  background-color: govuk-colour("light-grey");
+  padding: 15px;
+  min-height: 85px;
+}
+
+.app-filter-container {
+  display: inline-block;
+  float:left;
+  height: 37px;
+  margin: 0 15px 0 0;
+  min-width: 200px;
+
+  &:after {
+    @include govuk-clearfix;
+  }
+}
+
+.app-filter-selection {
+  position: relative;
+  display: block;
+  background-color: white;
+  border: 1px solid black;
+  padding: 25px 15px 0 15px;
+  top: -1px;
+  border-top-color: white;
+}

@@ -21,7 +21,6 @@ $(document).ready(function () {
       anySelected = anySelected || checkboxesInGroup[i].checked
     }
     anySelected ? button.classList.add('app-filter-button--selected') : button.classList.remove('app-filter-button--selected')
-    addFilters()
   }
 
   var checkboxes = document.getElementsByClassName('govuk-checkboxes__input')
@@ -46,7 +45,7 @@ function clearFilter ($id) {
   checkbox.click()
 }
 
-function addFilters($reset) {
+function applyFilters($reset) {
   var label
   var anySelected = false
   var container = document.querySelector('.app-filters-applied')

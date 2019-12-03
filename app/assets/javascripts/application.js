@@ -30,9 +30,9 @@ $(document).ready(function () {
 
 function checkboxClick (e) {
   e.stopPropagation()
-  var button = document.getElementById(`button-${e.target.name.substring(e.target.name.indexOf('-') + 1)}`)
+  var button = document.getElementById('button-' + e.target.name.substring(e.target.name.indexOf('-') + 1))
   var anySelected = false
-  var checkboxesInGroup = document.querySelectorAll(`[id^="${e.target.name}"]`)
+  var checkboxesInGroup = document.querySelectorAll('[id^="' + e.target.name + '"]')
   for (var i = 0, len = checkboxesInGroup.length; i < len; i++) {
     anySelected = anySelected || checkboxesInGroup[i].checked
   }
@@ -50,15 +50,15 @@ function applyFilters ($reset) {
   var container = document.querySelector('.app-filters-applied')
   container.innerHTML = ''
 
-  var allCheckboxes = document.querySelectorAll(`.govuk-checkboxes__input`)
+  var allCheckboxes = document.querySelectorAll('.govuk-checkboxes__input')
   for (var i = 0, len = allCheckboxes.length; i < len; i++) {
     if ($reset && allCheckboxes[i].checked) {
       clearFilter(allCheckboxes[i].id)
     }
     anySelected = anySelected || allCheckboxes[i].checked
     if (allCheckboxes[i].checked) {
-      label = document.querySelector(`label[for="${allCheckboxes[i].id}"]`)
-      container.innerHTML = container.innerHTML + `<div class="moj-filter__tag app-filter__tag" onclick="clearFilter('${allCheckboxes[i].id}'); applyFilters()">${label.innerText}</div>`
+      label = document.querySelector('label[for="' + allCheckboxes[i].id + '"]')
+      container.innerHTML = container.innerHTML + '<div class="moj-filter__tag app-filter__tag" onclick="clearFilter(\'' + allCheckboxes[i].id + '\'); applyFilters()">' + label.innerText + '</div>'
     }
   }
   var selectedFilters = document.querySelector('.selected-filters')

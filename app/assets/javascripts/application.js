@@ -40,7 +40,6 @@ $(document).ready(function () {
 })
 
 function clearFilter ($id) {
-  console.info('ID:', $id)
   var checkbox = document.getElementById($id)
   checkbox.click()
 }
@@ -59,7 +58,7 @@ function applyFilters($reset) {
     anySelected = anySelected || allCheckboxes[i].checked
     if (allCheckboxes[i].checked) {
       label = document.querySelector(`label[for="${allCheckboxes[i].id}"]`)
-      container.innerHTML = container.innerHTML + `<div class="moj-filter__tag app-filter__tag" onclick="clearFilter('${allCheckboxes[i].id}')">${label.innerText}</div>`
+      container.innerHTML = container.innerHTML + `<div class="moj-filter__tag app-filter__tag" onclick="clearFilter('${allCheckboxes[i].id}'); applyFilters()">${label.innerText}</div>`
     }
   }
   var selectedFilters = document.querySelector('.selected-filters')

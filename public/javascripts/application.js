@@ -7,24 +7,42 @@ if (window.console && window.console.info) {
 
 $(document).ready(function () {
   window.GOVUKFrontend.initAll()
+
+  function checkboxClick (e) {
+    var button = document.getElementById(`button-${e.target.name.substring(e.target.name.indexOf('-') + 1)}`)
+    var anySelected = false
+    var checkboxesInGroup = document.querySelectorAll(`[id^="${e.target.name}"]`)
+    for (var i = 0, len = checkboxesInGroup.length; i < len; i++) {
+      anySelected = anySelected || checkboxesInGroup[i].checked
+    }
+    anySelected ? button.classList.add('app-filter-button--selected') : button.classList.remove('app-filter-button--selected')
+  }
+
+  var checkboxes = document.getElementsByClassName('govuk-checkboxes__input')
+  for (var i = 0, len = checkboxes.length; i < len; i++) {
+    checkboxes[i].addEventListener('click', checkboxClick)
+  }
 })
 
 // Filters functionality
-function resetFilterUI () {
+function toggleFilter ($el) {
+  var current
+  if ($el) {
+    current = !$el.active && $el.dataset['controls']
+  }
+
   var filterButtons = document.getElementsByClassName('app-filter-button')
   var filterSections = document.getElementsByClassName('app-filter-selection')
   for (var i = 0, len = filterButtons.length; i < len; i++) {
-    filterButtons[i].classList.remove('app-filter-button--open')
+    current === filterButtons[i].dataset['controls'] ? filterButtons[i].classList.add('app-filter-button--open') : filterButtons[i].classList.remove('app-filter-button--open')
+    if (!$el || !$el.active) { filterButtons[i].active = false }
   }
   for (var i2 = 0, len2 = filterSections.length; i2 < len2; i2++) {
-    filterSections[i2].classList.add('govuk-visually-hidden')
+    current === filterSections[i2].id ? filterSections[i2].classList.remove('govuk-visually-hidden') : filterSections[i2].classList.add('govuk-visually-hidden')
   }
-}
-
-function openFilter ($el) {
-  resetFilterUI()
-  $el.classList.add('app-filter-button--open')
-  document.getElementById($el.dataset['controls']).classList.remove('govuk-visually-hidden')
+  if ($el) {
+    $el.active = !$el.active
+  }
 }
 
 new MOJFrontend.SearchToggle({
@@ -68,4 +86,6 @@ var y = n.getFullYear()
 var m = n.getMonth()
 var d = n.getDate()
 var x = n.getDay()
-document.getElementById('date').innerHTML = days[x] + ',' + ' ' + ' ' + d + ' ' + months[m] + ' ' + y
+if (document.getElementById('date')) {
+  document.getElementById('date').innerHTML = days[x] + ',' + ' ' + ' ' + d + ' ' + months[m] + ' ' + y
+}

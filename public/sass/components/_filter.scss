@@ -2,7 +2,8 @@
   width: 100%;
   background-color: govuk-colour("light-grey");
   padding: 15px;
-  min-height: 85px;
+  min-height: 115px;
+  box-sizing: border-box;
 }
 
 .app-filter-container {

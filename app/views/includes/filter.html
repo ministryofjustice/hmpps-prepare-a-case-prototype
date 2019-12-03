@@ -2,7 +2,7 @@
   <p class="govuk-heading-s">Filters</p>
 
   <div class="app-filter-container">
-    <button id="button-record" type="button" class="app-filter-button" data-controls="probation-record-selection" onclick="toggleFilter(this)" style="width: 244px;">Probation record</button>
+    <button id="button-record" type="button" class="app-filter-button" data-controls="probation-record-selection" onclick="event.stopPropagation(); toggleFilter(this)" style="width: 244px;">Probation record</button>
     <div id="probation-record-selection" class="app-filter-selection govuk-visually-hidden">
 
       {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
@@ -38,7 +38,7 @@
   </div>
 
   <div class="app-filter-container">
-    <button id="button-courtroom" type="button" class="app-filter-button" data-controls="courtroom-selection" onclick="toggleFilter(this)" style="width: 200px;">Courtroom</button>
+    <button id="button-courtroom" type="button" class="app-filter-button" data-controls="courtroom-selection" onclick="event.stopPropagation(); toggleFilter(this)" style="width: 200px;">Courtroom</button>
     <div id="courtroom-selection" class="app-filter-selection govuk-visually-hidden">
 
       {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
@@ -94,7 +94,7 @@
   </div>
 
   <div class="app-filter-container">
-    <button id="button-session" type="button" class="app-filter-button" data-controls="session-selection" onclick="toggleFilter(this)" style="width: 250px;">Session</button>
+    <button id="button-session" type="button" class="app-filter-button" data-controls="session-selection" onclick="event.stopPropagation(); toggleFilter(this)" style="width: 250px;">Session</button>
     <div id="session-selection" class="app-filter-selection govuk-visually-hidden">
 
       {{ govukCheckboxes({
@@ -123,6 +123,6 @@
     </div>
   </div>
 
-  <button type="button" class="govuk-button app-apply-filters-button" onclick="toggleFilter()">Apply filters</button>
+  <button type="button" class="govuk-button app-apply-filters-button">Apply filters</button>
 
 </section>

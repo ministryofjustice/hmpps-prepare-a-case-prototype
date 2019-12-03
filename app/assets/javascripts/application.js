@@ -8,7 +8,12 @@ if (window.console && window.console.info) {
 $(document).ready(function () {
   window.GOVUKFrontend.initAll()
 
+  $(window).click(function () {
+    toggleFilter()
+  })
+
   function checkboxClick (e) {
+    e.stopPropagation()
     var button = document.getElementById(`button-${e.target.name.substring(e.target.name.indexOf('-') + 1)}`)
     var anySelected = false
     var checkboxesInGroup = document.querySelectorAll(`[id^="${e.target.name}"]`)
@@ -21,6 +26,16 @@ $(document).ready(function () {
   var checkboxes = document.getElementsByClassName('govuk-checkboxes__input')
   for (var i = 0, len = checkboxes.length; i < len; i++) {
     checkboxes[i].addEventListener('click', checkboxClick)
+  }
+
+  var labelElems = document.getElementsByTagName('LABEL')
+  for (var j = 0, len2 = labelElems.length; j < len2; j++) {
+    labelElems[j].addEventListener('click', function (e) { e.stopPropagation()})
+  }
+
+  var filterSections = document.getElementsByClassName('app-filter-selection')
+  for (var k = 0, len3 = labelElems.length; k < len3; k++) {
+    filterSections[k].addEventListener('click', function (e) { e.stopPropagation()})
   }
 })
 

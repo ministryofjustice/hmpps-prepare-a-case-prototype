@@ -21,6 +21,7 @@ $(document).ready(function () {
       anySelected = anySelected || checkboxesInGroup[i].checked
     }
     anySelected ? button.classList.add('app-filter-button--selected') : button.classList.remove('app-filter-button--selected')
+    addFilters()
   }
 
   var checkboxes = document.getElementsByClassName('govuk-checkboxes__input')
@@ -38,6 +39,33 @@ $(document).ready(function () {
     filterSections[k].addEventListener('click', function (e) { e.stopPropagation()})
   }
 })
+
+function clearFilter ($id) {
+  console.info('ID:', $id)
+  var checkbox = document.getElementById($id)
+  checkbox.click()
+}
+
+function addFilters($reset) {
+  var label
+  var anySelected = false
+  var container = document.querySelector('.app-filters-applied')
+  container.innerHTML = ''
+
+  var allCheckboxes = document.querySelectorAll(`.govuk-checkboxes__input`)
+  for (var i = 0, len = allCheckboxes.length; i < len; i++) {
+    if ($reset && allCheckboxes[i].checked) {
+      clearFilter(allCheckboxes[i].id)
+    }
+    anySelected = anySelected || allCheckboxes[i].checked
+    if (allCheckboxes[i].checked) {
+      label = document.querySelector(`label[for="${allCheckboxes[i].id}"]`)
+      container.innerHTML = container.innerHTML + `<div class="moj-filter__tag app-filter__tag" onclick="clearFilter('${allCheckboxes[i].id}')">${label.innerText}</div>`
+    }
+  }
+  var selectedFilters = document.querySelector('.selected-filters')
+  anySelected ? selectedFilters.classList.remove('govuk-visually-hidden') : selectedFilters.classList.add('govuk-visually-hidden')
+}
 
 // Filters functionality
 function toggleFilter ($el) {

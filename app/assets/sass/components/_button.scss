@@ -35,8 +35,5 @@
 .app-apply-filters-button {
   padding: 5px 25px;
   float: left;
-
-  &:after {
-    @include govuk-clearfix;
-  }
+  @include govuk-clearfix();
 }

@@ -12,12 +12,8 @@
   height: 37px;
   margin: 0 15px 0 0;
   min-width: 200px;
-
-  &:after {
-    @include govuk-clearfix;
-  }
+  @include govuk-clearfix();
 }
-
 .app-filter-selection {
   position: relative;
   display: block;
@@ -26,4 +22,31 @@
   padding: 25px 15px 0 15px;
   top: -1px;
   border-top: 0;
+  z-index: 9999;
+}
+
+.selected-filters {
+  height: 155px;
+}
+
+.app-filter-tags {
+  display: block;
+}
+
+.app-filter__tag {
+  position: relative;
+  float: left;
+  margin: 0 15px 0 0;
+  padding-right: 25px;
+  @include govuk-clearfix();
+  z-index: 1;
+
+  &:after {
+    position: absolute;
+    background-image: none;
+    height: auto;
+    content: "x";
+    top: 5px;
+    right: 5px
+  }
 }

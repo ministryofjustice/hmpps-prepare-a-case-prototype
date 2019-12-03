@@ -1,0 +1,109 @@
+{% extends "layout.html" %}
+
+
+{% block pageTitle %}
+Dashboard
+{% endblock %}
+
+{% block beforeContent %}
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <h1 class="govuk-heading-l govuk-!-margin-bottom-7">Birmingham Magistrates' Court</h1>
+    <h2 class="govuk-heading-m">Tuesday 3 December 2019</h2>
+    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+  </div>
+</div>
+<div class="govuk-grid-row govuk-!-margin-bottom-7">
+
+    <div class="govuk-grid-column-one-quarter">
+        <h3 class="govuk-heading-s"><a class="govuk-link--no-visited-state" href="match-overview.html">Defendants with multiple possible
+            records</a></h3>
+        <div class="card card-red">
+          <span class="card__heading">3</span>
+        </div>
+        <p>More than one Probation record exists for these defendants. The correct record must be manually confirmed. </p>
+      </div>
+    
+      <div class="govuk-grid-column-one-quarter">
+        <h3 class="govuk-heading-s"><a class="govuk-link--no-visited-state" href="">Request Offender
+            Manager updates </a></h3>
+        <div class="card card-blue">
+          <span class="card__heading">1</span>
+        </div>
+        <p>New cases where an Offender Manager update has not yet been requested. </p>
+      </div>
+    
+      <div class="govuk-grid-column-one-quarter">
+        <h3 class="govuk-heading-s"><a class="govuk-link--no-visited-state" href="">Offender Manager update outstanding</a>
+        </h3>
+        <div class="card card-blue">
+          <span class="card__heading">4</span>
+        </div>
+        <p>Cases waiting for an Offender Manager update.</p>
+      </div>
+    
+      <div class="govuk-grid-column-one-quarter">
+        <h3 class="govuk-heading-s"><a class="govuk-link--no-visited-state" href="">Offender Manager update received</a>
+        </h3>
+        <div class="card card-green">
+          <span class="card__heading">7</span>
+        </div>
+        <p>Cases where an Offender Manager update has been received. </p>
+      </div>
+
+</div>
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <h2 class="govuk-heading-m">Wednesday 4 December 2019</h2>
+    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+  </div>
+</div>
+
+<div class="govuk-grid-row govuk-!-margin-bottom-7">
+
+    <div class="govuk-grid-column-one-quarter">
+      <h3 class="govuk-heading-s"><a class="govuk-link--no-visited-state" href="">Defendants with multiple possible
+          records</a></h3>
+      <div class="card card-red">
+        <span class="card__heading">2</span>
+      </div>
+      <p>More than one Probation record exists for these defendants. The correct record must be manually confirmed. </p>
+    </div>
+  
+    <div class="govuk-grid-column-one-quarter">
+      <h3 class="govuk-heading-s"><a class="govuk-link--no-visited-state" href="">Request Offender
+          Manager updates </a></h3>
+      <div class="card card-blue">
+        <span class="card__heading">19</span>
+      </div>
+      <p>New cases where an Offender Manager update has not yet been requested. </p>
+    </div>
+  
+    <div class="govuk-grid-column-one-quarter">
+      <h3 class="govuk-heading-s"><a class="govuk-link--no-visited-state" href="">Offender Manager update outstanding</a>
+      </h3>
+      <div class="card card-blue">
+        <span class="card__heading">0</span>
+      </div>
+      <p>Cases waiting for an Offender Manager update.</p>
+    </div>
+  
+    <div class="govuk-grid-column-one-quarter">
+      <h3 class="govuk-heading-s"><a class="govuk-link--no-visited-state" href="">Offender Manager update received</a>
+      </h3>
+      <div class="card card-green">
+        <span class="card__heading">0</span>
+      </div>
+      <p>Cases where an Offender Manager update has been received. </p>
+    </div>
+  
+  </div>
+
+{% endblock %}

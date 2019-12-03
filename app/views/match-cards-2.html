@@ -6,7 +6,7 @@ Choose probation record
 {% endblock %}
 
 {% block beforeContent %}
-<a href="cases.html" class="govuk-back-link">Back</a>
+<a href="match-overview.html" class="govuk-back-link">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -14,14 +14,14 @@ Choose probation record
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
 
-    <h1 class="govuk-heading-xl">
+    <h1 class="govuk-heading-l">
       Choose probation record
     </h1>
-    <p class="govuk-body-l">Select the probation record that matches the defendant's details.</p>
+    <p class="govuk-body-l">Select and confirm the probation record that matches the defendant's details.</p>
     <div class="govuk-!-margin-bottom-9">
-      <h2 class="govuk-heading-m">Defendant's details:</h2>
+      <h2 class="govuk-heading-m">Defendant's details</h2>
       </h2>
-      <div class="card">
+      <!-- <div class="card">
         <span class="card__heading">
           Klara McDonald
         </span>
@@ -31,9 +31,43 @@ Choose probation record
           <dt>PNC: </dt>
           <dd>A1237890BA</dd>
         </div>
+      </div> -->
+
+      <div class="moj-scrollable-pane">
+        <div class="moj-scrollable-pane__wrapper">
+          <table class="govuk-table match-record-table">
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header match-table-radio2" aria-sort="none"></th>
+                <th scope="col" class="govuk-table__header match-table-name" aria-sort="none">Name</th>
+                <th scope="col" class="govuk-table__header match-table-dob" aria-sort="none">Date of birth</th>
+                <th scope="col" class="govuk-table__header match-table-gender" aria-sort="none">Gender</th>
+                <th scope="col" class="govuk-table__header match-table-pnc" aria-sort="none">PNC</th>
+                <th scope="col" class="govuk-table__header match-table-summary" aria-sort="none">
+                </th>
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">
+                  <div style="display: none;" class="govuk-radios">
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="yes">
+                      <label class="govuk-label govuk-radios__label" for="changed-name"></label>
+                    </div>
+                  </div>
+                </td>
+                <td class="govuk-table__cell">Klara McDonald
+                </td>
+                <td class="govuk-table__cell">24/08/1992</td>
+                <td class="govuk-table__cell">Female</td>
+                <td class="govuk-table__cell">A1237890BA</td>
+                <td class="govuk-table__cell"><a class="govuk-link--no-visited-state" href=""></a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
-
-
 
 
       <!-- <p class="govuk-body-l govuk-!-margin-bottom-3">Michael Jones</p>
@@ -45,7 +79,7 @@ Choose probation record
     </div>
 
     <div class="govuk-!-margin-bottom-9">
-      <h2 class="govuk-heading-m">4 probation records found:</h2>
+      <h2 class="govuk-heading-m">4 probation records found</h2>
       <!-- <p class="govuk-body govuk-!-margin-bottom-3">Confirm if one of the nDelius offender records matches the defendant
         details.</p> -->
 
@@ -54,12 +88,12 @@ Choose probation record
           <table class="govuk-table match-record-table">
             <thead class="govuk-table__head">
               <tr class="govuk-table__row">
-                <th scope="col" class="govuk-table__header match-radio" aria-sort="none"></th>
-                <th scope="col" class="govuk-table__header" aria-sort="none">Name</th>
-                <th scope="col" class="govuk-table__header" aria-sort="none">Date of birth</th>
-                <th scope="col" class="govuk-table__header" aria-sort="none">Gender</th>
-                <th scope="col" class="govuk-table__header" aria-sort="none">PNC</th>
-                <th scope="col" class="govuk-table__header" aria-sort="none">Offender summary
+                <th scope="col" class="govuk-table__header match-table-radio" aria-sort="none"></th>
+                <th scope="col" class="govuk-table__header match-table-name" aria-sort="none">Name</th>
+                <th scope="col" class="govuk-table__header match-table-dob" aria-sort="none">Date of birth</th>
+                <th scope="col" class="govuk-table__header match-table-gender" aria-sort="none">Gender</th>
+                <th scope="col" class="govuk-table__header match-table-pnc" aria-sort="none">PNC</th>
+                <th scope="col" class="govuk-table__header match-table-summary" aria-sort="none">Offender summary
                 </th>
               </tr>
             </thead>
@@ -73,13 +107,13 @@ Choose probation record
                     </div>
                   </div>
                 </td>
-                <td class="govuk-table__cell">Klara MCDONALD<span class="moj-badge-wrapper"><span
+                <td class="govuk-table__cell"><span class="highlight">Klara</span> <span class="highlight">MCDONALD</span><span class="moj-badge-wrapper govuk-!-margin-top-1"><span
                       class="moj-badge">Current
                       offender</span></span>
                 </td>
-                <td class="govuk-table__cell">24/08/1992</td>
-                <td class="govuk-table__cell">Female</td>
-                <td class="govuk-table__cell">A1237890BA</td>
+                <td class="govuk-table__cell"><span class="highlight">24/08/1992</span></td>
+                <td class="govuk-table__cell"><span class="highlight">Female</span></td>
+                <td class="govuk-table__cell"><span class="highlight">A1237890BA</td>
                 <td class="govuk-table__cell"><a class="govuk-link--no-visited-state" href="">View
                     summary</a></td>
               </tr>
@@ -92,10 +126,10 @@ Choose probation record
                     </div>
                   </div>
                 </td>
-                <td class="govuk-table__cell">Klara Olivia MCDONALD</td>
-                <td class="govuk-table__cell">24/08/1992</td>
-                <td class="govuk-table__cell">Female</td>
-                <td class="govuk-table__cell">A1237890BA</td>
+                <td class="govuk-table__cell"><span class="highlight">Klara</span> Olivia <span class="highlight">MCDONALD</span></td>
+                <td class="govuk-table__cell"><span class="highlight">24/08/1992</span></td>
+                <td class="govuk-table__cell"><span class="highlight">Female</span></td>
+                <td class="govuk-table__cell"><span class="highlight">A1237890BA</span></td>
                 <td class="govuk-table__cell"><a class="govuk-link--no-visited-state" href="">View
                     summary</a></td>
               </tr>
@@ -108,10 +142,10 @@ Choose probation record
                     </div>
                   </div>
                 </td>
-                <td class="govuk-table__cell">Klara REED</td>
+                <td class="govuk-table__cell"><span class="highlight">Klara</span> REED</td>
                 <td class="govuk-table__cell">06/03/1991</td>
-                <td class="govuk-table__cell">Female</td>
-                <td class="govuk-table__cell">A1237890BA</td>
+                <td class="govuk-table__cell"><span class="highlight">Female</span></td>
+                <td class="govuk-table__cell"><span class="highlight">A1237890BA</span></td>
                 <td class="govuk-table__cell"><a class="govuk-link--no-visited-state" href="">View summary</a></td>
               </tr>
               <tr>
@@ -124,9 +158,9 @@ Choose probation record
                   </div>
                 </td>
                 <td class="govuk-table__cell">Rebecca MUNRO</td>
-                <td class="govuk-table__cell">02/06/1992</td>
-                <td class="govuk-table__cell">Female</td>
-                <td class="govuk-table__cell">A1237890BA</td>
+                <td class="govuk-table__cell">02/06/<span class="highlight">1992</span></td>
+                <td class="govuk-table__cell"><span class="highlight">Female</span></td>
+                <td class="govuk-table__cell"><span class="highlight">A1237890BA</span></td>
                 <td class="govuk-table__cell"><a class="govuk-link--no-visited-state" href="">View summary</a></td>
               </tr>
             </tbody>
@@ -138,7 +172,7 @@ Choose probation record
         <div class="moj-button-menu__wrapper">
           <a href="#" role="button" draggable="false" class="govuk-button moj-button-menu__item  "
             data-module="govuk-button">
-            Confirm selection
+            Match with this record
           </a>
         </div>
       </div>
@@ -234,7 +268,7 @@ Choose probation record
 
     <div class="">
       <h2 class="govuk-heading-m">Can't find a matching record?</h2>
-      <p class="govuk-body">If the defendant is not known to probation and has no matching probation record;
+      <p class="govuk-body">If the defendant is not known to probation and has no matching record;
         please confirm this is a new offender.</p>
       <p class="govuk-body"><a class="govuk-link govuk-link--no-visited-state" href="">This is a new
           offender</a></p>

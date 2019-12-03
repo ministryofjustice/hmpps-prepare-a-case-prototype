@@ -12,17 +12,6 @@ $(document).ready(function () {
     toggleFilter()
   })
 
-  function checkboxClick (e) {
-    e.stopPropagation()
-    var button = document.getElementById(`button-${e.target.name.substring(e.target.name.indexOf('-') + 1)}`)
-    var anySelected = false
-    var checkboxesInGroup = document.querySelectorAll(`[id^="${e.target.name}"]`)
-    for (var i = 0, len = checkboxesInGroup.length; i < len; i++) {
-      anySelected = anySelected || checkboxesInGroup[i].checked
-    }
-    anySelected ? button.classList.add('app-filter-button--selected') : button.classList.remove('app-filter-button--selected')
-  }
-
   var checkboxes = document.getElementsByClassName('govuk-checkboxes__input')
   for (var i = 0, len = checkboxes.length; i < len; i++) {
     checkboxes[i].addEventListener('click', checkboxClick)
@@ -39,12 +28,23 @@ $(document).ready(function () {
   }
 })
 
+function checkboxClick (e) {
+  e.stopPropagation()
+  var button = document.getElementById(`button-${e.target.name.substring(e.target.name.indexOf('-') + 1)}`)
+  var anySelected = false
+  var checkboxesInGroup = document.querySelectorAll(`[id^="${e.target.name}"]`)
+  for (var i = 0, len = checkboxesInGroup.length; i < len; i++) {
+    anySelected = anySelected || checkboxesInGroup[i].checked
+  }
+  anySelected ? button.classList.add('app-filter-button--selected') : button.classList.remove('app-filter-button--selected')
+}
+
 function clearFilter ($id) {
   var checkbox = document.getElementById($id)
   checkbox.click()
 }
 
-function applyFilters($reset) {
+function applyFilters ($reset) {
   var label
   var anySelected = false
   var container = document.querySelector('.app-filters-applied')
@@ -76,7 +76,9 @@ function toggleFilter ($el) {
   var filterSections = document.getElementsByClassName('app-filter-selection')
   for (var i = 0, len = filterButtons.length; i < len; i++) {
     current === filterButtons[i].dataset['controls'] ? filterButtons[i].classList.add('app-filter-button--open') : filterButtons[i].classList.remove('app-filter-button--open')
-    if (!$el || !$el.active) { filterButtons[i].active = false }
+    if (!$el || !$el.active) {
+      filterButtons[i].active = false
+    }
   }
   for (var i2 = 0, len2 = filterSections.length; i2 < len2; i2++) {
     current === filterSections[i2].id ? filterSections[i2].classList.remove('govuk-visually-hidden') : filterSections[i2].classList.add('govuk-visually-hidden')

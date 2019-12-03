@@ -7,24 +7,83 @@ if (window.console && window.console.info) {
 
 $(document).ready(function () {
   window.GOVUKFrontend.initAll()
+
+  $(window).click(function () {
+    toggleFilter()
+  })
+
+  function checkboxClick (e) {
+    e.stopPropagation()
+    var button = document.getElementById(`button-${e.target.name.substring(e.target.name.indexOf('-') + 1)}`)
+    var anySelected = false
+    var checkboxesInGroup = document.querySelectorAll(`[id^="${e.target.name}"]`)
+    for (var i = 0, len = checkboxesInGroup.length; i < len; i++) {
+      anySelected = anySelected || checkboxesInGroup[i].checked
+    }
+    anySelected ? button.classList.add('app-filter-button--selected') : button.classList.remove('app-filter-button--selected')
+  }
+
+  var checkboxes = document.getElementsByClassName('govuk-checkboxes__input')
+  for (var i = 0, len = checkboxes.length; i < len; i++) {
+    checkboxes[i].addEventListener('click', checkboxClick)
+  }
+
+  var labelElems = document.getElementsByTagName('LABEL')
+  for (var j = 0, len2 = labelElems.length; j < len2; j++) {
+    labelElems[j].addEventListener('click', function (e) { e.stopPropagation()})
+  }
+
+  var filterSections = document.getElementsByClassName('app-filter-selection')
+  for (var k = 0, len3 = labelElems.length; k < len3; k++) {
+    filterSections[k].addEventListener('click', function (e) { e.stopPropagation()})
+  }
 })
 
+function clearFilter ($id) {
+  var checkbox = document.getElementById($id)
+  checkbox.click()
+}
+
+function applyFilters($reset) {
+  var label
+  var anySelected = false
+  var container = document.querySelector('.app-filters-applied')
+  container.innerHTML = ''
+
+  var allCheckboxes = document.querySelectorAll(`.govuk-checkboxes__input`)
+  for (var i = 0, len = allCheckboxes.length; i < len; i++) {
+    if ($reset && allCheckboxes[i].checked) {
+      clearFilter(allCheckboxes[i].id)
+    }
+    anySelected = anySelected || allCheckboxes[i].checked
+    if (allCheckboxes[i].checked) {
+      label = document.querySelector(`label[for="${allCheckboxes[i].id}"]`)
+      container.innerHTML = container.innerHTML + `<div class="moj-filter__tag app-filter__tag" onclick="clearFilter('${allCheckboxes[i].id}'); applyFilters()">${label.innerText}</div>`
+    }
+  }
+  var selectedFilters = document.querySelector('.selected-filters')
+  anySelected ? selectedFilters.classList.remove('govuk-visually-hidden') : selectedFilters.classList.add('govuk-visually-hidden')
+}
+
 // Filters functionality
-function resetFilterUI () {
+function toggleFilter ($el) {
+  var current
+  if ($el) {
+    current = !$el.active && $el.dataset['controls']
+  }
+
   var filterButtons = document.getElementsByClassName('app-filter-button')
   var filterSections = document.getElementsByClassName('app-filter-selection')
   for (var i = 0, len = filterButtons.length; i < len; i++) {
-    filterButtons[i].classList.remove('app-filter-button--open')
+    current === filterButtons[i].dataset['controls'] ? filterButtons[i].classList.add('app-filter-button--open') : filterButtons[i].classList.remove('app-filter-button--open')
+    if (!$el || !$el.active) { filterButtons[i].active = false }
   }
   for (var i2 = 0, len2 = filterSections.length; i2 < len2; i2++) {
-    filterSections[i2].classList.add('govuk-visually-hidden')
+    current === filterSections[i2].id ? filterSections[i2].classList.remove('govuk-visually-hidden') : filterSections[i2].classList.add('govuk-visually-hidden')
   }
-}
-
-function openFilter ($el) {
-  resetFilterUI()
-  $el.classList.add('app-filter-button--open')
-  document.getElementById($el.dataset['controls']).classList.remove('govuk-visually-hidden')
+  if ($el) {
+    $el.active = !$el.active
+  }
 }
 
 new MOJFrontend.SearchToggle({
@@ -68,4 +127,6 @@ var y = n.getFullYear()
 var m = n.getMonth()
 var d = n.getDate()
 var x = n.getDay()
-document.getElementById('date').innerHTML = days[x] + ',' + ' ' + ' ' + d + ' ' + months[m] + ' ' + y
+if (document.getElementById('date')) {
+  document.getElementById('date').innerHTML = days[x] + ',' + ' ' + ' ' + d + ' ' + months[m] + ' ' + y
+}

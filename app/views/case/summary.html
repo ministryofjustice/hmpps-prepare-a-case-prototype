@@ -30,13 +30,13 @@ Summary
 
 
 {% block beforeContent %}
-<!-- <a href="cases.html" class="govuk-back-link">Back</a> -->
+<a href="/cases" class="govuk-back-link">Back</a>
 {% endblock %}
 
 
 {% block content %}
 
-<div class="govuk-grid-row">
+<!-- <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
 
     <nav class="moj-sub-navigation" aria-label="Sub navigation">
@@ -67,10 +67,9 @@ Summary
       
       </nav> 
     </div>
-  </div>
+  </div> -->
 
 
-  <main class="govuk-main-wrapper">
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
@@ -81,7 +80,7 @@ Summary
     <div class="govuk-!-margin-bottom-9">
       
       <h2 class="govuk-heading-m">Offences</h2>
-      <hr>
+      
 
       <h3 class="govuk-heading-s govuk-!-margin-top-4">Common assault and battery</h3>
       <p class="govuk-!-margin-bottom-2">On Sunday 29th December 2019 at Grey Lane, S10 1AG, assaulted Sarah Smith by beating her.</p>
@@ -94,7 +93,7 @@ Summary
     <div class="govuk-!-margin-bottom-9">
       <h2 class="govuk-heading-m">Active registers and warnings <span class="secondary-text-col">(3)</span></h2>
     </h2>
-    <hr>
+    
 
     <table class="govuk-table app-table app-table--split-rows">
       <thead class="govuk-table__head">
@@ -127,7 +126,36 @@ Summary
         </tr>
       </tbody>
     </table>
-<p><a href="#">View all registers and warnings</a></p>
+
+    <details class="govuk-details" data-module="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+         Inactive registers and warnings (1)
+        </span>
+      </summary>
+      <table class="govuk-table app-table app-table--split-rows">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header" aria-sort="none" style="width: 220px;">Type</th>
+            <th scope="col" class="govuk-table__header" aria-sort="none" style="width: 130px;">Status</th>
+            <th scope="col" class="govuk-table__header" aria-sort="none">Description</th>
+            <th scope="col" class="govuk-table__header" aria-sort="none" style="width: 130px;">Registration date</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Public protection</td>
+            <td class="govuk-table__cell">
+              <!-- <span class="moj-badge">medium</span> -->
+            </td>
+            <td class="govuk-table__cell">MAPPA Considered</td>
+            <td class="govuk-table__cell">04/06/2012</td>
+          </tr>
+        </tbody>
+      </table>
+    </details>
+
+<!-- <p><a href="#">View all registers and warnings</a></p> -->
 
     </div>
 
@@ -160,14 +188,14 @@ Summary
 
     <div class="govuk-!-margin-bottom-9">
       <h2 class="govuk-heading-m">Active events <span class="secondary-text-col">(1)</span></h2>
-      <hr>
-      <p class="govuk-heading-s govuk-!-margin-bottom-1 govuk-!-margin-top-4"><a class="govuk-link govuk-link--no-visited-state" href="/delius/events/1">ORA Community Order (18 Months)</a></p>
+      <p class="govuk-heading-s govuk-!-margin-bottom-1 govuk-!-margin-top-4"><a class="govuk-link govuk-link--no-visited-state" href="/case/history">ORA Community Order (18 Months)</a></p>
       <table class="govuk-table app-table govuk-!-margin-top-0">
         <tbody class="govuk-table__body">
           <tr class="govuk-table__row">
             <td class="govuk-table__cell">Common assault and battery - 10501</td>
-            <td class="govuk-table__cell">Commenced: 05/09/2019</td>
+            <td class="govuk-table__cell" style="text-align: right;">Commenced: 05/09/2019</td>
           </tr>
+          
         </tbody>
       </table>
       <!-- <p class="govuk-body"><a href="/case/events.html" class="govuk-link govuk-link--no-visited-state">View all events</a></p> -->
@@ -178,17 +206,16 @@ Summary
 
     <div class="govuk-!-margin-bottom-9">
       <h2 class="govuk-heading-m">Inactive events <span class="secondary-text-col">(3)</span></h2>
-      <hr>
-      <p class="govuk-heading-s govuk-!-margin-bottom-1 govuk-!-margin-top-4"><a class="govuk-link govuk-link--no-visited-state" href="/delius/events/1">CJA - Community Order (12 Months)</a></p>
+      <p class="govuk-heading-s govuk-!-margin-bottom-1 govuk-!-margin-top-4">CJA - Community Order (12 Months)</p>
       <table class="govuk-table app-table govuk-!-margin-top-0">
         <tbody class="govuk-table__body">
           <tr class="govuk-table__row">
             <td class="govuk-table__cell">Common assault and battery - 10501</td>
-            <td class="govuk-table__cell">Terminated: 01/02/2013</td>
+            <td class="govuk-table__cell" style="text-align: right;">Terminated: 01/02/2013</td>
           </tr>
         </tbody>
       </table>
-      <p class="govuk-body"><a href="/case/events.html" class="govuk-link govuk-link--no-visited-state">View all inactive events</a></p>
+      <p class="govuk-body"><a href="/case/history" class="govuk-link govuk-link--no-visited-state">View all inactive events</a></p>
     </div>
 
 
@@ -205,10 +232,17 @@ Summary
     <p class="govuk-body">Appearing in Court Room 1 on Wednesday 8 January, Morning session. </p>
     <h2 class="govuk-heading-m">Crown Prosecution Service pack</h2>
     <p class="govuk-body"><a href="#">Court Store</a></p>
+    <h2 class="govuk-heading-m">Offender Manager</h2>
+    <p class="govuk-body govuk-!-margin-bottom-0">John Doe</p>
+    <p class="secondary-text-col">Allocated on 03/07/2019</p>
+    <p>CRC - NHC OM, CPA BeNCH</p>
   </div>
+
+
+
 
 </div>
 </div>
-</main>
+
 
 {% endblock %}

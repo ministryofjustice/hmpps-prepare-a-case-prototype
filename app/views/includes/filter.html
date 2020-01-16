@@ -2,7 +2,7 @@
   <p class="govuk-heading-s">Filters</p>
 
   <div class="app-filter-container">
-    <button id="button-record" type="button" class="app-filter-button" data-controls="probation-record-selection" onclick="event.stopPropagation(); toggleFilter(this)" style="width: 244px;">Probation record</button>
+    <button id="button-record" type="button" class="app-filter-button" data-controls="probation-record-selection" onclick="event.stopPropagation(); toggleFilter(this)" style="width: 244px;">Probation status</button>
     <div id="probation-record-selection" class="app-filter-selection govuk-visually-hidden">
 
       {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
@@ -29,7 +29,7 @@
           },
           {
             value: "unknown",
-            text: "Not known"
+            text: "No record"
           }
         ]
       }) }}

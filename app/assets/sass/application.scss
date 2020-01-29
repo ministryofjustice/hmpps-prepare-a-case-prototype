@@ -85,6 +85,7 @@ $govuk-assets-path: '/govuk/assets/';
 .govuk-phase-banner__content,
 .govuk-select,
 .govuk-table__caption,
+.govuk-summary-list,
 .govuk-table {
     max-width: 727px;
 }
@@ -130,9 +131,9 @@ td ul {
 
 
 // Tag modifiers 
-.moj-tag--grey, .moj-tag--green {
-    border: none;
-}
+// .moj-tag--grey, .moj-tag--green {
+//     border: none;
+// }
 .moj-tag--small--nowrap {
     white-space: nowrap;
     font-size: 0.875rem;

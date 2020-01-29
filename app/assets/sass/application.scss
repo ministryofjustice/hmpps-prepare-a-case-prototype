@@ -16,6 +16,7 @@ $govuk-assets-path: '/govuk/assets/';
 @import "components/button";
 @import "components/cookie-banner";
 @import "components/filter";
+@import "components/timeline";
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
 
@@ -83,11 +84,13 @@ $govuk-assets-path: '/govuk/assets/';
 .govuk-warning-text__text,
 .govuk-phase-banner__content,
 .govuk-select,
-.govuk-table__caption {
+.govuk-table__caption,
+.govuk-table {
     max-width: 727px;
 }
-
-
+.govuk-table-xl {
+    max-width: none;
+}
 
 // Caselist timestamp
 .case-list-timestamp {

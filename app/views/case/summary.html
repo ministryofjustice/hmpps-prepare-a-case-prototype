@@ -18,7 +18,8 @@ Summary
       <span class="key-details-bar__status govuk-!-margin-right-2">Medium Risk of Serious Harm</span>
     </div>
     <div class="key-details-bar__bottom-block">
-      <span class="govuk-body govuk-!-margin-right-6">Date of birth: 27/09/1984</span> <span class="govuk-body govuk-!-margin-right-6">CRN: DX12340A</span><span class="govuk-body">PNC: A1234560BA</span>
+      <span class="govuk-body govuk-!-margin-right-6">Date of birth: 27/09/1984</span> <span
+        class="govuk-body govuk-!-margin-right-6">CRN: DX12340A</span><span class="govuk-body">PNC: A1234560BA</span>
       <p class="govuk-body govuk-!-margin-0 app-!-float-right">
         <!-- <a class="govuk-link govuk-link--no-visited-state govuk-link--text-colour" href="/cases/details/9168463">View
             case details</a> -->
@@ -30,193 +31,67 @@ Summary
 
 
 {% block beforeContent %}
-<a href="/cases" class="govuk-back-link">Back</a>
+<!-- <a href="/cases" class="govuk-back-link">Back</a> -->
 {% endblock %}
 
 
 {% block content %}
 
-<!-- <div class="govuk-grid-row">
+<div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
 
     <nav class="moj-sub-navigation" aria-label="Sub navigation">
 
       <ul class="moj-sub-navigation__list">
-      <li class="moj-sub-navigation__item">
-        <a class="moj-sub-navigation__link" aria-current="page" href="/case/summary.html">Summary</a>
-      </li>
-      
-      <li class="moj-sub-navigation__item">
-        <a class="moj-sub-navigation__link" href="/case/risk.html">Risk registers</a>
-      </li>
-      
-      <li class="moj-sub-navigation__item">
-        <a class="moj-sub-navigation__link" href="/case/events.html">Events</a>
-      </li>
-
-      <li class="moj-sub-navigation__item">
-        <a class="moj-sub-navigation__link" href="/case/offendermanager.html">Offender Manager</a>
-      </li>
-
-      <li class="moj-sub-navigation__item">
-        <a class="moj-sub-navigation__link" href="/case/offenderdetails.html">Offender Details</a>
-      </li>
-
-
+        <li class="moj-sub-navigation__item">
+          <a class="moj-sub-navigation__link" aria-current="page" href="/case/summary.html">Case details</a>
+        </li>
+        <li class="moj-sub-navigation__item">
+          <a class="moj-sub-navigation__link" href="/case/person.html">Person</a>
+        </li>
+        <li class="moj-sub-navigation__item">
+          <a class="moj-sub-navigation__link" href="/case/probationrecord.html">Probation record</a>
+        </li>
+        <li class="moj-sub-navigation__item">
+          <a class="moj-sub-navigation__link" href="/case/risk.html">Risk registers</a>
+        </li>
       </ul>
-      
-      </nav> 
-    </div>
-  </div> -->
+      </ul>
+
+    </nav>
+  </div>
+</div>
 
 
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
 
-    <h1 class="govuk-heading-xl govuk-!-margin-bottom-8">
-      Summary
-    </h1>
-
+    <!-- <h1 class="govuk-heading-xl govuk-!-margin-bottom-8">
+      Case details
+    </h1> -->
     <div class="govuk-!-margin-bottom-9">
-      
+      <h2 class="govuk-heading-m">Appearance</h2>
+      <p class="govuk-body">Court Room 1 on Wednesday 8 January, morning session. </p>
+    </div>
+    <div class="govuk-!-margin-bottom-9">
+
       <h2 class="govuk-heading-m">Offences</h2>
-      
+
 
       <h3 class="govuk-heading-s govuk-!-margin-top-4">Common assault and battery</h3>
-      <p class="govuk-!-margin-bottom-2">On Sunday 29th December 2019 at Grey Lane, S10 1AG, assaulted Sarah Smith by beating her.</p>
-      <p class="secondary-text-col">Contrary to section 39 of the Criminal Justice Act 1988.</p>
+      <p class="govuk-body govuk-!-margin-bottom-2">On Sunday 29th December 2019 at Grey Lane, S10 1AG, assaulted Sarah Smith by
+        beating her.</p>
+      <p class="govuk-body secondary-text-col">Contrary to section 39 of the Criminal Justice Act 1988.</p>
     </div>
 
 
 
 
-    <div class="govuk-!-margin-bottom-9">
-      <h2 class="govuk-heading-m">Active registers and warnings <span class="secondary-text-col">(3)</span></h2>
-    </h2>
-    
-
-    <table class="govuk-table app-table app-table--split-rows">
-      <thead class="govuk-table__head">
-        <tr class="govuk-table__row">
-          <th scope="col" class="govuk-table__header" aria-sort="none" style="width: 220px;">Type</th>
-          <th scope="col" class="govuk-table__header" aria-sort="none" style="width: 130px;">Status</th>
-          <th scope="col" class="govuk-table__header" aria-sort="none">Description</th>
-          <th scope="col" class="govuk-table__header" aria-sort="none" style="width: 130px;">Registration date</th>
-        </tr>
-      </thead>
-      <tbody class="govuk-table__body">
-        <tr class="govuk-table__row">
-          <td class="govuk-table__cell">Alerts</td>
-          <td class="govuk-table__cell"><span class="moj-badge">medium</span>
-          </td>
-          <td class="govuk-table__cell">Mental health issues</td>
-          <td class="govuk-table__cell">04/07/2011</td>
-        </tr>
-        <tr class="govuk-table__row">
-          <td class="govuk-table__cell">Public protection</td>
-          <td class="govuk-table__cell"><span class="moj-badge moj-badge--red">high</span></td>
-          <td class="govuk-table__cell"> Domestic Abuse Perpetrator</td>
-          <td class="govuk-table__cell">04/07/2011</td>
-        </tr>
-        <tr class="govuk-table__row">
-          <td class="govuk-table__cell">RoSH</td>
-          <td class="govuk-table__cell"><span class="moj-badge">medium</span></td>
-          <td class="govuk-table__cell"> Medium RoSH</td>
-          <td class="govuk-table__cell">09/09/2019</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <details class="govuk-details" data-module="govuk-details">
-      <summary class="govuk-details__summary">
-        <span class="govuk-details__summary-text">
-         Inactive registers and warnings (1)
-        </span>
-      </summary>
-      <table class="govuk-table app-table app-table--split-rows">
-        <thead class="govuk-table__head">
-          <tr class="govuk-table__row">
-            <th scope="col" class="govuk-table__header" aria-sort="none" style="width: 220px;">Type</th>
-            <th scope="col" class="govuk-table__header" aria-sort="none" style="width: 130px;">Status</th>
-            <th scope="col" class="govuk-table__header" aria-sort="none">Description</th>
-            <th scope="col" class="govuk-table__header" aria-sort="none" style="width: 130px;">Registration date</th>
-          </tr>
-        </thead>
-        <tbody class="govuk-table__body">
-          <tr class="govuk-table__row">
-            <td class="govuk-table__cell">Public protection</td>
-            <td class="govuk-table__cell">
-              <!-- <span class="moj-badge">medium</span> -->
-            </td>
-            <td class="govuk-table__cell">MAPPA Considered</td>
-            <td class="govuk-table__cell">04/06/2012</td>
-          </tr>
-        </tbody>
-      </table>
-    </details>
-
-<!-- <p><a href="#">View all registers and warnings</a></p> -->
-
-    </div>
-
-
-    <!-- <div class="govuk-!-margin-bottom-9">
-      
-      <h2 class="govuk-heading-m">Active events <span class="secondary-text-col">(1)</h2>
-        <hr>
-
-        <h3 class="govuk-heading-s govuk-!-margin-top-4">ORA Community Order (18 Months)</h3>
-        <p class="govuk-!-margin-bottom-2">Common assault and battery - 10501</p>
-        <p class="secondary-text-col">Commenced: 05/09/2019</p>
-
-        <h4 class="govuk-heading-s govuk-!-margin-bottom-2">Requirements <span class="secondary-text-col">(3)</span></h4>
-        <ul class="govuk-list">
-          <li>
-            Rehabilitation Activity Requirement (RAR) - Rehabilitation Activity Requirement (RAR)
-          </li>
-          <li>
-            Unpaid Work - Regular
-          </li>
-          <li>
-            Court - Accredited Programme - Building Better Relationships (BBR)
-          </li>
-        </ul>
-
-    </div> -->
 
 
 
-    <div class="govuk-!-margin-bottom-9">
-      <h2 class="govuk-heading-m">Active events <span class="secondary-text-col">(1)</span></h2>
-      <p class="govuk-heading-s govuk-!-margin-bottom-1 govuk-!-margin-top-4"><a class="govuk-link govuk-link--no-visited-state" href="/case/history">ORA Community Order (18 Months)</a></p>
-      <table class="govuk-table app-table govuk-!-margin-top-0">
-        <tbody class="govuk-table__body">
-          <tr class="govuk-table__row">
-            <td class="govuk-table__cell">Common assault and battery - 10501</td>
-            <td class="govuk-table__cell" style="text-align: right;">Commenced: 05/09/2019</td>
-          </tr>
-          
-        </tbody>
-      </table>
-      <!-- <p class="govuk-body"><a href="/case/events.html" class="govuk-link govuk-link--no-visited-state">View all events</a></p> -->
-    </div>
 
 
-  
-
-    <div class="govuk-!-margin-bottom-9">
-      <h2 class="govuk-heading-m">Inactive events <span class="secondary-text-col">(3)</span></h2>
-      <p class="govuk-heading-s govuk-!-margin-bottom-1 govuk-!-margin-top-4">CJA - Community Order (12 Months)</p>
-      <table class="govuk-table app-table govuk-!-margin-top-0">
-        <tbody class="govuk-table__body">
-          <tr class="govuk-table__row">
-            <td class="govuk-table__cell">Common assault and battery - 10501</td>
-            <td class="govuk-table__cell" style="text-align: right;">Terminated: 01/02/2013</td>
-          </tr>
-        </tbody>
-      </table>
-      <p class="govuk-body"><a href="/case/history" class="govuk-link govuk-link--no-visited-state">View all inactive events</a></p>
-    </div>
 
 
 
@@ -228,14 +103,9 @@ Summary
 
   </div>
   <div class="govuk-grid-column-one-third">
-    <h2 class="govuk-heading-m">Appearance</h2>
-    <p class="govuk-body">Court Room 1 on Wednesday 8 January, morning session. </p>
-    <h2 class="govuk-heading-m">CPS pack</h2>
-    <p class="govuk-body"><a href="#">Court Store</a></p>
-    <h2 class="govuk-heading-m">Offender Manager</h2>
-    <p class="govuk-body govuk-!-margin-bottom-0">John Doe</p>
-    <p class="secondary-text-col">Allocated on 03/07/2019</p>
-    <p>CRC - NHC OM, CPA BeNCH</p>
+
+    <h2 class="govuk-heading-s">CPS pack</h2>
+    <p class="govuk-body"><a href="#">View CPS Pack (opens in Court Store)</a></p>
   </div>
 
 

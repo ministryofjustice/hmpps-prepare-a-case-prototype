@@ -1,0 +1,466 @@
+{% extends "layout.html" %}
+
+
+{% block pageTitle %}
+Person
+{% endblock %}
+
+{% block bodyStart %}
+<section class="key-details-bar" aria-label="Key details">
+  <div class="key-details-bar__key-details">
+    <div class="key-details-bar__top-block">
+      <span class="govuk-visually-hidden">Name:</span>
+      <span class="key-details-bar__name">Dylan Adam ARMSTRONG</span>
+      <span class="key-details-bar__nino"></span>
+      <span class="govuk-visually-hidden">Status from nDelius:</span>
+      <span class="key-details-bar__status">Current offender</span>
+      <!-- <span class="govuk-visually-hidden">Status from nDelius:</span>
+      <span class="key-details-bar__status govuk-!-margin-right-2">Medium Risk of Serious Harm</span> -->
+    </div>
+    <div class="key-details-bar__bottom-block">
+      <span class="govuk-body govuk-!-margin-right-6">Date of birth: 27/09/1984</span> <span
+        class="govuk-body govuk-!-margin-right-6">CRN: DX12340A</span><span class="govuk-body">PNC: A1234560BA</span>
+      <p class="govuk-body govuk-!-margin-0 app-!-float-right">
+
+      </p>
+    </div>
+  </div>
+</section>
+{% endblock %}
+
+
+{% block beforeContent %}
+<a href="/case/probationrecord.html" class="govuk-back-link">Back to probation record</a>
+{% endblock %}
+
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l govuk-!-margin-bottom-7">
+      <!-- <span class="govuk-caption-l">Order performance</span> -->
+      ORA Community Order (18 Months)
+    </h1>
+    <div class="govuk-!-margin-bottom-9">
+      <p class="govuk-body">Common assault and battery - 10501</p>
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-third">
+          <p class="govuk-body govuk-!-margin-bottom-0 secondary-text-col">Started on</p>
+          <p class="govuk-body-l govuk-!-margin-bottom-0"><strong>05 Sept 2019</strong></p>
+        </div>
+        <div class="govuk-grid-column-one-third">
+          <p class="govuk-body govuk-!-margin-bottom-0 secondary-text-col">Ends</p>
+          <p class="govuk-body-l govuk-!-margin-bottom-0"><strong>04 March 2021</strong></p>
+        </div>
+        <div class="govuk-grid-column-one-third">
+          <p class="govuk-body govuk-!-margin-bottom-0 secondary-text-col">Time remaining</p>
+          <p class="govuk-body-l govuk-!-margin-bottom-0"><strong>12 months, 20 days</strong></p>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="govuk-!-margin-bottom-9">
+      <h3 class="govuk-heading-m">Requirements</h3>
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Requirement</th>
+            <th scope="col" class="govuk-table__header">Length</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Rehabilitation Activity Requirement (RAR) </td>
+            <td class="govuk-table__cell">20 days </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Court - Accredited Programme - Building Better Relationships (BBR)</td>
+            <td class="govuk-table__cell">-</td>
+
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Unpaid Work - Regular</td>
+            <td class="govuk-table__cell">40 Hours</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="govuk-!-margin-bottom-9">
+      <h3 class="govuk-heading-m">Overall attendance</h3>
+      <!-- <p class="secondary-text-col">Includes requirement and planned visit appointments up untill today.</p> -->
+      <p class="secondary-text-col">Includes all attendable appointments to date.</p>
+      <dl class="govuk-summary-list">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">Last attendance</dt>
+          <dd class="govuk-summary-list__value">22 Jan 2020 - IAPS Attendance
+            (NS)</dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">Appointments offered</dt>
+          <dd class="govuk-summary-list__value">37 </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">Appointments attended</dt>
+          <dd class="govuk-summary-list__value">23</dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">Acceptable absences </dt>
+          <dd class="govuk-summary-list__value">12</dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">Unacceptable absences </dt>
+          <dd class="govuk-summary-list__value">0</dd>
+        </div>
+      </dl>
+      <!-- <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-quarter govuk-!-margin-bottom-4">
+          <p class="govuk-body-l govuk-!-margin-bottom-0 govuk-!-font-size-36"><strong>37</strong></p>
+          <p class="govuk-body govuk-!-margin-bottom-0"> Appointments offered</p>
+        </div>
+        <div class="govuk-grid-column-one-quarter">
+          <p class="govuk-body-l govuk-!-margin-bottom-0 govuk-!-font-size-36"><strong>23</strong></p>
+          <p class="govuk-body govuk-!-margin-bottom-0">Appointments attended</p>
+        </div>
+        <div class="govuk-grid-column-one-quarter">
+          <p class="govuk-body-l govuk-!-margin-bottom-0 govuk-!-font-size-36"><strong>12</strong></p>
+          <p class="govuk-body govuk-!-margin-bottom-0">Acceptable absences</p>
+        </div>
+        <div class="govuk-grid-column-one-quarter">
+          <p class="govuk-body-l govuk-!-margin-bottom-0 govuk-!-font-size-36"><strong>0</strong></p>
+          <p class="govuk-body govuk-!-margin-bottom-0">Unacceptable absences</p>
+        </div>
+      </div>
+      <p class="govuk-body">Last attendance&ensp;<span class=""><strong>22 Jan 2020 - IAPS Attendance
+        (NS)</strong></span></p> -->
+    </div>
+
+
+
+
+    <div class="govuk-!-margin-bottom-9">
+      <h3 class="govuk-heading-m ">Unpaid work - regular</h3>
+      <dl class="govuk-summary-list">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">Status</dt>
+          <dd class="govuk-summary-list__value">Terminated - 19 Oct 2019 </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">Hours ordered</dt>
+          <dd class="govuk-summary-list__value">40 </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">Hours worked</dt>
+          <dd class="govuk-summary-list__value">40</dd>
+        </div>
+      </dl>
+      <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            View UPW attendance
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          <dl class="govuk-summary-list">
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">Appointments offered</dt>
+              <dd class="govuk-summary-list__value">9 </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">Appointments attended</dt>
+              <dd class="govuk-summary-list__value">6</dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">Acceptable absences </dt>
+              <dd class="govuk-summary-list__value">3</dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">Unacceptable absences </dt>
+              <dd class="govuk-summary-list__value">0</dd>
+            </div>
+          </dl>
+        </div>
+      </details>
+    </div>
+
+    <div class="govuk-!-margin-bottom-9">
+      <h3 class="govuk-heading-m">Recent contacts</h3>
+      <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
+        <div class="govuk-accordion__section ">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+              <span class="govuk-accordion__section-button govuk-!-font-size-19" id="accordion-default-heading-1">
+                IAPS Attendance (NS)
+              </span>
+            </h2>
+          </div>
+          <div id="accordion-default-content-1" class="govuk-accordion__section-content"
+            aria-labelledby="accordion-default-heading-1">
+            <dl class="govuk-summary-list">
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">Relates to </dt>
+                <dd class="govuk-summary-list__value">4 - Court - Accredited Programme (Building Better Relationships
+                  (BBR)
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">Date</dt>
+                <dd class="govuk-summary-list__value">05 Feb 2020 17:00</dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">Outcome</dt>
+                <dd class="govuk-summary-list__value">- </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">Officer </dt>
+                <dd class="govuk-summary-list__value">Staff, IAPS Staff(C13) </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">Notes</dt>
+                <dd class="govuk-summary-list__value">
+                  <p>Programme: Catchup session Foundation Module 6</p>
+                  <p>Scheduled</p>
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+        <div class="govuk-accordion__section ">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+              <span class="govuk-accordion__section-button govuk-!-font-size-19" id="accordion-default-heading-2">
+                Letter/Fax to Offender
+              </span>
+            </h2>
+          </div>
+          <div id="accordion-default-content-2" class="govuk-accordion__section-content"
+            aria-labelledby="accordion-default-heading-2">
+            <dl class="govuk-summary-list">
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">Relates to </dt>
+                <dd class="govuk-summary-list__value">4 - Court - Accredited Programme (Building Better Relationships
+                  (BBR)
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">Date</dt>
+                <dd class="govuk-summary-list__value">31 Jan 2020 13:22 </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">Outcome</dt>
+                <dd class="govuk-summary-list__value">- </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">Officer </dt>
+                <dd class="govuk-summary-list__value">Susan Jones </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">Notes</dt>
+                <dd class="govuk-summary-list__value">
+                  <p>Instruction to attend [City] Office on 12th February 2020 at 6.30pm for next BBR Programme.</p>
+                  <p>Alert flag cleared using an automated process on 31-JAN-2020 15:43:29 by John Doe</p>
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+        <div class="govuk-accordion__section ">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+              <span class="govuk-accordion__section-button govuk-!-font-size-19" id="accordion-default-heading-3">
+                IAPS Attendance (NS)
+              </span>
+            </h2>
+          </div>
+          <div id="accordion-default-content-3" class="govuk-accordion__section-content"
+            aria-labelledby="accordion-default-heading-3">
+            <dl class="govuk-summary-list">
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">Relates to </dt>
+                <dd class="govuk-summary-list__value">4 - Court - Accredited Programme (Building Better Relationships
+                  (BBR)
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">Date</dt>
+                <dd class="govuk-summary-list__value">29 Jan 2020 18:30 </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">Outcome</dt>
+                <dd class="govuk-summary-list__value">Acceptable Absence-Professional Judgement Decision </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">Officer </dt>
+                <dd class="govuk-summary-list__value">Staff, IAPS Staff(C13) </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">Notes</dt>
+                <dd class="govuk-summary-list__value">
+                  <p>Programme: Main session Foundation Module 6</p>
+                  <p>Unacceptable Absence</p>
+                  <p>FTA. no contact made but RO said he missed bus. Catch up and 121 on 5th Feb at 4pm-</p>
+                  <p>Updated by: user: 2020/01/31 - 13:07:03 GMT</p>
+                  <p>31/01/2020 13:04</p>
+                  <p>Enforcement Action: Refer to Offender Manager</p>
+                  <p>bus was late</p>
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+        <div class="govuk-accordion__section ">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+              <span class="govuk-accordion__section-button govuk-!-font-size-19" id="accordion-default-heading-4">
+                IAPS Attendance (NS)
+              </span>
+            </h2>
+          </div>
+          <div id="accordion-default-content-4" class="govuk-accordion__section-content"
+            aria-labelledby="accordion-default-heading-4">
+            <dl class="govuk-summary-list">
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">Relates to </dt>
+                <dd class="govuk-summary-list__value">4 - Court - Accredited Programme (Building Better Relationships
+                  (BBR)
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">Date</dt>
+                <dd class="govuk-summary-list__value">22 Jan 2020 18:30 </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">Outcome</dt>
+                <dd class="govuk-summary-list__value">Attended - Complied </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">Officer </dt>
+                <dd class="govuk-summary-list__value">Staff, IAPS Staff(C13) </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">Notes</dt>
+                <dd class="govuk-summary-list__value">
+                  <p>Programme: Main session Foundation Module 5</p>
+                  <p>Scheduled</p>
+                  <p>Programme: Main session Foundation Module 5 Eng: Und: </p>
+                  <p>Attended</p>
+                  <p>Attended</p>
+                  <p>Check in-No changes. Said he just works and nothing else but storing skills to use </p>
+                  <p>Assignment-Star chart additions-Said he told lies, minimising and purposely spending time away from
+                    the
+                    family.</p>
+                  <p>Views of men and women-Gave the example of `women should be rescued first. He was very ridged in
+                    his
+                    thinking and told the group that anyone who does not believe this was a bad person. This was
+                    challenged
+                    by another group member and he stuck to his opinion and would not listen to challenge. He then
+                    becomes
+                    very frustrated with the process and annoyed. He is focussing too much on the example and not the
+                    process of challenge.</p>
+                  <p>Identity map-Started map and fed back to group he was a provider and a brother and dad. Said that
+                    these
+                    roles have trust and love. Said that trust is a big part of all relationships and without it the
+                    relationship would not exist.</p>
+                  <p>Assignment- add to identity map another identity.</p>
+                  <p>Check out-Said that he found the identity map interesting, as he had never thought about things
+                    like this
+                    before.</p>
+                  <p>Tutor comments-Generally contributed but gets frustrated with the material if he does not
+                    understand it.
+                    This make him jump forward before the full explanation is given. Tutors will monitor this as he
+                    needs to
+                    be calmer and patient.</p>
+                  <p>Updated by: [user]: 2020/01/23 - 10:55:32 GMT</p>
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+        <div class="govuk-accordion__section ">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+              <span class="govuk-accordion__section-button govuk-!-font-size-19" id="accordion-default-heading-4">
+                IAPS Attendance (NS)
+              </span>
+            </h2>
+          </div>
+          <div id="accordion-default-content-4" class="govuk-accordion__section-content"
+            aria-labelledby="accordion-default-heading-4">
+            <dl class="govuk-summary-list">
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">Relates to </dt>
+                <dd class="govuk-summary-list__value">4 - Court - Accredited Programme (Building Better Relationships
+                  (BBR)
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">Date</dt>
+                <dd class="govuk-summary-list__value">15 Jan 2020 18:30 </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">Outcome</dt>
+                <dd class="govuk-summary-list__value">Attended - Complied</dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">Officer </dt>
+                <dd class="govuk-summary-list__value">Staff, IAPS Staff(C13) </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">Notes</dt>
+                <dd class="govuk-summary-list__value">
+                  <p>Programme: Main session Foundation Module 4</p>
+                  <p>Scheduled</p>
+                  <p>Programme: Main session Foundation Module 4 Eng: Und:</p>
+                  <p>Attended</p>
+                  <p>Attended-</p>
+                  <p>Check in-No changes</p>
+                  <p>Assignment- Not done as had catch up. Will read here and now booklet for next week.</p>
+                  <p>Filters-Ricky story- Recognised that the man in the example said it was not a big deal which he
+                    recognised
+                    as minimising.</p>
+                  <p>My Filters-Said that he minimised to his partner the amount of cannabis he was smoking to avoid and
+                    argument. Said the is doing it differently now by not smoking at all rather than being dishonest and
+                    filtering.</p>
+                  <p>DVD and star charts- Said that he did not care about his partner and only cared about himself and
+                    felt
+                    that
+                    he neglected his kids some times. Justified this by saying that he had paid the bills and the money
+                    left
+                    over was his to gamble.</p>
+                  <p>Check out-Said that he learnt today what manipulation is and how he did it in his relationship.
+                    Assignment- to think of another unhealthy relationship behaviour to put on start chart.</p>
+                  <p>Tutor comments- He tries very hard on group. At the moment he refers back to his gambling all the
+                    time .
+                    However he is making progress but gets frustrated if he does not understand and embarrassed to ask
+                    the
+                    tutor
+                    for clarity as he said he feels stupid. Tutors to monitor and offer support.</p>
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </div>
+      <p class="govuk-body"><a href="#">View full contact list (opens in nDelius)</a></p>
+
+    </div>
+
+
+
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+  </div>
+
+
+
+</div>
+
+
+
+
+{% endblock %}

@@ -6,26 +6,9 @@ Person
 {% endblock %}
 
 {% block bodyStart %}
-<section class="key-details-bar" aria-label="Key details">
-  <div class="key-details-bar__key-details">
-    <div class="key-details-bar__top-block">
-      <span class="govuk-visually-hidden">Name:</span>
-      <span class="key-details-bar__name">Dylan Adam ARMSTRONG</span>
-      <span class="key-details-bar__nino"></span>
-      <span class="govuk-visually-hidden">Status from nDelius:</span>
-      <span class="key-details-bar__status">Current offender</span>
-      <!-- <span class="govuk-visually-hidden">Status from nDelius:</span>
-      <span class="key-details-bar__status govuk-!-margin-right-2">Medium Risk of Serious Harm</span> -->
-    </div>
-    <div class="key-details-bar__bottom-block">
-      <span class="govuk-body govuk-!-margin-right-6">Date of birth: 27/09/1984</span> <span
-        class="govuk-body govuk-!-margin-right-6">CRN: DX12340A</span><span class="govuk-body">PNC: A1234560BA</span>
-      <p class="govuk-body govuk-!-margin-0 app-!-float-right">
-
-      </p>
-    </div>
-  </div>
-</section>
+{% block keyDetails %}
+{% include "includes/key_details/1_Armstrong.html" %}
+{% endblock %}
 {% endblock %}
 
 
@@ -43,16 +26,16 @@ Person
 
       <ul class="moj-sub-navigation__list">
         <li class="moj-sub-navigation__item">
-          <a class="moj-sub-navigation__link" href="/case/summary.html">Case details</a>
+          <a class="moj-sub-navigation__link" href="/cases/1/summary.html">Case details</a>
         </li>
         <li class="moj-sub-navigation__item">
-          <a class="moj-sub-navigation__link" aria-current="page" href="/case/person.html">Personal details</a>
+          <a class="moj-sub-navigation__link" aria-current="page" href="/cases/1/person.html">Personal details</a>
         </li>
         <li class="moj-sub-navigation__item">
-          <a class="moj-sub-navigation__link" href="/case/probationrecord.html">Probation record</a>
+          <a class="moj-sub-navigation__link" href="/cases/1/probationrecord.html">Probation record</a>
         </li>
         <li class="moj-sub-navigation__item">
-          <a class="moj-sub-navigation__link" href="/case/risk.html">Risk registers</a>
+          <a class="moj-sub-navigation__link" href="/cases/1/risk.html">Risk register</a>
         </li>
       </ul>
       </ul>
@@ -69,15 +52,15 @@ Person
       Case details
     </h1> -->
     <div class="govuk-!-margin-bottom-9">
-      <h2 class="govuk-heading-m">
-        Personal details from charge
+      <h2 class="govuk-heading-l govuk-!-margin-bottom-7">
+        Personal details from Police
       </h2>
       <table class=" govuk-table govuk-!-margin-top-4">
         <tbody class="govuk-table__body">
-          <tr class="govuk-table__row">
+          <!-- <tr class="govuk-table__row">
             <th scope="row" class="govuk-table__header" style="width: 30%;">PNC</th>
             <td class="govuk-table__cell">A1234560BA </td>
-          </tr>          
+          </tr>           -->
           <tr class="govuk-table__row">
             <th scope="row" class="govuk-table__header" style="width: 30%;">Name</th>
             <td class="govuk-table__cell">Dylan Adam Armstrong </td>
@@ -103,7 +86,7 @@ Person
     </div>
 
 
-    <div class="govuk-!-margin-bottom-9">
+    <!-- <div class="govuk-!-margin-bottom-9">
       <h2 class="govuk-heading-m">
         Personal details from Probation Service
       </h2>
@@ -160,7 +143,7 @@ Person
           </tr>
         </tbody>
       </table>
-    </div>
+    </div> -->
 
 
 

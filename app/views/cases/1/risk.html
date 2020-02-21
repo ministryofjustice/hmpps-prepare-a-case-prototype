@@ -6,25 +6,9 @@ Risk registers
 {% endblock %}
 
 {% block bodyStart %}
-<section class="key-details-bar" aria-label="Key details">
-  <div class="key-details-bar__key-details">
-    <div class="key-details-bar__top-block">
-      <span class="govuk-visually-hidden">Name:</span>
-      <span class="key-details-bar__name">Dylan Adam ARMSTRONG</span>
-      <span class="key-details-bar__nino"></span>
-      <span class="govuk-visually-hidden">Status from nDelius:</span>
-      <span class="key-details-bar__status">Current offender</span>
-    </div>
-    <div class="key-details-bar__bottom-block">
-      <span class="govuk-body govuk-!-margin-right-6">Date of birth: 27/09/1984</span> <span
-        class="govuk-body govuk-!-margin-right-6">CRN: DX12340A</span><span class="govuk-body">PNC: A1234560BA</span>
-      <p class="govuk-body govuk-!-margin-0 app-!-float-right">
-        <!-- <a class="govuk-link govuk-link--no-visited-state govuk-link--text-colour" href="/cases/details/9168463">View
-            case details</a> -->
-      </p>
-    </div>
-  </div>
-</section>
+{% block keyDetails %}
+{% include "includes/key_details/1_Armstrong.html" %}
+{% endblock %}
 {% endblock %}
 
 
@@ -41,17 +25,17 @@ Risk registers
 
       <ul class="moj-sub-navigation__list">
         <li class="moj-sub-navigation__item">
-          <a class="moj-sub-navigation__link" href="/case/summary.html">Case details</a>
+          <a class="moj-sub-navigation__link" href="/cases/1/summary.html">Case details</a>
         </li>
         <li class="moj-sub-navigation__item">
-          <a class="moj-sub-navigation__link" href="/case/person.html">Personal details</a>
+          <a class="moj-sub-navigation__link" href="/cases/1/person.html">Personal details</a>
         </li>
         <li class="moj-sub-navigation__item">
-          <a class="moj-sub-navigation__link" href="/case/probationrecord.html">Probation
+          <a class="moj-sub-navigation__link" href="/cases/1/probationrecord.html">Probation
             record</a>
         </li>
         <li class="moj-sub-navigation__item">
-          <a class="moj-sub-navigation__link" aria-current="page" href="/case/risk.html">Risk registers</a>
+          <a class="moj-sub-navigation__link" aria-current="page" href="/cases/1/risk.html">Risk register</a>
         </li>
       </ul>
 
@@ -62,9 +46,9 @@ Risk registers
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
     <div class="govuk-!-margin-bottom-9">
-      <h2 class="govuk-heading-m govuk-!-margin-bottom-5">
-        Risk registers
-      </h2>
+      <h1 class="govuk-heading-l govuk-!-margin-bottom-7">
+        Risk register
+      </h1>
       <div class="govuk-tabs" data-module="govuk-tabs">
         <h2 class="govuk-tabs__title">
           Contents
@@ -82,13 +66,13 @@ Risk registers
           </li>
         </ul>
         <section class="govuk-tabs__panel" id="active">
-          <!-- <h2 class="govuk-heading-l">Past day</h2> -->
+          <h2 class="govuk-heading-m">Active registrations</h2>
           <table class="govuk-table govuk-table-xl">
             <thead class="govuk-table__head">
               <tr class="govuk-table__row">
                 <!-- <th scope="col" class="govuk-table__header">Type</th> -->
                 <th scope="col" class="govuk-table__header">Type</th>
-                <th scope="col" class="govuk-table__header">Status</th>
+                <!-- <th scope="col" class="govuk-table__header">Status</th> -->
                 <th scope="col" class="govuk-table__header">Registration date</th>
                 <th scope="col" class="govuk-table__header">Next review</th>
                 <th scope="col" class="govuk-table__header">Notes</th>
@@ -97,40 +81,40 @@ Risk registers
             <tbody class="govuk-table__body">
               <tr class="govuk-table__row">
                 <!-- <td class="govuk-table__cell">Safeguarding</td> -->
-                <td class="govuk-table__cell">Suicide/Self Harm</td>
-                <td class="govuk-table__cell"><span class="moj-badge moj-badge--red">high</span></td>
+                <th scope="row" class="govuk-table__header">Suicide/Self Harm</th>
+                <!-- <td class="govuk-table__cell"><span class="moj-badge moj-badge--red">high</span></td> -->
                 <td class="govuk-table__cell">13 Oct 2019</td>
                 <td class="govuk-table__cell">13 April 2020</td>
                 <td class="govuk-table__cell">Previous suicide /self harm attempt. Needs further investigating.</td>
               </tr>
               <tr class="govuk-table__row">
-                <!-- <td class="govuk-table__cell">Public protection</td> -->
-                <td class="govuk-table__cell">Domestic Abuse Perpetrator</td>
-                <td class="govuk-table__cell"><span class="moj-badge moj-badge--red">high</span></td>
-                <td class="govuk-table__cell">04 July 2011</td>
-                <td class="govuk-table__cell">26 Dec 2019</td>
-                <td class="govuk-table__cell"></td>
-              </tr>
-              <tr class="govuk-table__row">
                 <!-- <td class="govuk-table__cell">Safeguarding</td> -->
-                <td class="govuk-table__cell">Child concerns</td>
-                <td class="govuk-table__cell"><span class="moj-badge">medium</span></td>
+                <th scope="row" class="govuk-table__header">Child concerns</th>
+                <!-- <td class="govuk-table__cell"><span class="moj-badge">medium</span></td> -->
                 <td class="govuk-table__cell">13 Oct 2019</td>
                 <td class="govuk-table__cell">13 Jan 2020</td>
                 <td class="govuk-table__cell">awaiting outcome of social services enquiry</td>
               </tr>
               <tr class="govuk-table__row">
                 <!-- <td class="govuk-table__cell">RoSH</td> -->
-                <td class="govuk-table__cell">Medium RoSH</td>
-                <td class="govuk-table__cell"><span class="moj-badge">medium</span></td>
+                <th scope="row" class="govuk-table__header">Medium RoSH</th>
+                <!-- <td class="govuk-table__cell"><span class="moj-badge">medium</span></td> -->
                 <td class="govuk-table__cell">09 Sept 2019</td>
                 <td class="govuk-table__cell">09 March 2020</td>
-                <td class="govuk-table__cell"></td>
+                <td class="govuk-table__cell">-</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <!-- <td class="govuk-table__cell">Public protection</td> -->
+                <th scope="row" class="govuk-table__header">Domestic Abuse Perpetrator</th>
+                <!-- <td class="govuk-table__cell"><span class="moj-badge moj-badge--red">high</span></td> -->
+                <td class="govuk-table__cell">04 July 2011</td>
+                <td class="govuk-table__cell">26 Dec 2019</td>
+                <td class="govuk-table__cell">-</td>
               </tr>
               <tr class="govuk-table__row">
                 <!-- <td class="govuk-table__cell">Alerts </td> -->
-                <td class="govuk-table__cell">Mental health issues</td>
-                <td class="govuk-table__cell"><span class="moj-badge">medium</span></td>
+                <th scope="row" class="govuk-table__header">Mental health issues</th>
+                <!-- <td class="govuk-table__cell"><span class="moj-badge">medium</span></td> -->
                 <td class="govuk-table__cell">04 July 2011</td>
                 <td class="govuk-table__cell">26 Dec 2019</td>
                 <td class="govuk-table__cell">personality disorder</td>
@@ -142,13 +126,13 @@ Risk registers
 
         </section>
         <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="inactive">
-          <!-- <h2 class="govuk-heading-l">Past week</h2> -->
+          <h2 class="govuk-heading-m">Inactive registrations</h2>
           <table class="govuk-table govuk-table-xl">
             <thead class="govuk-table__head">
               <tr class="govuk-table__row">
                 <th scope="col" class="govuk-table__header">Type</th>
                 <!-- <th scope="col" class="govuk-table__header">Description</th> -->
-                <th scope="col" class="govuk-table__header">Status</th>
+                <!-- <th scope="col" class="govuk-table__header">Status</th> -->
                 <th scope="col" class="govuk-table__header">Registration date</th>
                 <th scope="col" class="govuk-table__header">End date</th>
                 <th scope="col" class="govuk-table__header">Notes</th>
@@ -157,11 +141,11 @@ Risk registers
             <tbody class="govuk-table__body">
               <tr class="govuk-table__row">
                 <!-- <td class="govuk-table__cell">Public protection </td> -->
-                <td class="govuk-table__cell">MAPPA Considered</td>
-                <td class="govuk-table__cell"></td>
+                <th scope="row" class="govuk-table__header">MAPPA Considered</th>
+                <!-- <td class="govuk-table__cell"></td> -->
                 <td class="govuk-table__cell"> 14 June 2012</td>
                 <td class="govuk-table__cell"> 26 Sept 2019</td>
-                <td class="govuk-table__cell"></td>
+                <td class="govuk-table__cell">-</td>
               </tr>
             </tbody>
           </table>

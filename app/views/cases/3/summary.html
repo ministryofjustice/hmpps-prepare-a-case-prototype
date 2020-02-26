@@ -1,0 +1,109 @@
+{% extends "layout.html" %}
+
+
+{% block pageTitle %}
+Summary
+{% endblock %}
+
+{% block bodyStart %}
+
+{% block keyDetails %}
+{% include "includes/key_details/3_Edwards.html" %}
+{% endblock %}
+
+
+{% endblock %}
+
+
+{% block beforeContent %}
+<!-- <a href="/cases" class="govuk-back-link">Back</a> -->
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+    <nav class="moj-sub-navigation" aria-label="Sub navigation">
+
+      <ul class="moj-sub-navigation__list">
+        <li class="moj-sub-navigation__item">
+          <a class="moj-sub-navigation__link" aria-current="page" href="/cases/3/summary.html">Case details</a>
+        </li>
+        <li class="moj-sub-navigation__item">
+          <a class="moj-sub-navigation__link" href="/cases/3/person.html">Personal details</a>
+        </li>
+        <li class="moj-sub-navigation__item">
+          <a class="moj-sub-navigation__link" href="/cases/3/probationrecord.html">Probation record</a>
+        </li>
+        <li class="moj-sub-navigation__item">
+          <a class="moj-sub-navigation__link" href="/cases/3/risk.html">Risk register</a>
+        </li>
+      </ul>
+      </ul>
+
+    </nav>
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <h1 class="govuk-heading-l govuk-!-margin-bottom-7">Case details</h1>
+  </div>
+</div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <!-- <h1 class="govuk-heading-xl govuk-!-margin-bottom-8">
+      Case details
+    </h1> -->
+    <div class="govuk-!-margin-bottom-9">
+      <h2 class="govuk-heading-m">Appearance</h2>
+      <p class="govuk-body">Court Room 1 on Thursday 27 February, morning session. 1st listing.</p>
+    </div>
+    <div class="govuk-!-margin-bottom-9">
+
+      <h2 class="govuk-heading-m">Offences</h2>
+
+
+      <h3 class="govuk-heading-s govuk-!-margin-top-4">Use threatening / abusive / insulting words / behaviour with intent to cause fear of / provoke unlawful violence</h3>
+      <p class="govuk-body govuk-!-margin-bottom-2">On Friday 14th February 2019 at Charcoal Street S1 1XY used
+        towards Johnathan Priestly threatening, abusive or insulting words or behaviour with intent to cause that person
+        to believe that immediate unlawful violence would be used against him by any person, or to provoke the immediate
+        use of unlawful violence by him whereby that person was likely to believe that such violence would be used, or
+        it was likely that such violence would be provoked</p>
+      <p class="govuk-body secondary-text-col">Contrary to section 39 of the Criminal Justice Act 1988.</p>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+  <div class="govuk-grid-column-one-third">
+
+    <h2 class="govuk-heading-m">CPS pack</h2>
+    <p class="govuk-body"><a href="#">View CPS pack (opens in Court Store)</a></p>
+  </div>
+
+
+
+
+</div>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,170 @@
+{% extends "layout.html" %}
+
+
+{% block pageTitle %}
+Risk registers
+{% endblock %}
+
+{% block bodyStart %}
+{% block keyDetails %}
+{% include "includes/key_details/3_Edwards.html" %}
+{% endblock %}
+{% endblock %}
+
+
+{% block beforeContent %}
+<!-- <a href="cases.html" class="govuk-back-link">Back</a> -->
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <nav class="moj-sub-navigation" aria-label="Sub navigation">
+
+      <ul class="moj-sub-navigation__list">
+        <li class="moj-sub-navigation__item">
+          <a class="moj-sub-navigation__link" href="/cases/3/summary.html">Case details</a>
+        </li>
+        <li class="moj-sub-navigation__item">
+          <a class="moj-sub-navigation__link" href="/cases/3/person.html">Personal details</a>
+        </li>
+        <li class="moj-sub-navigation__item">
+          <a class="moj-sub-navigation__link" href="/cases/3/probationrecord.html">Probation
+            record</a>
+        </li>
+        <li class="moj-sub-navigation__item">
+          <a class="moj-sub-navigation__link" aria-current="page" href="/cases/3/risk.html">Risk register</a>
+        </li>
+      </ul>
+
+    </nav>
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <div class="govuk-!-margin-bottom-9">
+      <h1 class="govuk-heading-l govuk-!-margin-bottom-7">
+        Risk register
+      </h1>
+      <div class="govuk-tabs" data-module="govuk-tabs">
+        <h2 class="govuk-tabs__title">
+          Contents
+        </h2>
+        <ul class="govuk-tabs__list">
+          <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+            <a class="govuk-tabs__tab" href="#active">
+              Active (1)
+            </a>
+          </li>
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab" href="#inactive">
+              Inactive (6)
+            </a>
+          </li>
+        </ul>
+        <section class="govuk-tabs__panel" id="active">
+          <h2 class="govuk-heading-m">Active registrations</h2>
+          <table class="govuk-table govuk-table-xl">
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <!-- <th scope="col" class="govuk-table__header">Type</th> -->
+                <th scope="col" class="govuk-table__header">Type</th>
+                <!-- <th scope="col" class="govuk-table__header">Status</th> -->
+                <th scope="col" class="govuk-table__header">Registration date</th>
+                <th scope="col" class="govuk-table__header">Next review</th>
+                <th scope="col" class="govuk-table__header">Notes</th>
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <!-- <td class="govuk-table__cell">RoSH</td> -->
+                <th scope="row" class="govuk-table__header">Medium RoSH</th>
+                <!-- <td class="govuk-table__cell"><span class="moj-badge">medium</span></td> -->
+                <td class="govuk-table__cell">26 June 2019</td>
+                <td class="govuk-table__cell">29 Dec 2019</td>
+                <td class="govuk-table__cell">-</td>
+              </tr>
+            </tbody>
+          </table>
+
+        </section>
+        <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="inactive">
+          <h2 class="govuk-heading-m">Inactive registrations</h2>
+          <table class="govuk-table govuk-table-xl">
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header" style="width: 15%;">Type</th>
+                <!-- <th scope="col" class="govuk-table__header">Description</th> -->
+                <!-- <th scope="col" class="govuk-table__header">Status</th> -->
+                <th scope="col" class="govuk-table__header">Registration date</th>
+                <th scope="col" class="govuk-table__header" style="width: 12%;">End date</th>
+                <th scope="col" class="govuk-table__header">Notes</th>
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <!-- <td class="govuk-table__cell">Public protection </td> -->
+                <th scope="row" class="govuk-table__header">Medium RoSH</th>
+                <!-- <td class="govuk-table__cell"></td> -->
+                <td class="govuk-table__cell">15 Aug 2014</td>
+                <td class="govuk-table__cell">20 May 2019</td>
+                <td class="govuk-table__cell">Re-registered.</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <!-- <td class="govuk-table__cell">Public protection </td> -->
+                <th scope="row" class="govuk-table__header">MAPPA</th>
+                <!-- <td class="govuk-table__cell"></td> -->
+                <td class="govuk-table__cell">18 Apr 2013</td>
+                <td class="govuk-table__cell">30 June 2015</td>
+                <td class="govuk-table__cell">#1#2 MAPPA Register auto-generated at PCMS Migration from CRAMS MAPPA
+                  Level and Category Registrations - see Registration History
+                  Registering Staff ID re-assigned in TR Migration</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <!-- <td class="govuk-table__cell">Public protection </td> -->
+                <th scope="row" class="govuk-table__header">Medium RoSH</th>
+                <!-- <td class="govuk-table__cell"></td> -->
+                <td class="govuk-table__cell">16 Dec 2013</td>
+                <td class="govuk-table__cell">15 Aug 2014</td>
+                <td class="govuk-table__cell">Registering Staff ID re-assigned in TR Migration</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <!-- <td class="govuk-table__cell">Public protection </td> -->
+                <th scope="row" class="govuk-table__header">MAPPA Level 1</th>
+                <!-- <td class="govuk-table__cell"></td> -->
+                <td class="govuk-table__cell">18 Apr 2013</td>
+                <td class="govuk-table__cell">28 Jun 2013</td>
+                <td class="govuk-table__cell">CRAMS Register Type: L1 : MAPPA Level 1 / MAPPA_OMUPSRT completed by
+                  [Name], PO and discussed with [Name], TM. Level 1 MAPPA management agreed appropriate
+                  for release. HDC Eligibility Date - 15/05/13. CRD: 26/09/13.</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <!-- <td class="govuk-table__cell">Public protection </td> -->
+                <th scope="row" class="govuk-table__header">MAPPA CAT 2</th>
+                <!-- <td class="govuk-table__cell"></td> -->
+                <td class="govuk-table__cell">10 Feb 2012</td>
+                <td class="govuk-table__cell">28 Jun 2013</td>
+                <td class="govuk-table__cell">CRAMS Register Type: C2 : Vio/Oth Sex/Off 12+ / Cat 2. 10.01.12 sentenced
+                  to 42 months custody for Kidnapping and ABH.</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <!-- <td class="govuk-table__cell">Public protection </td> -->
+                <th scope="row" class="govuk-table__header">Not eligible for UPW</th>
+                <!-- <td class="govuk-table__cell"></td> -->
+                <td class="govuk-table__cell">12 Jan 2012</td>
+                <td class="govuk-table__cell">13 Jan 2012</td>
+                <td class="govuk-table__cell">CRAMS Register Type: NE : Not Eligible for UPW / IN custody</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}

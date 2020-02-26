@@ -1,0 +1,211 @@
+{% extends "layout.html" %}
+
+
+{% block pageTitle %}
+Person
+{% endblock %}
+
+{% block bodyStart %}
+{% block keyDetails %}
+{% include "includes/key_details/3_Edwards.html" %}
+{% endblock %}
+{% endblock %}
+
+
+{% block beforeContent %}
+<!-- <a href="/cases" class="govuk-back-link">Back</a> -->
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+    <nav class="moj-sub-navigation" aria-label="Sub navigation">
+
+      <ul class="moj-sub-navigation__list">
+        <li class="moj-sub-navigation__item">
+          <a class="moj-sub-navigation__link" href="/cases/3/summary.html">Case details</a>
+        </li>
+        <li class="moj-sub-navigation__item">
+          <a class="moj-sub-navigation__link" href="/cases/3/person.html">Personal details</a>
+        </li>
+        <li class="moj-sub-navigation__item">
+          <a class="moj-sub-navigation__link" aria-current="page" href="/cases/3/probationrecord.html">Probation
+            record</a>
+        </li>
+        <li class="moj-sub-navigation__item">
+          <a class="moj-sub-navigation__link" href="/cases/3/risk.html">Risk register</a>
+        </li>
+      </ul>
+
+    </nav>
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <h1 class="govuk-heading-l govuk-!-margin-bottom-7">Probation record</h1>
+  </div>
+</div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <!-- <div class="govuk-!-margin-bottom-9">
+      <h2 class="govuk-heading-m">
+        Offender manager update
+      </h2>
+      <div class="timeline">
+        <ul>
+          <li>
+            <h2 class="timeline__title">Reminder sent</h2>
+            <p class="timeline__meta">
+              <time>10 February 2020 at 09:00 am</time>
+              by Sarah Smith
+            </p>
+          </li>
+          <li>
+            <h2 class="timeline__title">Update requested</h2>
+            <p class="timeline__meta">
+              <time>8 February 2020 at 09:00 am</time>
+              by Sarah Smith
+            </p>
+          </li>
+        </ul>
+      </div>
+    </div> -->
+
+    <div class="govuk-!-margin-bottom-9">
+      <h2 class="govuk-heading-m">
+        Current orders <span class="secondary-text-col">(1)</span>
+      </h2>
+      <h3 class="govuk-heading-s govuk-!-margin-bottom-1"><a href="probationrecord/event1.html">ORA Adult Custody (inc
+          PSS) (6 Months)</a></h3>
+      <table class="govuk-table app-table govuk-!-margin-top-0 govuk-!-margin-bottom-3">
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Dangerous driving/Aid, abet cause or permit reckless driving - 80200</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">Started on 18 Sept 2019</td>
+          </tr>
+        </tbody>
+      </table>
+      <!-- <p class="govuk-body  govuk-!-margin-bottom-1">Common assault and battery - 10501</p>
+      <p class="govuk-body">Started on 05 Sept 2019</p> -->
+      <!-- <table class="govuk-table">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Requirement</th>
+            <th scope="col" class="govuk-table__header">Length</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Rehabilitation Activity Requirement (RAR) </td>
+            <td class="govuk-table__cell">20 days </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Court - Accredited Programme - Building Better Relationships (BBR)</td>
+            <td class="govuk-table__cell">-</td>
+
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Unpaid Work - Regular</td>
+            <td class="govuk-table__cell">40 Hours</td>
+          </tr>
+        </tbody>
+      </table> -->
+
+    </div>
+
+
+
+    <div class="govuk-!-margin-bottom-9">
+
+      <h2 class="govuk-heading-m">Previous orders <span class="secondary-text-col">(5)</span></h2>
+      <p class="govuk-heading-s govuk-!-margin-bottom-0"><a class="govuk-link govuk-link--no-visited-state" href="#">ORA
+          Community Order (12 Months)</a></p>
+      <table class="govuk-table app-table govuk-!-margin-top-0 govuk-!-margin-bottom-3">
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Careless driving - 80400</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">Ended on 17 May 2018</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="govuk-heading-s govuk-!-margin-bottom-0"><a class="govuk-link govuk-link--no-visited-state" href="#">ORA
+          Suspended Sentence Order (12 Months)</a></p>
+      <table class="govuk-table app-table govuk-!-margin-top-0 govuk-!-margin-bottom-3">
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Common assault and battery - 10501</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">Ended on 10 Aug 2016</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="govuk-heading-s govuk-!-margin-bottom-0"><a class="govuk-link govuk-link--no-visited-state" href="#">CJA
+          - Std Determinate Custody (42 Months)
+        </a></p>
+      <table class="govuk-table app-table govuk-!-margin-top-0 govuk-!-margin-bottom-3">
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Kidnapping - 03601</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">Ended on 26 June 2015</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="govuk-heading-s govuk-!-margin-bottom-0"><a class="govuk-link govuk-link--no-visited-state" href="#">CJA
+          - Community Order (12 Months)
+
+        </a></p>
+      <table class="govuk-table app-table govuk-!-margin-top-0 govuk-!-margin-bottom-3">
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Assaults occasioning actual bodily harm - 00806</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">Ended on 10 Jan 2012</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="govuk-heading-s govuk-!-margin-bottom-0"><a class="govuk-link govuk-link--no-visited-state" href="#">CJA
+          - Community Order (12 Months)
+        </a></p>
+      <table class="govuk-table app-table govuk-!-margin-top-0 govuk-!-margin-bottom-3">
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Offences against Public Order (Summary) - 12500</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">Ended on 30 June 2010</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+  <div class="govuk-grid-column-one-third">
+    <h2 class="govuk-heading-m">
+      Offender Manager </h2>
+    <p class="govuk-body">Wendy Williams <br><span class="secondary-text-col">Allocated on 19 Sept 2019</span></p>
+    <p>CRC South Yorkshire<br>
+      12 Holme Road<br>
+      Sheffield<br>
+      South Yorkshire<br>
+      S7 2TT
+    </p>
+    <p>Team telephone: 0114 123 0000</p>
+
+    <h2 class="govuk-heading-m">Last pre-sentence report </h2>
+    <p class="govuk-body">Pre-Sentence Report - Oral<br><span class="secondary-text-col">Delivered on 18 Sept 2019
+      </span></p>
+
+    <h2 class="govuk-heading-m">Last OASys assessment </h2>
+    <p class="govuk-body">OASys Assessment Layer 3<br><span class="secondary-text-col">Completed on 18 Nov 2019</p>
+
+  </div>
+
+
+
+</div>
+
+</div>
+
+
+{% endblock %}

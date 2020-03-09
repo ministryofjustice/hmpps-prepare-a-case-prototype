@@ -7,70 +7,318 @@ Prototypes | Prepare a case | HMPPS
 {% block content %}
 
 <div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds prototype-index">
+  <div class="govuk-grid-column-full-width prototype-index">
     <span class="govuk-caption-xl">Prototypes (Private Beta)</span>
     <h1 class="govuk-heading-xl">
       Prepare a case for court
     </h1>
 
-    {# Start of most recent box #}
-    <div class="most-recent">
-      <p class="recent-tag"><strong class="govuk-tag">beta sprint 2</strong></p>
-      {# Start of prototype write up #}
-      <div class="prototype-write-up">
-        <div class="govuk-grid-row">
-          <!-- <div class="govuk-grid-column-one-third">
+    <div class="moj-timeline">
+      <div class="moj-timeline__item">
+        <div class="moj-timeline__header govuk-!-margin-bottom-3">
+          <h2 class="moj-timeline__title govuk-!-font-size-24"><a href="/cases">Sprint 8</a></h2>&emsp;<span
+            class="govuk-tag">beta</span>
+        </div>
+        <p class="moj-timeline__date secondary-text-col govuk-!-font-size-19">
+          <time datetime="2019-06-14T14:01:00.000Z">4 March 2020</time>
+        </p>
+        <div class="moj-timeline__description">
+          <details class="govuk-details" data-module="govuk-details">
+            <summary class="govuk-details__summary">
+              <span class="govuk-details__summary-text">
+                Main changes
+              </span>
+            </summary>
+            <div class="govuk-details__text">
+              <table class="govuk-table" style="max-width: none !important;">
+                <thead class="govuk-table__head">
+                  <tr class="govuk-table__row">
+                    <th scope="col" class="govuk-table__header">Change</th>
+                    <th scope="col" class="govuk-table__header">Why we made it</th>
+                  </tr>
+                </thead>
+                <tbody class="govuk-table__body govuk-!-font-size-16">
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell"><a href="/cases/1/summary">Appearance information</a> - changed
+                      content formatting</td>
+                    <td class="govuk-table__cell">.</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell"><a href="cases/1/probationrecord">Probation record - requirements</a><br> added back in
+                        to probation record view</td>
+                    <td class="govuk-table__cell">We found users need/want to see this info at this level. Allows user to 
+                      get a summary of requirements (avoids having to click in to each view). Style changed from table
+                      layout to bullet for legibility</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell"><a href="cases/1/probationrecord/event2">Order summary - attendance</a> - reworked table</td>
+                    <td class="govuk-table__cell"></td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">Breach refinement placeholder</td>
+                    <td class="govuk-table__cell"></td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">Order summary - custodial order placeholder</td>
+                    <td class="govuk-table__cell"></td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">Licence requirements placeholder</td>
+                    <td class="govuk-table__cell"></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </details>
+        </div>
+      </div>
+      <div class="moj-timeline__item">
+        <div class="moj-timeline__header govuk-!-margin-bottom-3">
+          <h2 class="moj-timeline__title govuk-!-font-size-24 "><a
+              href="https://moj-pict-prototype-sprint7.herokuapp.com/cases">Sprint 7</a></h2>&emsp;<span
+            class="govuk-tag">beta</span>
+        </div>
+        <p class="moj-timeline__date secondary-text-col govuk-!-font-size-19">
+          <time datetime="2019-06-14T14:01:00.000Z">19 Feb 2020</time>
+        </p>
+        <div class="moj-timeline__description">
+          <details class="govuk-details" data-module="govuk-details">
+            <summary class="govuk-details__summary">
+              <span class="govuk-details__summary-text">
+                Main changes
+              </span>
+            </summary>
+            <div class="govuk-details__text">
+              <table class="govuk-table" style="max-width: none !important;">
+                <thead class="govuk-table__head">
+                  <tr class="govuk-table__row">
+                    <th scope="col" class="govuk-table__header">Change</th>
+                    <th scope="col" class="govuk-table__header">Why we made it</th>
+                  </tr>
+                </thead>
+                <tbody class="govuk-table__body govuk-!-font-size-16">
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell"><a
+                        href="https://moj-pict-prototype-sprint7.herokuapp.com/cases/1/summary">Key details header</a> -
+                      standardised display of Probation status and
+                      removed risk of serious harm status</td>
+                    <td class="govuk-table__cell">Probation status was inconsistent with display on case list. RoSH
+                      alone not representative of offender risk picture - needs further research and clarification from
+                      policy </td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell"><a
+                        href="https://moj-pict-prototype-sprint7.herokuapp.com/cases/1/risk">Risk registers</a> -
+                      removed ‘status’ column and markers from register
+                      table </td>
+                    <td class="govuk-table__cell">Checked with SME and only RoSH has inherent status levelling. Need
+                      further investigation as to why nDelius attributes different colours to certain risk flag types
+                    </td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell"><a
+                        href="https://moj-pict-prototype-sprint7.herokuapp.com/cases/1/person">Personal details</a> -
+                      removed ‘details from Probation’ </td>
+                    <td class="govuk-table__cell">Not servicing a clear/strong need </td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell"><a
+                        href="https://moj-pict-prototype-sprint7.herokuapp.com/cases/1/probationrecord">Probation
+                        record</a> - added details around last PSR and OaSys assessment
+                      (includes type and status date) </td>
+                    <td class="govuk-table__cell">Allows court staff to see if previous PSR can be reused with an
+                      addendum if SU is in on a similar offence. Can we reliably link to the document? </td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell"><a
+                        href="https://moj-pict-prototype-sprint7.herokuapp.com/cases/1/probationrecord">Probation
+                        record</a> - removed displaying requirements from current orders
+                    </td>
+                    <td class="govuk-table__cell">To ensure design is extensible and can handle multiple concurrent
+                      current orders </td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell"><a
+                        href="https://moj-pict-prototype-sprint7.herokuapp.com/cases/1/probationrecord/event2">Order
+                        summary - attendance</a><br>
+                      moved appointment data in to a table view with a more granular breakdown of contact type and non
+                      attendance reasons </td>
+                    <td class="govuk-table__cell">We found low confidence in NS summary data and what it represents/how
+                      it is derived. A breakdown increased confidence and provides better context to start to assess
+                      compliance and engagement at a high level </td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell"><a
+                        href="https://moj-pict-prototype-sprint7.herokuapp.com/cases/1/probationrecord/event2">Order
+                        summary - most recent contacts</a><br>
+                      Added ‘relates to’ data line in accordion section summary </td>
+                    <td class="govuk-table__cell">Displaying contact type heading alone did not provide enough context
+                    </td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell"><a
+                        href="https://moj-pict-prototype-sprint7.herokuapp.com/cases/5/summary">Case details</a> - added
+                      accordion component for offences when there is
+                      more than one charge </td>
+                    <td class="govuk-table__cell">Too much information displayed on page if there are multiple charges.
+                      Accordion allows user to see read top level charges and drill down </td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell"><a
+                        href="https://moj-pict-prototype-sprint7.herokuapp.com/cases/3/probationrecord/event1">Order
+                        summary - custodial order</a><br>
+                      added supervision status, throughcare dates, licence conditions and pss requirements </td>
+                    <td class="govuk-table__cell">SUs can move through different states of supervision when on a
+                      custodial order. Need to call this out and the dates around it </td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell"><a
+                        href="https://moj-pict-prototype-sprint7.herokuapp.com/cases/6/probationrecord/event1">Order
+                        summary - breaches</a><br>
+                      added a section displaying breaches currently in progress and breaches on the order that have been
+                      prosecuted with an outcome </td>
+                    <td class="govuk-table__cell">Need to know if SU is in breach and what state that breach is in. Need
+                      to know outcome of previous breach hearings </td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell"><a
+                        href="https://moj-pict-prototype-sprint7.herokuapp.com/cases/6/probationrecord/nsi/breach">Breach
+                        details</a> - added a view displaying the details recorded around a
+                      breach </td>
+                    <td class="govuk-table__cell">Need to know granular details of breach and have access to breach
+                      prosecution pack </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+        </div>
+      </div>
+      <div class="moj-timeline__item">
+        <div class="moj-timeline__header govuk-!-margin-bottom-3">
+          <h2 class="moj-timeline__title govuk-!-font-size-24"><a
+              href="https://moj-pict-prototype-sprint6.herokuapp.com/cases">Sprint 6</a></h2>&emsp;<span
+            class="govuk-tag">beta</span>
+        </div>
+        <p class="moj-timeline__date secondary-text-col govuk-!-font-size-19">
+          <time datetime="2019-06-14T14:01:00.000Z">5 Feb 2020</time>
+        </p>
+        <div class="moj-timeline__description">
+          <details class="govuk-details" data-module="govuk-details">
+            <summary class="govuk-details__summary">
+              <span class="govuk-details__summary-text">
+                Main changes
+              </span>
+            </summary>
+            <div class="govuk-details__text">
+              To be added
+            </div>
+          </details>
+        </div>
+      </div>
+      <div class="moj-timeline__item">
+        <div class="moj-timeline__header govuk-!-margin-bottom-3">
+          <h2 class="moj-timeline__title govuk-!-font-size-24"><a
+              href="https://moj-pict-prototype-sprint5.herokuapp.com/cases">Sprint 5</a></h2>&emsp;<span
+            class="govuk-tag">beta</span>
+        </div>
+        <p class="moj-timeline__date secondary-text-col govuk-!-font-size-19">
+          <time datetime="2019-06-14T14:01:00.000Z">22 Jan 2020</time>
+        </p>
+        <div class="moj-timeline__description">
+          <details class="govuk-details" data-module="govuk-details">
+            <summary class="govuk-details__summary">
+              <span class="govuk-details__summary-text">
+                Main changes
+              </span>
+            </summary>
+            <div class="govuk-details__text">
+              To be added
+            </div>
+          </details>
+        </div>
+      </div>
+      <div class="moj-timeline__item">
+        <div class="moj-timeline__header govuk-!-margin-bottom-3">
+          <h2 class="moj-timeline__title govuk-!-font-size-24"><a href="#">Sprint 4</a></h2>&emsp;<span
+            class="govuk-tag">beta</span>
+        </div>
+        <p class="moj-timeline__date secondary-text-col govuk-!-font-size-19">
+          <time datetime="2019-06-14T14:01:00.000Z">8 Jan 2020</time>
+        </p>
+        <div class="moj-timeline__description">
+          <details class="govuk-details" data-module="govuk-details">
+            <summary class="govuk-details__summary">
+              <span class="govuk-details__summary-text">
+                Main changes
+              </span>
+            </summary>
+            <div class="govuk-details__text">
+              To be added
+            </div>
+          </details>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 
+  {# Start of most recent box #}
+  <div class="most-recent">
+    <p class="recent-tag"><strong class="govuk-tag">beta sprint 2</strong></p>
+    {# Start of prototype write up #}
+    <div class="prototype-write-up">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-third">
             <h3 class="govuk-heading-s">Reference</h3>
             <p>v0.1</p>
-          </div> -->
-
-          <div class="govuk-grid-column-one-half">
-            <h3 class="govuk-heading-s">Sprint goal</h3>
-            <p>Support the need for probation staff to identify cases of interest to probation</p>
           </div>
 
-          <div class="govuk-grid-column-one-half">
-            <h3 class="govuk-heading-s">Related stories</h3>
-            <p>PIC-96, PIC-113, PIC-117, PIC-158, PIC-160, PIC-161</p>
-          </div>
+        <div class="govuk-grid-column-one-half">
+          <h3 class="govuk-heading-s">Sprint goal</h3>
+          <p>Support the need for probation staff to identify cases of interest to probation</p>
         </div>
-        <h3 class="govuk-heading-s">Added/updated</h3>
-        <p>First pass at design prototype for a single court. </p>
-        <ul class="govuk-list govuk-list--bullet">
 
-          <li>added case list view (access to cases 48 hrs in advance / across 3 days)</li>
-          <li>added last updated timestamp and pagination component from MOJ design system to case list view</li>
-          <li>removed ‘Action’ column and case numbers from case list view</li>
-          <li>removed add a case (overnights) flow</li>
-          <li>removed MOJ design system filter component </li>
-          <li>added new horizontal filter component </li>
-          <li>added offender summary screen from alpha prototype</li>
-          <li>added dashboard view (CTAs for matching & OM update statuses, and caseload overview)</li>
-          <li>added unmatched cases view (multiple possible records)</li>
-          <li>added match a case view (choose a record)</li>
-        </ul>
-
-        <h3 class="govuk-heading-s">Research notes</h3>
-        <p>
-          To follow
-        </p>
-        <a href="/cases.html" role="button" draggable="false" class="govuk-button govuk-button--start"
-          data-module="govuk-button">
-          View prototype
-          <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19"
-            viewBox="0 0 33 40" role="presentation" focusable="false">
-            <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z" />
-          </svg>
-        </a>
-        <p><a href="/screens.html" class="govuk-link">View all screens</a></p>
+        <div class="govuk-grid-column-one-half">
+          <h3 class="govuk-heading-s">Related stories</h3>
+          <p>PIC-96, PIC-113, PIC-117, PIC-158, PIC-160, PIC-161</p>
+        </div>
       </div>
-      {# End of prototype write up #}
+      <h3 class="govuk-heading-s">Added/updated</h3>
+      <p>First pass at design prototype for a single court. </p>
+      <ul class="govuk-list govuk-list--bullet">
 
+        <li>added case list view (access to cases 48 hrs in advance / across 3 days)</li>
+        <li>added last updated timestamp and pagination component from MOJ design system to case list view</li>
+        <li>removed ‘Action’ column and case numbers from case list view</li>
+        <li>removed add a case (overnights) flow</li>
+        <li>removed MOJ design system filter component </li>
+        <li>added new horizontal filter component </li>
+        <li>added offender summary screen from alpha prototype</li>
+        <li>added dashboard view (CTAs for matching & OM update statuses, and caseload overview)</li>
+        <li>added unmatched cases view (multiple possible records)</li>
+        <li>added match a case view (choose a record)</li>
+      </ul>
+
+      <h3 class="govuk-heading-s">Research notes</h3>
+      <p>
+        To follow
+      </p>
+      <a href="/cases.html" role="button" draggable="false" class="govuk-button govuk-button--start"
+        data-module="govuk-button">
+        View prototype
+        <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19"
+          viewBox="0 0 33 40" role="presentation" focusable="false">
+          <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z" />
+        </svg>
+      </a>
+      <p><a href="/screens.html" class="govuk-link">View all screens</a></p>
     </div>
-    {# End of most recent box #}
+    {# End of prototype write up #}
+
+  </div>
+  {# End of most recent box #} -->
 
 
-    <!-- <h2 class="govuk-heading-l">All versions</h2>
+  <!-- <h2 class="govuk-heading-l">All versions</h2>
           {# Start of hidden panel #}
           <details>
             <summary><span class="summary">Show all versions</span></summary>
@@ -163,7 +411,7 @@ Prototypes | Prepare a case | HMPPS
           </details>
           {# End of hidden panel #} -->
 
-  </div>
 </div>
+
 
 {% endblock %}

@@ -5,14 +5,17 @@ Prototypes | Prepare a case | HMPPS
 {% endblock %}
 
 {% block content %}
-
 <div class="govuk-grid-row">
-  <div class="govuk-grid-column-full-width prototype-index">
-    <span class="govuk-caption-xl">Prototypes (Private Beta)</span>
+  <!-- <div class="govuk-grid-column-full">
+    <span class="govuk-caption-xl">Prototypes</span>
     <h1 class="govuk-heading-xl">
       Prepare a case for court
     </h1>
-
+    <p class="govuk-body govuk-!-margin-bottom-6">
+      This site contains the design prototypes for the Prepare a case for court service.
+    </p>
+  </div> -->
+  <div class="govuk-grid-column-two-thirds">
     <div class="moj-timeline">
       <div class="moj-timeline__item">
         <div class="moj-timeline__header govuk-!-margin-bottom-3">
@@ -23,7 +26,9 @@ Prototypes | Prepare a case | HMPPS
           <time datetime="2019-06-14T14:01:00.000Z">4 March 2020</time>
         </p>
         <div class="moj-timeline__description">
-          <details class="govuk-details" data-module="govuk-details">
+        </div>
+        <div class="moj-timeline__description">
+          <details class="govuk-details govuk-!-margin-bottom-2" data-module="govuk-details">
             <summary class="govuk-details__summary">
               <span class="govuk-details__summary-text">
                 Main changes
@@ -99,18 +104,20 @@ Prototypes | Prepare a case | HMPPS
                   </tr>
                   <tr class="govuk-table__row">
                     <td class="govuk-table__cell"><a href="cases/1/probationrecord/event2">Order summary - Unpaid
-                        work</a><br>Changed unpaid work attendance breakdown to more closely follow main attendance breakdown structure</td>
+                        work</a><br>Changed unpaid work attendance breakdown to more closely follow main attendance
+                      breakdown structure</td>
                     <td class="govuk-table__cell">Consistency</td>
                   </tr>
                   <tr class="govuk-table__row">
                     <td class="govuk-table__cell"><a href="cases/1/summary">Key details bar - date of birth
-                        </a><br>removed</td>
+                      </a><br>removed</td>
                     <td class="govuk-table__cell">Not servicing a strong enough need to be displayed persistently</td>
                   </tr>
                 </tbody>
               </table>
             </div>
           </details>
+          <p><a href="screens">View all screens</a></p>
         </div>
       </div>
       <div class="moj-timeline__item">
@@ -278,7 +285,7 @@ Prototypes | Prepare a case | HMPPS
           </details>
         </div>
       </div>
-      <div class="moj-timeline__item">
+      <!-- <div class="moj-timeline__item">
         <div class="moj-timeline__header govuk-!-margin-bottom-3">
           <h2 class="moj-timeline__title govuk-!-font-size-24"><a href="#">Sprint 4</a></h2>&emsp;<span
             class="govuk-tag">beta</span>
@@ -298,161 +305,92 @@ Prototypes | Prepare a case | HMPPS
             </div>
           </details>
         </div>
-      </div>
-    </div>
-  </div>
-  <!-- 
-  {# Start of most recent box #}
-  <div class="most-recent">
-    <p class="recent-tag"><strong class="govuk-tag">beta sprint 2</strong></p>
-    {# Start of prototype write up #}
-    <div class="prototype-write-up">
-      <div class="govuk-grid-row">
-        <div class="govuk-grid-column-one-third">
-            <h3 class="govuk-heading-s">Reference</h3>
-            <p>v0.1</p>
-          </div>
-
-        <div class="govuk-grid-column-one-half">
-          <h3 class="govuk-heading-s">Sprint goal</h3>
-          <p>Support the need for probation staff to identify cases of interest to probation</p>
+      </div> -->
+      <div class="moj-timeline__item">
+        <div class="moj-timeline__header govuk-!-margin-bottom-3">
+          <h2 class="moj-timeline__title govuk-!-font-size-24"><a href="https://probation-court-prototype.apps.live-1.cloud-platform.service.justice.gov.uk/dashboard">Alpha prototype</a></h2>&emsp;<span
+            class="moj-tag--bright-purple govuk-tag" style="border:none">alpha</span>
         </div>
-
-        <div class="govuk-grid-column-one-half">
-          <h3 class="govuk-heading-s">Related stories</h3>
-          <p>PIC-96, PIC-113, PIC-117, PIC-158, PIC-160, PIC-161</p>
-        </div>
-      </div>
-      <h3 class="govuk-heading-s">Added/updated</h3>
-      <p>First pass at design prototype for a single court. </p>
-      <ul class="govuk-list govuk-list--bullet">
-
-        <li>added case list view (access to cases 48 hrs in advance / across 3 days)</li>
-        <li>added last updated timestamp and pagination component from MOJ design system to case list view</li>
-        <li>removed ‘Action’ column and case numbers from case list view</li>
-        <li>removed add a case (overnights) flow</li>
-        <li>removed MOJ design system filter component </li>
-        <li>added new horizontal filter component </li>
-        <li>added offender summary screen from alpha prototype</li>
-        <li>added dashboard view (CTAs for matching & OM update statuses, and caseload overview)</li>
-        <li>added unmatched cases view (multiple possible records)</li>
-        <li>added match a case view (choose a record)</li>
-      </ul>
-
-      <h3 class="govuk-heading-s">Research notes</h3>
-      <p>
-        To follow
-      </p>
-      <a href="/cases.html" role="button" draggable="false" class="govuk-button govuk-button--start"
-        data-module="govuk-button">
-        View prototype
-        <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19"
-          viewBox="0 0 33 40" role="presentation" focusable="false">
-          <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z" />
-        </svg>
-      </a>
-      <p><a href="/screens.html" class="govuk-link">View all screens</a></p>
-    </div>
-    {# End of prototype write up #}
-
-  </div>
-  {# End of most recent box #} -->
-
-
-  <!-- <h2 class="govuk-heading-l">All versions</h2>
-          {# Start of hidden panel #}
-          <details>
-            <summary><span class="summary">Show all versions</span></summary>
-            
-            <div class="panel panel-border-narrow">
-
-                {# Start of prototype write up #}
-                <div class="prototype-write-up">
-                  <div class="grid-row">
-                    <div class="govuk-grid-column-one-third">
-                        <h3 class="govuk-heading-s">Date of release</h3>
-                        <p>DD Month YYYY</p>
-                    </div>
-        
-                    <div class="govuk-grid-column-one-third">
-                        <h3 class="govuk-heading-s">Feature</h3>
-                        <p>Feature name</p>
-                    </div>
-        
-                    <div class="govuk-grid-column-one-third">
-                        <h3 class="govuk-heading-s">Related stories</h3>
-                        <p>PIC-123</p>
-                    </div>
-                  </div>
-                  <h3 class="govuk-heading-s">Changes</h3>
-                  <p>
-                    In this version, we added X into Y, on the Z.
-                  </p>
-                  <h3 class="govuk-heading-s">Hypothesis</h3>
-                  <p>
-                    If... then... because.
-                  </p>
-                  <h3 class="govuk-heading-s">Research notes</h3>
-                  <p>
-                    ...
-                  </p>
-                  <a href="/link-to-prototype" role="button" draggable="false" class="govuk-button govuk-button--start" data-module="govuk-button">
-                    View prototype
-                    <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" role="presentation" focusable="false">
-                      <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z" />
-                    </svg>
-                  </a>
-    
-                </div>
-                {# End of prototype write up #}
-                
-              <hr />
-    
-              {# Start of prototype write up #}
-              <div class="prototype-write-up">
-                <div class="grid-row">
-                  <div class="govuk-grid-column-one-third">
-                      <h3 class="govuk-heading-s">Date of release</h3>
-                      <p>DD Month YYYY</p>
-                  </div>
-      
-                  <div class="govuk-grid-column-one-third">
-                      <h3 class="govuk-heading-s">Feature</h3>
-                      <p>Feature name</p>
-                  </div>
-      
-                  <div class="govuk-grid-column-one-third">
-                      <h3 class="govuk-heading-s">Related stories</h3>
-                      <p>PIC-123</p>
-                  </div>
-                </div>
-                <h3 class="govuk-heading-s">Changes</h3>
-                <p>
-                  In this version, we added X into Y, on the Z.
-                </p>
-                <h3 class="govuk-heading-s">Hypothesis</h3>
-                <p>
-                  If... then... because.
-                </p>
-                <h3 class="govuk-heading-s">Research notes</h3>
-                <p>
-                  ...
-                </p>
-                <a href="/link-to-prototype" role="button" draggable="false" class="govuk-button govuk-button--start" data-module="govuk-button">
-                  View prototype
-                  <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" role="presentation" focusable="false">
-                    <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z" />
-                  </svg>
-                </a>
-  
-              </div>
-              {# End of prototype write up #}
-    
+        <!-- <p class="moj-timeline__date secondary-text-col govuk-!-font-size-19">
+          <time datetime="2019-06-14T14:01:00.000Z">October 2020</time>
+        </p>
+        <div class="moj-timeline__description">
+          <details class="govuk-details" data-module="govuk-details">
+            <summary class="govuk-details__summary">
+              <span class="govuk-details__summary-text">
+                Main changes
+              </span>
+            </summary>
+            <div class="govuk-details__text">
+              To be added
             </div>
           </details>
-          {# End of hidden panel #} -->
+        </div> -->
+      </div>
+    </div>
+  </div>
+  <div class="govuk-grid-column-one-third">
+    <aside class="app-related-items" role="complementary">
+      <h2 class="govuk-heading-m" id="subsection-title">
+        Related content
+      </h2>
+      <nav role="navigation" aria-labelledby="subsection-title">
+        <ul class="govuk-list useful-links govuk-!-font-size-16">
+          <li>
+            <a href="https://dsdmoj.atlassian.net/wiki/spaces/NDSS/pages/1500250131/Probation+in+Court+Team">
+              Project Confluence
+            </a>
+          </li>
+          <li>
+            <a href="https://dsdmoj.atlassian.net/secure/RapidBoard.jspa?rapidView=366&projectKey=PIC">
+              Project JIRA
+            </a>
+          </li>
+          <li>
+            <a href="https://drive.google.com/drive/folders/1wdxNv68ltZO_robqoGyv52aQZ2jdtMYX">
+              Team Google Drive
+            </a>
+          </li>
+          <li>
+            <a href="https://trello.com/b/tAWAHTP2/probation-in-court-research-questions-for-beta">
+              Research questions for Beta (Trello)
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/Charan-MoJ/hmpps-prepare-a-case-prototype">
+              Prototype GitHub repository
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <h2 class="govuk-heading-m govuk-!-margin-top-6">Examples and documentation</h2>
+      <nav role="navigation" aria-labelledby="subsection-title">
+         <ul class="govuk-list useful-links govuk-!-font-size-16">
+           <li>
+             <a href="https://govuk-prototype-kit.herokuapp.com/docs/tutorials-and-examples">
+               GOV.UK Prototype Kit - Tutorials and examples
+             </a>
+           </li>
+           <li>
+             <a href="https://design-system.service.gov.uk/">
+               GOV.UK Design System
+             </a>
+           </li>
+           <li>
+             <a href="https://moj-design-system.herokuapp.com/">
+               MOJ Design System
+             </a>
+           </li>
+           <li>
+            <a href="https://github.com/ctdesign/gov-design-systems-list/blob/master/README.md">
+              GOV Design Systems list
+            </a>
+          </li>
+         </ul>
+       </nav>
+    </aside>
+   
+  </div>
 
-</div>
 
-
-{% endblock %}
+  {% endblock %}

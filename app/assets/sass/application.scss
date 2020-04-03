@@ -517,6 +517,29 @@ width: 16%;
 
 
 // Prototype index page styles
+
+.app-masthead {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #ffffff;
+    background-color: $govuk-brand-colour;
+    margin-top: -20px;
+}
+@media (min-width: 40.0625em) {
+    .app-masthead {
+        padding-top: 50px;
+    }
+}
+.app-masthead__title, .app-masthead__subtitle, .app-masthead p {
+    color:#ffffff !important;
+}
+.app-masthead__subtitle {
+    font-weight: normal !important;
+}
+.app-related-items .useful-links > li {
+    margin-bottom: 15px !important;
+}
+
 .prototype-index {
     margin-bottom: 80px;
 }

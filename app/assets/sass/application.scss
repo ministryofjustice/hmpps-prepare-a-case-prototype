@@ -16,6 +16,7 @@ $govuk-assets-path: '/govuk/assets/';
 @import "components/button";
 @import "components/cookie-banner";
 @import "components/filter";
+@import "components/timeline";
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
 
@@ -83,11 +84,15 @@ $govuk-assets-path: '/govuk/assets/';
 .govuk-warning-text__text,
 .govuk-phase-banner__content,
 .govuk-select,
-.govuk-table__caption {
+.govuk-table__caption,
+.govuk-summary-list,
+.govuk-accordion,
+.govuk-table {
     max-width: 727px;
 }
-
-
+.govuk-table-xl {
+    max-width: none;
+}
 
 // Caselist timestamp
 .case-list-timestamp {
@@ -127,9 +132,9 @@ td ul {
 
 
 // Tag modifiers 
-.moj-tag--grey, .moj-tag--green {
-    border: none;
-}
+// .moj-tag--grey, .moj-tag--green {
+//     border: none;
+// }
 .moj-tag--small--nowrap {
     white-space: nowrap;
     font-size: 0.875rem;
@@ -204,8 +209,8 @@ td ul {
     margin-inline-start: 0;
 }
 .key-details-bar .key-details-bar__key-details .key-details-bar__bottom-block {
-    border-top: 1px solid rgba(255, 255, 255, 0.3);
-    content: ' ';
+    // border-top: 1px solid rgba(255, 255, 255, 0.3);
+    // content: ' ';
     padding-top: 10px;
     margin-top: 6px;
 }
@@ -231,13 +236,19 @@ td ul {
 .key-details-bar .key-details-bar__key-details * {
     color: #ffffff;
 }
+.key-details-bar_divider {
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+    margin: 0 15px 0 0;
+    padding: 0 15px 0 0;
+}
 @media (min-width: 40.0625em) {
     // .key-details-bar .key-details-bar__key-details {
     //     margin: 0 auto;
     // }
     .key-details-bar .key-details-bar__key-details .key-details-bar__name {
-        font-size: 36px;
-        font-size: 2.25rem;
+        // font-size: 36px;
+        // font-size: 2.25rem;
+        font-size: 1.675rem;
         line-height: 1.11111;
     }
     .key-details-bar .key-details-bar__key-details .key-details-bar__status {
@@ -292,35 +303,41 @@ width: 16%;
     color: #0b0c0c;
     display: block;
     margin: 10px 0;
-    padding: 10px 10px;
-    // border-bottom: 1px solid #b1b4b6;
-    // border-top: 1px solid #b1b4b6;
-    // border-right: 1px solid #b1b4b6;
-    background-color: #f3f2f1;
+    padding: 15px 20px;
+    background-color: #fff;
+    border: 1px solid #0b0c0c;
     max-width: 960px;
-    padding-left: 15px;
 }
-.card-red {
-    border-left: 6px solid #d4351c;
+.card p {
+    margin-bottom: 0;
 }
-.card-blue {
-    border-left: 6px solid #1d70b8;
+
+
+.card-total p {
+    color:$govuk-brand-colour;
 }
-.card-green {
-    border-left: 6px solid #00703c;
+.card-total-subset p {
+    color: white;
 }
-.card-black {
-    border-left: 6px solid #000;
-} 
+.card-total-subset {
+    background-color: $govuk-brand-colour;
+    color: #fff;
+    border:none;
+}
+.card-todo {
+    background-color: $govuk-error-colour;
+    color: #fff;
+    border: none;
+}
+.card-todo a:link, .card-todo a:visited  {
+    color: #fff;
+}
 
 .card__heading {
-    font-size: 1.25rem;
+    font-size: 48px;
     line-height: 1;
-    // color: #1d70b8;
     display: block;
-    // padding-bottom: 10px;
-    // margin-bottom: 15px;
-    // border-bottom: 1px solid #c0c0c0;
+    margin-bottom: 0.2rem;
     font-weight: 700;
 }
 .card__attributes {
@@ -376,13 +393,155 @@ width: 16%;
 }
 
 
+// DASHBOARD
+
+.app-pagination__list {
+    padding-left: 0;
+    margin: 0;
+}
+
+    .app-pagination--inline .app-pagination__list-item {
+        display: inline-block;
+    }
+    .app-pagination__list-item {
+        display: block;
+    }
+    .app-pagination--inline .app-pagination__link {
+        display: block;
+    }
+    
+    .app-pagination__link:active, .app-pagination__link:hover, .app-pagination__link:link, .app-pagination__link:visited {
+        color: #1d70b8;
+    }
+    .govuk-link:visited, a:visited {
+        color: #4c2c92;
+    }
+    .govuk-link:link, a:link {
+        color: #1d70b8;
+    }
+    .app-pagination__link {
+        display: block;
+        padding: 15px;
+        text-decoration: none;
+    }
+
+
+.app-pagination__link-title {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.25;
+    display: block;
+    font-weight: 700;
+}
+
+.app-pagination__link-icon {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    font-size: 18px;
+    font-size: 1.125rem;
+    line-height: 1.11111;
+    float: left;
+    height: 1em;
+    position: relative;
+    top: 1px;
+    width: .63em;
+}
+
+@media (min-width: 40.0625em) {
+    
+    .app-pagination__link-title {
+        font-size: 19px;
+        font-size: 1.1875rem;
+        line-height: 1.31579;
+    }
+        }
+
+@media (min-width: 40.0625em) {
+.app-pagination__link-icon {
+    font-size: 24px;
+    font-size: 1.5rem;
+    line-height: 1.25;
+}
+}
+
+.app-pagination__link:hover {
+    background-color: #f3f2f1;
+}
+
+.app-pagination--inline .app-pagination__list-item--next .app-pagination__link-icon {
+    float: right;
+}
+
+.app-pagination {
+    display: block;
+    list-style: none;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+
+.app-pagination--inline .app-pagination__list-item--next .app-pagination__link-text {
+    margin-left: 0;
+    margin-right: 10px;
+}
+.app-pagination__list-item--next .app-pagination__link-text, .app-pagination__list-item--prev .app-pagination__link-text {
+    margin-left: 10px;
+}
+.app-pagination--inline .app-pagination__link-text {
+    font-weight: 400;
+}
+
+// Sub navigation 
+
+.moj-sub-navigation__item {
+    margin-right: 30px;
+}
+.moj-sub-navigation__item:last-child {
+    margin-right: 0;
+}
+
+
+// Overall attendance counts
+
+.app-dashboard-count {
+    padding-right: 10px !important;
+    text-align: right;
+    min-width: 30px !important;
+    display: inline-block;
+    margin-bottom: 0;
+}
 
 
 
 // Prototype index page styles
+
+.app-masthead {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #ffffff;
+    background-color: $govuk-brand-colour;
+    margin-top: -20px;
+}
+@media (min-width: 40.0625em) {
+    .app-masthead {
+        padding-top: 50px;
+    }
+}
+.app-masthead__title, .app-masthead__subtitle, .app-masthead p {
+    color:#ffffff !important;
+}
+.app-masthead__subtitle {
+    font-weight: normal !important;
+}
+.app-related-items .useful-links > li {
+    margin-bottom: 15px !important;
+}
+
 .prototype-index {
     margin-bottom: 80px;
-    max-width: 700px;
 }
 .prototype-write-up .govuk-heading-s {
     margin-bottom: 10px;

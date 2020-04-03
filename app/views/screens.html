@@ -8,23 +8,34 @@ Prototypes | Prepare a case | HMPPS
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <h1 class="govuk-heading-xl">
-      Prepare a case for court screens
-    </h1>
-
+    <h2 class="govuk-heading-l">Screens</h2>
     <ul class="govuk-list govuk-list--bullet">
+      <li><a href="cases">Cases</a></li>
       <li>
-        <a href="dashboard.html">Dashboard</a>
+        <h2 class="govuk-heading-m govuk-!-margin-top-6 govuk-!-margin-bottom-2">Case view</h2>
         <ul class="govuk-list govuk-list--bullet">
-          <li><a href="match-overview.html">Defendants with multiple possible records</a></li>
-          <li><a href="match-cards-2.html">Choose probation record</a></li>
-        </ul>
-      </li>
-      <li>
-        <a href="cases.html">Cases</a>
-      </li>
-      <li>
-        <a href="summary.html">Case details (offender summary)</a>
+          <li><a href="cases/1/summary">Case details (current with single charge)</a></li>
+          <li><a href="cases/5/summary">Case details (no record with multiple charges)</a></li>
+          <li><a href="cases/1/probationrecord">Probation record (current community order)</a></li>
+          <li><a href="cases/6/probationrecord">Probation record (current order with breach)</a></li>
+          <li><a href="cases/3/probationrecord">Probation record (current custodial order)</a></li>
+          <li><a href="cases/1/risk">Risk register</a></li>
+          <li>
+            <h3 class="govuk-heading-s govuk-!-margin-top-6 govuk-!-margin-bottom-2">Order summary</h3>
+          </li>
+          <ul class="govuk-list govuk-list--bullet">
+            <li><a href="cases/1/probationrecord/event2"> Current community/SSO order</a></li>
+            <li><a href="cases/6/probationrecord/event1"> Current community/SSO order (with breach in progress)</a></li>
+            <li><a href="cases/3/probationrecord/event1"> Current custodial order</a></li>
+            <li><a href="cases/1/probationrecord/event3"> Previous order</a></li>
+            <li><a href="cases/6/probationrecord/event3"> Previous order (with completed breaches)</a></li>
+            <li>
+              <h4 class="govuk-heading-s govuk-!-margin-top-6 govuk-!-margin-bottom-2">Breach</h3>
+                <ul class="govuk-list govuk-list--bullet">
+                  <li><a href="cases/6/probationrecord/nsi/breach">Breach details (not ready to prosecute)</a></li>
+                  <li><a href="cases/6/probationrecord/nsi/breach-ready">Breach details (ready to prosecute)</a></li>
+                </ul>
+            </li>
       </li>
     </ul>
 

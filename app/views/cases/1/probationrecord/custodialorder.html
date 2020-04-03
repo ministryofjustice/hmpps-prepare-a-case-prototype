@@ -1,0 +1,510 @@
+{% extends "layout.html" %}
+
+
+{% block pageTitle %}
+Person
+{% endblock %}
+
+{% block bodyStart %}
+{% block keyDetails %}
+{% include "includes/key_details/1_Armstrong.html" %}
+{% endblock %}
+{% endblock %}
+
+
+{% block beforeContent %}
+<a href="/cases/1/probationrecord.html" class="govuk-back-link">Back to probation record</a>
+{% endblock %}
+
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l govuk-!-margin-bottom-7">
+      <!-- <span class="govuk-caption-l">Order performance</span> -->
+      ORA Adult Custody (inc PSS) (6 Months)
+    </h1>
+    <div class="govuk-!-margin-bottom-9">
+      <p class="govuk-body">Dangerous driving/Aid, abet cause or permit reckless driving - 80200</p>
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-third">
+          <p class="govuk-body govuk-!-margin-bottom-0 secondary-text-col">Current status</p>
+          <p class="govuk-body-l govuk-!-margin-bottom-0"><strong>Released - On Licence</strong></p>
+        </div>
+        <!-- <div class="govuk-grid-column-one-third">
+          <p class="govuk-body govuk-!-margin-bottom-0 secondary-text-col">Started</p>
+          <p class="govuk-body-l govuk-!-margin-bottom-0"><strong>05 Sept 2019</strong></p>
+        </div>
+        <div class="govuk-grid-column-one-third">
+          <p class="govuk-body govuk-!-margin-bottom-0 secondary-text-col">Ends</p>
+          <p class="govuk-body-l govuk-!-margin-bottom-0"><strong>04 March 2021</strong></p>
+        </div> -->
+      </div>
+      <table class="govuk-table">
+        <!-- <caption class="govuk-table__caption">Custodial order dates</caption> -->
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header"></th>
+            <th scope="col" class="govuk-table__header">Start</th>
+            <th scope="col" class="govuk-table__header">End</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Custody</th>
+            <td class="govuk-table__cell">18 Sept 2019</td>
+            <td class="govuk-table__cell">4 Nov 2019</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Licence</th>
+            <td class="govuk-table__cell">4 Nov 2019</td>
+            <td class="govuk-table__cell">17 Mar 2020</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Post sentence supervision</th>
+            <td class="govuk-table__cell">17 Mar 2020</td>
+            <td class="govuk-table__cell">17 Dec 2020</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+
+    <div class="govuk-!-margin-bottom-9">
+      <h3 class="govuk-heading-m">Licence conditions</h3>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>Curfew Arrangement </li>
+        <li>Participate or co-op with Programme or Activities</li>
+      </ul>
+      <!-- <table class="govuk-table">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Licence condition</th>
+            <th scope="col" class="govuk-table__header">Notes</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Curfew Arrangement </td>
+            <td class="govuk-table__cell">-</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell"></td>
+            <td class="govuk-table__cell">-</td>
+          </tr>
+        </tbody>
+      </table> -->
+      <p class="govuk-body"><a href="#">View licence conditions details</a></p>
+    </div>
+
+
+
+    <div class="govuk-!-margin-bottom-9">
+      <h3 class="govuk-heading-m">PSS Requirements</h3>
+      <p>No post sentence supervision requirements records were found.</p>
+    </div>
+
+    <div class="govuk-!-margin-bottom-9">
+      <h3 class="govuk-heading-m">Appointment attendance</h3>
+      <!-- <p class="secondary-text-col">Includes requirement and planned visit appointments up untill today.</p> -->
+      <p class="govuk-body">Last attendance: 11 Feb 2020 - Planned office visit (Attended - Complied)</p>
+      <!-- <div class="govuk-inset-text">
+        <p>Calculated on all appointments offered to date</p>
+      </div> -->
+
+
+      <div class="app-card">
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-one-third" style="width: 27%;">
+            <h2 class="govuk-heading-m govuk-!-margin-bottom-0"><span
+                class="govuk-body govuk-!-font-weight-bold govuk-!-margin-bottom-0 govuk-!-display-inline-block">
+                Appointments to date</span></h2>
+          </div>
+          <div class="govuk-grid-column-two-thirds">
+            <h2 class="govuk-heading-m govuk-!-margin-bottom-0"><span class="app-dashboard-count">12</span><span
+                class="govuk-body govuk-!-font-weight-bold govuk-!-margin-bottom-0 govuk-!-display-inline-block">
+                </span></h2>
+          </div>
+        </div>
+      </div>
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible"
+        style="max-width: 727px; border-bottom: 2px solid #000000;">
+      <div class="app-card">
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-one-third" style="width: 27%;">
+            <h2 class="govuk-heading-m govuk-!-margin-bottom-2"><span
+                class="govuk-body govuk-!-font-weight-bold govuk-!-margin-bottom-0 govuk-!-display-inline-block">
+                Attended</span></h2>
+          </div>
+          <div class="govuk-grid-column-two-thirds">
+            <h2 class="govuk-heading-m govuk-!-margin-bottom-2" style="margin-bottom: 5px !important;"><span
+                class="app-dashboard-count">11</span><span
+                class="govuk-body govuk-!-font-weight-bold govuk-!-margin-bottom-0 govuk-!-display-inline-block">
+                Complied</span></h2>
+            <p class="govuk-body govuk-!-margin-0"><span class="app-dashboard-count">10</span>Planned
+              office visits</p>
+            <p class="govuk-body govuk-!-margin-0"><span class="app-dashboard-count">1</span>Initial
+              appointment</p>
+            <h2 class="govuk-heading-m govuk-!-margin-bottom-2" style="margin-bottom: 0 !important;"><span
+                class="app-dashboard-count">0</span><span
+                class="govuk-body govuk-!-font-weight-bold govuk-!-margin-bottom-0 govuk-!-display-inline-block">
+                Failed to comply</span></h2>
+          </div>
+        </div>
+      </div>
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible" style="
+          max-width: 727px;">
+      <div class="app-card">
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-one-third" style="width: 27%;">
+            <h2 class="govuk-heading-m govuk-!-margin-bottom-2"><span
+                class="govuk-body govuk-!-font-weight-bold govuk-!-margin-bottom-0 govuk-!-display-inline-block">
+                Absences</span></h2>
+          </div>
+          <div class="govuk-grid-column-two-thirds">
+            <h2 class="govuk-heading-m govuk-!-margin-bottom-2" style="margin-bottom: 5px !important;"><span
+                class="app-dashboard-count">1</span><span
+                class="govuk-body govuk-!-font-weight-bold govuk-!-margin-bottom-0 govuk-!-display-inline-block">
+                Acceptable</span></h2>
+            <p class="govuk-body govuk-!-margin-0 seo"><span class="app-dashboard-count"></span>Medical
+            </p>
+            <h2 class="govuk-heading-m govuk-!-margin-bottom-2" style="margin-bottom: 0 !important;"><span
+                class="app-dashboard-count">0</span><span
+                class="govuk-body govuk-!-font-weight-bold govuk-!-margin-bottom-0 govuk-!-display-inline-block">
+                Unacceptable</span></h2>
+          </div>
+        </div>
+      </div>
+      <!-- <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible" style="max-width: 727px;">
+      <div class="app-card">
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-one-third" style="width: 26%;">
+            <h2 class="govuk-heading-m govuk-!-margin-bottom-2"><span
+                class="govuk-body govuk-!-font-weight-bold govuk-!-margin-bottom-0 govuk-!-display-inline-block"></span>
+            </h2>
+          </div>
+          <div class="govuk-grid-column-two-thirds">
+            <h2 class="govuk-heading-m govuk-!-margin-bottom-2">2<span
+                class="govuk-body govuk-!-font-weight-bold govuk-!-margin-bottom-0 govuk-!-display-inline-block">
+                &ensp;Appointments awaiting outcome</span></h2>
+          </div>
+        </div>
+      </div> -->
+
+
+
+
+
+      <!-- <dt class="govuk-summary-list__key">Last attendance</dt>
+              <dd class="govuk-summary-list__value">19 Feb 2020 - IAPS Attendance (NS) - Attended - Complied</dd> -->
+      <!-- <dl class="govuk-summary-list">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">Last attendance</dt>
+          <dd class="govuk-summary-list__value">19 Feb 2020 - IAPS Attendance (NS) - Attended - Complied</dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">Appointments offered</dt>
+          <dd class="govuk-summary-list__value">40 </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">Appointments attended</dt>
+          <dd class="govuk-summary-list__value">26</dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">Acceptable absences </dt>
+          <dd class="govuk-summary-list__value">12</dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">Unacceptable absences </dt>
+          <dd class="govuk-summary-list__value">0</dd>
+        </div>
+      </dl> -->
+      <!-- <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-quarter govuk-!-margin-bottom-4">
+          <p class="govuk-body-l govuk-!-margin-bottom-0 govuk-!-font-size-36"><strong>37</strong></p>
+          <p class="govuk-body govuk-!-margin-bottom-0"> Appointments offered</p>
+        </div>
+        <div class="govuk-grid-column-one-quarter">
+          <p class="govuk-body-l govuk-!-margin-bottom-0 govuk-!-font-size-36"><strong>23</strong></p>
+          <p class="govuk-body govuk-!-margin-bottom-0">Appointments attended</p>
+        </div>
+        <div class="govuk-grid-column-one-quarter">
+          <p class="govuk-body-l govuk-!-margin-bottom-0 govuk-!-font-size-36"><strong>12</strong></p>
+          <p class="govuk-body govuk-!-margin-bottom-0">Acceptable absences</p>
+        </div>
+        <div class="govuk-grid-column-one-quarter">
+          <p class="govuk-body-l govuk-!-margin-bottom-0 govuk-!-font-size-36"><strong>0</strong></p>
+          <p class="govuk-body govuk-!-margin-bottom-0">Unacceptable absences</p>
+        </div>
+      </div>
+      <p class="govuk-body">Last attendance&ensp;<span class=""><strong>22 Jan 2020 - IAPS Attendance
+        (NS)</strong></span></p> -->
+    </div>
+
+
+    <div class="govuk-!-margin-bottom-9">
+      <h3 class="govuk-heading-m">Most recent contacts</h3>
+      <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
+        <div class="govuk-accordion__section ">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+              <span class="govuk-accordion__section-button govuk-!-font-size-19" id="accordion-default-heading-5">
+                Planned Office Visit (NS)
+              </span>
+            </h2>
+            <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-5">
+              Relates to ORA Adult Custody (inc PSS)
+            </div>
+          </div>
+          <div id="accordion-default-content-4" class="govuk-accordion__section-content"
+            aria-labelledby="accordion-default-heading-4">
+            <dl class="govuk-summary-list">
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">Date</dt>
+                <dd class="govuk-summary-list__value">11 Feb 2020 17:30</dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">Outcome</dt>
+                <dd class="govuk-summary-list__value">Attended - Complied</dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">Officer </dt>
+                <dd class="govuk-summary-list__value">Miller, Gary </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">Notes</dt>
+                <dd class="govuk-summary-list__value">
+                  <p>Attended as arranged, States no changes in circs, working as groundworker on building site,
+                    repairing
+                    a damaged wall to a building at present. Not pleasant in this weather.</p>
+                  <p>States that still living with mum, however, G/F and his 3 children (and elder step child) live
+                    nearby,
+                    house very over crowded as 3 girls aged 5, 7 and 10 sleep in 1 bedroom, and g/f and 3yo son sleep in
+                    the 2nd bedroom. They remain a close family unit as he is over every night, meal times, etc and
+                    stays
+                    over on the weekends, the children often stay over a family houses on weekend as nana's, aunties,
+                    etc
+                    all live in very close proximity.</p>
+                  <p>States no contact with police and no concerns raised, no evidence of increased risk to self or
+                    others
+                    at this time and does not require any assiatcne from me at present</p>
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+        <div class="govuk-accordion__section ">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+              <span class="govuk-accordion__section-button govuk-!-font-size-19" id="accordion-default-heading-1">
+                Planned Office Visit (NS)
+              </span>
+            </h2>
+            <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-1">
+              Relates to ORA Adult Custody (inc PSS)
+            </div>
+          </div>
+          <div id="accordion-default-content-1" class="govuk-accordion__section-content"
+            aria-labelledby="accordion-default-heading-1">
+            <dl class="govuk-summary-list">
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">Date</dt>
+                <dd class="govuk-summary-list__value">4 Feb 2020 18:15</dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">Outcome</dt>
+                <dd class="govuk-summary-list__value">Acceptable Absence - Medical</dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">Officer </dt>
+                <dd class="govuk-summary-list__value">Miller, Gary </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">Notes</dt>
+                <dd class="govuk-summary-list__value">
+                  <p>see tel call of earlier in day..</p>
+                  <p>Spoke again to [] and gave him RIs for next week with []..</p>
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+        <div class="govuk-accordion__section ">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+              <span class="govuk-accordion__section-button govuk-!-font-size-19" id="accordion-default-heading-2">
+                Phone Contact from Offender
+              </span>
+            </h2>
+            <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-2">
+              Relates to ORA Adult Custody (inc PSS)
+            </div>
+          </div>
+          <div id="accordion-default-content-2" class="govuk-accordion__section-content"
+            aria-labelledby="accordion-default-heading-2">
+            <dl class="govuk-summary-list">
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">Date</dt>
+                <dd class="govuk-summary-list__value">4 Feb 2020 13:00</dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">Outcome</dt>
+                <dd class="govuk-summary-list__value">- </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">Officer </dt>
+                <dd class="govuk-summary-list__value">Miller, Gary </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">Notes</dt>
+                <dd class="govuk-summary-list__value">
+                  <p>[] reports that he has not been in work this week, home ill in bed with potential flue,, agreed I
+                    would confirm with a colleague to get him an apt next week I will AA his absence to illness.
+                    previous good reporting levels.</p>
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+        <div class="govuk-accordion__section ">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+              <span class="govuk-accordion__section-button govuk-!-font-size-19" id="accordion-default-heading-5">
+                Planned Office Visit (NS)
+              </span>
+            </h2>
+            <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-5">
+              Relates to ORA Adult Custody (inc PSS)
+            </div>
+          </div>
+          <div id="accordion-default-content-4" class="govuk-accordion__section-content"
+            aria-labelledby="accordion-default-heading-4">
+            <dl class="govuk-summary-list">
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">Date</dt>
+                <dd class="govuk-summary-list__value">21 Jan 2020 18:15</dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">Outcome</dt>
+                <dd class="govuk-summary-list__value">Attended - Complied</dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">Officer </dt>
+                <dd class="govuk-summary-list__value">Miller, Gary </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">Notes</dt>
+                <dd class="govuk-summary-list__value">
+                  <p>reported after work as instructed, reports no changes in circumstances. States that last week he
+                    injured his back, at work, by Saturday he took himself to A&E dept at the local hospital. where he
+                    was given appropriate medication. He has however managed to continue to attend work this week.....
+                  </p>
+                  <p>Denies any increase in his drink levels, continues to abstain from drinking the day before he is
+                    due to attend work.... No evidence of increased concerns at this time N/A 2 weeks.</p>
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+        <div class="govuk-accordion__section ">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+              <span class="govuk-accordion__section-button govuk-!-font-size-19" id="accordion-default-heading-5">
+                Planned Office Visit (NS)
+              </span>
+            </h2>
+            <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-5">
+              Relates to ORA Adult Custody (inc PSS)
+            </div>
+          </div>
+          <div id="accordion-default-content-4" class="govuk-accordion__section-content"
+            aria-labelledby="accordion-default-heading-4">
+            <dl class="govuk-summary-list">
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">Date</dt>
+                <dd class="govuk-summary-list__value">7 Jan 2020 18:15</dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">Outcome</dt>
+                <dd class="govuk-summary-list__value">Attended - Complied</dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">Officer </dt>
+                <dd class="govuk-summary-list__value">Miller, Gary </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">Notes</dt>
+                <dd class="govuk-summary-list__value">
+                  <p>Attended after work as agreed. reports that he followed the plan for Christmas and spent it with
+                    his family...has returned to work immediately after New year, is currently working a week in hand so
+                    looking forward to at least some wage this Friday...…</p>
+                  <p>Discussed the fact that he had chosen to go drinking after work on the final work day before
+                    Christmas.... this was a planned event and we had discussed it on previous appointments. []
+                    reports that he returned home by 8pm and although he was drinking throughout he remained on the same
+                    drink and made a decision not to carry this on all night.. praised his control and he acknowledges
+                    that he has no plans to increase his drinking levels, seeing this event as 'special' for Christmas.
+                  </p>
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+        <!-- <div class="govuk-accordion__section ">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+              <span class="govuk-accordion__section-button govuk-!-font-size-19" id="accordion-default-heading-5">
+                IAPS Attendance (NS)
+              </span>
+            </h2>
+            <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-5">
+              Relates to Court - Accredited Programme (Building Better Relationships (BBR))
+            </div>
+          </div>
+          <div id="accordion-default-content-4" class="govuk-accordion__section-content"
+            aria-labelledby="accordion-default-heading-4">
+            <dl class="govuk-summary-list">
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">Date</dt>
+                <dd class="govuk-summary-list__value">05 Feb 2020 16:00</dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">Outcome</dt>
+                <dd class="govuk-summary-list__value">-</dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">Officer </dt>
+                <dd class="govuk-summary-list__value">Staff, IAPS Staff(C13) </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">Notes</dt>
+                <dd class="govuk-summary-list__value">
+                  <p>Programme: Catchup session Foundation Module 6</p>
+                  <p>Scheduled</p>
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </div> -->
+      </div>
+      <p class="govuk-body"><a href="#">View full contact list (opens in nDelius)</a></p>
+
+    </div>
+
+
+
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+  </div>
+
+
+
+</div>
+
+
+
+
+{% endblock %}

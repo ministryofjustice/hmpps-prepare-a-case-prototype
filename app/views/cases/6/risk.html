@@ -1,0 +1,127 @@
+{% extends "layout.html" %}
+
+
+{% block pageTitle %}
+Risk registers
+{% endblock %}
+
+{% block bodyStart %}
+{% block keyDetails %}
+{% include "includes/key_details/6_Houghton.html" %}
+{% endblock %}
+{% endblock %}
+
+
+{% block beforeContent %}
+<!-- <a href="cases.html" class="govuk-back-link">Back</a> -->
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <nav class="moj-sub-navigation" aria-label="Sub navigation">
+
+      <ul class="moj-sub-navigation__list">
+        <li class="moj-sub-navigation__item">
+          <a class="moj-sub-navigation__link" href="/cases/6/summary.html">Case details</a>
+        </li>
+        <li class="moj-sub-navigation__item">
+          <a class="moj-sub-navigation__link" href="/cases/6/probationrecord.html">Probation
+            record</a>
+        </li>
+        <li class="moj-sub-navigation__item">
+          <a class="moj-sub-navigation__link" aria-current="page" href="/cases/6/risk.html">Risk register</a>
+        </li>
+      </ul>
+
+    </nav>
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <div class="govuk-!-margin-bottom-9">
+      <h1 class="govuk-heading-l govuk-!-margin-bottom-7">
+        Risk register
+      </h1>
+      <div class="govuk-tabs" data-module="govuk-tabs">
+        <h2 class="govuk-tabs__title">
+          Contents
+        </h2>
+        <ul class="govuk-tabs__list">
+          <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+            <a class="govuk-tabs__tab" href="#active">
+              Active (1)
+            </a>
+          </li>
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab" href="#inactive">
+              Inactive (1)
+            </a>
+          </li>
+        </ul>
+        <section class="govuk-tabs__panel" id="active">
+          <h2 class="govuk-heading-m">Active registrations</h2>
+          <table class="govuk-table govuk-table-xl">
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <!-- <th scope="col" class="govuk-table__header">Type</th> -->
+                <th scope="col" class="govuk-table__header">Type</th>
+                <!-- <th scope="col" class="govuk-table__header">Status</th> -->
+                <th scope="col" class="govuk-table__header">Registered</th>
+                <th scope="col" class="govuk-table__header">Next review</th>
+                <th scope="col" class="govuk-table__header">Notes</th>
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+
+
+              <tr class="govuk-table__row">
+                <!-- <td class="govuk-table__cell">RoSH</td> -->
+                <th scope="row" class="govuk-table__header">Low RoSH</th>
+                <!-- <td class="govuk-table__cell"><span class="moj-badge">medium</span></td> -->
+                <td class="govuk-table__cell">19 June 2019</td>
+                <td class="govuk-table__cell">12 May 2020</td>
+                <td class="govuk-table__cell">-</td>
+              </tr>
+
+
+
+            </tbody>
+          </table>
+
+        </section>
+        <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="inactive">
+          <h2 class="govuk-heading-m">Inactive registrations</h2>
+          <table class="govuk-table govuk-table-xl">
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header">Type</th>
+                <!-- <th scope="col" class="govuk-table__header">Description</th> -->
+                <!-- <th scope="col" class="govuk-table__header">Status</th> -->
+                <th scope="col" class="govuk-table__header">Registered</th>
+                <th scope="col" class="govuk-table__header">End date</th>
+                <th scope="col" class="govuk-table__header">Notes</th>
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <!-- <td class="govuk-table__cell">Public protection </td> -->
+                <th scope="row" class="govuk-table__header">Warrant / Summons </th>
+                <!-- <td class="govuk-table__cell"></td> -->
+                <td class="govuk-table__cell"> 20 June 2019</td>
+                <td class="govuk-table__cell"> 29 Oct 2019</td>
+                <td class="govuk-table__cell">18.7.19 - Warrant also issued today for new offence of Sec. 5 POA that he FTA'd.</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}

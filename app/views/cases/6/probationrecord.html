@@ -1,0 +1,151 @@
+{% extends "layout.html" %}
+
+
+{% block pageTitle %}
+Probation record
+{% endblock %}
+
+{% block bodyStart %}
+{% block keyDetails %}
+{% include "includes/key_details/6_Houghton.html" %}
+{% endblock %}
+{% endblock %}
+
+
+{% block beforeContent %}
+<!-- <a href="/cases" class="govuk-back-link">Back</a> -->
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+    <nav class="moj-sub-navigation" aria-label="Sub navigation">
+
+      <ul class="moj-sub-navigation__list">
+        <li class="moj-sub-navigation__item">
+          <a class="moj-sub-navigation__link" href="/cases/6/summary.html">Case details</a>
+        </li>
+        <li class="moj-sub-navigation__item">
+          <a class="moj-sub-navigation__link" aria-current="page" href="/cases/6/probationrecord.html">Probation
+            record</a>
+        </li>
+        <li class="moj-sub-navigation__item">
+          <a class="moj-sub-navigation__link" href="/cases/6/risk.html">Risk register</a>
+        </li>
+      </ul>
+
+    </nav>
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <h1 class="govuk-heading-l govuk-!-margin-bottom-7">Probation record</h1>
+  </div>
+</div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <div class="govuk-!-margin-bottom-9">
+      <h2 class="govuk-heading-m">
+        Current orders <span class="secondary-text-col">(1)</span>
+      </h2>
+      <div class="current-order-wrapper">
+        <h3 class="govuk-heading-s govuk-!-margin-bottom-2"><a href="probationrecord/event1.html">ORA Community Order (12
+          Months)</a>&ensp;<span class="moj-badge moj-badge--black">Breach</span></h3>
+        <p class="govuk-body  govuk-!-margin-bottom-1">Using violence to secure entry (Criminal Law Act/CJ and Public
+          Order Act) - 19563</p>
+        <p class="govuk-body  ">Started on 18 Oct 2019</p>
+        <h3 class="govuk-heading-s govuk-!-margin-bottom-2 govuk-!-padding-top-0">Requirements</h3>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>Alcohol Treatment –	9 months</li>
+          <li>Rehabilitation Activity Requirement (RAR) –	15 days</li>
+        </ul>
+        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible" style="max-width: 727px;">
+      </div>
+    </div>
+
+
+    <div class="govuk-!-margin-bottom-9">
+      <h2 class="govuk-heading-m">Previous orders <span class="secondary-text-col">(4)</span></h2>
+      <p class="govuk-heading-s govuk-!-margin-bottom-0"><a class="govuk-link govuk-link--no-visited-state"
+          href="probationrecord/event2.html">Absolute/Conditional Discharge (8 Months)</a></p>
+      <table class="govuk-table app-table govuk-!-margin-top-0 govuk-!-margin-bottom-3">
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Causing intentional harassment, alarm or distress (Public Order Act 1986/CJ &
+              PO Act 1994) - 12509</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">Ended on 29 Aug 2019</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="govuk-heading-s govuk-!-margin-bottom-0"><a class="govuk-link govuk-link--no-visited-state"
+          href="probationrecord/event3.html">ORA
+          Community Order (12 months)</a></p>
+      <table class="govuk-table app-table govuk-!-margin-top-0 govuk-!-margin-bottom-3">
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Using violence to secure entry (Criminal Law Act/CJ and Public Order Act) -
+              19563</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">Ended on 18 Oct 2019</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="govuk-heading-s govuk-!-margin-bottom-0"><a class="govuk-link govuk-link--no-visited-state" href="#">CJA
+          Community Order (3 months)</a></p>
+      <table class="govuk-table app-table govuk-!-margin-top-0 govuk-!-margin-bottom-3">
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Racially aggravated harassment, alarm or distress (Public Order Act 1986/Crime
+              and Disorder Act 1998) - 12558</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">Ended on 27 Sept 2012</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="govuk-heading-s govuk-!-margin-bottom-0"><a class="govuk-link govuk-link--no-visited-state" href="#">CJA
+          Community Order (12 months)</a></p>
+      <table class="govuk-table app-table govuk-!-margin-top-0 govuk-!-margin-bottom-3">
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">(Class C - Cannabis - Having possession of (post 29/1/04) - 09266)</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">Ended on 18 Apr 2007</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+  <div class="govuk-grid-column-one-third">
+    <h2 class="govuk-heading-m">
+      Offender Manager </h2>
+    <p class="govuk-body">Claire Smith <br><span class="secondary-text-col">Allocated on 24 Oct 2019</span></p>
+
+    <p>CRC South Yorkshire<br>
+      12 Holme Road<br>
+      Sheffield<br>
+      South Yorkshire<br>
+      S7 2TT
+    </p>
+
+    <p>Team telephone: 0114 123 0000</p>
+
+    <h2 class="govuk-heading-m">Last pre-sentence report </h2>
+    <p class="govuk-body">Pre-Sentence Report - Oral<br><span class="secondary-text-col">Delivered on 24 April 2019
+      </span></p>
+
+    <h2 class="govuk-heading-m">Last OASys assessment </h2>
+    <p class="govuk-body">OASys Assessment Layer 1<br><span class="secondary-text-col">Completed on 31 Oct 2019</p>
+
+  </div>
+
+
+
+</div>
+
+</div>
+
+
+{% endblock %}

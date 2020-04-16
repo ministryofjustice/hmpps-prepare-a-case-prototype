@@ -8,7 +8,7 @@ Case summary
 {% block bodyStart %}
 
 {% block keyDetails %}
-{% include "includes/key_details/5_Hill.html" %}
+{% include "includes/key_details/7_Test.html" %}
 {% endblock %}
 
 
@@ -26,34 +26,41 @@ Case summary
   <div class="govuk-grid-column-full">
 
     <nav class="moj-sub-navigation" aria-label="Sub navigation">
-
       <ul class="moj-sub-navigation__list">
         <li class="moj-sub-navigation__item">
-          <a class="moj-sub-navigation__link govuk-link--no-visited-state" aria-current="page" href="/cases/5/summary.html">Case details</a>
+          <a class="moj-sub-navigation__link    govuk-link--no-visited-state" aria-current="page" href="/cases/testcase/summaryV2.html">Case details</a>
+        </li>
+        <li class="moj-sub-navigation__item">
+          <a class="moj-sub-navigation__link   govuk-link--no-visited-state" href="/cases/testcase/historyV2.html">Case history</a>
+        </li>
+        <li class="moj-sub-navigation__item">
+          <a class="moj-sub-navigation__link  govuk-link--no-visited-state" href="">Probation record</a>
+        </li>
+        <li class="moj-sub-navigation__item">
+          <a class="moj-sub-navigation__link govuk-link--no-visited-state" href="">Risk register</a>
         </li>
       </ul>
       </ul>
-
     </nav>
   </div>
 </div>
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
-    <h1 class="govuk-heading-l govuk-!-margin-bottom-7">Case details</h1>
+    <h1 class="govuk-heading-l govuk-!-margin-bottom-7">Case details</h1>    
   </div>
 </div>
-
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
+    <!-- <h1 class="govuk-heading-xl govuk-!-margin-bottom-8">
+      Case details
+    </h1> -->
     <div class="govuk-!-margin-bottom-9">
       <h2 class="govuk-heading-m">Appearance</h2>
-      <p class="govuk-body">Court 1, morning session, Thursday 27 February (2nd listing).</p>
+      <p class="govuk-body">Court 1, morning session, Thursday 27 February (1st listing).</p>
     </div>
     <div class="govuk-!-margin-bottom-9">
-
       <h2 class="govuk-heading-m">Offences</h2>
-
       <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
         <div class="govuk-accordion__section ">
           <div class="govuk-accordion__section-header">
@@ -109,12 +116,11 @@ Case summary
           </div>
         </div>
       </div>
-
     </div>
-
-
-
-
+    <div class="govuk-!-margin-bottom-9">
+      <h2 class="govuk-heading-m">CPS pack</h2>
+      <p class="govuk-body"><a class="moj-timeline__document-link" href="#">View CPS pack (opens in Court Store)</a></p>
+    </div>
     <div class="govuk-!-margin-bottom-9">
       <h2 class="govuk-heading-m">
         Personal details from police
@@ -126,7 +132,7 @@ Case summary
             Name
           </dt>
           <dd class="govuk-summary-list__value">
-            Aiden Hill
+            Test Service User Name
           </dd>
         </div>
         <div class="govuk-summary-list__row">
@@ -142,7 +148,7 @@ Case summary
             Date of birth
           </dt>
           <dd class="govuk-summary-list__value">
-            1 April 1983 (28 years old)
+            27 September 1984 (35 years old)
           </dd>
         </div>
         <div class="govuk-summary-list__row">
@@ -150,7 +156,7 @@ Case summary
             Address
           </dt>
           <dd class="govuk-summary-list__value">
-            55 Bishop Gate<br>Sheffield<br>S1 2BB
+            1 Grey Lane<br> Sheffield<br> South Yorkshire<br> S10 1AG
           </dd>
         </div>
         <div class="govuk-summary-list__row">
@@ -162,6 +168,7 @@ Case summary
           </dd>
         </div>
       </dl>
+
     </div>
 
 
@@ -178,9 +185,65 @@ Case summary
 
   </div>
   <div class="govuk-grid-column-one-third">
+    <h2 class="govuk-heading-m">Recent case history</h2>
 
-    <h2 class="govuk-heading-m">CPS pack</h2>
-    <p class="govuk-body"><a href="#">View CPS pack (opens in Court Store)</a></p>
+
+    <div class="timeline">
+      <ul>
+        <li>
+          <h2 class="timeline__title">
+            Progress report from offender manager not received
+          </h2>
+          <p class="timeline__meta">
+            <time>14 April 2020 at 4:22 pm</time>. Automatic message
+          </p>
+          <p>We haven’t received a progress report from Dylan’s offender manager. You should contact them directly for
+            an update.</p>
+          <details class="govuk-details govuk-!-margin-bottom-4" data-module="govuk-details">
+            <summary class="govuk-details__summary">
+              <span class="govuk-details__summary-text">
+                Offender manager details
+              </span>
+            </summary>
+            <div class="govuk-details__text">
+              <p class="govuk-body">John Doe <br><span class="secondary-text-col">Allocated on 11 Sept 2019</span></p>
+              <p>
+                Provider: CPA South Yorkshire<br>
+                LDU: Rotherham<br>
+                Team: Rotherham LMC<br>
+              </p>
+              <p>Team telephone: 0114 123 0000</p>
+            </div>
+          </details>
+        </li>
+        <li>
+          <h2 class="timeline__title">Progress report from offender manager received</h2>
+          <p class="timeline__meta">
+            <time>14 April 2020 at 4:18 pm</time>. Report from John Doe
+          </p>
+          <p><a href="casehistory/progressreport">View progress
+              report</a></p>
+        </li>
+        <li>
+          <h2 class="timeline__title">Reminder for progress report sent to offender manager</h2>
+          <p class="timeline__meta">
+            <time>14 April 2020 at 4:18 pm</time>. Reminder sent automatically
+          </p>
+          <p>A progress report hasn’t been received yet. We’ve sent Dylan’s offender manager a reminder.</p>
+        </li>
+        <li>
+          <h2 class="timeline__title">Progress report from offender manager requested</h2>
+          <p class="timeline__meta">
+            <time>14 April 2020 at 4:18 pm</time>
+            Request sent automatically
+          </p>
+          <p>We’ve asked Dylan’s offender manager to tell us how they have been progressing on their current order.</p>
+        </li>
+      </ul>
+    </div>
+
+
+
   </div>
 
 

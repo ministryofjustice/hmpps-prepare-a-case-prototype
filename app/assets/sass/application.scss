@@ -31,6 +31,13 @@ $govuk-assets-path: '/govuk/assets/';
     background-image: url(/public/images/icon-document.svg) !important;
 }
 
+// Button menu toggle icon
+.moj-button-menu__toggle-button--secondary:after {
+    background-image: url(/public/images/icon-arrow-black-down.svg) !important;
+}
+.moj-button-menu button {
+    color: #000000 !important;
+}
 
 // Container max width
 .govuk-width-container, .moj-primary-navigation__container, .moj-header__container, .key-details-bar .key-details-bar__key-details {
@@ -497,7 +504,7 @@ width: 16%;
 // Sub navigation 
 
 .moj-sub-navigation__item {
-    margin-right: 30px;
+    margin-right: 25px;
 }
 .moj-sub-navigation__item:last-child {
     margin-right: 0;
@@ -514,6 +521,36 @@ width: 16%;
     margin-bottom: 0;
 }
 
+
+// Delius contact
+.delius-contact  {
+    max-width: none;
+}
+.delius-contact .govuk-summary-list__key {
+    text-align: right !important;
+}
+.delius-contact .govuk-select {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.9em;
+    border: 1px solid #ccc;
+    height: 2rem;
+    width: 100%;
+    background-color: white;
+}
+.delius-contact .mandatory {
+    color: $govuk-error-colour;
+}
+.delius-contact .govuk-summary-list__value {
+    padding: 5px 0 5px 0;
+}
+.delius-contact button {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.9em;
+    border: 1px solid #ccc;
+    box-shadow: none;
+    padding: 10px 12px 9px;
+    border-radius: 4px;
+}
 
 
 // Prototype index page styles
@@ -579,4 +616,16 @@ width: 16%;
 }
 .panel .grid-row {
 margin-top: 32px;
+}
+
+
+// Show more show less links
+.morecontent span {
+	display: none;
+}
+a.morelink {
+    color: #1d70b8;
+}
+a.morelink:visited {
+	color: #1d70b8;
 }

@@ -144,7 +144,7 @@ new MOJFrontend.ButtonMenu({
 
   // Comment history show more show less
   $(document).ready(function() {
-    var showChar = 140;
+    var showChar = 175;
     var ellipsestext = "...";
     var moretext = "Show more";
     var lesstext = "Show less";

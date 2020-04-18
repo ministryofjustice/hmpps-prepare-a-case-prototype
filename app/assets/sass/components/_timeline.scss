@@ -95,6 +95,10 @@
   }
 }
 
+// When >5 items in recent activity remove bottom horizontal bar on timeline
+.timeline.truncated ul:before {
+display: none;
+}
 
 .timeline__title {
   @include govuk-font($size: 19, $weight: bold);

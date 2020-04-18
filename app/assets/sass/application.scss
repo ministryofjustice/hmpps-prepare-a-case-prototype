@@ -21,23 +21,25 @@ $govuk-assets-path: '/govuk/assets/';
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
 
 
-// Search toggle image
+// IMAGES
+// Search toggle icon
 .moj-search-toggle__button:after {
     background-image: url(/public/images/icon-search-blue.svg) !important;
 }
-
-// Document icon image
+// Document icon 
 .moj-timeline__document-link {
     background-image: url(/public/images/icon-document.svg) !important;
 }
-
-// Button menu toggle icon
+// Button menu toggle chevron icon
 .moj-button-menu__toggle-button--secondary:after {
     background-image: url(/public/images/icon-arrow-black-down.svg) !important;
 }
-.moj-button-menu button {
+
+
+.moj-button-menu__toggle-button--secondary {
     color: #000000 !important;
 }
+
 
 // Container max width
 .govuk-width-container, .moj-primary-navigation__container, .moj-header__container, .key-details-bar .key-details-bar__key-details {
@@ -106,7 +108,6 @@ $govuk-assets-path: '/govuk/assets/';
     float: none;
     margin-right: 0;
 }
-
 @media (min-width: 1024px) {
 .case-list-timestamp {
     float: right;
@@ -400,107 +401,6 @@ width: 16%;
 }
 
 
-// DASHBOARD
-
-.app-pagination__list {
-    padding-left: 0;
-    margin: 0;
-}
-
-    .app-pagination--inline .app-pagination__list-item {
-        display: inline-block;
-    }
-    .app-pagination__list-item {
-        display: block;
-    }
-    .app-pagination--inline .app-pagination__link {
-        display: block;
-    }
-    
-    .app-pagination__link:active, .app-pagination__link:hover, .app-pagination__link:link, .app-pagination__link:visited {
-        color: #1d70b8;
-    }
-    .govuk-link:visited, a:visited {
-        color: #4c2c92;
-    }
-    .govuk-link:link, a:link {
-        color: #1d70b8;
-    }
-    .app-pagination__link {
-        display: block;
-        padding: 15px;
-        text-decoration: none;
-    }
-
-
-.app-pagination__link-title {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    font-size: 16px;
-    font-size: 1rem;
-    line-height: 1.25;
-    display: block;
-    font-weight: 700;
-}
-
-.app-pagination__link-icon {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    font-weight: 400;
-    font-size: 18px;
-    font-size: 1.125rem;
-    line-height: 1.11111;
-    float: left;
-    height: 1em;
-    position: relative;
-    top: 1px;
-    width: .63em;
-}
-
-@media (min-width: 40.0625em) {
-    
-    .app-pagination__link-title {
-        font-size: 19px;
-        font-size: 1.1875rem;
-        line-height: 1.31579;
-    }
-        }
-
-@media (min-width: 40.0625em) {
-.app-pagination__link-icon {
-    font-size: 24px;
-    font-size: 1.5rem;
-    line-height: 1.25;
-}
-}
-
-.app-pagination__link:hover {
-    background-color: #f3f2f1;
-}
-
-.app-pagination--inline .app-pagination__list-item--next .app-pagination__link-icon {
-    float: right;
-}
-
-.app-pagination {
-    display: block;
-    list-style: none;
-    margin-left: -15px;
-    margin-right: -15px;
-}
-
-
-.app-pagination--inline .app-pagination__list-item--next .app-pagination__link-text {
-    margin-left: 0;
-    margin-right: 10px;
-}
-.app-pagination__list-item--next .app-pagination__link-text, .app-pagination__list-item--prev .app-pagination__link-text {
-    margin-left: 10px;
-}
-.app-pagination--inline .app-pagination__link-text {
-    font-weight: 400;
-}
-
 // Sub navigation 
 
 .moj-sub-navigation__item {
@@ -624,8 +524,8 @@ margin-top: 32px;
 	display: none;
 }
 a.morelink {
-    color: #1d70b8;
+    color: $govuk-link-colour;
 }
 a.morelink:visited {
-	color: #1d70b8;
+	color: $govuk-link-colour;
 }

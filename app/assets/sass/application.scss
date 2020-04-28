@@ -103,6 +103,16 @@ $govuk-assets-path: '/govuk/assets/';
     max-width: none;
 }
 
+// HR section break max width
+.govuk-grid-column-two-thirds .govuk-section-break{
+    max-width: 727px;
+}
+.govuk-section-break--visible {
+    border-bottom: 1px solid #DEE0E2;
+}  
+
+
+
 // Caselist timestamp
 .case-list-timestamp {
     float: none;
@@ -529,3 +539,5 @@ a.morelink {
 a.morelink:visited {
 	color: $govuk-link-colour;
 }
+
+

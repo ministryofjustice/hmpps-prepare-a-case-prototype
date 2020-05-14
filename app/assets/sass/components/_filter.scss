@@ -25,6 +25,14 @@
   z-index: 9999;
 }
 
+.app-selected-filters--label {
+  display: inline-block;
+  float: left;
+  margin-right: 10px;
+  @include govuk-clearfix();
+  @include govuk-typography-weight-bold;
+}
+
 .selected-filters {
   height: 155px;
 }

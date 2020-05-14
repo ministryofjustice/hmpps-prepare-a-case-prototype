@@ -52,7 +52,7 @@ function applyFilters ($reset) {
   var label
   var anySelected = false
   var filterOptions = ['record', 'courtroom', 'session']
-  
+
   for (var ii = 0, leni = filterOptions.length; ii < leni; ii++) {
     document.querySelector('.app-filters-applied-' + filterOptions[ii]).innerHTML = ''
     document.querySelector('.applied-' + filterOptions[ii]).classList.add('govuk-visually-hidden')

@@ -1,0 +1,177 @@
+{% extends "layout.html" %}
+
+
+{% block pageTitle %}
+Defendants with possible probation records
+{% endblock %}
+
+
+
+{% block beforeContent %}
+<a href="/cases/day/2020-06-19/case-list" class="govuk-back-link">Back to cases</a>
+{% endblock %}
+
+
+{% block content %}
+
+<h1 class="govuk-heading-l">
+  <!-- <span class="govuk-caption-l">Brian Ball</span> -->
+  Defendants with possible probation records
+</h1>
+<h2 class='govuk-heading-m'>6 defendants partially match with existing probation records.
+</h2>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <p class="govuk-body">Review and confirm the correct record for each defendant.</p>
+    <table class="govuk-table" style="max-width: 500px;">
+      <!-- <caption class="govuk-table__caption">Months and rates</caption> -->
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Defendant</th>
+          <th scope="col" class="govuk-table__header govuk-table__header--numeric">Records found</th>
+          <th scope="col" class="govuk-table__header">Action</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Brian Ball</td>
+          <td class="govuk-table__cell govuk-table__cell--numeric">2</td>
+          <td class="govuk-table__cell"><a href="/cases/day/2020-06-19/review-records-ball" class="govuk-link govuk-link--no-visited-state">Review records</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">
+            Ian Bell</td>
+          <td class="govuk-table__cell govuk-table__cell--numeric">2</td>
+          <td class="govuk-table__cell"><a href="/cases/day/2020-06-19/review-records-bell" class="govuk-link govuk-link--no-visited-state">Review records</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">       Paul Grey</td>
+          <td class="govuk-table__cell govuk-table__cell--numeric">2</td>
+          <td class="govuk-table__cell"><a href="/cases/day/2020-06-19/review-records-grey" class="govuk-link govuk-link--no-visited-state">Review records</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">  Tom Andrew Carlisle</td>
+          <td class="govuk-table__cell govuk-table__cell--numeric">2</td>
+          <td class="govuk-table__cell"><a href="" class="govuk-link govuk-link--no-visited-state">Review records</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">     Jordan Stewart Green</td>
+          <td class="govuk-table__cell govuk-table__cell--numeric">2</td>
+          <td class="govuk-table__cell"><a href="" class="govuk-link govuk-link--no-visited-state">Review records</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Muhammed Riyan</td>
+          <td class="govuk-table__cell govuk-table__cell--numeric">2</td>
+          <td class="govuk-table__cell"><a href="/cases/day/2020-06-19/review-records-riyan" class="govuk-link govuk-link--no-visited-state">Review records</a></td>
+        </tr>
+      </tbody>
+    </table>
+
+
+
+    <!-- <table class="govuk-table" style="margin-bottom: 200px;">
+      <caption class="govuk-table__caption">Months and rates</caption>
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Defendant</th>
+          <th scope="col" class="govuk-table__header">Action</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Brian Ball</td>
+          <td class="govuk-table__cell"><a href="/cases/day/2020-06-19/review-records" class="govuk-link govuk-link--no-visited-state">Review records</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">
+            Ian Bell</td>
+          <td class="govuk-table__cell"><a href="" class="govuk-link govuk-link--no-visited-state">Review records</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">       Paul Grey</td>
+          <td class="govuk-table__cell"><a href="" class="govuk-link govuk-link--no-visited-state">Review records</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">  Tom Andrew Carlisle</td>
+          <td class="govuk-table__cell"><a href="" class="govuk-link govuk-link--no-visited-state">Review records</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">     Jordan Stewart Green</td>
+          <td class="govuk-table__cell"><a href="" class="govuk-link govuk-link--no-visited-state">Review records</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Muhammed Riyan</td>
+          <td class="govuk-table__cell"><a href="" class="govuk-link govuk-link--no-visited-state">Review records</a></td>
+        </tr>
+      </tbody>
+    </table>
+
+
+
+    <table class="govuk-table" style="margin-bottom: 100px;">
+      <caption class="govuk-table__caption">Months and rates</caption>
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Defendant</th>
+          <th scope="col" class="govuk-table__header">Session</th>
+          <th scope="col" class="govuk-table__header govuk-table__header--numeric">Court</th>
+          <th scope="col" class="govuk-table__header">Action</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Brian Ball</td>
+          <td class="govuk-table__cell">Morning</td>
+          <td class="govuk-table__cell govuk-table__cell--numeric">3</td>
+          <td class="govuk-table__cell"><a href="/cases/day/2020-06-19/review-records" class="govuk-link govuk-link--no-visited-state">Review records</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Ian Bell</td>
+          <td class="govuk-table__cell">Morning</td>
+          <td class="govuk-table__cell govuk-table__cell--numeric">3</td>
+          <td class="govuk-table__cell"><a href="" class="govuk-link govuk-link--no-visited-state">Review records</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Paul Grey</td>
+          <td class="govuk-table__cell">Morning</td>
+          <td class="govuk-table__cell govuk-table__cell--numeric">3</td>
+          <td class="govuk-table__cell"><a href="" class="govuk-link govuk-link--no-visited-state">Review records</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">  Tom Andrew Carlisle</td>
+          <td class="govuk-table__cell">  Morning</td>
+          <td class="govuk-table__cell govuk-table__cell--numeric">5</td>
+          <td class="govuk-table__cell"><a href="" class="govuk-link govuk-link--no-visited-state">Review records</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">     Jordan Stewart Green</td>
+          <td class="govuk-table__cell">    Afternoon</td>
+          <td class="govuk-table__cell govuk-table__cell--numeric">6</td>
+          <td class="govuk-table__cell"><a href="" class="govuk-link govuk-link--no-visited-state">Review records</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Muhammed Riyan</td>
+          <td class="govuk-table__cell">Afternoon</td>
+          <td class="govuk-table__cell govuk-table__cell--numeric">6</td>
+          <td class="govuk-table__cell"><a href="" class="govuk-link govuk-link--no-visited-state">Review records</a></td>
+        </tr>
+      </tbody>
+    </table> -->
+
+
+
+    </div>
+    <div class="govuk-grid-column-one-third"></div>
+  </div>
+</div>
+
+
+
+
+
+</div>
+
+
+
+
+{% endblock %}

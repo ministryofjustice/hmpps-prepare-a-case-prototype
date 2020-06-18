@@ -1,0 +1,221 @@
+{% extends "layout.html" %}
+
+
+{% block pageTitle %}
+Review possible probation records
+{% endblock %}
+
+
+
+{% block beforeContent %}
+<a href="/cases/day/2020-06-19/defendants-with-possible-records" class="govuk-back-link">Back</a>
+{% endblock %}
+
+
+{% block content %}
+
+<h1 class="govuk-heading-l govuk-!-margin-bottom-7">
+  <span class="govuk-caption-l">Ian Bell</span>
+  Review possible probation records
+</h1>
+<div class="govuk-grid-row govuk-!-margin-bottom-4">
+  <div class="govuk-grid-column-full">
+    <p class="govuk-body govuk-!-margin-bottom-6">Compare details and confirm the correct record for the defendant.</p>
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-half app-match-defendant-details">
+        <h2 class="govuk-heading-m govuk-!-margin-bottom-5">Defendant details</h2>
+
+        <div class="govuk-!-margin-bottom-0 app-possible-probation-record" style="
+        border-left: 1px solid #ccc;
+        background: #f8f8f8;
+        padding: 0 20px;
+        padding-bottom: 15px;
+        padding-top: 5px;">
+          <table class="govuk-table" style="margin-bottom: 0;">
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header" style="width: 40%;">Name</th>
+                <td class="govuk-table__cell">Ian Bell</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">DOB</th>
+                <td class="govuk-table__cell">7 October 1978</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Address</th>
+                <td class="govuk-table__cell">45 Kanchelskis Avenue, Bridlington, YO15 2TQ</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- <ul class="govuk-list" style="border-left: 1px solid #ccc; padding: 10px 20px;">
+          <li><strong>Name:</strong> Brian Ball</li>
+          <li><strong>DOB:</strong> 7 July 1986</li>
+          <li><strong>Address:</strong> 72A Saltash Road, Plymouth, PL4 6LF</li>
+        </ul> -->
+      </div>
+      <div class="govuk-grid-column-one-half app-match-probation-records">
+        <h2 class="govuk-heading-m govuk-!-margin-bottom-5">2 probation records found</h2>
+        <div class="govuk-form-group govuk-!-margin-bottom-0">
+          <fieldset class="govuk-fieldset">
+            <!-- <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                Where do you live?
+              </h1>
+            </legend> -->
+            <div class="govuk-radios">
+              <div class="govuk-radios__item" style="margin-bottom: 20px;">
+                <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio"
+                  value="england">
+                <label class="govuk-label govuk-radios__label" for="where-do-you-live"
+                  style="padding-top: 0; padding-right: 0;">
+                  <div class="govuk-!-margin-bottom-0 app-possible-probation-record" style="
+                  border-left: 1px solid #ccc;
+                  background: #f8f8f8;
+                  padding: 0 20px;
+                  padding-bottom: 15px;
+                  padding-top: 5px;">
+                    <table class="govuk-table" style="margin-bottom: 0;">
+                      <tbody class="govuk-table__body">
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-table__header" style="width: 40%;">Name</th>
+                          <td class="govuk-table__cell">Ian John Bell</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-table__header">DOB</th>
+                          <td class="govuk-table__cell">7 October 1978</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-table__header">Address</th>
+                          <td class="govuk-table__cell">10 Badminton Crescent, Hull, HU12 8AT</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-table__header">PNC</th>
+                          <td class="govuk-table__cell">2013/623230234K</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-table__header">CRN</th>
+                          <td class="govuk-table__cell">D7835712</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-table__header">Probation status</th>
+                          <td class="govuk-table__cell">Previously known</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-table__header">Most recent event</th>
+                          <td class="govuk-table__cell">31 Mar 2015 - ORA Community Order (12 Months)</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </label>
+              </div>
+            </div>
+            <!-- <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio"
+                value="scotland">
+              <label class="govuk-label govuk-radios__label" for="where-do-you-live-2"
+                style="padding-top:0; width:100%; padding-right: 0;">
+                <ul class="govuk-list govuk-!-margin-bottom-0" style="border-left: 1px solid #ccc;
+    background: #f8f8f8;
+    padding: 10px 20px;">
+                  <li><strong>Name:</strong> Brian Arthur Ball</li>
+                  <li><strong>DOB:</strong> 7 July 1986</li>
+                  <li><strong>Address:</strong> 212 Worthwark Park Drive, Newport, NP57 2HH</li>
+                  <li><strong>PNC:</strong> 0000000000</li>
+                  <li><strong>CRN:</strong> Z9745904</li>
+                  <li><strong>Probation status:</strong> Previously known</li>
+                  <li><strong>Most recent event:</strong> 22 Aug 2011 - Adult Custody 12m plus (48 Months)</li>
+                </ul>
+              </label>
+            </div> -->
+
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio"
+                value="wales">
+              <label class="govuk-label govuk-radios__label" for="where-do-you-live-2"
+                style="padding-top:0; padding-right: 0;">
+                <div class="govuk-!-margin-bottom-0 app-possible-probation-record" style="
+                border-left: 1px solid #ccc;
+                background: #f8f8f8;
+                padding: 0 20px;
+                padding-bottom: 15px;
+                padding-top: 5px;">
+                  <table class="govuk-table" style="margin-bottom: 0;">
+                    <tbody class="govuk-table__body">
+                      <tr class="govuk-table__row">
+                        <th scope="row" class="govuk-table__header" style="width: 40%;">Name</th>
+                        <td class="govuk-table__cell">Ian William Bell</td>
+                      </tr>
+                      <tr class="govuk-table__row">
+                        <th scope="row" class="govuk-table__header">DOB</th>
+                        <td class="govuk-table__cell">7 October 1980</td>
+                      </tr>
+                      <tr class="govuk-table__row">
+                        <th scope="row" class="govuk-table__header">Address</th>
+                        <td class="govuk-table__cell">167 Ladbroke Close, Scunthorpe, DN15 5GZ</td>
+                      </tr>
+                      <tr class="govuk-table__row">
+                        <th scope="row" class="govuk-table__header">PNC</th>
+                        <td class="govuk-table__cell">2012/324724377E</td>
+                      </tr>
+                      <tr class="govuk-table__row">
+                        <th scope="row" class="govuk-table__header">CRN</th>
+                        <td class="govuk-table__cell">T5473757</td>
+                      </tr>
+                      <tr class="govuk-table__row">
+                        <th scope="row" class="govuk-table__header">Probation status</th>
+                        <td class="govuk-table__cell">Previously known</td>
+                      </tr>
+                      <tr class="govuk-table__row">
+                        <th scope="row" class="govuk-table__header">Most recent event</th>
+                        <td class="govuk-table__cell">19 Mar 2015 - CJA Suspended Sentence Order (24 Months)</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </label>
+            </div>
+
+          </fieldset>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<a href="/cases/day/2020-06-19/defendants-with-possible-records" role="button" draggable="false" class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-0" data-module="govuk-button">
+  Confirm record
+</a>
+<a href="/cases/day/2020-06-19/defendants-with-possible-records" role="button" draggable="false" class="govuk-button govuk-button--secondary govuk-!-margin-right-1 govuk-!-margin-bottom-0" data-module="govuk-button">
+  Cancel
+</a>
+<!-- <button class="govuk-button govuk-button--secondary govuk-!-margin-bottom-0" data-module="govuk-button">
+  Cancel
+</button> -->
+<!-- <p class="govuk-body"><a class="govuk-link govuk-link--no-visited-state" href="">Skip this defendant</a></p> -->
+<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+<h2 class="govuk-heading-m">Can't see the correct record?</h2>
+<p class="govuk-body">If the defendant is not known to probation, you need to confirm they have no record:
+</p>
+<p class="govuk-body"><a class="govuk-link govuk-link--no-visited-state" href="/cases/day/2020-06-19/defendants-with-possible-records">Confirm no existing probation
+    record</a>
+</p>
+<p class="govuk-body"><strong>OR</strong>
+</p>
+<p class="govuk-body">If the defendant is known to probation but their record isn't listed above, you can link the
+  correct record using a case reference number (CRN):</p>
+<p class="govuk-body"><a class="govuk-link govuk-link--no-visited-state" href="">Link defendant with another record</a>
+</p>
+
+
+
+
+
+
+</div>
+
+
+
+
+{% endblock %}

@@ -1,0 +1,81 @@
+{% extends "layout.html" %}
+
+
+{% block pageTitle %}
+Link defendant to existing probation record
+{% endblock %}
+
+
+
+{% block beforeContent %}
+<a href="javascript:history.back();" class="govuk-back-link">Back</a>
+{% endblock %}
+
+
+{% block content %}
+
+<h1 class="govuk-heading-l govuk-!-margin-bottom-7">
+  <!-- <span class="govuk-caption-l">Brian Ball</span> -->
+  Link defendant to existing probation record
+</h1>
+<div class="govuk-grid-row govuk-!-margin-bottom-4">
+  <div class="govuk-grid-column-two-thirds">
+    <p class="govuk-body govuk-!-margin-bottom-6">Use a case reference number (CRN) to link the defendant to an existing
+      probation record.</p>
+
+    <div class="app-match-defendant-details govuk-!-margin-bottom-7">
+      <h2 class="govuk-heading-m govuk-!-margin-bottom-5">Defendant details</h2>
+      <div class="govuk-!-margin-bottom-0 app-possible-probation-record" style="
+        border-left: 1px solid #ccc;
+        background: #f8f8f8;
+        padding: 0 20px;
+        padding-bottom: 15px;
+        padding-top: 5px;">
+        <table class="govuk-table" style="margin-bottom: 0;">
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header" style="width: 40%;">Name</th>
+              <td class="govuk-table__cell">Brian Ball</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">DOB</th>
+              <td class="govuk-table__cell">7 July 1986</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Address</th>
+              <td class="govuk-table__cell">72A Saltash Road, Hull, HU19 6LF</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <fieldset class="govuk-fieldset">
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+        <h2 class="govuk-fieldset__heading">
+          Enter CRN for existing record
+        </h2>
+      </legend>
+      <div class="govuk-form-group">
+        <!-- <label class="govuk-label" for="address-postcode">
+          CRN
+        </label> -->
+        <input class="govuk-input govuk-input--width-10" id="address-postcode" name="address-postcode" type="text"
+          autocomplete="postal-code">
+      </div>
+      <button type="submit" class="govuk-button" data-module="govuk-button">
+        Find record
+      </button>
+
+    </fieldset>
+
+
+  </div>
+</div>
+
+
+
+
+
+
+{% endblock %}

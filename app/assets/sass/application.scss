@@ -83,10 +83,10 @@ $govuk-assets-path: '/govuk/assets/';
 
 // CASELIST UPDATE TIMESTAMPS
 .app-case-updates {
-    float: none;
+    // float: none;
     margin-bottom: 25px;
 }
-@media (min-width: 1024px) {
+@media (min-width: 1124px) {
 .app-case-updates {
     float: right;
     margin-bottom: 0;

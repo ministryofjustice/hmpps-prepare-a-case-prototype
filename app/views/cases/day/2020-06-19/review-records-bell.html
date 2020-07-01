@@ -2,7 +2,7 @@
 
 
 {% block pageTitle %}
-Review possible probation records
+Review possible nDelius records
 {% endblock %}
 
 
@@ -14,16 +14,19 @@ Review possible probation records
 
 {% block content %}
 
-<h1 class="govuk-heading-l govuk-!-margin-bottom-7">
+<h1 class="govuk-heading-l">
   <span class="govuk-caption-l">Ian Bell</span>
-  Review possible probation records
+  Review possible nDelius records
 </h1>
 <div class="govuk-grid-row govuk-!-margin-bottom-4">
   <div class="govuk-grid-column-full">
     <p class="govuk-body govuk-!-margin-bottom-6">Compare details and confirm the correct record for the defendant.</p>
+    <div class="govuk-inset-text">
+      Details that match the defendant are highlighted.
+    </div>
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-one-half app-match-defendant-details">
-        <h2 class="govuk-heading-m govuk-!-margin-bottom-5">Defendant details</h2>
+        <h2 class="govuk-heading-m">Defendant details</h2>
 
         <div class="govuk-!-margin-bottom-0 app-possible-probation-record" style="
                 border-left: 4px solid #ccc;
@@ -57,7 +60,7 @@ Review possible probation records
         </ul> -->
       </div>
       <div class="govuk-grid-column-one-half app-match-probation-records">
-        <h2 class="govuk-heading-m govuk-!-margin-bottom-5">2 probation records found</h2>
+        <h2 class="govuk-heading-m">2 nDelius records found</h2>
         <div class="govuk-form-group govuk-!-margin-bottom-0">
           <fieldset class="govuk-fieldset">
             <!-- <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
@@ -93,12 +96,12 @@ Review possible probation records
                           <td class="govuk-table__cell">10 Badminton Crescent, Hull, HU12 8AT</td>
                         </tr>
                         <tr class="govuk-table__row">
-                          <th scope="row" class="govuk-table__header">PNC</th>
-                          <td class="govuk-table__cell">2013/623230234K</td>
-                        </tr>
-                        <tr class="govuk-table__row">
                           <th scope="row" class="govuk-table__header">CRN</th>
                           <td class="govuk-table__cell">D7835712</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-table__header">PNC</th>
+                          <td class="govuk-table__cell">2013/623230234K</td>
                         </tr>
                         <tr class="govuk-table__row">
                           <th scope="row" class="govuk-table__header">Probation status</th>
@@ -160,12 +163,12 @@ Review possible probation records
                         <td class="govuk-table__cell">167 Ladbroke Close, Scunthorpe, DN15 5GZ</td>
                       </tr>
                       <tr class="govuk-table__row">
-                        <th scope="row" class="govuk-table__header">PNC</th>
-                        <td class="govuk-table__cell">2012/324724377E</td>
-                      </tr>
-                      <tr class="govuk-table__row">
                         <th scope="row" class="govuk-table__header">CRN</th>
                         <td class="govuk-table__cell">T5473757</td>
+                      </tr>
+                      <tr class="govuk-table__row">
+                        <th scope="row" class="govuk-table__header">PNC</th>
+                        <td class="govuk-table__cell">2012/324724377E</td>
                       </tr>
                       <tr class="govuk-table__row">
                         <th scope="row" class="govuk-table__header">Probation status</th>
@@ -205,7 +208,7 @@ Review possible probation records
       href="/cases/day/2020-06-19/defendants-with-possible-records">Confirm no existing probation
       record</a>
   </p>
-  <h3 class="govuk-heading-s">Link defendant to a different record</h2>
+  <h3 class="govuk-heading-s">Link defendant to a different nDelius record</h2>
     <p class="govuk-body">If the defendant has an existing record but it isn't listed above, you can link the
       correct record using the case reference number (CRN):</p>
     <p class="govuk-body"><a class="govuk-link govuk-link--no-visited-state" href="">Link defendant with another

@@ -2,7 +2,7 @@
 
 
 {% block pageTitle %}
-Review possible probation records
+Review possible nDelius records
 {% endblock %}
 
 
@@ -14,16 +14,19 @@ Review possible probation records
 
 {% block content %}
 
-<h1 class="govuk-heading-l govuk-!-margin-bottom-7">
+<h1 class="govuk-heading-l">
   <span class="govuk-caption-l">Tom Andrew Carlisle</span>
-  Review possible probation records
+  Review possible nDelius records
 </h1>
 <div class="govuk-grid-row govuk-!-margin-bottom-4">
   <div class="govuk-grid-column-full">
     <p class="govuk-body govuk-!-margin-bottom-6">Compare details and confirm the correct record for the defendant.</p>
+    <div class="govuk-inset-text">
+      Details that match the defendant are highlighted.
+    </div>
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-one-half app-match-defendant-details">
-        <h2 class="govuk-heading-m govuk-!-margin-bottom-5">Defendant details</h2>
+        <h2 class="govuk-heading-m">Defendant details</h2>
 
         <div class="govuk-!-margin-bottom-0 app-possible-probation-record" style="
         border-left: 4px solid #ccc;
@@ -57,7 +60,7 @@ Review possible probation records
         </ul> -->
       </div>
       <div class="govuk-grid-column-one-half app-match-probation-records">
-        <h2 class="govuk-heading-m govuk-!-margin-bottom-5">1 probation record found</h2>
+        <h2 class="govuk-heading-m">1 nDelius record found</h2>
         <div class="govuk-form-group govuk-!-margin-bottom-0">
           <fieldset class="govuk-fieldset">
             <!-- <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
@@ -93,12 +96,12 @@ Review possible probation records
                           <td class="govuk-table__cell">4 Forest Street, Newcastle, NE2 8DW</td>
                         </tr>
                         <tr class="govuk-table__row">
-                          <th scope="row" class="govuk-table__header">PNC</th>
-                          <td class="govuk-table__cell">2014/89303028D</td>
-                        </tr>
-                        <tr class="govuk-table__row">
                           <th scope="row" class="govuk-table__header">CRN</th>
                           <td class="govuk-table__cell">M7889292</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-table__header">PNC</th>
+                          <td class="govuk-table__cell">2014/89303028D</td>
                         </tr>
                         <tr class="govuk-table__row">
                           <th scope="row" class="govuk-table__header">Probation status</th>

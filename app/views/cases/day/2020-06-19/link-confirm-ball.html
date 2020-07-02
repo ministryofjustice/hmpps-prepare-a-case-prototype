@@ -2,7 +2,7 @@
 
 
 {% block pageTitle %}
-Link defendant to existing probation record
+Link an nDelius record to the defendant
 {% endblock %}
 
 
@@ -14,55 +14,109 @@ Link defendant to existing probation record
 
 {% block content %}
 
-<h1 class="govuk-heading-l govuk-!-margin-bottom-7">
+<h1 class="govuk-heading-l">
   <!-- <span class="govuk-caption-l">Brian Ball</span> -->
-  Link defendant to existing probation record
+  Link an nDelius record to the defendant
 </h1>
 <div class="govuk-grid-row govuk-!-margin-bottom-4">
   <div class="govuk-grid-column-two-thirds">
-    <p class="govuk-body govuk-!-margin-bottom-6">Use a case reference number (CRN) to link the defendant to an existing
-      probation record.</p>
-
-    <div class="app-match-defendant-details govuk-!-margin-bottom-7">
-      <h2 class="govuk-heading-m govuk-!-margin-bottom-5">Defendant details</h2>
-      <div class="govuk-!-margin-bottom-0 app-possible-probation-record">
-        <table class="govuk-table" style="margin-bottom: 0;">
-          <tbody class="govuk-table__body">
-            <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__header" style="width: 40%;">Name</th>
-              <td class="govuk-table__cell">Brian Ball</td>
-            </tr>
-            <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__header">DOB</th>
-              <td class="govuk-table__cell">7 July 1986</td>
-            </tr>
-            <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__header">Address</th>
-              <td class="govuk-table__cell">72A Saltash Road, Hull, HU19 6LF</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+    <p class="govuk-body">Use a case reference number (CRN) to link an existing nDelius record to the defendant.</p>
+    <div class="govuk-!-margin-bottom-7">
+      <h2 class="govuk-heading-m">Defendant details</h2>
+      <dl class="govuk-summary-list ">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Name
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Brian Ball
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Date of birth
+          </dt>
+          <dd class="govuk-summary-list__value">
+            7 July 1986
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Address
+          </dt>
+          <dd class="govuk-summary-list__value">
+            72A Saltash Road, Hull, HU19 6LF
+          </dd>
+        </div>
+      </dl>
+    </div>
+    <div class="govuk-!-margin-bottom-7">
+      <h2 class="govuk-heading-m">nDelius record found</h2>
+      <dl class="govuk-summary-list">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Name
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Brian Ball
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Date of birth
+          </dt>
+          <dd class="govuk-summary-list__value">
+            7 July 1986
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Address
+          </dt>
+          <dd class="govuk-summary-list__value">
+            72A Saltash Road, Hull, HU19 6LF
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            CRN
+          </dt>
+          <dd class="govuk-summary-list__value">
+            G123456
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            PNC
+          </dt>
+          <dd class="govuk-summary-list__value">
+            2018/329592392A
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Probation status
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Current
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Most recent event
+          </dt>
+          <dd class="govuk-summary-list__value">
+            31 July 2019 - ORA Suspended Sentence Order (24 Months)
+          </dd>
+        </div>
+      </dl>
+      <button type="submit" class="govuk-button" data-module="govuk-button">
+        Link record to defendant
+      </button>
+      <p class="govuk-body">If this isn't the record you're looking for you can <a href="" class="govuk-link">search again</a></p>
     </div>
 
-    <fieldset class="govuk-fieldset">
-      <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-        <h2 class="govuk-fieldset__heading">
-          Case reference number (CRN)
-        </h2>
-      </legend>
-      <div class="govuk-form-group">
-        <!-- <label class="govuk-label" for="address-postcode">
-          CRN
-        </label> -->
-        <input class="govuk-input govuk-input--width-10" id="address-postcode" name="address-postcode" type="text"
-          autocomplete="postal-code">
-      </div>
-      <button type="submit" class="govuk-button" data-module="govuk-button">
-        Find record
-      </button>
 
-    </fieldset>
 
 
   </div>

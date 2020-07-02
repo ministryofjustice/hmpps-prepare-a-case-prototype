@@ -2,7 +2,7 @@
 
 
 {% block pageTitle %}
-Link defendant to existing probation record
+Link an nDelius record to the defendant
 {% endblock %}
 
 
@@ -14,19 +14,43 @@ Link defendant to existing probation record
 
 {% block content %}
 
-<h1 class="govuk-heading-l govuk-!-margin-bottom-7">
+<h1 class="govuk-heading-l">
   <!-- <span class="govuk-caption-l">Brian Ball</span> -->
-  Link defendant to existing probation record
+  Link an nDelius record to the defendant
 </h1>
 <div class="govuk-grid-row govuk-!-margin-bottom-4">
   <div class="govuk-grid-column-two-thirds">
-    <p class="govuk-body govuk-!-margin-bottom-6">Use a case reference number (CRN) to link the defendant to an existing
-      probation record.</p>
+    <p class="govuk-body">Use a case reference number (CRN) to link an existing nDelius record to the defendant.</p>
 
-    <div class="app-match-defendant-details govuk-!-margin-bottom-7">
+    <div class="govuk-!-margin-bottom-7">
       <h2 class="govuk-heading-m">Defendant details</h2>
-      <div class="govuk-!-margin-bottom-0 app-possible-probation-record">
-        <table class="govuk-table" style="margin-bottom: 0;">
+      <dl class="govuk-summary-list">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Name
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Brian Ball
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Date of birth
+          </dt>
+          <dd class="govuk-summary-list__value">
+            7 July 1986
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Address
+          </dt>
+          <dd class="govuk-summary-list__value">
+            72A Saltash Road, Hull, HU19 6LF
+          </dd>
+        </div>
+      </dl>
+        <!-- <table class="govuk-table" style="margin-bottom: 0;">
           <tbody class="govuk-table__body">
             <tr class="govuk-table__row">
               <th scope="row" class="govuk-table__header" style="width: 40%;">Name</th>
@@ -41,8 +65,7 @@ Link defendant to existing probation record
               <td class="govuk-table__cell">72A Saltash Road, Hull, HU19 6LF</td>
             </tr>
           </tbody>
-        </table>
-      </div>
+        </table> -->
     </div>
 
     <fieldset class="govuk-fieldset">
@@ -52,11 +75,14 @@ Link defendant to existing probation record
         </h2>
       </legend>
       <div class="govuk-form-group">
-        <label class="govuk-label" for="address-postcode">
+        <label class="govuk-label" for="CRN">
           Case reference number (CRN)
         </label>
-        <input class="govuk-input govuk-input--width-10" id="address-postcode" name="address-postcode" type="text"
-          autocomplete="postal-code">
+        <span id="dob-hint" class="govuk-hint">
+          For example, A123456
+        </span> 
+        <input class="govuk-input govuk-input--width-10" id="CRN" name="CRN" type="text"
+          autocomplete="CRN">
       </div>
       <button type="submit" class="govuk-button" data-module="govuk-button">
         Find record

@@ -2,9 +2,17 @@
 
 
 {% block pageTitle %}
-Link an nDelius record to the defendant
+Link nDelius record from the defendant
 {% endblock %}
 
+{% block bodyStart %}
+
+{% block keyDetails %}
+{% include "includes/key_details/4_Francis-no-link.html" %}
+{% endblock %}
+
+
+{% endblock %}
 
 
 {% block beforeContent %}
@@ -14,13 +22,18 @@ Link an nDelius record to the defendant
 
 {% block content %}
 
-<h1 class="govuk-heading-l">
-  <!-- <span class="govuk-caption-l">Brian Ball</span> -->
-  Link an nDelius record to the defendant
-</h1>
-<div class="govuk-grid-row govuk-!-margin-bottom-4">
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <h1 class="govuk-heading-l">Link an nDelius record to the defendant</h1>
+  </div>
+</div>
+<div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <p class="govuk-body">Use a case reference number (CRN) to link an existing nDelius record to the defendant.</p>
+    <!-- <h2 class="govuk-heading-m">Appearance</h2> -->
+    <p class="govuk-body">Use a case reference number (CRN) to link an existing nDelius record to the
+      defendant.
+    </p>
     <div class="govuk-!-margin-bottom-7">
       <h2 class="govuk-heading-m">Defendant details</h2>
       <dl class="govuk-summary-list ">
@@ -29,7 +42,7 @@ Link an nDelius record to the defendant
             Name
           </dt>
           <dd class="govuk-summary-list__value">
-            Brian Ball
+            Hannah Francis
           </dd>
         </div>
         <div class="govuk-summary-list__row">
@@ -37,17 +50,9 @@ Link an nDelius record to the defendant
             Date of birth
           </dt>
           <dd class="govuk-summary-list__value">
-            7 July 1986
+            26 December 1996
           </dd>
         </div>
-        <!-- <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Address
-          </dt>
-          <dd class="govuk-summary-list__value">
-            72A Saltash Road, Hull, HU19 6LF
-          </dd>
-        </div> -->
       </dl>
     </div>
     <div class="govuk-!-margin-bottom-7">
@@ -58,7 +63,7 @@ Link an nDelius record to the defendant
             Name
           </dt>
           <dd class="govuk-summary-list__value">
-            Brian Ball
+            Hannah Jane Frances
           </dd>
         </div>
         <div class="govuk-summary-list__row">
@@ -66,7 +71,7 @@ Link an nDelius record to the defendant
             Date of birth
           </dt>
           <dd class="govuk-summary-list__value">
-            7 July 1986
+            26 December 1996
           </dd>
         </div>
         <!-- <div class="govuk-summary-list__row">
@@ -82,7 +87,7 @@ Link an nDelius record to the defendant
             CRN
           </dt>
           <dd class="govuk-summary-list__value">
-            G123456
+            F763945
           </dd>
         </div>
         <div class="govuk-summary-list__row">
@@ -90,7 +95,7 @@ Link an nDelius record to the defendant
             PNC
           </dt>
           <dd class="govuk-summary-list__value">
-            2018/329592392A
+            2017/324724377E
           </dd>
         </div>
         <div class="govuk-summary-list__row">
@@ -110,24 +115,29 @@ Link an nDelius record to the defendant
           </dd>
         </div> -->
       </dl>
-      <a href="/cases/day/2020-06-19/defendants-with-possible-records.html">
-        <button type="submit" class="govuk-button" data-module="govuk-button">
-          Link record to defendant
-        </button>
-      </a>
-      <p class="govuk-body">If this isn't the record you're looking for you can <a
-          href="/cases/day/2020-06-19/link-ball" class="govuk-link govuk-link--no-visited-state">search again</a>.</p>
+      <a href="/cases/4/summary-correct-crn"><button type="submit" class="govuk-button" data-module="govuk-button">
+        Link record to defendant
+      </button></a>
+      <p class="govuk-body">If this isn't the record you're looking for you can <a href="/cases/4/link" class="govuk-link govuk-link--no-visited-state">search
+          again</a>.</p>
     </div>
 
 
 
 
+
+
+  </div>
+  <div class="govuk-grid-column-one-third">
   </div>
 </div>
 
 
 
 
+
+</div>
+</div>
 
 
 {% endblock %}

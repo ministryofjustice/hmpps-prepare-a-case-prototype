@@ -1,0 +1,100 @@
+{% extends "layout.html" %}
+
+
+{% block pageTitle %}
+Unlink nDelius record from the defendant
+{% endblock %}
+
+{% block bodyStart %}
+
+{% block keyDetails %}
+{% include "includes/key_details/1_Armstrong-no-unlink.html" %}
+{% endblock %}
+
+
+{% endblock %}
+
+
+{% block beforeContent %}
+<a href="javascript:history.back();" class="govuk-back-link">Back</a>
+{% endblock %}
+
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <h1 class="govuk-heading-l">Unlink nDelius record from the defendant</h1>
+  </div>
+</div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-!-margin-bottom-8">
+      <!-- <h2 class="govuk-heading-m">Appearance</h2> -->
+      <p class="govuk-body">Unlink an nDelius record if the defendant is unknown to probation or has been linked to the wrong record.
+      </p>
+      <p class="govuk-body">Once unlinked you can link a different nDelius record to the defendant using a case reference number.</p>
+      <div>
+        <h2 class="govuk-heading-m">Linked nDelius record</h2>
+        <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Name
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Dylan Roger Adam Armstrong
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Date of birth
+            </dt>
+            <dd class="govuk-summary-list__value">
+              27 September 1984
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              CRN
+            </dt>
+            <dd class="govuk-summary-list__value">
+              DX12340APNC
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              PNC
+            </dt>
+            <dd class="govuk-summary-list__value">
+              A1234560BA
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Probation status
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Current
+            </dd>
+          </div>
+        </dl>
+      </div>
+      <a href="/cases/1/summary"><button class="govuk-button" data-module="govuk-button">
+        Unlink record from defendant
+      </button></a>
+    </div>
+  </div>
+  <div class="govuk-grid-column-one-third">
+  </div>
+</div>
+
+
+
+
+
+</div>
+</div>
+
+
+{% endblock %}

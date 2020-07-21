@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+
+
+{% block pageTitle %}
+Case summary
+{% endblock %}
+
+{% block bodyStart %}
+
+{% block keyDetails %}
+{% include "includes/key_details/9_Smith.html" %}
+{% endblock %}
+
+
+{% endblock %}
+
+
+{% block beforeContent %}
+<a href="/cases/day/2020-06-17/case-list" class="govuk-back-link">Back to cases</a>
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <h1 class="govuk-heading-l">Restricted case</h1>
+  </div>
+</div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <div class="">
+      <!-- <h2 class="govuk-heading-m">Appearance</h2> -->
+      <p class="govuk-body-l">Zane Harris Smith</p>
+      <p class="govuk-body">You are unable to view this case because the defendant is personally known or related to
+        you.</p>
+      <p class="govuk-body">If you think you should be able to view this case, contact your line manager.</p>
+    </div>
+    <!-- <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible"> -->
+    <div class="govuk-grid-column-one-third">
+      <!-- <h2 class="govuk-heading-m">CPS pack</h2>
+    <p class="govuk-body"><a href="#">View CPS pack (opens in Court Store)</a></p> -->
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}

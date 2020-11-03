@@ -24,8 +24,8 @@ Cases
     </h1>
 
     <nav class="app-pagination app-pagination--inline app-print--hide" role="navigation" aria-label="Pagination">
-      <ul class="app-pagination__list">
-        <!-- <li class="app-pagination__list-item">
+      <!-- <ul class="app-pagination__list">
+        <li class="app-pagination__list-item">
           <a href="/cases/day/2020-06-17/case-list" class="app-pagination__link">
             <span class="app-pagination__link-title">
               <span class="app-pagination__link-text" style="color: #000000;">Today</span>
@@ -45,7 +45,7 @@ Cases
               <span class="app-pagination__link-text">Monday 29 Jun</span>
             </span>
           </a>
-        </li> -->
+        </li>
         <li class="app-pagination__list-item app-pagination__list-item--next">
           <a href="/cases/day/2020-06-18/case-list" class="app-pagination__link" rel="next">
             <span class="app-pagination__link-title">
@@ -59,8 +59,24 @@ Cases
             </span>
           </a>
         </li>
-      </ul>
+      </ul> -->
+      
+
     </nav>
+    <div class="govuk-form-group">
+      <!-- <label class="govuk-label" for="sort">
+        Sort by
+      </label> -->
+      <select class="govuk-select" id="sort" name="sort">
+        <option value="published" selected>Tuesday 3 November</option>
+        <option value="updated" >Wednesday 4 November</option>
+        <option value="views">Thursday 5 November</option>
+        <option value="comments">Friday 6 November</option>
+        <option value="comments">Saturday 7 November</option>
+        <option value="comments">Monday 9 November</option>
+        <option value="comments">Tuesday 10 November</option>
+      </select>
+    </div>
   </div>
   <div class="govuk-grid-column-one-third">
   </div>

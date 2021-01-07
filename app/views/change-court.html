@@ -1,24 +1,20 @@
 {% extends "layout.html" %}
 
 {% block head %}
-{% include "includes/head-noprimary.html" %}
+  {% include "includes/head-noprimary.html" %}
 {% endblock %}
 
 {% block pageTitle %}
-Select a court
+  Select a court
 {% endblock %}
-
-
 
 {% block beforeContent %}
-<!-- <a href="/cases/day/2020-06-19/case-list" class="govuk-back-link">Back to cases</a> -->
 {% endblock %}
 
-
 {% block content %}
+<script type="text/javascript" src="courts-names.js"></script>
 
 <h1 class="govuk-heading-l">
-  <!-- <span class="govuk-caption-l">Brian Ball</span> -->
   Which courts do you work in?
 </h1>
 
@@ -47,13 +43,15 @@ Select a court
   </ul>
   <h4 class="govuk-heading-s">Add court</h4>
   <div class="govuk-!-margin-bottom-5">
-    <label label class="govuk-label" for="two-thirds" style="color:#505a5f">Type in the name of the court</label>
-    <input class="govuk-input govuk-!-width-two-thirds" id="two-thirds" name="two-thirds" type="text">
+    <div id="event-name-hint" class="govuk-hint">Type in the name of the court</div>
+    <select class="govuk-select govuk-input govuk-!-width-two-thirds" id="magistrate-courts" name="magistrate-courts" type="text" autocomplete="magistrate-courts">
+      <option value="Sheffield" href="/cases/day/2020-06-17/case-list">Sheffield Magistrates' Court</option>
+      <option value="Tyneside" href="/cases/day/2020-06-17/case-list">Tyneside Magistrates' Court</option>
+      <option value="Sheffield">Sheffield</option>
+    </select>
   </div>
   <div>
-    <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
-      Add court
-    </button>
+    <button class="govuk-button govuk-button--secondary" data-module="govuk-button">Add court</button>
   </div>
   <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
   <div class="govuk-!-margin-top-8">
@@ -63,13 +61,6 @@ Select a court
   </div>
 </div>
 
-
-
-
-
 </div>
-
-
-
 
 {% endblock %}

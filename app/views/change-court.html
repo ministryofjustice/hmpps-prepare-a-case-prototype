@@ -1,58 +1,309 @@
 {% extends "layout.html" %}
-
 {% block head %}
-  {% include "includes/head-noprimary.html" %}
+  {% include "includes/head.html" %}
 {% endblock %}
-
-{% block pageTitle %}
-  Select a court
+  {% block pageTitle %}
+Select a court
 {% endblock %}
-
 {% block beforeContent %}
 {% endblock %}
 
 {% block content %}
-<script type="text/javascript" src="./courts-names.js"></script>
-<script type="text/javascript" src="./accessible-autocomplete.min.js"></script>
+<style type="text/css">
+  .autocomplete__wrapper {
+    position: relative
+  }
+  .autocomplete__hint, .autocomplete__input {
+    -webkit-appearance: none;
+    border: 2px solid #0b0c0c;
+    border-radius: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    margin-bottom: 0;
+    width: 66%
+  }
+  .autocomplete__input {
+    background-color: transparent;
+    position: relative
+  }
+  .autocomplete__hint {
+    color: #b1b4b6;
+    position: absolute
+  }
+  .autocomplete__input--default {
+    padding: 5px
+  }
+  .autocomplete__input--focused {
+    outline: 3px solid #fd0;
+    outline-offset: 0;
+    box-shadow: inset 0 0 0 2px
+  }
+  .autocomplete__input--show-all-values {
+    padding: 5px 34px 5px 5px;
+    cursor: pointer
+  }
+  .autocomplete__dropdown-arrow-down {
+    z-index: -1;
+    display: inline-block;
+    position: absolute;
+    right: 8px;
+    width: 24px;
+    height: 24px;
+    top: 10px
+  }
+  .autocomplete__menu {
+    background-color: #fff;
+    border: 2px solid #0b0c0c;
+    border-top: 0;
+    color: #0b0c0c;
+    margin: 0;
+    max-height: 342px;
+    overflow-x: hidden;
+    padding: 0;
+    width: 100%;
+    width: calc(66% - 4px)
+  }
+  .autocomplete__menu--visible {
+    display: block
+  }
+  .autocomplete__menu--hidden {
+    display: none
+  }
+  .autocomplete__menu--overlay {
+    box-shadow: rgba(0, 0, 0, .256863) 0 2px 6px;
+    left: 0;
+    position: absolute;
+    top: 100%;
+    z-index: 100
+  }
+  .autocomplete__menu--inline {
+    position: relative
+  }
+  .autocomplete__option {
+    font-family: "GDS Transport";
+    border-bottom: solid #b1b4b6;
+    border-width: 1px 0;
+    cursor: pointer;
+    display: block;
+    position: relative
+  }
+  .autocomplete__option > * {
+    pointer-events: none
+  }
+  .autocomplete__option:first-of-type {
+    border-top-width: 0
+  }
+  .autocomplete__option:last-of-type {
+    border-bottom-width: 0
+  }
+  .autocomplete__option--odd {
+    background-color: #fafafa
+  }
+  .autocomplete__option--focused, .autocomplete__option:hover {
+    background-color: #1d70b8;
+    border-color: #1d70b8;
+    color: #fff;
+    outline: 0
+  }
+  .autocomplete__option--no-results {
+    background-color: #fafafa;
+    color: #646b6f;
+    cursor: not-allowed
+  }
+  .autocomplete__hint, .autocomplete__input, .autocomplete__option {
+    font-family: "GDS Transport";
+    font-size: 16px;
+    line-height: 1.25
+  }
+  .autocomplete__hint, .autocomplete__option {
+    padding: 5px
+  }
+  @media (min-width: 641px) {
+    .autocomplete__hint, .autocomplete__input, .autocomplete__option {
+      font-size: 19px;
+      line-height: 1.31579
+    }
+  }
+</style>
+<h1 class="govuk-heading-l">Select a court</h1>
+<p class="govuk-body">Add the courts you work in to create your 'My courts' list.</p>
+<p class="govuk-body">After you save your list, you can:</p>
+<ul class="govuk-list govuk-list--bullet govuk-!-margin-bottom-7">
+  <li>view case lists and cases in those courts</li>
+  <li>edit 'My courts' to add or remove courts</li>
+</ul>
 
-<h1 class="govuk-heading-l">
-  Which courts do you work in?
-</h1>
+<h4 class="govuk-heading-s">Add court</h4>
+<div class="govuk-!-margin-bottom-5">
+  {%- set courtList = [
+  {name: "Aberystwyth Justice Centre"},
+  {name: "Aldershot Magistrates' Court"},
+  {name: "Barkingside  Magistrates' Court"},
+  {name: "Barnsley Law Courts"},
+  {name: "Barnstaple Magistrates', County and Family Court"},
+  {name: "Barrow-in-Furness Magistrates' Court"},
+  {name: "Basildon Magistrates' Court and Family Court"},
+  {name: "Basingstoke Magistrates' Court"},
+  {name: "Bath Law Courts"},
+  {name: "Belmarsh Magistrates' Court"},
+  {name: "Berwick upon Tweed Magistrates' Court"},
+  {name: "Beverley Magistrates' Court and Hearing Centre"},
+  {name: "Bexley Magistrates' Court"},
+  {name: "Birmingham Magistrates' Court"},
+  {name: "Blackburn Magistrates' Court"},
+  {name: "Blackpool Magistrates' and Civil Court"},
+  {name: "Bodmin Magistrates' Court"},
+  {name: "Bolton Magistrates' Court"},
+  {name: "Boston Magistrates' Court"},
+  {name: "Bradford  and Keighley Magistrates' Court and Family Court"},
+  {name: "Bridlington Magistrates' Court and Hearing Centre"},
+  {name: "Brighton Magistrates' Court"},
+  {name: "Bristol Magistrates' Court and Tribunals Hearing Centre"},
+  {name: "Bromley Magistrates' Court"},
+  {name: "Burnley Magistrates' Court"},
+  {name: "Caernarfon  Justice Centre"},
+  {name: "Cambridge Magistrates' Court"},
+  {name: "Cannock Magistrates' Court"},
+  {name: "Canterbury Magistrates' Court"},
+  {name: "Cardiff  Magistrates' Court"},
+  {name: "Carlisle Magistrates' Court"},
+  {name: "Chelmsford Magistrates' Court and Family Court"},
+  {name: "Cheltenham Magistrates' Court"},
+  {name: "Chester Magistrates' Court"},
+  {name: "North East Derbyshire & Dales (Chesterfield) Magistrates' Court"},
+  {name: "City of London Magistrates' Court"},
+  {name: "Colchester Magistrates' Court and Family Court"},
+  {name: "Coventry Magistrates' Court"},
+  {name: "Crawley Magistrates' Court"},
+  {name: "Crewe (South Cheshire) Magistrates' Court"},
+  {name: "Croydon Magistrates' Court"},
+  {name: "Cwmbran Magistrates' Court"},
+  {name: "Darlington Magistrates' Court and Family Court"},
+  {name: "Derby Magistrates' Court"},
+  {name: "Doncaster Justice Centre North"},
+  {name: "Dudley Magistrates' Court"},
+  {name: "Ealing Magistrates' Court"},
+  {name: "East Berkshire Magistrates' Court, Slough"},
+  {name: "Exeter Magistrates' Court - North and East Devon"},
+  {name: "Folkestone Magistrates' Court"},
+  {name: "Gateshead Magistrates' Court and Family Court"},
+  {name: "Great Yarmouth Magistrates' Court and Family Court"},
+  {name: "Grimsby Magistrates' Court and Family Court"},
+  {name: "Guildford Magistrates' Court and Family Court"},
+  {name: "Harrogate Justice Centre"},
+  {name: "Hastings Magistrates' Court"},
+  {name: "Hatfield Magistrates' Court"},
+  {name: "Haverfordwest Magistrates' Court"},
+  {name: "Hendon Magistrates' Court"},
+  {name: "Hereford Justice Centre"},
+  {name: "High Wycombe Magistrates' Court and Family Court"},
+  {name: "Highbury Corner Magistrates' Court"},
+  {name: "Horsham Magistrates' Court"},
+  {name: "Hull and Holderness Magistrates' Court and Hearing Centre"},
+  {name: "Huntingdon Law Courts"},
+  {name: "Ipswich Magistrates' Court"},
+  {name: "Isle of Wight Combined Court"},
+  {name: "Kidderminster Magistrates' Court"},
+  {name: "King's Lynn Magistrates' Court and Family Court"},
+  {name: "Kirklees (Huddersfield) Magistrates' Court and Family Court"},
+  {name: "Lancaster Courthouse"},
+  {name: "Lavender Hill Magistrates' Court"},
+  {name: "Leamington Spa Magistrates' Court"},
+  {name: "Leeds Magistrates' Court and Family Court"},
+  {name: "Leicester Magistrates' Court"},
+  {name: "Lincoln Magistrates' Court"},
+  {name: "Liverpool & Knowsley Magistrates' Court"},
+  {name: "Llandrindod Wells Magistrates' and Family Court"},
+  {name: "Llandudno Magistrates' Court"},
+  {name: "Llanelli Law Courts"},
+  {name: "Loughborough Magistrates' Court"},
+  {name: "Luton and South Bedfordshire Magistrates' Court and Family Court"},
+  {name: "Maidstone Magistrates' Court"},
+  {name: "Manchester Magistrates' Court"},
+  {name: "Mansfield Magistrates' and County Court"},
+  {name: "Margate Magistrates' Court"},
+  {name: "Medway Magistrates' Court and Family Court"},
+  {name: "Merthyr Tydfil Combined Court Centre"},
+  {name: "Mid and South East Northumberland Law Courts"},
+  {name: "Milton Keynes Magistrates' Court and Family Court"},
+  {name: "Mold Justice Centre"},
+  {name: "Newcastle upon Tyne Magistrates' Court"},
+  {name: "Newport (South Wales) Magistrates' Court"},
+  {name: "Newton Abbot Magistrates' Court"},
+  {name: "Newton Aycliffe Magistrates' Court"},
+  {name: "North Somerset Magistrates' Court"},
+  {name: "North Staffordshire Justice Centre"},
+  {name: "North Tyneside Magistrates' Court"},
+  {name: "Northampton Magistrates' Court"},
+  {name: "Norwich Magistrates' Court and Family Court"},
+  {name: "Nottingham Magistrates' Court"},
+  {name: "Nuneaton Magistrates' Court"},
+  {name: "Oxford and Southern Oxfordshire Magistrates' Court"},
+  {name: "Peterborough Magistrates' Court"},
+  {name: "Peterlee Magistrates' Court"},
+  {name: "Plymouth Magistrates' Court"},
+  {name: "Poole Magistrates' Court"},
+  {name: "Port Talbot Justice Centre"},
+  {name: "Portsmouth Magistrates' Court"},
+  {name: "Preston Magistrates' Court"},
+  {name: "Reading Magistrates' Court and Family Court"},
+  {name: "Redditch Magistrates' Court"},
+  {name: "Romford Magistrates' Court"},
+  {name: "Salisbury Law Courts"},
+  {name: "Scarborough Justice Centre"},
+  {name: "Sefton Magistrates' Court"},
+  {name: "Sevenoaks Magistrates' Court and Family Court"},
+  {name: "Sheffield Magistrates' Court"},
+  {name: "Skipton Magistrates' Court"},
+  {name: "South Tyneside Magistrates' Court"},
+  {name: "South Worcestershire Magistrates' Court"},
+  {name: "Southend Magistrates' Court"},
+  {name: "St Albans Magistrates' Court"},
+  {name: "Staines Magistrates' Court and Family Court"},
+  {name: "Stevenage Magistrates' Court"},
+  {name: "Stockport Magistrates' Court"},
+  {name: "Stratford Magistrates' Court"},
+  {name: "Sunderland County, Family, Magistrates and Tribunal Hearings"},
+  {name: "Swansea Magistrates' Court"},
+  {name: "Swindon Magistrates' Court"},
+  {name: "Tameside Magistrates' Court"},
+  {name: "Taunton Magistrates' Court, Tribunals and Family Hearing Centre"},
+  {name: "Teesside Magistrates' Court"},
+  {name: "Telford Magistrates' Court"},
+  {name: "Thames Magistrates' Court"},
+  {name: "Truro Magistrates' Court"},
+  {name: "Uxbridge Magistrates' Court"},
+  {name: "Walsall Magistrates' Court"},
+  {name: "Warrington Magistrates' Court"},
+  {name: "Warwick Combined Court"},
+  {name: "Wellingborough Magistrates' Court"},
+  {name: "Welshpool Magistrates' Court"},
+  {name: "West Cumbria Courthouse"},
+  {name: "West Hampshire Magistrates' Court"},
+  {name: "Westminster Magistrates' Court"},
+  {name: "Weymouth Combined Court"},
+  {name: "Wigan and Leigh Magistrates' Court"},
+  {name: "Willesden Magistrates' Court"},
+  {name: "Wimbledon Magistrates' Court"},
+  {name: "Wirral Magistrates' Court"},
+  {name: "Wolverhampton Magistrates' Court"},
+  {name: "Worcester Justice Centre"},
+  {name: "Worthing Magistrates' Court"},
+  {name: "Wrexham Magistrates' Court"},
+  {name: "Yeovil County, Family and Magistrates' Court"},
+  {name: "York Magistrates' Court and Family Court"}
+  ] -%}
 
-<!--<div class="govuk-grid-row govuk-!-margin-bottom-8">-->
-<!--  <div class="govuk-grid-column-two-thirds">-->
-<!--    <ul class="govuk-list">-->
-<!--      <li>-->
-<!--        <a class="govuk-link govuk-heading-m govuk-!-margin-bottom-2" href="/cases/day/2020-06-17/case-list">North-->
-<!--          Tyneside Magistrates' Court</a>-->
-<!--      </li>-->
-<!--      <li>-->
-<!--        <a class="govuk-link govuk-heading-m govuk-!-margin-bottom-2" href="">Sheffield Magistrates' Court</a>-->
-<!--      </li>-->
-<!--    </ul>-->
-<!--  </div>-->
-<!--  <div class="govuk-grid-column-one-third"></div>-->
-<!--</div>-->
-<!--</div>-->
-
-<div>
-  <p class="govuk-body">Add the courts you work in to create your 'My courts' list.</p>
-  <p class="govuk-body">After you save your list, you can:</p>
-  <ul class="govuk-list govuk-list--bullet govuk-!-margin-bottom-7">
-    <li>view case lists and cases in those courts</li>
-    <li>edit 'My courts' to add or remove courts</li>
-  </ul>
-  <h4 class="govuk-heading-s">Add court</h4>
-  <div class="govuk-!-margin-bottom-5">
-    <div id="event-name-hint" class="govuk-hint">Type in the name of the court</div>
-    <select class="govuk-select govuk-input govuk-!-width-two-thirds" id="magistrate-courts" name="magistrate-courts" type="text" autocomplete="magistrate-courts">
-      <option value="Sheffield" href="/cases/day/2020-06-17/case-list">Sheffield Magistrates' Court</option>
-      <option value="Tyneside" href="/cases/day/2020-06-17/case-list">Tyneside Magistrates' Court</option>
-      <option value="Sheffield">Sheffield</option>
-    </select>
-  </div>
+  <label for="court-selection" class="govuk-label govuk-!-margin-bottom-3" style="color:#505a5f">Type in the name of the court</label>
+  <select id="court-selection" name="court-selection">
+    <option value="">Select a court</option>
+    {% for court in courtList %}
+    <option value="{{ court }}">{{ court.name }}</option>
+    {% endfor %}
+  </select>
   <div>
-    <button class="govuk-button govuk-button--secondary" data-module="govuk-button">Add court</button>
+    <button class="govuk-button govuk-button--secondary govuk-!-margin-top-5" data-module="govuk-button">Add court</button>
   </div>
   <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
   <div class="govuk-!-margin-top-8">
@@ -62,6 +313,16 @@
   </div>
 </div>
 
+  <script type="text/javascript" src="/public/javascripts/accessible-autocomplete.min.js"></script>
+  <script type="text/javascript">
+    var selectEl = document.querySelector('#court-selection')
+    accessibleAutocomplete.enhanceSelectElement({
+      autoselect: true,
+      confirmOnBlur: true,
+      defaultValue: '',
+      minLength: 2,
+      selectElement: selectEl
+    })
+  </script>
 </div>
-
 {% endblock %}

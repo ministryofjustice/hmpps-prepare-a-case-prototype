@@ -158,13 +158,9 @@ Select a court
 
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-        <h1 class="govuk-heading-l">Select a court</h1>
-        <p class="govuk-body">Add the courts you work in to create your 'My courts' list.</p>
-        <p class="govuk-body">After you save your list, you can:</p>
-        <ul class="govuk-list govuk-list--bullet govuk-!-margin-bottom-7">
-            <li>view case lists and cases in those courts</li>
-            <li>edit 'My courts' to add or remove courts</li>
-        </ul>
+        <h1 class="govuk-heading-l">Edit my court</h1>
+        <p class="govuk-body">Add or remove courts from your list.</p>
+        <div class="govuk-body-l govuk-!-font-weight-bold govuk-link" id="courtsResults"></div>
         <ul class="govuk-list" id="courts"> </ul>
         <h4 class="govuk-heading-s">Add court</h4>
         <div class="govuk-!-margin-bottom-5">
@@ -355,6 +351,15 @@ Select a court
         minLength: 2,
         selectElement: selectEl
     })
+    var myCourtStored = sessionStorage.courts
+    console.log('myCourtStored', myCourtStored)
+    document.querySelector('#courtsResults').textContent = myCourtStored
+
+    var splitMyCourtStored = myCourtStored.split(',').join("\n")
+    console.log('splitMyCourtStored', splitMyCourtStored)
+
+
+
     var courts = []
     const addCourt = () => {
         var courtName = document.querySelector('#court-selection').value
@@ -388,6 +393,7 @@ Select a court
     }
     const deleteCourt = name => {
         courts = courts.filter(court => court !== name)
+        // console.log('*********',courts)
     }
 </script>
 {% endblock %}

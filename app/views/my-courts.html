@@ -9,7 +9,7 @@ My courts
     <div class="govuk-grid-column-two-thirds">
         <h1 class="govuk-heading-xl">My courts</h1>
         <div class="form-group">
-            <a href="change-court.html" class="govuk-link">Edit my courts</a>
+            <a href="edit-my-court.html" class="govuk-link">Edit my courts</a>
             <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
             <p class="govuk-body">Select a court to view the case list.</p>
             <div class="govuk-body-l govuk-!-font-weight-bold govuk-link" id="results"></div>
@@ -20,8 +20,8 @@ My courts
     var courts = sessionStorage.courts
     var filteredCourts = sessionStorage.filteredCourts
     if (filteredCourts) {
-        // var filteredArray = filteredCourts.split(',')
-        // console.log('hehehe', filteredArray)
+        var filteredArray = filteredCourts.split(',')
+        console.log('filteredArray', filteredArray)
         document.querySelector('#results').innerHTML = filteredCourts
     } else {
             var courtsArray = courts.split(",")

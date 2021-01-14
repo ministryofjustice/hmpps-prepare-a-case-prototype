@@ -12,7 +12,7 @@ My courts
             <a href="change-court.html" class="govuk-link">Edit my courts</a>
             <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
             <p class="govuk-body">Select a court to view the case list.</p>
-            <div class="govuk-body" id="results"></div>
+            <div class="govuk-body-l govuk-!-font-weight-bold govuk-link" id="results"></div>
         </div>
     </div>
 </div>
@@ -20,13 +20,26 @@ My courts
     var courts = sessionStorage.courts
     var filteredCourts = sessionStorage.filteredCourts
     if (filteredCourts) {
-        var filteredArray = filteredCourts.split(',')
-        console.log(filteredArray)
-        document.querySelector('#results').innerHTML = filteredArray
+        // var filteredArray = filteredCourts.split(',')
+        // console.log('hehehe', filteredArray)
+        document.querySelector('#results').innerHTML = filteredCourts
     } else {
-        var courtsArray = courts.split(',')
-        console.log(courts.split(','))
-        document.querySelector('#results').innerHTML = courtsArray
+            var courtsArray = courts.split(",")
+            var newLine = courtsArray.join("\n")
+            // var courtLines = courtsArray.replace(",", "<br />")
+            console.log('courts.split', courtsArray)
+            console.log('courts.length', courtsArray.length)
+            console.log('courts.join', courtsArray.join("\n"))
+            console.log('courts.newline', newLine)
+            // console.log('courts.split', courtLines)
+        // var courtsArray = courts.replace(",", "<br />")
+        // console.log('courts.split', courtsArray)
+        //
+        document.querySelector('#results').textContent = courtsArray
+
+        results.classList.add('govuk-link')
+        results.style.textDecoration = 'underline'
+        results.style.color = '#1d70b8'
     }
 </script>
 {% endblock %}

@@ -21,16 +21,16 @@ My courts
     var filteredCourts = sessionStorage.filteredCourts
     if (filteredCourts) {
         var filteredArray = filteredCourts.split(',')
-        console.log('filteredArray', filteredArray)
+        // console.log('hehehe', filteredArray)
         document.querySelector('#results').innerHTML = filteredCourts
     } else {
             var courtsArray = courts.split(",")
-            var newLine = courtsArray.join("\n")
+            // var newLine = courtsArray.join("\n")
             // var courtLines = courtsArray.replace(",", "<br />")
             console.log('courts.split', courtsArray)
-            console.log('courts.length', courtsArray.length)
-            console.log('courts.join', courtsArray.join("\n"))
-            console.log('courts.newline', newLine)
+            // console.log('courts.length', courtsArray.length)
+            // console.log('courts.join', courtsArray.join("\n"))
+            // console.log('courts.newline', newLine)
             // console.log('courts.split', courtLines)
         // var courtsArray = courts.replace(",", "<br />")
         // console.log('courts.split', courtsArray)
@@ -41,5 +41,6 @@ My courts
         results.style.textDecoration = 'underline'
         results.style.color = '#1d70b8'
     }
+
 </script>
 {% endblock %}

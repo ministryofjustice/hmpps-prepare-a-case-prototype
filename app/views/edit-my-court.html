@@ -353,12 +353,41 @@ Select a court
     })
     var myCourtStored = sessionStorage.courts
     console.log('myCourtStored', myCourtStored)
-    document.querySelector('#courtsResults').textContent = myCourtStored
 
     var splitMyCourtStored = myCourtStored.split(',').join("\n")
     console.log('splitMyCourtStored', splitMyCourtStored)
 
+    var linkCourt = document.createElement('li')
+    linkCourt.innerText = splitMyCourtStored
+    linkCourt.classList.add('govuk-heading-s')
+    document.querySelector('#courts').appendChild(linkCourt)
 
+    // var removeButton = document.createElement('a')
+    // removeButton.innerText = 'Remove'
+    //     removeButton.classList.add('govuk-link')
+    //     removeButton.style.textDecoration = 'underline'
+    //     removeButton.style.color = '#1d70b8'
+    //     removeButton.style.fontWeight = 0
+    //     removeButton.style.cssFloat = 'right'
+    //     removeButton.style.cursor = 'pointer'
+    //     removeButton.onclick = remove
+    //     linkCourt.appendChild(removeButton)
+    //     var hr = document.createElement('hr')
+    //     linkCourt.appendChild(hr)
+    //     }
+    //     const remove = e => {
+    //         var el = e.target
+    //         el.parentNode.remove()
+    //         var court = el.parentNode.textContent
+    //         var res = court.replace('Remove', '')
+    //         deleteCourt(res)
+    //         console.log(courts)
+    //         sessionStorage.filteredCourts = courts
+    //     }
+    //     const deleteCourt = name => {
+    //         courts = courts.filter(court => court !== name)
+    //         // console.log('*********',courts)
+    //     }
 
     var courts = []
     const addCourt = () => {

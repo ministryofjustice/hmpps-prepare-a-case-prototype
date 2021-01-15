@@ -7,13 +7,11 @@ Select a court
 {% endblock %}
 {% block beforeContent %}
 {% endblock %}
-
 {% block content %}
 <style type="text/css">
     .autocomplete__wrapper {
         position: relative
     }
-
     .autocomplete__hint, .autocomplete__input {
         -webkit-appearance: none;
         border: 2px solid #0b0c0c;
@@ -24,32 +22,26 @@ Select a court
         margin-bottom: 0;
         width: 66%
     }
-
     .autocomplete__input {
         background-color: transparent;
         position: relative
     }
-
     .autocomplete__hint {
         color: #b1b4b6;
         position: absolute
     }
-
     .autocomplete__input--default {
         padding: 5px
     }
-
     .autocomplete__input--focused {
         outline: 3px solid #fd0;
         outline-offset: 0;
         box-shadow: inset 0 0 0 2px
     }
-
     .autocomplete__input--show-all-values {
         padding: 5px 34px 5px 5px;
         cursor: pointer
     }
-
     .autocomplete__dropdown-arrow-down {
         z-index: -1;
         display: inline-block;
@@ -59,7 +51,6 @@ Select a court
         height: 24px;
         top: 10px
     }
-
     .autocomplete__menu {
         background-color: #fff;
         border: 2px solid #0b0c0c;
@@ -72,15 +63,12 @@ Select a court
         width: 100%;
         width: calc(66% - 4px)
     }
-
     .autocomplete__menu--visible {
         display: block
     }
-
     .autocomplete__menu--hidden {
         display: none
     }
-
     .autocomplete__menu--overlay {
         box-shadow: rgba(0, 0, 0, .256863) 0 2px 6px;
         left: 0;
@@ -88,11 +76,9 @@ Select a court
         top: 100%;
         z-index: 100
     }
-
     .autocomplete__menu--inline {
         position: relative
     }
-
     .autocomplete__option {
         font-family: "GDS Transport";
         border-bottom: solid #b1b4b6;
@@ -101,53 +87,43 @@ Select a court
         display: block;
         position: relative
     }
-
     .autocomplete__option > * {
         pointer-events: none
     }
-
     .autocomplete__option:first-of-type {
         border-top-width: 0
     }
-
     .autocomplete__option:last-of-type {
         border-bottom-width: 0
     }
-
     .autocomplete__option--odd {
         background-color: #fafafa
     }
-
     .autocomplete__option--focused, .autocomplete__option:hover {
         background-color: #1d70b8;
         border-color: #1d70b8;
         color: #fff;
         outline: 0
     }
-
     .autocomplete__option--no-results {
         background-color: #fafafa;
         color: #646b6f;
         cursor: not-allowed
     }
-
     .autocomplete__hint, .autocomplete__input, .autocomplete__option {
         font-family: "GDS Transport";
         font-size: 16px;
         line-height: 1.25
     }
-
     .autocomplete__hint, .autocomplete__option {
         padding: 5px
     }
-
     .form-inline {
         display: flex;
         flex-flow: row wrap;
         justify-content: space-between;
         align-items: baseline;
     }
-
     @media (min-width: 641px) {
         .autocomplete__hint, .autocomplete__input, .autocomplete__option {
             font-size: 19px;
@@ -155,14 +131,13 @@ Select a court
         }
     }
 </style>
-
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-        <h1 class="govuk-heading-l">Edit my court</h1>
-        <p class="govuk-body">Add or remove courts from your list.</p>
+        <h1 class="govuk-heading-l govuk-!-padding-bottom-3">Edit my court</h1>
+        <p class="govuk-body govuk-!-padding-bottom-5">Add or remove courts from your list.</p>
         <div class="govuk-body-l govuk-!-font-weight-bold govuk-link" id="courtsResults"></div>
         <ul class="govuk-list" id="courts"> </ul>
-        <h4 class="govuk-heading-s">Add court</h4>
+        <h4 class="govuk-heading-s govuk-!-padding-top-7">Add court</h4>
         <div class="govuk-!-margin-bottom-5">
             {%- set courtList = [
             {name: "Aberystwyth Justice Centre"},
@@ -324,7 +299,7 @@ Select a court
             ] -%}
             <label for="court-selection" class="govuk-label govuk-!-margin-bottom-3" style="color:#505a5f">Type in the name of the court</label>
             <select id="court-selection" name="court-selection">
-                <option value="">Select a court</option>
+                <option value=""></option>
                 {% for court in courtList %}
                 <option value="{{ court }}">{{ court.name }}</option>
                 {% endfor %}
@@ -336,8 +311,8 @@ Select a court
             <div class="govuk-!-margin-top-8">
                 <a href="my-courts.html" role="button" draggable="false" class="govuk-button moj-button-menu__item"
                    data-module="govuk-button">Save and continue</a>
+                <a href="change-court.html" class="govuk-link" style="float: right; padding-top: 10px; margin-right: 60%">Cancel</a>
             </div>
-            <div id="result"></div>
         </div>
     </div>
 </div>
@@ -351,78 +326,50 @@ Select a court
         minLength: 2,
         selectElement: selectEl
     })
-    var myCourtStored = sessionStorage.courts
-    console.log('myCourtStored', myCourtStored)
-
-    var splitMyCourtStored = myCourtStored.split(',').join("\n")
-    console.log('splitMyCourtStored', splitMyCourtStored)
-
-    var linkCourt = document.createElement('li')
-    linkCourt.innerText = splitMyCourtStored
-    linkCourt.classList.add('govuk-heading-s')
-    document.querySelector('#courts').appendChild(linkCourt)
-
-    // var removeButton = document.createElement('a')
-    // removeButton.innerText = 'Remove'
-    //     removeButton.classList.add('govuk-link')
-    //     removeButton.style.textDecoration = 'underline'
-    //     removeButton.style.color = '#1d70b8'
-    //     removeButton.style.fontWeight = 0
-    //     removeButton.style.cssFloat = 'right'
-    //     removeButton.style.cursor = 'pointer'
-    //     removeButton.onclick = remove
-    //     linkCourt.appendChild(removeButton)
-    //     var hr = document.createElement('hr')
-    //     linkCourt.appendChild(hr)
-    //     }
-    //     const remove = e => {
-    //         var el = e.target
-    //         el.parentNode.remove()
-    //         var court = el.parentNode.textContent
-    //         var res = court.replace('Remove', '')
-    //         deleteCourt(res)
-    //         console.log(courts)
-    //         sessionStorage.filteredCourts = courts
-    //     }
-    //     const deleteCourt = name => {
-    //         courts = courts.filter(court => court !== name)
-    //         // console.log('*********',courts)
-    //     }
-
+    var courts = sessionStorage.courts
+    var courtsArray = courts.split(',')
+    for (var i = 0; i < courtsArray.length; i++) {
+        document.querySelector('#courts').innerHTML +=
+            '<li class="govuk-heading-s">' +
+            courtsArray[i] + '<a id="remove1" onclick="remove(event)" class="govuk-link" style="float: right !important; cursor: pointer !important; text-decoration: underline; color: #1d70b8 !important; font-weight: normal">' + 'Remove' + '</a>' + '<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible govuk-!-margin-top-2">' +
+            '</li>'
+    }
     var courts = []
     const addCourt = () => {
+        courts.push(sessionStorage.courts)
         var courtName = document.querySelector('#court-selection').value
-        courts.push(courtName)
-        sessionStorage.courts = courts
-        var li = document.createElement('li')
-        li.innerText = courtName
-        li.classList.add('govuk-heading-s')
-        document.querySelector('#courts').appendChild(li)
-        var removeBtn = document.createElement('a')
-        removeBtn.innerText = 'Remove'
-        removeBtn.classList.add('govuk-link')
-        removeBtn.style.textDecoration = 'underline'
-        removeBtn.style.color = '#1d70b8'
-        removeBtn.style.fontWeight = 0
-        removeBtn.style.cssFloat = 'right'
-        removeBtn.style.cursor = 'pointer'
-        removeBtn.onclick = remove
-        li.appendChild(removeBtn)
-        var hr = document.createElement('hr')
-        li.appendChild(hr)
+        if (courtName !== '') {
+            courts.push(courtName)
+            sessionStorage.courts = courts
+            var li = document.createElement('li')
+            li.innerText = courtName
+            li.classList.add('govuk-heading-s')
+            document.querySelector('#courts').appendChild(li)
+            var removeBtn = document.createElement('a')
+            removeBtn.innerText = 'Remove'
+            removeBtn.classList.add('govuk-link')
+            removeBtn.style.textDecoration = 'underline'
+            removeBtn.style.color = '#1d70b8'
+            removeBtn.style.fontWeight = 1
+            removeBtn.style.cssFloat = 'right'
+            removeBtn.style.cursor = 'pointer'
+            removeBtn.onclick = remove
+            li.appendChild(removeBtn)
+            var hr = document.createElement('hr')
+            li.appendChild(hr)
+            hr.classList.add('govuk-section-break', 'govuk-section-break--l', 'govuk-section-break--visible',  'govuk-!-margin-top-3')
+        }
     }
     const remove = e => {
         var el = e.target
         el.parentNode.remove()
         var court = el.parentNode.textContent
         var res = court.replace('Remove', '')
-        deleteCourt(res)
+        courts = sessionStorage.courts
+        var filteredArray = courts.split(',')
+        courts = filteredArray.filter(court => court !== res)
+        sessionStorage.courts = courts
         console.log(courts)
-        sessionStorage.filteredCourts = courts
-    }
-    const deleteCourt = name => {
-        courts = courts.filter(court => court !== name)
-        // console.log('*********',courts)
     }
 </script>
 {% endblock %}

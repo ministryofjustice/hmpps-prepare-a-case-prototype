@@ -22,8 +22,8 @@ My courts
     console.log(courts.split(','))
     for (var i = 0; i < courtsArray.length; i++) {
         document.querySelector('#results').innerHTML +=
-            '<li class="govuk-link govuk-!-margin-top-2">' +
-            courtsArray[i] +
+            '<li class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-2">' +
+            '<a  href="cases/day/2020-06-17/case-list.html">'+ courtsArray[i] + '</a>' +
             '</li>'
     }
     var results = document.querySelector('#results')
@@ -31,5 +31,6 @@ My courts
     results.style.textDecoration = 'underline'
     results.style.color = '#1d70b8'
     results.style.cursor = 'pointer'
+    // results.link = 'cases/day/2020-06-17/case-list.html'
 </script>
 {% endblock %}

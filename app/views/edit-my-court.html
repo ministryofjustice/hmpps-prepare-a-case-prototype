@@ -336,11 +336,9 @@ Select a court
 
     const addCourt = () => {
         var courts = []
-        if (sessionStorage.courts && sessionStorage.courts.length) {
+        if (sessionStorage.courts) {
             courts = courts.concat(sessionStorage.courts.split(','))
         }
-        console.log(courts)
-
         var courtName = document.querySelector('#court-selection').value
         if (courtName !== '' && !courts.includes(courtName)) {
             courts.push(courtName)
@@ -366,13 +364,11 @@ Select a court
         document.querySelector('#court-selection').value = ''
     }
     const remove = e => {
-        console.log("REMOVE")
         var el = e.target
         el.parentNode.remove()
         var court = el.parentNode.textContent
         var res = court.replace('Remove', '')
         courts = sessionStorage.courts.split(',')
-        console.log(courts)
         sessionStorage.courts = courts.filter(court => court !== res)
     }
 </script>

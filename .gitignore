@@ -2,3 +2,5 @@
 /public/
 .DS_Store
 /.port.tmp
+/.idea
+/hmpps-prepare-a-case-prototype.iml

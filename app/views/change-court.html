@@ -364,7 +364,7 @@ Select a court
             courtForm.classList.add('govuk-form-group--error')
             courtError.classList.add('govuk-error-message')
             courtError.classList.remove('govuk-visually-hidden')
-        } else {
+        } else if (!courts.includes(courtName)) {
             errorSummary.classList.add('govuk-visually-hidden')
             courtInput.classList.remove('govuk-input--error')
             courtForm.classList.remove('govuk-form-group--error')
@@ -391,6 +391,7 @@ Select a court
             li.appendChild(hr)
             hr.classList.add('govuk-section-break govuk-section-break--m govuk-section-break--visible')
         }
+        document.querySelector('#court-selection').value = ''
     }
     const remove = e => {
         var el = e.target

@@ -358,6 +358,7 @@ Select a court
         var courtInput = document.querySelector('#court-name')
         var courtForm = document.querySelector('#court-form')
         var courtError = document.querySelector('#court-error')
+        document.querySelector('#court-selection').value = ''
         if (courtName === '') {
             errorSummary.classList.remove('govuk-visually-hidden')
             courtInput.classList.add('govuk-input--error')
@@ -391,7 +392,6 @@ Select a court
             li.appendChild(hr)
             hr.classList.add('govuk-section-break govuk-section-break--m govuk-section-break--visible')
         }
-        document.querySelector('#court-selection').value = ''
     }
     const remove = e => {
         var el = e.target

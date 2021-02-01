@@ -334,8 +334,8 @@ Select a court
             </div>
             <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
             <div class="govuk-!-margin-top-8">
-                <a href="my-courts.html" role="button" draggable="false" class="govuk-button moj-button-menu__item"
-                   data-module="govuk-button">Save and continue</a>
+                <a href="javascript:void(0);" role="button" draggable="false" class="govuk-button moj-button-menu__item"
+                   data-module="govuk-button" onclick="saveAndContinue()">Save and continue</a>
             </div>
             <div id="result"></div>
         </div>
@@ -352,32 +352,46 @@ Select a court
         selectElement: selectEl
     })
     var courts = []
-    const addCourt = () => {
-        var courtName = document.querySelector('#court-selection').value
+
+    const hasError = (error) => {
         var errorSummary = document.querySelector('.govuk-error-summary')
         var courtInput = document.querySelector('#court-name')
         var courtForm = document.querySelector('#court-form')
         var courtError = document.querySelector('#court-error')
-        document.querySelector('#court-selection').value = ''
-        if (courtName === '') {
+        if (error) {
             errorSummary.classList.remove('govuk-visually-hidden')
             courtInput.classList.add('govuk-input--error')
             courtForm.classList.add('govuk-form-group--error')
             courtError.classList.add('govuk-error-message')
             courtError.classList.remove('govuk-visually-hidden')
-        } else if (!courts.includes(courtName)) {
+        } else {
             errorSummary.classList.add('govuk-visually-hidden')
             courtInput.classList.remove('govuk-input--error')
             courtForm.classList.remove('govuk-form-group--error')
             courtError.classList.remove('govuk-error-message')
             courtError.classList.add('govuk-visually-hidden')
+        }
+    }
+
+    const addCourt = () => {
+        var courtName = document.querySelector('#court-selection').value
+
+        document.querySelector('#court-selection').value = ''
+
+        if (courtName === '') {
+            hasError(true)
+        } else if (!courts.includes(courtName)) {
+            hasError(false)
+
             courts.push(courtName)
             sessionStorage.courts = courts
+
             var li = document.createElement('li')
             li.innerText = courtName
             li.classList.add('govuk-heading-s')
             li.classList.add('govuk-!-margin-top-4')
             document.querySelector('#courts').appendChild(li)
+
             var removeBtn = document.createElement('a')
             removeBtn.innerText = 'Remove'
             removeBtn.classList.add('govuk-link')
@@ -388,6 +402,7 @@ Select a court
             removeBtn.style.cursor = 'pointer'
             removeBtn.onclick = remove
             li.appendChild(removeBtn)
+
             var hr = document.createElement('hr')
             li.appendChild(hr)
             hr.classList.add('govuk-section-break govuk-section-break--m govuk-section-break--visible')
@@ -404,6 +419,14 @@ Select a court
     }
     const deleteCourt = name => {
         courts = courts.filter(court => court !== name)
+    }
+    const saveAndContinue = () => {
+        if (courts.length) {
+            hasError(false)
+            window.location = 'my-courts.html'
+        } else {
+            hasError(true)
+        }
     }
 </script>
 {% endblock %}

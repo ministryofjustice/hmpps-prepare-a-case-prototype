@@ -8,7 +8,7 @@ Case summary
 {% block bodyStart %}
 
 {% block keyDetails %}
-{% include "includes/key_details/7_Ball.html" %}
+{% include "includes/key_details/7_Ball-unlink.html" %}
 {% endblock %}
 
 
@@ -16,7 +16,7 @@ Case summary
 
 
 {% block beforeContent %}
-<a href="/cases/day/2020-06-19/case-list.html" class="govuk-back-link">Back to cases</a>
+<a href="/cases/day/2020-06-19/case-list.html" style="margin-bottom: 0;" class="govuk-back-link">Back to cases</a>
 {% endblock %}
 
 
@@ -24,7 +24,7 @@ Case summary
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <div class="moj-banner">
+    <!-- <div class="moj-banner">
       <svg class="moj-banner__icon" fill="currentColor" role="presentation" focusable="false"
         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" height="25" width="25">
         <path d="M13.7,18.5h-2.4v-2.4h2.4V18.5z M12.5,13.7c-0.7,0-1.2-0.5-1.2-1.2V7.7c0-0.7,0.5-1.2,1.2-1.2s1.2,0.5,1.2,1.2v4.8
@@ -33,26 +33,42 @@ Case summary
         <h2 class="govuk-heading-m">2 possible nDelius records found for Brian Ball. <a href="/cases/day/2020-06-19/review-records-ball" class="govuk-link--no-visited-state">Review records</a>
         </h2>
       </div>
-    </div>
+    </div> -->
+    <div class="moj-banner moj-banner--success">
+
+        <svg class="moj-banner__icon" fill="currentColor" role="presentation" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" height="25" width="25">
+        <path d="M25,6.2L8.7,23.2L0,14.1l4-4.2l4.7,4.9L21,2L25,6.2z" /></svg>
+        
+        <div class="moj-banner__message">
+        <span class="moj-banner__assistive">Success</span>You have successfully confirmed a record for Brian Ball.</div>
+        
+        </div> 
   </div>
 </div>
 
-<!-- <div class="govuk-grid-row">
-  <div class="govuk-grid-column-full">
-
-    <nav class="moj-sub-navigation" aria-label="Sub navigation">
-
-      <ul class="moj-sub-navigation__list">
-        <li class="moj-sub-navigation__item">
-          <a class="moj-sub-navigation__link" aria-current="page" href="/cases/7/summary.html">Case summary</a>
-        </li>
-
-      </ul>
-      </ul>
-
-    </nav>
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+  
+      <nav class="moj-sub-navigation" aria-label="Sub navigation">
+  
+        <ul class="moj-sub-navigation__list">
+          <li class="moj-sub-navigation__item">
+            <a class="moj-sub-navigation__link govuk-link--no-visited-state" aria-current="page"
+              href="">Case summary</a>
+          </li>
+          <li class="moj-sub-navigation__item">
+            <a class="moj-sub-navigation__link govuk-link--no-visited-state"
+              href="">Probation record</a>
+          </li>
+          <li class="moj-sub-navigation__item">
+            <a class="moj-sub-navigation__link govuk-link--no-visited-state" href="">Risk register</a>
+          </li>
+        </ul>
+        </ul>
+  
+      </nav>
+    </div>
   </div>
-</div> -->
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
@@ -68,25 +84,6 @@ Case summary
       <h2 class="govuk-heading-m">Appearance</h2>
       <p class="govuk-body">Court 1, morning session, Wednesday 10 March (1st listing).</p>
     </div>
-    <!-- <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
-    <div class="govuk-!-margin-bottom-7">
-      <h2 class="govuk-heading-m">Supporting information</h2>
-      <dl class="govuk-summary-list govuk-summary-list--no-border">
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            CPS pack
-          </dt>
-          <dd class="govuk-summary-list__value">
-            <p class="govuk-body">Available in CourtStore</p>
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a class="govuk-link" href="/cases/7/cps">
-              View<span class="govuk-visually-hidden"> CPS pack</span>
-            </a>
-          </dd>
-        </div>
-      </dl>
-    </div> -->
     <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
     <div class="govuk-!-margin-bottom-8">
       <h2 class="govuk-heading-m">Offences</h2>
@@ -150,39 +147,7 @@ Case summary
         </div>
       </dl>
     </div>
-    <!-- <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
-    <div class="govuk-!-margin-bottom-8">
-      <h2 class="govuk-heading-m">
-        Contact details
-      </h2>
-      <p class="govuk-body"><a href="/cases/4/contactdetails">Edit contact details</a></p>
-      <dl class="govuk-summary-list govuk-summary-list--no-border">
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Address
-          </dt>
-          <dd class="govuk-summary-list__value">
-            72A Saltash Road<br> Hull<br> HU19 6LF
-          </dd>
-        </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Email address
-          </dt>
-          <dd class="govuk-summary-list__value">
-            Unknown
-          </dd>
-        </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Telephone number
-          </dt>
-          <dd class="govuk-summary-list__value">
-            Unknown
-          </dd>
-        </div>
-      </dl>
-    </div> -->
+
 
 
 
@@ -200,9 +165,6 @@ Case summary
 
   </div>
   <div class="govuk-grid-column-one-third">
-
-    <!-- <h2 class="govuk-heading-m">CPS pack</h2>
-    <p class="govuk-body"><a href="#">View CPS pack (opens in Court Store)</a></p> -->
   </div>
 
 

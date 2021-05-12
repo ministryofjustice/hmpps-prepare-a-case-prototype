@@ -1,9 +1,9 @@
 <div class="moj-scrollable-pane">
   <div class="moj-scrollable-pane__wrapper">
-    <table class="govuk-table govuk-table-xl">
+    <table class="govuk-table case-list-table govuk-table-xl">
       <thead class="govuk-table__head">
         <tr class="govuk-table__row govuk-table__row">
-          <th scope="col" class="govuk-table__header custom-defendant-width" aria-sort="none">Defendant</th>
+          <th scope="col" class="govuk-table__header custom-defendant-width" aria-sort="none">Defendant / CRN</th>
           <th scope="col" class="govuk-table__header custom-delius-record-width" aria-sort="none">Probation
             status
           </th>
@@ -17,8 +17,9 @@
         <tr class="govuk-table__row">
           <td class="govuk-table__cell">
             <a href="/cases/1/summary.html" class="govuk-link govuk-link--no-visited-state">
-              Dylan Adam Armstrong
+              <strong>Dylan Adam Armstrong</strong>
             </a>
+            <span class="govuk-hint govuk-!-font-size-16 govuk-!-margin-bottom-0">V654123</span>
           </td>
           <td class="govuk-table__cell">
             <ul>
@@ -34,12 +35,13 @@
         <tr class="govuk-table__row">
           <td class="govuk-table__cell">
             <a href="/cases/details/123456" class="govuk-link govuk-link--no-visited-state">
-              Tony Davis
+              <strong>Tony Davis</strong>
             </a>
+            <span class="govuk-hint govuk-!-font-size-16 govuk-!-margin-bottom-0">B948574</span>
           </td>
           <td class="govuk-table__cell">
             <ul>
-              <li class="govuk-!-margin-bottom-1">Previously known</li>
+              <li class="">Previously known</li>
               <li class="secondary-text-col">Order ended 05 July 2019</li>
             </ul>
           </td>
@@ -61,8 +63,9 @@
         <tr class="govuk-table__row">
           <td class="govuk-table__cell">
             <a href="/cases/3/summary.html" class="govuk-link govuk-link--no-visited-state">
-              Andrei Edwards
+              <strong>Andrei Edwards</strong>
             </a>
+            <span class="govuk-hint govuk-!-font-size-16 govuk-!-margin-bottom-0">DX1234FF</span>
           </td>
           <td class="govuk-table__cell">Current</td>
           <td class="govuk-table__cell">Use threatening / abusive / insulting words / behaviour with intent to cause fear of / provoke unlawful violence</td>
@@ -73,10 +76,15 @@
         <tr class="govuk-table__row">
           <td class="govuk-table__cell">
             <a href="/cases/4/summary.html" class="govuk-link govuk-link--no-visited-state">
-              Hannah Francis
+              <strong>Hannah Francis
             </a>
+            <span class="govuk-hint govuk-!-font-size-16 govuk-!-margin-bottom-0">X664857</span>
           </td>
-          <td class="govuk-table__cell">No record</span>
+          <td class="govuk-table__cell">Pre-sentence record             
+            <span class="moj-badge-wrapper">
+            <strong class="govuk-tag govuk-tag--blue">
+            PSR
+          </strong></span>
           <td class="govuk-table__cell">Drive motor vehicle when alcohol level above limit</td>
           <td class="govuk-table__cell">1st </td>
           <td class="govuk-table__cell"> Morning</td>
@@ -85,10 +93,11 @@
         <tr class="govuk-table__row">
           <td class="govuk-table__cell">
             <a href="/cases/5/summary.html" class="govuk-link govuk-link--no-visited-state">
-              Aiden Hill
+              <strong>Aiden Hill</strong>
             </a>
           </td>
-          <td class="govuk-table__cell">No record</td>
+          <td class="govuk-table__cell">
+            No record</td>
           <td class="govuk-table__cell">
             <ol>
               <li>Fail to provide specimen for analysis - vehicle driver</li>
@@ -108,14 +117,19 @@
         <tr class="govuk-table__row">
           <td class="govuk-table__cell">
             <a href="/cases/6/summary.html" class="govuk-link govuk-link--no-visited-state">
-              Rhys John Houghton
+              <strong>Rhys John Houghton</strong>
             </a>
+            <span class="govuk-hint govuk-!-font-size-16 govuk-!-margin-bottom-0">DX12340X</span>
           </td>
           <td class="govuk-table__cell">
-            <span class="moj-badge-wrapper">
-              <span class="moj-badge moj-badge--black">Breach</span>
-              <!-- <span class="moj-badge moj-badge--black">Sso</span> -->
-            </span>Current
+          Current
+          <span class="moj-badge-wrapper">
+            <strong class="govuk-tag govuk-tag--yellow">
+              Breach
+            </strong>
+            <!-- <span class="moj-badge moj-badge--black">Breach</span> -->
+            <!-- <span class="moj-badge moj-badge--black">Sso</span> -->
+          </span>
           </td>
           <td class="govuk-table__cell">Attempt theft from shop</td>
           <td class="govuk-table__cell">1st </td>
@@ -125,12 +139,14 @@
         <tr class="govuk-table__row">
           <td class="govuk-table__cell">
             <a href="/cases/details/123456" class="govuk-link govuk-link--no-visited-state">
-              Klara McDonald
+              <strong>Klara McDonald</strong>
             </a>
           </td>
           <td class="govuk-table__cell">
              <!-- <span class="moj-badge moj-badge--red">duplicate records</span> -->
-            No record
+             <strong class="govuk-tag govuk-tag--red">
+              POSSIBLE NDELIUS RECORD
+          </strong>
           </td>
           <td class="govuk-table__cell">Common assault and battery</td>
           <td class="govuk-table__cell">1st </td>
@@ -140,14 +156,15 @@
         <tr class="govuk-table__row">
           <td class="govuk-table__cell">
             <a href="/cases/details/123456" class="govuk-link govuk-link--no-visited-state">
-              Ava Ryan
+              <strong>Ava Ryan</strong>
             </a>
+            <span class="govuk-hint govuk-!-font-size-16 govuk-!-margin-bottom-0">F847388</span>
           </td>
           <td class="govuk-table__cell">
-            <span class="moj-badge-wrapper">
-              <!-- <span class="moj-badge moj-badge--black">Breach</span> -->
-              <!-- <span class="moj-badge moj-badge--black">Sso</span> -->
-            </span>
+            <!-- <span class="moj-badge-wrapper">
+              <span class="moj-badge moj-badge--black">Breach</span>
+              <span class="moj-badge moj-badge--black">Sso</span>
+            </span> -->
             Current</td>
           <td class="govuk-table__cell">Sexual assault on a male</td>
           <td class="govuk-table__cell">1st </td>
@@ -157,12 +174,13 @@
         <tr class="govuk-table__row">
           <td class="govuk-table__cell">
             <a href="/cases/details/123456" class="govuk-link govuk-link--no-visited-state">
-              Vinnie Robert Sanderson
+              <strong>Vinnie Robert Sanderson</strong>
             </a>
+            <span class="govuk-hint govuk-!-font-size-16 govuk-!-margin-bottom-0">K8446384</span>
           </td>
           <td class="govuk-table__cell">
             <ul>
-              <li class="govuk-!-margin-bottom-1">Previously known</li>
+              <li class="">Previously known</li>
               <li class="secondary-text-col">Order ended 07 Aug 2019</li>
             </ul>
 
@@ -181,12 +199,13 @@
         <tr class="govuk-table__row">
           <td class="govuk-table__cell">
             <a href="/cases/10/summary.html" class="govuk-link govuk-link--no-visited-state">
-              Naomi Thornton
+              <strong>Naomi Thornton</strong>
             </a>
+            <span class="govuk-hint govuk-!-font-size-16 govuk-!-margin-bottom-0">J478183</span>
           </td>
           <td class="govuk-table__cell">
             <ul>
-              <li class="govuk-!-margin-bottom-1">Previously known</li>
+              <li class="">Previously known</li>
               <li class="secondary-text-col">Order ended 24 Nov 2016</li>
             </ul>
           </td>
@@ -202,7 +221,7 @@
         <tr class="govuk-table__row">
           <td class="govuk-table__cell">
             <a href="/cases/details/123456" class="govuk-link govuk-link--no-visited-state">
-              Declan Dennis Bradley
+              <strong>Declan Dennis Bradley</strong>
             </a>
           </td>
           <td class="govuk-table__cell">No record</td>
@@ -223,7 +242,7 @@
         <tr class="govuk-table__row govuk-table__row">
           <td class="govuk-table__cell">
             <a href="/cases/details/123456" class="govuk-link govuk-link--no-visited-state">
-              Noah Harvey
+              <strong>Noah Harvey</strong>
             </a>
           </td>
           <td class="govuk-table__cell">
@@ -243,12 +262,276 @@
         <tr class="govuk-table__row">
           <td class="govuk-table__cell">
             <a href="/cases/9/limited-access.html" class="govuk-link govuk-link--no-visited-state">
-              Zane Harris Smith
+              <strong>Zane Harris Smith</strong>
             </a>
+            <span class="govuk-hint govuk-!-font-size-16 govuk-!-margin-bottom-0">C445638</span>
           </td>
           <td class="govuk-table__cell">
             <ul>
-              <li class="govuk-!-margin-bottom-1">Previously known</li>
+              <li class="">Previously known</li>
+              <li class="secondary-text-col">Order ended 22 June 2019</li>
+            </ul>
+          </td>
+          <td class="govuk-table__cell">Possess a class C controlled drug</td>
+          <td class="govuk-table__cell">1st</td>
+          <td class="govuk-table__cell">Afternoon</td>
+          <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="2">1</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">
+            <a href="/cases/1/summary.html" class="govuk-link govuk-link--no-visited-state">
+              <strong>Dylan Adam Armstrong</strong>
+            </a>
+            <span class="govuk-hint govuk-!-font-size-16 govuk-!-margin-bottom-0">V654123</span>
+          </td>
+          <td class="govuk-table__cell">
+            <ul>
+              <li class="govuk-!-margin-bottom-1">Current</li>
+              <!-- <li class="secondary-text-col">Order ended 24 Nov 2016</li> -->
+            </ul>
+          </td>
+          <td class="govuk-table__cell">Common assault and battery</td>
+          <td class="govuk-table__cell">1st </td>
+          <td class="govuk-table__cell">Morning</td>
+          <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="1">1</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">
+            <a href="/cases/details/123456" class="govuk-link govuk-link--no-visited-state">
+              <strong>Tony Davis</strong>
+            </a>
+            <span class="govuk-hint govuk-!-font-size-16 govuk-!-margin-bottom-0">B948574</span>
+          </td>
+          <td class="govuk-table__cell">
+            <ul>
+              <li class="">Previously known</li>
+              <li class="secondary-text-col">Order ended 05 July 2019</li>
+            </ul>
+          </td>
+          <td class="govuk-table__cell">
+            <ol>
+              <li>Possess a class C controlled drug</li>
+              <li>Possess a controlled drug of Class A - heroin</li>
+            </ol>
+          </td>
+          <td class="govuk-table__cell">
+            <ul>
+              <li class="govuk-!-margin-bottom-1">2nd</li>
+              <!-- <li class="secondary-text-col">Adjourned from 18 Nov 2019, non-standard reason: [1]</li> -->
+            </ul>
+          </td>
+          <td class="govuk-table__cell"> Morning</td>
+          <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="1">1</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">
+            <a href="/cases/3/summary.html" class="govuk-link govuk-link--no-visited-state">
+              <strong>Andrei Edwards</strong>
+            </a>
+            <span class="govuk-hint govuk-!-font-size-16 govuk-!-margin-bottom-0">DX1234FF</span>
+          </td>
+          <td class="govuk-table__cell">Current</td>
+          <td class="govuk-table__cell">Use threatening / abusive / insulting words / behaviour with intent to cause fear of / provoke unlawful violence</td>
+          <td class="govuk-table__cell">1st </td>
+          <td class="govuk-table__cell"> Morning</td>
+          <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="1">1</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">
+            <a href="/cases/4/summary.html" class="govuk-link govuk-link--no-visited-state">
+              <strong>Hannah Francis
+            </a>
+            <span class="govuk-hint govuk-!-font-size-16 govuk-!-margin-bottom-0">X664857</span>
+          </td>
+          <td class="govuk-table__cell">Pre-sentence record             
+            <span class="moj-badge-wrapper">
+            <strong class="govuk-tag govuk-tag--blue">
+            PSR
+          </strong></span>
+          <td class="govuk-table__cell">Drive motor vehicle when alcohol level above limit</td>
+          <td class="govuk-table__cell">1st </td>
+          <td class="govuk-table__cell"> Morning</td>
+          <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="1">1</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">
+            <a href="/cases/5/summary.html" class="govuk-link govuk-link--no-visited-state">
+              <strong>Aiden Hill</strong>
+            </a>
+          </td>
+          <td class="govuk-table__cell">
+            No record</td>
+          <td class="govuk-table__cell">
+            <ol>
+              <li>Fail to provide specimen for analysis - vehicle driver</li>
+              <li>Drive a motor vehicle otherwise than in accordance with a license - endorsable offence</li>
+              <li>Use a motor vehicle on a road / public place without third party insurance</li>
+            </ol>
+          </td>
+          <td class="govuk-table__cell">
+            <ul>
+              <li class="govuk-!-margin-bottom-1">2nd </li>
+              <!-- <li class="secondary-text-col">Adjourned from 20 Nov 2019, for a pre-sentence report to be prepared</li> -->
+            </ul>
+          </td>
+          <td class="govuk-table__cell"> Morning</td>
+          <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="1">1</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">
+            <a href="/cases/6/summary.html" class="govuk-link govuk-link--no-visited-state">
+              <strong>Rhys John Houghton</strong>
+            </a>
+            <span class="govuk-hint govuk-!-font-size-16 govuk-!-margin-bottom-0">DX12340X</span>
+          </td>
+          <td class="govuk-table__cell">
+          Current
+          <span class="moj-badge-wrapper">
+            <strong class="govuk-tag govuk-tag--yellow">
+              Breach
+            </strong>
+            <!-- <span class="moj-badge moj-badge--black">Breach</span> -->
+            <!-- <span class="moj-badge moj-badge--black">Sso</span> -->
+          </span>
+          </td>
+          <td class="govuk-table__cell">Attempt theft from shop</td>
+          <td class="govuk-table__cell">1st </td>
+          <td class="govuk-table__cell"> Morning</td>
+          <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="1">1</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">
+            <a href="/cases/details/123456" class="govuk-link govuk-link--no-visited-state">
+              <strong>Klara McDonald</strong>
+            </a>
+          </td>
+          <td class="govuk-table__cell">
+             <!-- <span class="moj-badge moj-badge--red">duplicate records</span> -->
+             <strong class="govuk-tag govuk-tag--red">
+              POSSIBLE NDELIUS RECORD
+          </strong>
+          </td>
+          <td class="govuk-table__cell">Common assault and battery</td>
+          <td class="govuk-table__cell">1st </td>
+          <td class="govuk-table__cell"> Morning</td>
+          <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="1">1</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">
+            <a href="/cases/details/123456" class="govuk-link govuk-link--no-visited-state">
+              <strong>Ava Ryan</strong>
+            </a>
+            <span class="govuk-hint govuk-!-font-size-16 govuk-!-margin-bottom-0">F847388</span>
+          </td>
+          <td class="govuk-table__cell">
+            <!-- <span class="moj-badge-wrapper">
+              <span class="moj-badge moj-badge--black">Breach</span>
+              <span class="moj-badge moj-badge--black">Sso</span>
+            </span> -->
+            Current</td>
+          <td class="govuk-table__cell">Sexual assault on a male</td>
+          <td class="govuk-table__cell">1st </td>
+          <td class="govuk-table__cell"> Morning</td>
+          <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="1">1</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">
+            <a href="/cases/details/123456" class="govuk-link govuk-link--no-visited-state">
+              <strong>Vinnie Robert Sanderson</strong>
+            </a>
+            <span class="govuk-hint govuk-!-font-size-16 govuk-!-margin-bottom-0">K8446384</span>
+          </td>
+          <td class="govuk-table__cell">
+            <ul>
+              <li class="">Previously known</li>
+              <li class="secondary-text-col">Order ended 07 Aug 2019</li>
+            </ul>
+
+          </td>
+          <td class="govuk-table__cell">
+            Assault by beating of an emergency worker</td>
+          <td class="govuk-table__cell">
+            <ul>
+              <li class="govuk-!-margin-bottom-1">2nd </li>
+              <!-- <li class="secondary-text-col">Adjourned from 20 Nov 2019, to attend or warrant to issue</li> -->
+            </ul>
+          </td>
+          <td class="govuk-table__cell"> Morning</td>
+          <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="1">1</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">
+            <a href="/cases/10/summary.html" class="govuk-link govuk-link--no-visited-state">
+              <strong>Naomi Thornton</strong>
+            </a>
+            <span class="govuk-hint govuk-!-font-size-16 govuk-!-margin-bottom-0">J478183</span>
+          </td>
+          <td class="govuk-table__cell">
+            <ul>
+              <li class="">Previously known</li>
+              <li class="secondary-text-col">Order ended 24 Nov 2016</li>
+            </ul>
+          </td>
+          <td class="govuk-table__cell">
+            Arrest by a constable for breaking / likely to break bail conditions - duty to surrender into the custody of a court
+          </td>
+          <td class="govuk-table__cell">
+            1st
+          </td>
+          <td class="govuk-table__cell"> Morning</td>
+          <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="1">1</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">
+            <a href="/cases/details/123456" class="govuk-link govuk-link--no-visited-state">
+              <strong>Declan Dennis Bradley</strong>
+            </a>
+          </td>
+          <td class="govuk-table__cell">No record</td>
+          <td class="govuk-table__cell">
+            <ol>
+              <li>Obstruct/resist a constable in execution of duty</li>
+              <li>Use a handheld mobile phone / device while drivng a motor vehicle on a road - endorsable
+                offence
+              </li>
+              <li>Use a motor vehicle on a road / public place without third party insurance</li>
+              <li>Drive a motor vehicle otherwise than in accordance with a licence - endorsable offence</li>
+            </ol>
+          </td>
+          <td class="govuk-table__cell">1st </td>
+          <td class="govuk-table__cell">Afternoon</td>
+          <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="2">1</td>
+        </tr>
+        <tr class="govuk-table__row govuk-table__row">
+          <td class="govuk-table__cell">
+            <a href="/cases/details/123456" class="govuk-link govuk-link--no-visited-state">
+              <strong>Noah Harvey</strong>
+            </a>
+          </td>
+          <td class="govuk-table__cell">
+            <!-- <span class="moj-badge moj-badge--red">duplicate records</span> -->
+            No record
+          </td>
+          <td class="govuk-table__cell">
+            <ol>
+              <li>Possess a controlled drug of Class B - Amphetamine</li>
+              <li>Drunk and disorderly in a public place</li>
+            </ol>
+          </td>
+          <td class="govuk-table__cell">1st </td>
+          <td class="govuk-table__cell">Afternoon</td>
+          <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="1">1</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">
+            <a href="/cases/9/limited-access.html" class="govuk-link govuk-link--no-visited-state">
+              <strong>Zane Harris Smith</strong>
+            </a>
+            <span class="govuk-hint govuk-!-font-size-16 govuk-!-margin-bottom-0">C445638</span>
+          </td>
+          <td class="govuk-table__cell">
+            <ul>
+              <li class="">Previously known</li>
               <li class="secondary-text-col">Order ended 22 June 2019</li>
             </ul>
           </td>

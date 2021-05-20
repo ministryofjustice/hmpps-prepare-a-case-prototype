@@ -20,16 +20,16 @@ $govuk-assets-path: '/govuk/assets/';
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
 
-@media (min-width: 40.0625em) {
-.govuk-main-wrapper--auto-spacing:first-child, .govuk-main-wrapper--l {
-    padding-top: 40px;
-    }
-}
+// @media (min-width: 40.0625em) {
+// .govuk-main-wrapper--auto-spacing:first-child, .govuk-main-wrapper--l {
+//     padding-top: 40px;
+//     }
+// }
 
 // SERVICE HEADER
-.moj-header {
-    border-bottom: none !important;
-}
+// .moj-header {
+//     border-bottom: none !important;
+// }
 
 // SERVICE NAME AND PHASE BANNER CONTAINER
 .moj-header__link--service-name--wrapper {
@@ -47,43 +47,47 @@ $govuk-assets-path: '/govuk/assets/';
 }
 
 // MENU TOP RIGHT 
-a.moj-header__navigation-link {
-    font-size: 16px;
-    font-weight: bold;
-}
+// a.moj-header__navigation-link {
+//     font-size: 16px;
+//     font-weight: bold;
+// }
 
 // PHASE BANNER IN MOJ HEADER
-.app-phase-tag {
-    position: relative;
-    top: 3px;
-    margin-left: 2px;
+// .app-phase-tag {
+//     position: relative;
+//     top: 3px;
+//     margin-left: 2px;
+// }
+
+.govuk-phase-banner {
+    border-bottom: none;
 }
 
 // PRIMARY NAV
-.moj-primary-navigation {
-    background-color: #0b0c0c;
-  }
-  .moj-primary-navigation__link { 
-    padding-top: 5px;
-  }  
-  .moj-primary-navigation__link[aria-current] {
-    color: #ffffff;
-}
-.moj-primary-navigation__link:link, .moj-primary-navigation__link:visited {
-    color: #ffffff;
-}
-.moj-primary-navigation__link[aria-current]:before {
-    background-color: #ffffff;
-}
+// .moj-primary-navigation {
+//     background-color: #0b0c0c;
+//   }
+//   .moj-primary-navigation__link { 
+//     padding-top: 5px;
+//   }  
+//   .moj-primary-navigation__link[aria-current] {
+//     color: #ffffff;
+// }
+// .moj-primary-navigation__link:link, .moj-primary-navigation__link:visited {
+//     color: #ffffff;
+// }
+// .moj-primary-navigation__link[aria-current]:before {
+//     background-color: #ffffff;
+// }
 
 // ORG TITLE IN PRIMARY NAV BAR
 .app-organisation-nav-title {
     float: right;
-    padding-top: 9px;
+    padding-top: 19px;
 }
-.app-organisation-nav-title .govuk-body-s {
-    color: #ffffff;
-}
+// .app-organisation-nav-title .govuk-body-s {
+//     color: #ffffff;
+// }
 
 // IMAGES
 // Search toggle icon
@@ -263,12 +267,7 @@ a.moj-header__navigation-link {
     }
 }
 
-.case-list-table {
-    font-size: 16px;
-}
-.case-list-table tr:nth-child(even) {
-    background-color: #f3f2f1;
-  }
+
 
 // Case list overrides 
 td ol {
@@ -283,24 +282,37 @@ td ul {
     list-style-type:none;
 }
 
-// @media screen and (min-width: 40.0625em) {
-//     .custom-delius-record-width {
-//       min-width: 180px;
-//     }
-//     .custom-defendant-width {
-//         min-width: 175px;
-//     }
-//   }
+@media screen and (min-width: 40.0625em) {
+    .custom-delius-record-width {
+    //   min-width: 180px;
+    white-space: nowrap;
+    }
+    .custom-defendant-width {
+        // min-width: 160px;
+    white-space: nowrap;
+    }
+  }
 
+// Case list secondary info
+.case-list-table .govuk-hint, .case-list-table .secondary-text-col {
+    margin-top: 5px;
+}
+.case-list-table .secondary-text-col {
+    font-size: 16px;
+}
 
 // Tag modifiers 
 // .moj-tag--grey, .moj-tag--green {
 //     border: none;
 // }
-.case-list-table .govuk-tag {
-    // white-space: nowrap;
-    font-size: 0.875rem;
+@media screen and (min-width: 40.0625em) {
+    .case-list-table .govuk-tag {
+        white-space: nowrap;
+    }
 }
+.case-list-table .govuk-tag {
+    padding: 2px 6px 1px 6px;
+    }
 .govuk-tag--yellow {
     color: #594d00;
     background: #fff7bf;

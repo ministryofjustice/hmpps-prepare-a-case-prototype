@@ -16,22 +16,20 @@ Case summary
 
 
 {% block beforeContent %}
-<!-- <a href="/cases" class="govuk-back-link">Back</a> -->
+<a href="/cases/day/2020-06-17/case-list" class="govuk-back-link">Back to cases</a>
 {% endblock %}
 
 
 {% block content %}
 
-<div class="govuk-grid-row">
+<!-- <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
-
     <nav class="moj-sub-navigation" aria-label="Sub navigation">
-
       <ul class="moj-sub-navigation__list">
         <li class="moj-sub-navigation__item">
-          <a class="moj-sub-navigation__link" aria-current="page" href="/cases/4/summary.html">Case details</a>
+          <a class="moj-sub-navigation__link" aria-current="page" href="/cases/4/summary.html">Case summary</a>
         </li>
-        <!-- <li class="moj-sub-navigation__item">
+        <li class="moj-sub-navigation__item">
           <a class="moj-sub-navigation__link" href="/cases/1/person.html">Personal details</a>
         </li>
         <li class="moj-sub-navigation__item">
@@ -39,16 +37,17 @@ Case summary
         </li>
         <li class="moj-sub-navigation__item">
           <a class="moj-sub-navigation__link" href="/cases/1/risk.html">Risk registers</a>
-        </li> -->
+        </li>
       </ul>
       </ul>
 
     </nav>
   </div>
-</div>
+</div> -->
+
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
-    <h1 class="govuk-heading-l govuk-!-margin-bottom-7">Case details</h1>
+    <h1 class="govuk-heading-l govuk-!-margin-bottom-7">Case summary</h1>
   </div>
 </div>
 
@@ -56,27 +55,45 @@ Case summary
   <div class="govuk-grid-column-two-thirds">
 
 
-    <div class="govuk-!-margin-bottom-9">
+    <div class="govuk-!-margin-bottom-8">
       <h2 class="govuk-heading-m">Appearance</h2>
-      <p class="govuk-body">Court 1, morning session, Thursday 27 February (1st listing).</p>
+      <p class="govuk-body">Court 1, morning session, Monday 8 March (1st listing).</p>
     </div>
-    <div class="govuk-!-margin-bottom-9">
+    <!-- <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible"> -->
+    <!-- <div class="govuk-!-margin-bottom-7">
+      <h2 class="govuk-heading-m">Supporting information</h2>
+      <dl class="govuk-summary-list govuk-summary-list--no-border">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            CPS pack
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <p class="govuk-body">Available in CourtStore</p>
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="/cases/4/cps">
+              View<span class="govuk-visually-hidden"> CPS pack</span>
+            </a>
+          </dd>
+        </div>
+      </dl>
+    </div> -->
+    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+    <div class="govuk-!-margin-bottom-8">
       <h2 class="govuk-heading-m">Offences</h2>
       <h3 class="govuk-heading-s">Drive motor vehicle when alcohol level above limit</h3>
-      <p class="govuk-body govuk-!-margin-bottom-2">On Wednesday 12th February at Green Avenue, Sheffield drove a motor
+      <p class="govuk-body govuk-!-margin-bottom-2">On Friday 10th February at Green Avenue, Sheffield drove a motor
         vehicle namely BMW registration AB12 ZZZ on a road namely Green Avenue, Sheffield, after consuming so much
         alcohol that the proportion of it in your breath, namely 117 microgrammes of alcohol in 100 millilitres of
         breath, exceeded the prescribed limit. </p>
       <p class="govuk-body secondary-text-col">Contrary to section 5(1)(a) of the Road Traffic Act 1988 and schedule 2
         to the Road Traffic Offenders Act 1988.</p>
     </div>
-
-    <div class="govuk-!-margin-bottom-9">
+    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+    <div class="govuk-!-margin-bottom-7">
       <h2 class="govuk-heading-m">
-        Personal details from police
+        Defendant details
       </h2>
-
-
       <dl class="govuk-summary-list govuk-summary-list--no-border">
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
@@ -99,15 +116,7 @@ Case summary
             Date of birth
           </dt>
           <dd class="govuk-summary-list__value">
-            26 December 1998 (21 years old)
-          </dd>
-        </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Address
-          </dt>
-          <dd class="govuk-summary-list__value">
-            68 Parsonage Lane<br>Sheffield<br>S4 8HF
+            26 December 1996 (24 years old)
           </dd>
         </div>
         <div class="govuk-summary-list__row">
@@ -118,10 +127,49 @@ Case summary
             British
           </dd>
         </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Address
+          </dt>
+          <dd class="govuk-summary-list__value">
+            68 Parsonage Lane<br>Manchester<br>M21 3WE
+          </dd>
+        </div>
       </dl>
-
     </div>
-
+    <!-- <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+    <div class="govuk-!-margin-bottom-8">
+      <h2 class="govuk-heading-m">
+        Contact details
+      </h2>
+      <p class="govuk-body"><a href="/cases/4/contactdetails">Edit contact details</a></p>
+      <dl class="govuk-summary-list govuk-summary-list--no-border">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Address
+          </dt>
+          <dd class="govuk-summary-list__value">
+            68 Parsonage Lane<br>Sheffield<br>S4 8HF
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Email address
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Unknown
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Telephone number 
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Unknown
+          </dd>
+        </div>
+      </dl>
+    </div> -->
 
 
 
@@ -140,8 +188,8 @@ Case summary
   </div>
   <div class="govuk-grid-column-one-third">
 
-    <h2 class="govuk-heading-m">CPS pack</h2>
-    <p class="govuk-body"><a href="#">View CPS pack (opens in Court Store)</a></p>
+    <!-- <h2 class="govuk-heading-m">CPS pack</h2>
+    <p class="govuk-body"><a href="#">View CPS pack (opens in Court Store)</a></p> -->
   </div>
 
 

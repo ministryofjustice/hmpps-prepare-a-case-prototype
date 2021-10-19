@@ -20,6 +20,10 @@
         },
         items: [
           {
+            value: "possible",
+            text: "Possible NDelius record"
+          },
+          {
             value: "current",
             text: "Current"
           },
@@ -127,7 +131,16 @@
 
   <div class="selected-filters govuk-visually-hidden">
     <p class="govuk-body"><span class="govuk-!-font-weight-bold">Applied filters</span> <a href="#" class="govuk-body-s govuk-!-margin-left-2" onclick="event.preventDefault(); applyFilters(true)">Clear all</a></p>
-    <div class="app-filters-applied"></div>
+
+    <p class="applied-record govuk-body-s govuk-!-margin-top-2 govuk-!-margin-bottom-0 app-selected-filters--label govuk-visually-hidden">Probation status</p>
+    <div class="app-filters-applied-record"></div>
+
+    <p class="applied-courtroom govuk-body-s govuk-!-margin-top-2 govuk-!-margin-bottom-0 app-selected-filters--label govuk-visually-hidden">Courtroom</p>
+    <div class="app-filters-applied-courtroom"></div>
+
+    <p class="applied-session govuk-body-s govuk-!-margin-top-2 govuk-!-margin-bottom-0 app-selected-filters--label govuk-visually-hidden">Session</p>
+    <div class="app-filters-applied-session"></div>
+
   </div>
 
 </section>

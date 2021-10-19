@@ -1,0 +1,226 @@
+{% extends "layout.html" %}
+
+
+{% block pageTitle %}
+Link an nDelius record to the defendant
+{% endblock %}
+
+
+
+{% block beforeContent %}
+<a href="javascript:history.back();" class="govuk-back-link">Back</a>
+{% endblock %}
+
+
+{% block content %}
+
+<!-- EMPTY CRN -->
+
+<div class="govuk-grid-row govuk-!-margin-bottom-9">
+    <div class="govuk-grid-column-two-thirds">
+        <div tabindex="-1" role="group" id="errorSummary" class="govuk-error-summary" data-module="error-summary"
+            aria-labelledby="errorSummary-heading">
+            <h2 id="error-summary-title" class="govuk-error-summary__title">There is a problem</h2>
+            <div class="govuk-error-summary__body">
+                <ul class="govuk-list govuk-error-summary__list">
+                    <li><a href="#email">You must enter a case reference number</a></li>
+                </ul>
+            </div>
+        </div>
+        <h1 class="govuk-heading-l">
+            Link an nDelius record to the defendant
+        </h1>
+        <p class="govuk-body">Use a case reference number (CRN) to link an existing nDelius record to the defendant.</p>
+        <div class="govuk-!-margin-bottom-7">
+            <h2 class="govuk-heading-m">Defendant details</h2>
+            <dl class="govuk-summary-list">
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Name
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        Brian Ball
+                    </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Date of birth
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        7 July 1986
+                    </dd>
+                </div>
+            </dl>
+        </div>
+        <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                <h2 class="govuk-fieldset__heading">
+                    Enter the CRN of the existing record
+                </h2>
+            </legend>
+            <div class="govuk-form-group govuk-form-group--error">
+                <label class="govuk-label" for="CRN">
+                    Case reference number (CRN)
+                </label>
+                <span id="dob-hint" class="govuk-hint">
+                    For example, A123456
+                </span>
+                <span id="passport-issued-error" class="govuk-error-message">
+                    <span class="govuk-visually-hidden">Error:</span>Enter a case reference number</span>
+                <input class="govuk-input govuk-input--error govuk-input--width-10" id="CRN" name="CRN" type="text"
+                    autocomplete="CRN">
+            </div>
+            <a href="/cases/day/2020-06-19/link-confirm-ball">
+                <button type="submit" class="govuk-button" data-module="govuk-button">
+                    Find record
+                </button>
+            </a>
+            <p class="govuk-body">
+                <a class="govuk-link govuk-link--no-visited-state" href="javascript:history.back();">Cancel</a>
+            </p>
+        </fieldset>
+    </div>
+</div>
+<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+
+
+
+<!-- INVALID CRN -->
+
+<div class="govuk-grid-row govuk-!-margin-bottom-7">
+    <div class="govuk-grid-column-two-thirds">
+        <div tabindex="-1" role="group" id="errorSummary" class="govuk-error-summary" data-module="error-summary"
+            aria-labelledby="errorSummary-heading">
+            <h2 id="error-summary-title" class="govuk-error-summary__title">There is a problem</h2>
+            <div class="govuk-error-summary__body">
+                <ul class="govuk-list govuk-error-summary__list">
+                    <li><a href="#email">Case reference number must be in the correct format </a></li>
+                </ul>
+            </div>
+        </div>
+        <h1 class="govuk-heading-l">
+            Link an nDelius record to the defendant
+        </h1>
+        <p class="govuk-body">Use a case reference number (CRN) to link an existing nDelius record to the defendant.</p>
+        <div class="govuk-!-margin-bottom-7">
+            <h2 class="govuk-heading-m">Defendant details</h2>
+            <dl class="govuk-summary-list">
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Name
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        Brian Ball
+                    </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Date of birth
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        7 July 1986
+                    </dd>
+                </div>
+            </dl>
+        </div>
+        <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                <h2 class="govuk-fieldset__heading">
+                    Enter the CRN of the existing record
+                </h2>
+            </legend>
+            <div class="govuk-form-group govuk-form-group--error">
+                <label class="govuk-label" for="CRN">
+                    Case reference number (CRN)
+                </label>
+                <span id="dob-hint" class="govuk-hint">
+                    For example, A123456
+                </span>
+                <span id="passport-issued-error" class="govuk-error-message">
+                    <span class="govuk-visually-hidden">Error:</span>Enter a CRN in the correct format  </span>
+                <input class="govuk-input govuk-input--error govuk-input--width-10" id="CRN" name="CRN" type="text"
+                    autocomplete="CRN">
+            </div>
+            <a href="/cases/day/2020-06-19/link-confirm-ball">
+                <button type="submit" class="govuk-button" data-module="govuk-button">
+                    Find record
+                </button>
+            </a>
+            <p class="govuk-body">
+                <a class="govuk-link govuk-link--no-visited-state" href="javascript:history.back();">Cancel</a>
+            </p>
+        </fieldset>
+    </div>
+</div>
+<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+<!-- NO RESULTS -->
+
+<div class="govuk-grid-row govuk-!-margin-bottom-7">
+    <div class="govuk-grid-column-two-thirds">
+        <div tabindex="-1" role="group" id="errorSummary" class="govuk-error-summary" data-module="error-summary"
+            aria-labelledby="errorSummary-heading">
+            <h2 id="error-summary-title" class="govuk-error-summary__title">No record found</h2>
+            <div class="govuk-error-summary__body">
+                <ul class="govuk-list govuk-error-summary__list">
+                    <li><a href="#email">No records match the CRN provided</a></li>
+                </ul>
+            </div>
+        </div>
+        <h1 class="govuk-heading-l">
+            Link an nDelius record to the defendant
+        </h1>
+        <p class="govuk-body">Use a case reference number (CRN) to link an existing nDelius record to the defendant.</p>
+        <div class="govuk-!-margin-bottom-7">
+            <h2 class="govuk-heading-m">Defendant details</h2>
+            <dl class="govuk-summary-list">
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Name
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        Brian Ball
+                    </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Date of birth
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        7 July 1986
+                    </dd>
+                </div>
+            </dl>
+        </div>
+        <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                <h2 class="govuk-fieldset__heading">
+                    Enter the CRN of the existing record
+                </h2>
+            </legend>
+            <div class="govuk-form-group govuk-form-group--error">
+                <label class="govuk-label" for="CRN">
+                    Case reference number (CRN)
+                </label>
+                <span id="dob-hint" class="govuk-hint">
+                    For example, A123456
+                </span>
+                <span id="passport-issued-error" class="govuk-error-message">
+                    <span class="govuk-visually-hidden">Error:</span> Check CRN is correct and try again</span>
+                <input class="govuk-input govuk-input--error govuk-input--width-10" id="CRN" name="CRN" type="text"
+                    autocomplete="CRN">
+            </div>
+            <a href="/cases/day/2020-06-19/link-confirm-ball">
+                <button type="submit" class="govuk-button" data-module="govuk-button">
+                    Find record
+                </button>
+            </a>
+            <p class="govuk-body">
+                <a class="govuk-link govuk-link--no-visited-state" href="javascript:history.back();">Cancel</a>
+            </p>
+        </fieldset>
+    </div>
+</div>
+
+{% endblock %}

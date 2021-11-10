@@ -1,0 +1,137 @@
+{% extends "layout.html" %}
+
+
+{% block pageTitle %}
+Case summary
+{% endblock %}
+
+{% block bodyStart %}
+
+{% block keyDetails %}
+{% include "includes/key_details/11_Hart.html" %}
+{% endblock %}
+
+
+{% endblock %}
+
+
+{% block beforeContent %}
+<a href="request-psr" style="margin-bottom: 0;" class="govuk-back-link">Back</a>
+{% endblock %}
+
+
+{% block content %}
+
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+
+
+    <div class="govuk-width-container">
+
+
+
+            <h1 class="govuk-heading-l">Review and submit pre-sentence report request</h1>
+
+            <h2 class="govuk-heading-m">Report details</h2>
+
+            <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Requested by court on
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  11 November 2021
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="request1">
+                    Change<span class="govuk-visually-hidden"> name</span>
+                  </a>
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Required by court on
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  18 November 2021
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="request1">
+                    Change<span class="govuk-visually-hidden"> </span>
+                  </a>
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Report type
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  Short format
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="request1">
+                    Change<span class="govuk-visually-hidden"> </span>
+                  </a>
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Court view of seriousness
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  <p class="govuk-body">Not stated</p>
+
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="request1">
+                    Change<span class="govuk-visually-hidden"> contact details</span>
+                  </a>
+                </dd>
+              </div>
+            </dl>
+
+            <h2 class="govuk-heading-m">Report allocation</h2>
+
+            <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Report writer
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  Unallocated
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="request2">
+                    Change<span class="govuk-visually-hidden"> </span>
+              </a>
+            </dl>
+
+            <h2 class="govuk-heading-m">An NDelius record will be created for Gary Hart</h2>
+
+            <p class="govuk-body">As this defendant does not have an existing NDelius record, one will be created for them if you submit this pre-sentence report request.</p>
+
+            <form action="/form-handler" method="post" novalidate>
+
+              <input type="hidden" name="answers-checked" value="true">
+
+          <a href="summary-success" role="button" draggable="false" class="govuk-button" style="margin: 10px 0 0;" data-module="govuk-button">Submit report request</a>
+
+            </form>
+
+          </div>
+        </div>
+
+    </div>
+
+
+
+
+    </div>
+
+</div>
+
+
+{% endblock %}

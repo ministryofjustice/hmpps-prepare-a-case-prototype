@@ -1,0 +1,217 @@
+{% extends "layout.html" %}
+
+
+{% block pageTitle %}
+Case summary
+{% endblock %}
+
+{% block bodyStart %}
+
+{% block keyDetails %}
+{% include "includes/key_details/11_Hart-presentence.html" %}
+{% endblock %}
+
+
+{% endblock %}
+
+
+{% block beforeContent %}
+<a href="/cases/day/2021-11-11/case-list" style="margin-bottom: 0;" class="govuk-back-link">Back to cases</a>
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+  <div class="govuk-grid-column-full">
+    <div class="govuk-notification-banner govuk-notification-banner--success" role="alert" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+  <div class="govuk-notification-banner__header">
+    <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+      Success
+    </h2>
+  </div>
+  <div class="govuk-notification-banner__content">
+    <h3 class="govuk-notification-banner__heading">
+      You have requested an oral pre-sentence report for Gary Hart
+    </h3>
+    <p class="govuk-body">An NDelius record has been created and the report can be allocated to a report writer.</p>
+  </div>
+</div>
+
+    <nav class="moj-sub-navigation" aria-label="Sub navigation">
+
+      <ul class="moj-sub-navigation__list">
+        <li class="moj-sub-navigation__item">
+          <a class="moj-sub-navigation__link govuk-link--no-visited-state" aria-current="page"
+            href="/cases/11/summary.html">Case summary</a>
+        </li>
+        <li class="moj-sub-navigation__item">
+          <a class="moj-sub-navigation__link govuk-link--no-visited-state"
+            href="/cases/11/probationrecord.html">Probation record</a>
+        </li>
+        <li class="moj-sub-navigation__item">
+          <a class="moj-sub-navigation__link govuk-link--no-visited-state" href="/cases/11/risk.html">Risk register</a>
+        </li>
+      </ul>
+      </ul>
+
+    </nav>
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <h1 class="govuk-heading-l govuk-!-margin-bottom-7">Case summary</h1>
+  </div>
+</div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-!-margin-bottom-8">
+      <h2 class="govuk-heading-m">Appearance</h2>
+      <p class="govuk-body">Court 1, morning session, Thursday 11 November (1st listing).</p>
+    </div>
+    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+    <!-- <div class="govuk-!-margin-bottom-7">
+      <h2 class="govuk-heading-m">Supporting information</h2>
+      <dl class="govuk-summary-list govuk-summary-list--no-border">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            CPS pack
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <p class="govuk-body">Available in CourtStore</p>
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="/cases/3/cps">
+              View<span class="govuk-visually-hidden"> CPS pack</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Offender manager report
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <p class="govuk-body">Not received</p>
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="/cases/3/addreport">
+              Add<span class="govuk-visually-hidden"> offender manager report</span>
+            </a>
+          </dd>
+        </div>
+      </dl>
+    </div>
+    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible"> -->
+    <div class="govuk-!-margin-bottom-8">
+      <h2 class="govuk-heading-m">Offences</h2>
+      <h3 class="govuk-heading-s govuk-!-margin-top-4">Common assault and battery</h3>
+      <p class="govuk-body govuk-!-margin-bottom-2">On Wednesday 15th February 2021 at Grey Lane, S10 1AG, assaulted Sarah
+        Smith by beating her.</p>
+      <p class="govuk-body secondary-text-col">Contrary to section 39 of the Criminal Justice Act 1988.</p>
+    </div>
+    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+    <div class="govuk-!-margin-bottom-8">
+      <h2 class="govuk-heading-m">
+        Defendant details
+      </h2>
+      <dl class="govuk-summary-list govuk-summary-list--no-border">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Name
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Gary Hart
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Gender
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Male
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Date of birth
+          </dt>
+          <dd class="govuk-summary-list__value">
+            22 December 2000 (20 years old)
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Address
+          </dt>
+          <dd class="govuk-summary-list__value">
+            22 Crombie Street<br> Haldon<br> Sheffield<br> S68 4EY
+          </dd>
+        </div>
+      </dl>
+    </div>
+    <!-- <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+    <div class="govuk-!-margin-bottom-8">
+      <h2 class="govuk-heading-m">
+        Contact details
+      </h2>
+      <p class="govuk-body"><a href="/cases/3/contactdetails">Edit contact details</a></p>
+      <dl class="govuk-summary-list govuk-summary-list--no-border">
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Email address
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <p class="govuk-body">Unknown</p>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Telephone number
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <p class="govuk-body">07999 000 000</p>
+          </dd>
+        </div>
+      </dl>
+    </div> -->
+
+
+
+
+
+
+
+  </div>
+  <div class="govuk-grid-column-one-third">
+    <!-- <h2 class="govuk-heading-m">Recent case activity</h2>
+    <div class="timeline">
+      <ul>
+        <li>
+          <h2 class="timeline__title">Reminder sent</h2>
+          <p class="timeline__meta">
+            <time>28 April 2020 at 9:00 am</time>. Reminder sent automatically
+          </p>
+          <p>Andrei's offender manager was reminded to send a progress report.</p>
+        </li>
+        <li>
+          <h2 class="timeline__title">Report requested</h2>
+          <p class="timeline__meta">
+            <time>24 April 2020 at 9:00 am</time>. Request sent automatically
+          </p>
+          <p>Andrei's offender manager was asked to send a progress report.</p>
+        </li>
+      </ul>
+    </div> -->
+  </div>
+
+
+
+
+</div>
+</div>
+
+
+{% endblock %}

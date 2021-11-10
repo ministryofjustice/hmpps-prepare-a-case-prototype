@@ -1,0 +1,109 @@
+{% extends "layout.html" %}
+
+
+{% block pageTitle %}
+Probation record
+{% endblock %}
+
+{% block bodyStart %}
+{% block keyDetails %}
+{% include "includes/key_details/11_Hart-presentence.html" %}
+{% endblock %}
+{% endblock %}
+
+
+{% block beforeContent %}
+<a href="/cases/day/2021-11-11/case-list" style="margin-bottom: 0;" class="govuk-back-link">Back to cases</a>
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+    <nav class="moj-sub-navigation" aria-label="Sub navigation">
+
+      <ul class="moj-sub-navigation__list">
+        <li class="moj-sub-navigation__item">
+          <a class="moj-sub-navigation__link govuk-link--no-visited-state" href="/cases/11/summary.html">Case summary</a>
+        </li>
+        <li class="moj-sub-navigation__item">
+          <a class="moj-sub-navigation__link govuk-link--no-visited-state" aria-current="page" href="/cases/11/probationrecord.html">Probation
+            record</a>
+        </li>
+        <li class="moj-sub-navigation__item">
+          <a class="moj-sub-navigation__link govuk-link--no-visited-state" href="/cases/11/risk.html">Risk register</a>
+        </li>
+      </ul>
+
+    </nav>
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <h1 class="govuk-heading-l govuk-!-margin-bottom-7">Probation record</h1>
+  </div>
+</div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-!-margin-bottom-9">
+      <h2 class="govuk-heading-m">Pre-sentence report requested</h2>
+          <p class="govuk-body govuk-!-margin-top-1 govuk-!-margin-bottom-0">
+            Common assault and battery - 80200
+          </p>
+          <p class="govuk-hint govuk-!-margin-top-1 govuk-!-margin-bottom-4">Offence committed
+            on 15 February 2021</p>
+
+          <p class="govuk-body govuk-!-font-weight-bold">Report requested
+            on 11 November 2021</p>
+
+          <dl class="govuk-summary-list govuk-summary-list--no-border">
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Type
+              </dt>
+              <dd class="govuk-summary-list__value">
+               Short format
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Report writer
+              </dt>
+              <dd class="govuk-summary-list__value">
+                  Unallocated
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Required by court on
+              </dt>
+              <dd class="govuk-summary-list__value">
+                18 November 2021
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Status
+              </dt>
+              <dd class="govuk-summary-list__value">
+
+                  Incomplete
+
+              </dd>
+            </div>
+          </dl>
+
+    </div>
+
+
+
+
+</div>
+
+</div>
+
+
+{% endblock %}

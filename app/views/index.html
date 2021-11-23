@@ -541,26 +541,38 @@ Prototypes | Prepare a case | HMPPS
                 <tbody class="govuk-table__body govuk-!-font-size-16">
                   <tr class="govuk-table__row">
                     <td class="govuk-table__cell"><a
-                        href="https://moj-pict-prototype-sprint23.herokuapp.com/change-court">Select court</a> - when a user first signs into the service </td>
+                        href="https://moj-pict-prototype-sprint12.herokuapp.com/cases/1/summary">Case details</a> - renamed case summary </td>
                     <td class="govuk-table__cell">To allow users to see all the courts available within the service and navigate to them. </td>
                   </tr>
                   <tr class="govuk-table__row">
                     <td class="govuk-table__cell"><a
-                        href="https://moj-pict-prototype-sprint23.herokuapp.com/change-court">Change court</a> - added to primary navigation bar next to username </td>
+                        href="https://moj-pict-prototype-sprint12.herokuapp.com/cases/1/summary">Support informaiton</a> - moved CPS pack under supporting information H2 and added in 'offender manager report' status and link to view </td>
                     <td class="govuk-table__cell">To allow users to move between different courts available in the service if they work in more than one.</td>
                   </tr>
                   <tr class="govuk-table__row">
                     <td class="govuk-table__cell"><a
-                        href="https://moj-pict-prototype-sprint23.herokuapp.com/change-court">Beta badge</a>
+                        href="https://moj-pict-prototype-sprint12.herokuapp.com/cases/1/summary">Recent case activity</a>
                        -
-                        added after service name</td>
+                        added timeline component to sidebar of case summary to highlight recent case activity such as appearances and offender manager report requests.</td>
                     <td class="govuk-table__cell">To reflect that the service was in a private beta rollout to a small number of test courts.</td>
                   </tr>
                   <tr class="govuk-table__row">
                     <td class="govuk-table__cell"><a
-                        href="https://moj-pict-prototype-sprint17.herokuapp.com/cases/8/link-confirm">Linked record</a> - show users detail of record when a valid CRN has been entered
+                        href="https://moj-pict-prototype-sprint12.herokuapp.com/cases/1/summary">Personal and contact details separated</a> - separated 'Personal details from police' into two 'Personal details' and 'Contact details' with the option to edit contact details. New fields of 'email address' and 'mobile number' included in contact details.
                     </td>
-                    <td class="govuk-table__cell">To allow users to see details of the record the CRN relates. They can confirm it is the right record or search for a different CRN if an error was made.</td>
+                    <td class="govuk-table__cell">Users demonstrated a need to capture contact information of the defendant when in court. By separating into two sections, it is clearer which fields can be edited by the user.</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell"><a
+                        href="https://moj-pict-prototype-sprint12.herokuapp.com/cases/1/probationrecord/event2">Personal and contact details separated</a> - contact table removed and replaced with link to NDelius contact log
+                    </td>
+                    <td class="govuk-table__cell">No clear benefit to users by pulling back most recent contacts or a logical way of filtering most relevant contacts. Contacts still relevant, but probation staff would often go back through multiple pages of contacts to get more information if needed. A deep link through to the contact log in NDelius more appropriate than recreating contact log in our service.</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell"><a
+                        href="https://moj-pict-prototype-sprint12.herokuapp.com/cases/6/offenderprogressreport">Offender manager report</a> - user has ability to view a report uploaded to the service
+                    </td>
+                    <td class="govuk-table__cell">Added ability to see a completed OM report from the case summary for purpose of user test.</td>
                   </tr>
                 </tbody>
               </table>

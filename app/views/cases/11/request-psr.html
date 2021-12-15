@@ -1,4 +1,4 @@
-{% extends "layout.html" %}
+{% extends "layout-main.html" %}
 
 
 {% block pageTitle %}
@@ -27,64 +27,144 @@ Case summary
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
 
-    <h1 class="govuk-heading-l govuk-!-margin-bottom-7">Allocate to a report writer</h1>
+    <h1 class="govuk-heading-l govuk-!-margin-bottom-7">Enter details of pre-sentence report </h1>
+    <h2 class="govuk-heading-m">Offence details</h2>
+    <dl class="govuk-summary-list govuk-!-margin-bottom-8">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Main offence
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Common assault and battery
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">
+            Change<span class="govuk-visually-hidden"> offence</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Sentencing court
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Sheffield Magistrates' Court
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">
+            Change<span class="govuk-visually-hidden"> court</span>
+          </a>
+        </dd>
+      </div>
+    </dl>
+        <h2 class="govuk-heading-m">Report writer</h2>
 
+        <dl class="govuk-summary-list govuk-!-margin-bottom-8">
+          <div class="govuk-summary-list__row">
+            <dd class="govuk-summary-list__value">
+              Unallocated
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Allocate<span class="govuk-visually-hidden"> author</span>
+              </a>
+            </dd>
+          </div>
+          </dl>
     <div class="govuk-form-group">
-      <fieldset class="govuk-fieldset">
-        <div class="govuk-radios">
-                  <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="england">
-                    <label class="govuk-label govuk-radios__label" for="where-do-you-live">
-                        Leave unallocated
-                    </label>
-                  </div>
-                  <div class="govuk-radios__divider">or</div>
-          <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="where-do-you-live-3" name="where-do-you-live" type="radio" value="wales">
-            <label class="govuk-label govuk-radios__label" for="where-do-you-live-3">
-              Bob Burnquist
-            </label>
+      <fieldset class="govuk-fieldset govuk-!-margin-bottom-8" role="group" aria-describedby="passport-issued-hint">
+      <h2 class="govuk-heading-m">Required by court on</h2>
+        <div class="govuk-date-input" id="passport-issued">
+          <div class="govuk-date-input__item">
+            <div class="govuk-form-group">
+              <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                Day
+              </label>
+              <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" pattern="[0-9]*" inputmode="numeric"></div>
           </div>
-          <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="where-do-you-live-4" name="where-do-you-live" type="radio" value="northern-ireland">
-            <label class="govuk-label govuk-radios__label" for="where-do-you-live-4">
-              Bucky Lasek
-            </label>
+          <div class="govuk-date-input__item">
+            <div class="govuk-form-group">
+              <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                Month
+              </label>
+              <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" pattern="[0-9]*" inputmode="numeric"></div>
           </div>
-
-          <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="where-do-you-live-6" name="where-do-you-live" type="radio" value="abroad">
-            <label class="govuk-label govuk-radios__label" for="where-do-you-live-6">
-              Tony Hawk
-            </label>
+          <div class="govuk-date-input__item">
+            <div class="govuk-form-group">
+              <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                Year
+              </label>
+              <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" pattern="[0-9]*" inputmode="numeric"></div>
           </div>
-
-
-          <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="where-do-you-live-6" name="where-do-you-live" type="radio" value="abroad">
-            <label class="govuk-label govuk-radios__label" for="where-do-you-live-6">
-              Elissa Steamer
-            </label>
-          </div>
-
-
         </div>
 
       </fieldset>
     </div>
 
+    <div class="govuk-form-group">
 
-    <a href="check-answers" role="button" draggable="false" class="govuk-button" style="margin: 10px 0 0;" data-module="govuk-button">Save and continue</a>
+  <fieldset class="govuk-fieldset govuk-!-margin-bottom-8">
+  <h2 class="govuk-heading-m">Report type</h2>
+    <div class="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="type-of-psr" name="type-of-psr" type="radio" value="Oral">
+        <label class="govuk-label govuk-radios__label" for="type-of-psr">
+          Oral
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="type-of-psr-2" name="type-of-psr" type="radio" value="Short format">
+        <label class="govuk-label govuk-radios__label" for="type-of-psr-2">
+          Short format
+        </label>
+      </div>
+    </div>
+
+  </fieldset>
+</div>
+
+<fieldset class="govuk-fieldset">
+<h2 class="govuk-heading-m">Has an interview been arranged?</h2>
+<div class="govuk-radios govuk-!-margin-bottom-8">
+  <div class="govuk-radios__item">
+    <input class="govuk-radios__input" id="interview" name="interview" type="radio" value="Yes">
+    <label class="govuk-label govuk-radios__label" for="seriousness">
+    Yes
+    </label>
+  </div>
+  <div class="govuk-radios__item">
+    <input class="govuk-radios__input" id="interview-2" name="interview" type="radio" value="No">
+    <label class="govuk-label govuk-radios__label" for="interview-2">
+    No
+    </label>
+  </div>
+</div>
+
+</fieldset>
+
+<div class="govuk-form-group">
+  <h2 class="govuk-heading-m"><label class="govuk-label govuk-label--m" for="more-detail">
+      Notes for report author
+    </label>
+  </h2>
+  <div id="more-detail-hint" class="govuk-hint">
+    Include any information that may be helpful for the report author to know.
+  </div>
+  <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+</div>
+<a href="interview" role="button" draggable="false" class="govuk-button" style="margin: 10px 0 0;" data-module="govuk-button">Save and continue</a>
+</div>
+
+
+
+
+
+
+
   </div>
 
 
         </div>
-
-
-    </div>
-
-
-</div>
 
 
 {% endblock %}

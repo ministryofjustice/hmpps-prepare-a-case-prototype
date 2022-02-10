@@ -6,22 +6,15 @@ Case summary
 {% endblock %}
 
 {% block bodyStart %}
-
-{% block keyDetails %}
-{% include "includes/key_details/11_Hart.html" %}
-{% endblock %}
-
-
-{% endblock %}
-
-
-{% block beforeContent %}
+<div class="govuk-width-container">
 <a href="/cases/day/2021-11-11/case-list" style="margin-bottom: 0;" class="govuk-back-link">Back to cases</a>
+</div>
+{% block keyDetails %}
+{% include "includes/key_details/11_Hart-new-no-record.html" %}
 {% endblock %}
-
+{% endblock %}
 
 {% block content %}
-
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
@@ -169,7 +162,7 @@ Case summary
       </ul>
     </div> -->
     <div class="govuk-!-margin-bottom-8">
-      <h2 class="govuk-heading-m">Action</h2>
+      <h2 class="govuk-heading-m">Case action</h2>
           <a href="start-psr" role="button" draggable="false" class="govuk-button" style="margin: 10px 0 0;" data-module="govuk-button">Request pre-sentence report</a>
     </div>
   </div>

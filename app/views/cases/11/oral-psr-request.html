@@ -10,7 +10,7 @@ Case summary
 <a href="/cases/11/summary.html" style="margin-bottom: 0;" class="govuk-back-link">Back</a>
 </div>
 {% block keyDetails %}
-{% include "includes/key_details/11_Hart-current.html" %}
+{% include "includes/key_details/11_Hart-new-no-record.html" %}
 {% endblock %}
 
 
@@ -30,8 +30,7 @@ Case summary
 
 
 
-            <h1 class="govuk-heading-l">Create an oral pre-sentence report</h1>
-<p class="govuk-body">You are updating Gary Hart's NDelius record and creating a report for a writer to complete.</p>
+            <h1 class="govuk-heading-l">Enter oral pre-sentence report details</h1>
             <h2 class="govuk-heading-m">Report details</h2>
             <dl class="govuk-summary-list govuk-!-margin-bottom-6">
               <div class="govuk-summary-list__row">
@@ -76,6 +75,19 @@ Case summary
               <div class="govuk-summary-list__row">
                 <dt class="govuk-summary-list__key">
                   Convicted on
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  24 February 2022
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="request1">
+                    Change<span class="govuk-visually-hidden"> </span>
+                  </a>
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Report requested on
                 </dt>
                 <dd class="govuk-summary-list__value">
                   24 February 2022
@@ -164,11 +176,41 @@ Case summary
       </fieldset>
     </div>
 
+    <fieldset class="govuk-fieldset">
+    <h2 class="govuk-heading-m">Has an interview been arranged?</h2>
+    <div class="govuk-radios govuk-!-margin-bottom-8">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="interview" name="interview" type="radio" value="Yes">
+        <label class="govuk-label govuk-radios__label" for="seriousness">
+        Yes
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="interview-2" name="interview" type="radio" value="No">
+        <label class="govuk-label govuk-radios__label" for="interview-2">
+        No
+        </label>
+      </div>
+    </div>
+
+    </fieldset>
+
+    <div class="govuk-form-group">
+      <h2 class="govuk-heading-m"><label class="govuk-label govuk-label--m" for="more-detail">
+          Notes for report writer
+        </label>
+      </h2>
+      <div id="more-detail-hint" class="govuk-hint">
+        Include any information that may be helpful for a report writer to know.
+      </div>
+      <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+    </div>
+
             <form action="/form-handler" method="post" novalidate>
 
               <input type="hidden" name="answers-checked" value="true">
 
-          <a href="probationrecord" role="button" draggable="false" class="govuk-button" style="margin: 10px 0 0;" data-module="govuk-button">Create report</a>
+          <a href="interview" role="button" draggable="false" class="govuk-button" style="margin: 10px 0 0;" data-module="govuk-button">Save and continue</a>
 
             </form>
 

@@ -44,21 +44,33 @@ function clearFilter ($id) {
   checkbox.click()
 }
 
+function getContainerId ($id) {
+  return $id.split('-')[1]
+}
+
 function applyFilters ($reset) {
   var label
   var anySelected = false
-  var container = document.querySelector('.app-filters-applied')
-  container.innerHTML = ''
+  var filterOptions = ['record', 'courtroom', 'session']
+
+  for (var ii = 0, leni = filterOptions.length; ii < leni; ii++) {
+    document.querySelector('.app-filters-applied-' + filterOptions[ii]).innerHTML = ''
+    document.querySelector('.applied-' + filterOptions[ii]).classList.add('govuk-visually-hidden')
+  }
 
   var allCheckboxes = document.querySelectorAll('.govuk-checkboxes__input')
-  for (var i = 0, len = allCheckboxes.length; i < len; i++) {
+  for (var i = 0, len = allCheckboxes.length, containerId, container, id; i < len; i++) {
     if ($reset && allCheckboxes[i].checked) {
       clearFilter(allCheckboxes[i].id)
     }
     anySelected = anySelected || allCheckboxes[i].checked
     if (allCheckboxes[i].checked) {
-      label = document.querySelector('label[for="' + allCheckboxes[i].id + '"]')
-      container.innerHTML = container.innerHTML + '<div class="moj-filter__tag app-filter__tag" onclick="clearFilter(\'' + allCheckboxes[i].id + '\'); applyFilters()">' + label.innerText + '</div>'
+      id = allCheckboxes[i].id
+      containerId = getContainerId(id)
+      container = document.querySelector('.app-filters-applied-' + containerId)
+      document.querySelector('.applied-' + containerId).classList.remove('govuk-visually-hidden')
+      label = document.querySelector('label[for="' + id + '"]')
+      container.innerHTML = container.innerHTML + '<div class="moj-filter__tag app-filter__tag" onclick="clearFilter(\'' + id + '\'); applyFilters()">' + label.innerText + '</div>'
     }
   }
   var selectedFilters = document.querySelector('.selected-filters')
@@ -144,7 +156,7 @@ new MOJFrontend.ButtonMenu({
 
   // Comment history show more show less
   $(document).ready(function() {
-    var showChar = 140;
+    var showChar = 175;
     var ellipsestext = "...";
     var moretext = "Show more";
     var lesstext = "Show less";

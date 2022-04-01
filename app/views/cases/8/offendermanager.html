@@ -1,0 +1,187 @@
+{% extends "layout.html" %}
+
+
+{% block pageTitle %}
+Offender Manager
+{% endblock %}
+
+{% block bodyStart %}
+<section class="key-details-bar" aria-label="Key details">
+  <div class="key-details-bar__key-details">
+    <div class="key-details-bar__top-block">
+      <span class="govuk-visually-hidden">Name:</span>
+      <span class="key-details-bar__name">Dylan Adam ARMSTRONG</span>
+      <span class="key-details-bar__nino"></span>
+      <span class="govuk-visually-hidden">Status from nDelius:</span>
+      <span class="key-details-bar__status">Current offender</span>
+      <span class="govuk-visually-hidden">Status from nDelius:</span>
+      <span class="key-details-bar__status govuk-!-margin-right-2">Medium Risk of Serious Harm</span>
+    </div>
+    <div class="key-details-bar__bottom-block">
+      <span class="govuk-body govuk-!-margin-right-6">Date of birth: 27/09/1984</span> <span class="govuk-body govuk-!-margin-right-6">CRN: DX12340A</span><span class="govuk-body">PNC: A1234560BA</span>
+      <p class="govuk-body govuk-!-margin-0 app-!-float-right">
+        <!-- <a class="govuk-link govuk-link--no-visited-state govuk-link--text-colour" href="/cases/details/9168463">View
+            case details</a> -->
+      </p>
+    </div>
+  </div>
+</section>
+{% endblock %}
+
+
+{% block beforeContent %}
+<!-- <a href="cases.html" class="govuk-back-link">Back</a> -->
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+    <nav class="moj-sub-navigation" aria-label="Sub navigation">
+
+      <ul class="moj-sub-navigation__list">
+      <li class="moj-sub-navigation__item">
+        <a class="moj-sub-navigation__link" href="/case/summary.html">Case details</a>
+      </li>
+      
+      <li class="moj-sub-navigation__item">
+        <a class="moj-sub-navigation__link"  href="/case/risk.html">Risk registers</a>
+      </li>
+      
+      <li class="moj-sub-navigation__item">
+        <a class="moj-sub-navigation__link"  href="/case/events.html">Events</a>
+      </li>
+
+      <li class="moj-sub-navigation__item">
+        <a class="moj-sub-navigation__link" aria-current="page" href="/case/offendermanager.html">Offender Manager</a>
+      </li>
+
+      <li class="moj-sub-navigation__item">
+        <a class="moj-sub-navigation__link" href="/case/offenderdetails.html">Offender Details</a>
+      </li>
+
+
+      </ul>
+      
+      </nav> 
+
+  </div>
+</div>
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl govuk-!-margin-bottom-8">
+      Offender Manager
+    </h1>
+    <div class="govuk-!-margin-bottom-9">
+      <table class=" govuk-table govuk-!-margin-top-4">
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header" style="width: 30%;">Provider</th>
+            <td class="govuk-table__cell">CPA BeNCH</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Cluster</th>
+            <td class="govuk-table__cell">Hertfordshire</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">LDU</th>
+            <td class="govuk-table__cell">Hertfordshire</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Team</th>
+            <td class="govuk-table__cell">CRC - SWC OM</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Officer</th>
+            <td class="govuk-table__cell">Doe, John</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Team Telephone</th>
+            <td class="govuk-table__cell">01442 111111</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Date allocated</th>
+            <td class="govuk-table__cell"> 10/09/2019</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Reason for allocation</th>
+            <td class="govuk-table__cell">Other</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+      <div class="govuk-!-margin-bottom-9">
+        <h2 class="govuk-heading-m">Personal circumstances</h2>
+      </h2>
+      
+      <table class="govuk-table app-table app-table--split-rows">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header" aria-sort="none">Type</th>
+            <th scope="col" class="govuk-table__header" aria-sort="none">Sub type</th>
+            <th scope="col" class="govuk-table__header" aria-sort="none">Date</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">CP/UPW Offender Project Information</td>
+            <td class="govuk-table__cell">Alert to Project Supervisor</td>
+            <td class="govuk-table__cell">05/09/2019</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Educational Attainment Levels  </td>
+            <td class="govuk-table__cell">Other - No Qualification  </td>
+            <td class="govuk-table__cell">05/09/2019</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Educational Attainment Levels  </td>
+            <td class="govuk-table__cell">Numeracy - No Qualification  </td>
+            <td class="govuk-table__cell">05/09/2019</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Educational Attainment Levels  </td>
+            <td class="govuk-table__cell">Literacy - No Qualification  </td>
+            <td class="govuk-table__cell">05/09/2019</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Employment  </td>
+            <td class="govuk-table__cell">	Unavailable to work - Work Capability Assessment </td>
+            <td class="govuk-table__cell">05/09/2019</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Accomodation  </td>
+            <td class="govuk-table__cell">	Friends/Family (transient) </td>
+            <td class="govuk-table__cell">05/09/2019</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Relationship  </td>
+            <td class="govuk-table__cell">Single </td>
+            <td class="govuk-table__cell">14/09/2012</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Employment  </td>
+            <td class="govuk-table__cell">Full-time employed or self-employed</td>
+            <td class="govuk-table__cell">12/03/2012</td>
+          </tr>
+        </tbody>
+      </table>
+
+
+      </div>
+
+
+
+    </div>  
+     
+
+
+
+  </div>
+
+{% endblock %}

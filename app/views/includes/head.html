@@ -24,9 +24,13 @@
 
       </svg>
 
-      <a class="moj-header__link moj-header__link--organisation-name" href="https://moj-pict-prototype.herokuapp.com/index">HMPPS</a>
+      <a class="moj-header__link moj-header__link--organisation-name" href="/index">HMPPS</a>
+      <span class="moj-header__link--service-name--wrapper">
+        <a class="moj-header__link moj-header__link--service-name" href="/cases/day/2020-06-17/case-list">Prepare a case
+          for sentence</a>
 
-      <a class="moj-header__link moj-header__link--service-name" href="/cases">Prepare a case for court</a>
+          <!-- <span class="app-phase-tag"><strong class="govuk-tag">Beta</strong></span> -->
+      </span>
     </div>
     <div class="moj-header__content">
 
@@ -34,7 +38,11 @@
 
         <ul class="moj-header__navigation-list">
           <li class="moj-header__navigation-item">
-            <a class="moj-header__navigation-link" href="#" aria-current="page">Account name</a>
+            <a class="moj-header__navigation-link" href="#" aria-current="page">Mark Berridge</a>
+          </li>
+
+          <li class="moj-header__navigation-item">
+            <a class="moj-header__navigation-link" href="/select-court">My courts</a>
           </li>
 
           <li class="moj-header__navigation-item">
@@ -50,27 +58,40 @@
 </header>
 
 
+<div class="govuk-phase-banner govuk-width-container">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      feedback
+    </strong>
+    <span class="govuk-phase-banner__text">
+      <a class="govuk-link" href="#">Give us your feedback</a> to help us improve this service.
+      <!-- This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it. -->
+    </span>
+  </p>
+</div>
+
 
 
 <div class="moj-primary-navigation">
 
   <div class="moj-primary-navigation__container">
-
+    <div class="app-organisation-nav-title">
+      <span class="govuk-body-s"><strong>Sheffield Magistrates' Court</strong></span>
+    </div>
     <div class="moj-primary-navigation__nav">
-
       <nav class="moj-primary-navigation" aria-label="Primary navigation">
 
         <ul class="moj-primary-navigation__list">
           <!-- <li class="moj-primary-navigation__item">
             <a class="moj-primary-navigation__link"  href="/dashboard">Dashboard</a>
           </li> -->
+
           <li class="moj-primary-navigation__item">
-            <a class="moj-primary-navigation__link" href="/cases">Cases</a>
+            <a class="moj-primary-navigation__link" aria-current="page" href="/cases/day/2020-06-17/case-list">Cases</a>
           </li>
-
         </ul>
-
       </nav>
+
 
     </div>
     <!-- <div class="moj-primary-navigation__search">

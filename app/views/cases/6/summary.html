@@ -16,7 +16,7 @@ Case summary
 
 
 {% block beforeContent %}
-<!-- <a href="/cases" class="govuk-back-link">Back</a> -->
+<a href="/cases/day/2020-06-17/case-list" style="margin-bottom: 0;" class="govuk-back-link">Back to cases</a>
 {% endblock %}
 
 
@@ -29,10 +29,12 @@ Case summary
 
       <ul class="moj-sub-navigation__list">
         <li class="moj-sub-navigation__item">
-          <a class="moj-sub-navigation__link govuk-link--no-visited-state" aria-current="page" href="/cases/6/summary.html">Case details</a>
+          <a class="moj-sub-navigation__link govuk-link--no-visited-state" aria-current="page"
+            href="/cases/6/summary.html">Case summary</a>
         </li>
         <li class="moj-sub-navigation__item">
-          <a class="moj-sub-navigation__link govuk-link--no-visited-state" href="/cases/6/probationrecord.html">Probation record</a>
+          <a class="moj-sub-navigation__link govuk-link--no-visited-state"
+            href="/cases/6/probationrecord.html">Probation record</a>
         </li>
         <li class="moj-sub-navigation__item">
           <a class="moj-sub-navigation__link govuk-link--no-visited-state" href="/cases/6/risk.html">Risk register</a>
@@ -46,7 +48,7 @@ Case summary
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
-    <h1 class="govuk-heading-l govuk-!-margin-bottom-7">Case details</h1>
+    <h1 class="govuk-heading-l govuk-!-margin-bottom-7">Case summary</h1>
   </div>
 </div>
 
@@ -56,25 +58,57 @@ Case summary
     <!-- <h1 class="govuk-heading-xl govuk-!-margin-bottom-8">
       Case details
     </h1> -->
-    <div class="govuk-!-margin-bottom-9">
+    <div class="govuk-!-margin-bottom-8">
       <h2 class="govuk-heading-m">Appearance</h2>
-      <p class="govuk-body">Court 1, morning session, Thursday 27 February (1st listing).</p>
+      <p class="govuk-body">Court 1, morning session, Monday 8 March (1st listing).</p>
     </div>
-    <div class="govuk-!-margin-bottom-9">
-
+    <!-- <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+    <div class="govuk-!-margin-bottom-7">
+      <h2 class="govuk-heading-m">Supporting information</h2>
+      <dl class="govuk-summary-list govuk-summary-list--no-border">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            CPS pack
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <p class="govuk-body">Available in CourtStore</p>
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="/cases/6/cps">
+              View<span class="govuk-visually-hidden"> CPS pack</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Offender manager report
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <p class="govuk-body">Report received</p>
+            
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="/cases/6/offenderprogressreport">
+              View<span class="govuk-visually-hidden"> offender manager report</span>
+            </a>
+          </dd>
+        </div>
+      </dl>
+    </div> -->
+    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+    <div class="govuk-!-margin-bottom-8">
       <h2 class="govuk-heading-m">Offences</h2>
       <h3 class="govuk-heading-s">Attempt theft from shop</h3>
-      <p class="govuk-body govuk-!-margin-bottom-2">On Saturday 15th February at Red Street, Sheffield attempted to
+      <p class="govuk-body govuk-!-margin-bottom-2">On Wednesday 15th January at Red Street, Walker attempted to
         steal various food items and alchohol spirits to a value of £74.00 belonging to Asda.</p>
       <p class="govuk-body secondary-text-col">Contrary to section 1(1) of the Criminal Attempts Act 1981. </p>
     </div>
+    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
 
 
-
-
-    <div class="govuk-!-margin-bottom-9">
+    <div class="govuk-!-margin-bottom-7">
       <h2 class="govuk-heading-m">
-        Personal details from police
+        Defendant details 
       </h2>
       <dl class="govuk-summary-list govuk-summary-list--no-border">
         <div class="govuk-summary-list__row">
@@ -98,15 +132,7 @@ Case summary
             Date of birth
           </dt>
           <dd class="govuk-summary-list__value">
-            01 June 1987 (32 years old)
-          </dd>
-        </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Address
-          </dt>
-          <dd class="govuk-summary-list__value">
-            No fixed abode
+            01 June 1987 (33 years old)
           </dd>
         </div>
         <div class="govuk-summary-list__row">
@@ -117,15 +143,42 @@ Case summary
             British
           </dd>
         </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Address
+          </dt>
+          <dd class="govuk-summary-list__value">
+            No fixed abode
+          </dd>
+        </div>
       </dl>
     </div>
+    <!-- <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+    <div class="govuk-!-margin-bottom-7">
+      <h2 class="govuk-heading-m">
+        Contact details
+      </h2>
+      <p class="govuk-body"><a href="/cases/6/contactdetails">Edit contact details</a></p>
+      <dl class="govuk-summary-list govuk-summary-list--no-border">
 
-
-
-
-
-
-
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Email address
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Unknown
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Telephone number 
+          </dt>
+          <dd class="govuk-summary-list__value">
+            07111 222 333
+          </dd>
+        </div>
+      </dl>
+    </div> -->
 
 
 
@@ -133,10 +186,35 @@ Case summary
 
 
   </div>
-  <div class="govuk-grid-column-one-third">
 
-    <h2 class="govuk-heading-m">CPS pack</h2>
-    <p class="govuk-body"><a href="#">View CPS pack (opens in Court Store)</a></p>
+
+  <div class="govuk-grid-column-one-third">
+    <!-- <h2 class="govuk-heading-m">Recent case activity</h2>
+    <div class="timeline">
+      <ul>
+        <li>
+          <h2 class="timeline__title">Report received</h2>
+          <p class="timeline__meta">
+            <time>30 June 2020 at 4:18 pm</time>. Report from Claire Smith (CRC Offender Manager)
+          </p>
+        </li>
+        <li>
+          <h2 class="timeline__title">Reminder sent</h2>
+          <p class="timeline__meta">
+            <time>26 June 2020 at 9:00 am</time>. Reminder sent automatically
+          </p>
+          <p>Rhys's offender manager was reminded to send a progress report.</p>
+        </li>
+        <li>
+          <h2 class="timeline__title">Report requested</h2>
+          <p class="timeline__meta">
+            <time>24 June 2020 at 9:00 am</time>. Request sent automatically
+          </p>
+          <p>Rhys’s offender manager was asked to send a progress report.</p>
+        </li>
+      </ul>
+    </div> -->
+
   </div>
 
 

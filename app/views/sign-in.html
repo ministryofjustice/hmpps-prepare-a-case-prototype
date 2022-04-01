@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+{% block head %}
+{% include "includes/head-signin.html" %}
+{% endblock %}
+{% block pageTitle %}
+Sign in
+{% endblock %}
+{% block beforeContent %}
+{% endblock %}
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        
+        <h1 class="govuk-heading-l ">Sign in</h1>
+        <div class="govuk-!-margin-bottom-5">
+            <div class="govuk-form-group">
+                <label class="govuk-label" for="width-20">
+                  Username
+                </label>
+                <input class="govuk-input govuk-input--width-20" id="width-20" name="width-20" type="text"></div>
+                <div class="govuk-form-group">
+                    <label class="govuk-label" for="width-20">
+                      Password
+                    </label>
+                    <input class="govuk-input govuk-input--width-20" id="width-20" name="width-20" type="text"></div>    
+            <div class="govuk-!-margin-top-6">
+                <a href="/select-court.html" role="button" draggable="false" class="govuk-button moj-button-menu__item"
+                   data-module="govuk-button">Sign in</a>
+            </div>
+            <div id="result"></div>
+        </div>
+        <h1 class="govuk-heading-m govuk-!-margin-top-8">Problems signing in</h1>
+        <p class="govuk-body"><a href="/select-court.html" class="govuk-link govuk-link--no-visited-state">I have forgotten my password</a></p>
+        <details class="govuk-details" data-module="govuk-details">
+            <summary class="govuk-details__summary">
+              <span class="govuk-details__summary-text">
+                Why won’t my password work?
+              </span>
+            </summary>
+          </details>
+    </div>
+</div>
+
+{% endblock %}

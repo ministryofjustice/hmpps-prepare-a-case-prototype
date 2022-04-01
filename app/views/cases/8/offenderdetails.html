@@ -1,0 +1,131 @@
+{% extends "layout.html" %}
+
+
+{% block pageTitle %}
+Offender Details
+{% endblock %}
+
+{% block bodyStart %}
+<section class="key-details-bar" aria-label="Key details">
+  <div class="key-details-bar__key-details">
+    <div class="key-details-bar__top-block">
+      <span class="govuk-visually-hidden">Name:</span>
+      <span class="key-details-bar__name">Dylan Adam ARMSTRONG</span>
+      <span class="key-details-bar__nino"></span>
+      <span class="govuk-visually-hidden">Status from nDelius:</span>
+      <span class="key-details-bar__status">Current offender</span>
+      <span class="govuk-visually-hidden">Status from nDelius:</span>
+      <span class="key-details-bar__status govuk-!-margin-right-2">Medium Risk of Serious Harm</span>
+    </div>
+    <div class="key-details-bar__bottom-block">
+      <span class="govuk-body govuk-!-margin-right-6">Date of birth: 27/09/1984</span> <span class="govuk-body govuk-!-margin-right-6">CRN: DX12340A</span><span class="govuk-body">PNC: A1234560BA</span>
+      <p class="govuk-body govuk-!-margin-0 app-!-float-right">
+        <!-- <a class="govuk-link govuk-link--no-visited-state govuk-link--text-colour" href="/cases/details/9168463">View
+            case details</a> -->
+      </p>
+    </div>
+  </div>
+</section>
+{% endblock %}
+
+
+{% block beforeContent %}
+<!-- <a href="cases.html" class="govuk-back-link">Back</a> -->
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+    <nav class="moj-sub-navigation" aria-label="Sub navigation">
+
+      <ul class="moj-sub-navigation__list">
+      <li class="moj-sub-navigation__item">
+        <a class="moj-sub-navigation__link" href="/case/summary.html">Case details</a>
+      </li>
+      
+      <li class="moj-sub-navigation__item">
+        <a class="moj-sub-navigation__link"  href="/case/risk.html">Risk registers</a>
+      </li>
+      
+      <li class="moj-sub-navigation__item">
+        <a class="moj-sub-navigation__link"  href="/case/events.html">Events</a>
+      </li>
+
+      <li class="moj-sub-navigation__item">
+        <a class="moj-sub-navigation__link"  href="/case/offendermanager.html">Offender Manager</a>
+      </li>
+
+      <li class="moj-sub-navigation__item">
+        <a class="moj-sub-navigation__link" aria-current="page" href="/case/offenderdetails.html">Offender Details</a>
+      </li>
+
+
+      </ul>
+      
+      </nav> 
+
+  </div>
+</div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl govuk-!-margin-bottom-8">
+      Offender Details
+    </h1>
+    <div class="govuk-!-margin-bottom-9">
+      <table class=" govuk-table govuk-!-margin-top-4">
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header" style="width: 30%;">Aliases</th>
+            <td class="govuk-table__cell">Yes (1)</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Gender</th>
+            <td class="govuk-table__cell">Male</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">NI Number</th>
+            <td class="govuk-table__cell">Unknown</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Nationality</th>
+            <td class="govuk-table__cell">British</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Ethnicity</th>
+            <td class="govuk-table__cell">	White: British/English/Welsh/Scottish/Northern Irish</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Interpreter required</th>
+            <td class="govuk-table__cell">No</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Disability status</th>
+            <td class="govuk-table__cell">No Disability</td>
+          </tr>
+        </tbody>
+      </table>
+      <details class="govuk-details" data-module="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+             Contact details
+            </span>
+          </summary>
+          <!-- <div class="govuk-details__text">
+            We need to know your nationality so we can work out which elections you’re entitled to vote in. If you cannot provide your nationality, you’ll have to send copies of identity documents through the post.
+          </div> -->
+        </details>
+  </div>
+
+
+
+
+
+
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,91 @@
+{% extends "layout-main.html" %}
+
+
+{% block pageTitle %}
+Cases
+{% endblock %}
+
+{% block beforeContent %}
+
+{% endblock %}
+
+{% block content %}
+
+<div class="moj-banner">
+  <svg class="moj-banner__icon" fill="currentColor" role="presentation" focusable="false"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" height="25" width="25">
+    <path d="M13.7,18.5h-2.4v-2.4h2.4V18.5z M12.5,13.7c-0.7,0-1.2-0.5-1.2-1.2V7.7c0-0.7,0.5-1.2,1.2-1.2s1.2,0.5,1.2,1.2v4.8
+  C13.7,13.2,13.2,13.7,12.5,13.7z M12.5,0.5c-6.6,0-12,5.4-12,12s5.4,12,12,12s12-5.4,12-12S19.1,0.5,12.5,0.5z" /></svg>
+  <div class="moj-banner__message">
+    <h2 class="govuk-heading-m" style="max-width: none;">Case list could not be retrieved. We'll try again on Thursday 16 Jul at 9:00am.</h2>
+    <!-- <p class="govuk-body"><a href="" class="govuk-link govuk-link--no-visited-state">Dismiss</a></p> -->
+  </div>
+</div>
+
+<header class="govuk-grid-row govuk-!-margin-bottom-7">
+  <div class="govuk-grid-column-two-thirds">
+    <span class="govuk-caption-xl">
+      Cases
+    </span>
+    <h1 class="govuk-heading-xl govuk-!-margin-bottom-2">
+      <time class="" datetime="2020-06-26">
+        Thursday 16 Jul
+      </time>
+    </h1>
+    <nav class="app-pagination app-pagination--inline app-print--hide" role="navigation" aria-label="Pagination">
+      <ul class="app-pagination__list">
+
+        <li class="app-pagination__list-item app-pagination__list-item--prev">
+          <a href="/cases/day/2020-06-18/case-list" class="app-pagination__link" rel="prev">
+            <span class="app-pagination__link-title">
+              <svg class="app-pagination__link-icon" xmlns="http://www.w3.org/2000/svg" height="13" width="17"
+                viewBox="0 0 17 13">
+                <path fill="currentColor"
+                  d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z">
+                </path>
+              </svg>
+              <span class="app-pagination__link-text">Previous day</span>
+            </span>
+
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <div class="govuk-grid-column-one-third">
+  </div>
+</header>
+
+
+
+<div class="govuk-tabs" data-module="govuk-tabs">
+  <!-- <div class="app-case-updates">
+    <p class="govuk-body-s govuk-!-margin-bottom-1 app-last-updated-stamp">List created: Today at 9:00am</p>
+    <p class="govuk-body-s govuk-!-margin-bottom-0 app-next-update-stamp">Next scheduled update: Wednesday 15 Jul at 9:00am</p>
+  </div> -->
+  <ul class="govuk-tabs__list">
+    <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+      <a class="govuk-tabs__tab" href="">
+        Case list
+      </a>
+    </li>
+
+  </ul>
+</div>
+
+<div class="govuk-grid-row govuk-!-margin-bottom-9">
+  <div class="govuk-grid-column-full">
+    <div class="app-task-card"
+      style="border-left: 8px solid #ccc; background: #e6eff7; padding: 20px; margin-bottom: 0; background: #f1f2f3;">
+      <p class="govuk-body govuk-!-margin-bottom-0">The case list will be available on Thursday 16 Jul at 9:00am.</p>
+    </div>
+  </div>
+</div>
+
+
+
+
+</div>
+</div>
+
+{% endblock %}

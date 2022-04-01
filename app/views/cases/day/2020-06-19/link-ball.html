@@ -1,0 +1,90 @@
+{% extends "layout.html" %}
+
+
+{% block pageTitle %}
+Link an nDelius record to the defendant
+{% endblock %}
+
+
+
+{% block beforeContent %}
+<a href="javascript:history.back();" class="govuk-back-link">Back</a>
+{% endblock %}
+
+
+{% block content %}
+
+<h1 class="govuk-heading-l">
+  <!-- <span class="govuk-caption-l">Brian Ball</span> -->
+  Link an nDelius record to the defendant
+</h1>
+<div class="govuk-grid-row govuk-!-margin-bottom-4">
+  <div class="govuk-grid-column-two-thirds">
+    <p class="govuk-body">Use a case reference number (CRN) to link an existing nDelius record to the defendant.</p>
+
+    <div class="govuk-!-margin-bottom-7">
+      <h2 class="govuk-heading-m">Defendant details</h2>
+      <dl class="govuk-summary-list">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Name
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Brian Ball
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Date of birth
+          </dt>
+          <dd class="govuk-summary-list__value">
+            7 July 1986
+          </dd>
+        </div>
+        <!-- <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Address
+          </dt>
+          <dd class="govuk-summary-list__value">
+            72A Saltash Road, Hull, HU19 6LF
+          </dd>
+        </div> -->
+      </dl>
+    </div>
+
+    <fieldset class="govuk-fieldset">
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+        <h2 class="govuk-fieldset__heading">
+          Enter the CRN of the existing record
+        </h2>
+      </legend>
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="CRN">
+          Case reference number (CRN)
+        </label>
+        <span id="dob-hint" class="govuk-hint">
+          For example, A123456
+        </span>
+        <input class="govuk-input govuk-input--width-10" id="CRN" name="CRN" type="text" autocomplete="CRN">
+      </div>
+      <a href="/cases/day/2020-06-19/link-confirm-ball">
+        <button type="submit" class="govuk-button" data-module="govuk-button">
+          Find record
+        </button>
+      </a>
+      <p class="govuk-body">
+        <a class="govuk-link govuk-link--no-visited-state" href="javascript:history.back();">Cancel</a>
+      </p>
+
+    </fieldset>
+
+
+  </div>
+</div>
+
+
+
+
+
+
+{% endblock %}

@@ -2,7 +2,7 @@
 
 
 {% block pageTitle %}
-Case history
+Case activity
 {% endblock %}
 
 {% block bodyStart %}
@@ -29,11 +29,11 @@ Case history
       <ul class="moj-sub-navigation__list">
         <li class="moj-sub-navigation__item">
           <a class="moj-sub-navigation__link govuk-link--no-visited-state" href="/cases/testcase/summaryV2.html">Case
-            details</a>
+            summary</a>
         </li>
         <li class="moj-sub-navigation__item">
           <a class="moj-sub-navigation__link govuk-link--no-visited-state" aria-current="page"
-            href="/cases/testcase/historyV2.html">Case history</a>
+            href="/cases/testcase/historyV2.html">Case activity</a>
         </li>
         <li class="moj-sub-navigation__item">
           <a class="moj-sub-navigation__link govuk-link--no-visited-state" href="">Probation record</a>
@@ -49,7 +49,7 @@ Case history
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
-    <h1 class="govuk-heading-l govuk-!-margin-bottom-7">Case history</h1>
+    <h1 class="govuk-heading-l govuk-!-margin-bottom-7">Case activity</h1>
   </div>
 </div>
 <div class="govuk-grid-row">
@@ -61,12 +61,12 @@ Case history
       <ul>
         <li>
           <h2 class="timeline__title">
-            Progress report from offender manager not received
+            No progress report received
           </h2>
           <p class="timeline__meta">
             <time>14 April 2020 at 4:22 pm</time>. Automatic message
           </p>
-          <p>We haven’t received a progress report from Dylan’s offender manager. You should contact them directly for
+          <p>Dylan’s offender manager has not sent a progress report. You should contact them directly for
             an update.</p>
           <details class="govuk-details govuk-!-margin-bottom-4" data-module="govuk-details">
             <summary class="govuk-details__summary">
@@ -84,9 +84,12 @@ Case history
               <p>Team telephone: 0114 123 0000</p>
             </div>
           </details>
+          <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+            Add progress report
+          </button>
         </li>
         <li>
-          <h2 class="timeline__title">Progress report from offender manager received</h2>
+          <h2 class="timeline__title">Progress report received</h2>
           <p class="timeline__meta">
             <time>14 April 2020 at 4:18 pm</time>. Report from John Doe (CRC - PSO)
           </p>
@@ -108,7 +111,7 @@ Case history
 
 
         <li>
-          <h2 class="timeline__title">Progress report from offender manager received</h2>
+          <h2 class="timeline__title">Progress report received</h2>
           <p class="timeline__meta">
             <time>14 April 2020 at 4:18 pm</time>. Report from John Doe (CRC - PSO)
           </p>
@@ -116,19 +119,18 @@ Case history
               report</a></p>
         </li>
         <li>
-          <h2 class="timeline__title">Reminder for progress report sent to offender manager</h2>
+          <h2 class="timeline__title">Reminder sent for progress report</h2>
           <p class="timeline__meta">
             <time>14 April 2020 at 4:18 pm</time>. Reminder sent automatically
           </p>
-          <p>A progress report hasn’t been received yet. We’ve sent Dylan’s offender manager a reminder.</p>
+          <p>A progress report has not been received yet. We’ve sent Dylan’s offender manager a reminder.</p>
         </li>
         <li>
-          <h2 class="timeline__title">Progress report from offender manager requested</h2>
+          <h2 class="timeline__title">Offender progress report requested</h2>
           <p class="timeline__meta">
-            <time>14 April 2020 at 4:18 pm</time>
-            Request sent automatically
+            <time>14 April 2020 at 4:18 pm</time>. Request sent automatically
           </p>
-          <p>We’ve asked Dylan’s offender manager to tell us how they have been progressing on their current order.</p>
+          <p>Dylan’s offender manager has been asked to send us an update on Dylan's progress.</p>
         </li>
       </ul>
     </div>

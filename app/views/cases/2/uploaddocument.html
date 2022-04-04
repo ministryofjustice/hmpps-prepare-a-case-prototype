@@ -1,0 +1,100 @@
+{% extends "layout.html" %}
+
+
+{% block pageTitle %}
+Case summary
+{% endblock %}
+
+{% block bodyStart %}
+
+{% block keyDetails %}
+{% include "includes/key_details/1_Armstrong.html" %}
+{% endblock %}
+
+
+{% endblock %}
+
+
+{% block beforeContent %}
+<a href="/cases/day/2020-06-17/case-list" style="margin-bottom: 0;" class="govuk-back-link">Back to cases</a>
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+    <h1 class="govuk-heading-xl">Upload documents to Adam Armstrong's case </h1>
+    <p>You can upload the CPS pack and police logs to the case</p>
+    
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+    
+        
+    
+        <form action="/components/multi-file-upload/examples/default" method="post" enctype="multipart/form-data">
+    
+          <div class="moj-multi-file-upload">
+            <div class="moj-multi-file__uploaded-files ">
+             
+              <div class="govuk-summary-list moj-multi-file-upload__list">
+    
+              </div>
+            </div>
+    
+            <div class="moj-multi-file-upload__upload">
+    
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-label--m" for="documents">
+                  Upload CPS pack
+                </label>
+    
+                <input class="govuk-file-upload moj-multi-file-upload__input" id="documents" name="documents" type="file" multiple="">
+              </div>
+
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-label--m" for="documents">
+                  Upload police logs
+                </label>
+    
+                <input class="govuk-file-upload moj-multi-file-upload__input" id="documents" name="documents" type="file" multiple="">
+              </div>
+    
+
+              <a href="documentsuploaded.html" role="button" draggable="false" class="govuk-button" style="margin: 10px 0 0;" data-module="govuk-button">Upload files</a>
+
+
+             
+   
+    
+            </div>
+          </div>
+    
+          
+    
+        </form>
+      </div>
+    </div>
+    
+
+
+
+
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+{% endblock %}

@@ -1,0 +1,99 @@
+{% extends "layout.html" %}
+
+
+{% block pageTitle %}
+CJA - Community Order (12 Months)
+{% endblock %}
+
+{% block bodyStart %}
+{% block keyDetails %}
+{% include "includes/key_details/1_Armstrong.html" %}
+{% endblock %}
+{% endblock %}
+
+
+{% block beforeContent %}
+<a href="/cases/1/probationrecord.html" class="govuk-back-link">Back to probation record</a>
+{% endblock %}
+
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l govuk-!-margin-bottom-7">
+      <!-- <span class="govuk-caption-l">Order performance</span> -->
+      CJA - Community Order (12 Months)
+    </h1>
+    <div class="govuk-!-margin-bottom-9">
+      <p class="govuk-body">Breach of a Non-Molestation Order (Family Law Act 1996/Dom Viol, Crime & Victims Act 2004) -
+        06639</p>
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-third">
+          <p class="govuk-body govuk-!-margin-bottom-0 secondary-text-col">Started</p>
+          <p class="govuk-body-l govuk-!-margin-bottom-0"><strong>14 June 2012</strong></p>
+        </div>
+        <div class="govuk-grid-column-one-third">
+          <p class="govuk-body govuk-!-margin-bottom-0 secondary-text-col">Ended</p>
+          <p class="govuk-body-l govuk-!-margin-bottom-0"><strong>24 Nov 2012</strong></p>
+        </div>
+        <div class="govuk-grid-column-one-third">
+          <p class="govuk-body govuk-!-margin-bottom-0 secondary-text-col">Reason</p>
+          <p class="govuk-body-l govuk-!-margin-bottom-0"><strong>Completed - Sentence/ PSS Expiry Reached</strong></p>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="govuk-!-margin-bottom-9">
+      <h3 class="govuk-heading-m">Requirements</h3>
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Requirement</th>
+            <th scope="col" class="govuk-table__header">Length</th>
+            <th scope="col" class="govuk-table__header">Ended</th>
+            <th scope="col" class="govuk-table__header">Reason</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Unpaid Work - Regular</td>
+            <td class="govuk-table__cell">50 Hours</td>
+            <td class="govuk-table__cell">24 Nov 2012</td>
+            <td class="govuk-table__cell">Expired (Normal)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+
+    <!-- <div class="govuk-!-margin-bottom-9">
+      <h3 class="govuk-heading-m ">HEADING</h3>
+    </div> -->
+
+    <div class="govuk-!-margin-bottom-9">
+      <h3 class="govuk-heading-m">Contacts</h3>
+      <p class="govuk-body"><a href="#">View contact list (opens in nDelius)</a></p>
+    </div>
+
+
+  </div>
+
+
+
+</div>
+
+<div class="govuk-grid-column-one-third">
+</div>
+
+
+
+</div>
+
+
+
+
+{% endblock %}

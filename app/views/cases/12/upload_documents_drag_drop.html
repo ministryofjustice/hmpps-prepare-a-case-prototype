@@ -1,4 +1,4 @@
-{% extends "../layout.html" %}
+{% extends "layout.html" %}
 
 {% block beforeContent %}
 {{ govukBackLink({
@@ -13,7 +13,7 @@ text: "Back"
 
 {% block content %}
 <div class="govuk-grid-row">
-    <div class="govuk-grid-column-full">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
         {% if uploads.deletedFile %}
         {{ mojBanner({
         type: 'success',
@@ -21,27 +21,20 @@ text: "Back"
         iconFallbackText: 'Success'
         }) }}
         {% endif %}
-        <span class="govuk-caption-l">Book a recall for Wesley Holt</span>
         <h1 class="govuk-heading-l">Upload documents</h1>
-        {% if uploads.allMandatoryUploaded %}
-        <p class="govuk-body govuk-!-margin-bottom-6">Your documents have been uploaded.</p>
-        {% else %}
         <p class="govuk-body">You can upload:</p>
         <ul class="govuk-list govuk-list--bullet">
-            <li>a licence</li>
-            <li>a part A recall report</li>
-            <li>a previous convictions sheet</li>
-            <li>an OASys report</li>
-            <li>any supprting documents</li>
+            <li>CPS pack</li>
+            <li>DV logs</li>
         </ul>
         <p class="govuk-body govuk-!-margin-bottom-6">You can only upload PDFs.</p>
-        {% endif %}
 
         <div class="document-upload">
-        <form novalidate action="/cases/12/test" method="post" enctype="multipart/form-data">
+        <form novalidate method="post" enctype="multipart/form-data">
+            <input type="hidden" name="redirectPage" value="/cases/12/summary" />
             <div class="govuk-form-group">
                 <div class="moj-multi-file__uploaded-files">
-                {% include '../partials/uploadedDocumentsStatus.njk' %}
+                    {% include './uploadedDocumentsStatus.njk' %}
                 </div>
 
                 <div class="moj-multi-file-upload__upload">
@@ -73,12 +66,12 @@ text: "Back"
 
 
 {% block pageScripts %}
-<script src="/javascripts/document-upload.js"></script>
+<script src="/public/javascripts/document-upload.js"></script>
 <script>
   if (typeof DocumentUpload !== 'undefined') {
     new DocumentUpload({
       container: $('.document-upload'),
-      uploadUrl: '/cases/12/test.html'
+      uploadUrl: window.location.url
     })
   }
 </script>

@@ -153,6 +153,12 @@ $govuk-assets-path: '/govuk/assets/';
     background-color: #1d70b8;
 }
 
+//13 DAY NAV
+.calendar-nav-link-today{
+    border-style:solid;
+    border-width: thin;
+    border-color:#1d70b8 ;
+}
 
 // CASELIST UPDATE TIMESTAMPS
 .app-case-updates {

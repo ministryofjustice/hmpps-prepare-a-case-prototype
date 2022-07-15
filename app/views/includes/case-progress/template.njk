@@ -1,0 +1,57 @@
+{% from "govuk/components/button/macro.njk" import govukButton %}
+{% from "govuk/components/details/macro.njk" import govukDetails %}
+{% from "govuk/components/textarea/macro.njk" import govukTextarea %}
+
+{% set innerHtml %}
+
+  {{ govukTextarea({
+    name: params.id,
+    id: params.id,
+    label: {
+      text: "Add a note"
+    }
+  }) }}
+
+  {{ govukButton({
+    text: "Save"
+  }) }}
+{% endset %}
+
+<div class="app-case-progress_wrapper">
+
+  <div class="app-case-progress_header">
+    <p class="app-case-progress_heading">{{ params.title }}</p>
+    <p class="govuk-body">{{ params.description }}</p>
+  </div>
+  <div class="app-case-progress_content">
+
+    {% if params.note %}
+
+      <table class="govuk-table govuk-!-margin-bottom-0">
+        <tr>
+          <td class="govuk-table__cell app-!-no-border">
+            <p class="govuk-body govuk-!-margin-bottom-0">{{ params.note.name }}</p>
+            <p class="govuk-body govuk-!-margin-bottom-0">{{ params.note.date }}</p>
+          </td>
+          <td class="govuk-table__cell app-!-no-border">
+            <p class="govuk-body">{{ params.note.text }}</p>
+          </td>
+        </tr>
+      </table>
+
+      <p class="govuk-body">
+        <a class="govuk-link" href="javascript:void(0);">Delete</a>
+      </p>
+
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible app-!-width-full">
+
+    {% endif %}
+
+    {{ govukDetails({
+      summaryText: "Add a note",
+      html: innerHtml
+    }) }}
+
+  </div>
+
+</div>

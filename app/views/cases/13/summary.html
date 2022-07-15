@@ -160,12 +160,36 @@ Case summary
     <div class="govuk-!-margin-bottom-8">
       <h2 class="govuk-heading-m">Case progress</h2>
 
+      <!-- Include the component -->
 
+      {% from "includes/case-progress/macro.njk" import caseProgress %}
 
+      <!-- Start components -->
 
+      {{ caseProgress({
+        id: "progress_1",
+        title: "Sentencing hearing",
+        description: "Thursday 30 June 2022. Court 2, morning session, Sheffield Magistrates' court"
+      }) }}
 
-      
-      
+      {{ caseProgress({
+        id: "progress_2",
+        title: "Plea",
+        description: "Wednesday 15 June 2022. Court 1, morning session, Sheffield Magistrates' court",
+        note: {
+          name: "Mark Berridge",
+          date: "16 June 2022 at 9:55am",
+          text: "A note that you've typed about this hearing"
+        }
+      }) }}
+
+      {{ caseProgress({
+        id: "progress_2",
+        title: "First hearing",
+        description: "Friday 10 June 2022. Court 2, morning session, Sheffield Magistrates' court"
+      }) }}
+
+      <!-- End components -->
 
     </div>
 
@@ -176,7 +200,7 @@ Case summary
       </h2>
 
     <div class="govuk-form-group">
-     
+
       </h1>
       <div id="more-detail-hint" class="govuk-hint"> Add notes and observations about this case. Your colleagues who use Prepare a Case will be able to read them.
         These comments will not be saved to NDelius.
@@ -188,7 +212,7 @@ Case summary
     </button>
 
     <table class="govuk-table">
-     
+
       <thead class="govuk-table__head">
         <tr class="govuk-table__row">
           <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Details</th>
@@ -197,32 +221,32 @@ Case summary
       </thead>
       <tbody class="govuk-table__body">
         <tr class="govuk-table__row">
-          
+
           <td scope="row" class="govuk-table__cell">Mark Berridge <br>
 
-            <span style="padding-top:5px;" class="govuk-!-font-size-19 govuk-!-font-weight-regular">16 June 2022 at 
+            <span style="padding-top:5px;" class="govuk-!-font-size-19 govuk-!-font-weight-regular">16 June 2022 at
               9:55 am</span>
-            
+
               <p style="padding-top: 10px;"><a href="">Delete</a></p>
             </td>
           <td class="govuk-table__cell">Update from OM Mike Hatch: He has been engaging well since February with no unacceptable absences.
             He has completed 60/80 hours of unpaid work so far.
-            
+
             His risk level is stable, he is living with his parents again and away from his partner. </td>
         </tr>
-       
+
         <tr class="govuk-table__row">
-          
+
           <td scope="row" class="govuk-table__cell">Mark Berridge <br>
 
-            <span style="padding-top:5px;" class="govuk-!-font-size-19 govuk-!-font-weight-regular">16 June 2022 at 
+            <span style="padding-top:5px;" class="govuk-!-font-size-19 govuk-!-font-weight-regular">16 June 2022 at
               9:55 am</span>
-            
+
               <p style="padding-top: 10px;"><a href="">Delete</a></p>
             </td>
           <td class="govuk-table__cell">A domestic violence report is needed. Have requested one is completed before we can proceed.. </td>
         </tr>
-        
+
       </tbody>
     </table>
 
@@ -231,7 +255,7 @@ Case summary
 
   </div>
 
-  
+
 
 
   <div class="govuk-grid-column-one-third">
@@ -266,7 +290,7 @@ Case summary
         <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
           Add progress report
         </button>
-      </li> 
+      </li>
        <li>
           <h2 class="timeline__title">Report received</h2>
           <p class="timeline__meta">

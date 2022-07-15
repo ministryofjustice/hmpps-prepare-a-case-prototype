@@ -197,17 +197,15 @@ Case summary
         Comments
       </h2>
 
-    <div class="govuk-form-group">
-
+    <form class="govuk-form-group" method="post" action="/cases/13/summary" novalidate>
       </h1>
       <div id="more-detail-hint" class="govuk-hint"> Add notes and observations about this case. Your colleagues who use Prepare a Case will be able to read them.
         These comments will not be saved to NDelius.
       </div>
-      <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
-    </div>
-    <button class="govuk-button" data-module="govuk-button">
-      Save
-    </button>
+      <textarea class="govuk-textarea" id="comment" name="comment" rows="5" aria-describedby="more-detail-hint"></textarea>
+
+      <button class="govuk-button" data-module="govuk-button">Save</button>
+    </form>
 
     <table class="govuk-table">
 
@@ -218,39 +216,20 @@ Case summary
         </tr>
       </thead>
       <tbody class="govuk-table__body">
-        <tr class="govuk-table__row">
 
-          <td scope="row" class="govuk-table__cell">Mark Berridge <br>
-
-            <span style="padding-top:5px;" class="govuk-!-font-size-19 govuk-!-font-weight-regular">16 June 2022 at
-              9:55 am</span>
-
-              <p style="padding-top: 10px;"><a href="">Delete</a></p>
-            </td>
-          <td class="govuk-table__cell">Update from OM Mike Hatch: He has been engaging well since February with no unacceptable absences.
-            He has completed 60/80 hours of unpaid work so far.
-
-            His risk level is stable, he is living with his parents again and away from his partner. </td>
-        </tr>
-
-        <tr class="govuk-table__row">
-
-          <td scope="row" class="govuk-table__cell">Mark Berridge <br>
-
-            <span style="padding-top:5px;" class="govuk-!-font-size-19 govuk-!-font-weight-regular">16 June 2022 at
-              9:55 am</span>
-
-              <p style="padding-top: 10px;"><a href="">Delete</a></p>
-            </td>
-          <td class="govuk-table__cell">A domestic violence report is needed. Have requested one is completed before we can proceed.. </td>
-        </tr>
+        {% for comment in comments %}
+          <tr class="govuk-table__row">
+            <td scope="row" class="govuk-table__cell">{{ comment.name }}<br>
+              <span style="padding-top:5px;" class="govuk-!-font-size-19 govuk-!-font-weight-regular">{{ comment.date}}</span>
+                <p style="padding-top: 10px;"><a href="">Delete</a></p>
+              </td>
+            <td class="govuk-table__cell">{{ comment.text }}</td>
+          </tr>
+        {% endfor %}
 
       </tbody>
+
     </table>
-
-
-
-
   </div>
 
 

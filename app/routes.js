@@ -51,7 +51,7 @@ router.post('/cases/13/summary', (req, res, next) => {
       text: req.body[i]
     }
     if (i.includes('progress')) {
-      req.session.progressNotes[i].push(updateObj)
+      req.session.progressNotes[i].unshift(updateObj)
     } else {
       req.session.comments.unshift(updateObj)
     }

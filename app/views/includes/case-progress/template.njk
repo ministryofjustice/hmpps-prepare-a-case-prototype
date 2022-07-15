@@ -3,7 +3,6 @@
 {% from "govuk/components/textarea/macro.njk" import govukTextarea %}
 
 {% set innerHtml %}
-
   {{ govukTextarea({
     name: params.id,
     id: params.id,
@@ -17,7 +16,7 @@
   }) }}
 {% endset %}
 
-<div class="app-case-progress_wrapper">
+<form class="app-case-progress_wrapper" method="post" action="/cases/13/summary" novalidate>
 
   <div class="app-case-progress_header">
     <p class="app-case-progress_heading">{{ params.title }}</p>
@@ -25,26 +24,26 @@
   </div>
   <div class="app-case-progress_content">
 
-    {% if params.note %}
+    {% if params.notes | length %}
+      {% for note in params.notes %}
+        <table class="govuk-table govuk-!-margin-bottom-0">
+          <tr>
+            <td class="govuk-table__cell govuk-!-width-one-third app-!-no-border">
+              <p class="govuk-body govuk-!-margin-bottom-0">{{ note.name }}</p>
+              <p class="govuk-body govuk-!-margin-bottom-0">{{ note.date }}</p>
+            </td>
+            <td class="govuk-table__cell govuk-!-width-two-thirds app-!-no-border">
+              <p class="govuk-body">{{ note.text }}</p>
+            </td>
+          </tr>
+        </table>
 
-      <table class="govuk-table govuk-!-margin-bottom-0">
-        <tr>
-          <td class="govuk-table__cell app-!-no-border">
-            <p class="govuk-body govuk-!-margin-bottom-0">{{ params.note.name }}</p>
-            <p class="govuk-body govuk-!-margin-bottom-0">{{ params.note.date }}</p>
-          </td>
-          <td class="govuk-table__cell app-!-no-border">
-            <p class="govuk-body">{{ params.note.text }}</p>
-          </td>
-        </tr>
-      </table>
+        <p class="govuk-body govuk-body-s">
+          <a class="govuk-link" href="javascript:void(0);">Delete</a>
+        </p>
 
-      <p class="govuk-body govuk-body-s">
-        <a class="govuk-link" href="javascript:void(0);">Delete</a>
-      </p>
-
-      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible app-!-width-full">
-
+        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible app-!-width-full">
+      {% endfor %}
     {% endif %}
 
     {{ govukDetails({
@@ -55,4 +54,4 @@
 
   </div>
 
-</div>
+</form>

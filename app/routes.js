@@ -3,37 +3,30 @@ const router = express.Router()
 const uploadRecallDocuments = require('./views/cases/12/uploadDocuments/recallUploadDocuments')
 
 const notesDefaults = {
-  progress_1: [],
+  progress_1: [
+  ],
   progress_2: [{
     name: 'Mark Berridge',
-    date: '16 June 2022 at 9:55am',
-    text: 'A note that you\'ve typed about this hearing'
+    date: '16 July 2022 at 9:55am',
+    text: 'Pleaded guilty.'
   }],
-  progress_3: [],
-  progress_4: [{
-    name: 'Anna Smith',
-    date: '14 July 2022 at 9:55am',
-    text: 'appears letter sent to Mr.Hart may have had the wrong telephone number on it. Will possibly have to be an on the day report. I am on my own on that date but will try to do the report'
-  }],
-
-  progress_5: [{
-    name: 'Anna Smith',
-    date: '15 July 2022 at 9:55am',
-    text: 'Pleaded guilty to the offence. PSR requested all option to be completed'
-  }],
+  progress_3: [
+    {
+      name: 'Mark Berridge',
+      date: '15 July 2022 at 9:55am',
+      text: 'Needs a spanish translator'
+    }
+  ],
+  
 }
 
 const commentsDefaults = [
-  {
-    name: 'Mark Berridge',
-    date: '16 June 2022 at 10:15am',
-    text: 'Update from OM Mike Hatch: He has been engaging well since February with no unacceptable absences. He has completed 60/80 hours of unpaid work so far. His risk level is stable, he is living with his parents again and away from his partner.'
-  },
+ 
   {
     name: 'Mark Berridge',
     date: '16 June 2022 at 9:55am',
     text: 'A domestic violence report is needed. Have requested one is completed before we can proceed.'
-  }
+  } 
 ]
 
 const monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']

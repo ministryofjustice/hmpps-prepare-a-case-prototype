@@ -8,7 +8,7 @@ Case summary
 {% block bodyStart %}
 
 {% block keyDetails %}
-{% include "includes/key_details/1_Armstrong.html" %}
+{% include "includes/key_details/11_Hart-current.html" %}
 {% endblock %}
 
 
@@ -19,7 +19,7 @@ Case summary
 
 
 {% block beforeContent %}
-<a href="/includes/2022-07-20/case-list.html" style="margin-bottom: 0;" class="govuk-back-link">Back to cases</a>
+<a href="/includes/2020-06-19-court-list.html" style="margin-bottom: 0;" class="govuk-back-link">Back to cases</a>
 {% endblock %}
 
 
@@ -112,7 +112,7 @@ Case summary
             Name
           </dt>
           <dd class="govuk-summary-list__value">
-            Adam Armstrong
+            Gary Hart
           </dd>
         </div>
         <div class="govuk-summary-list__row">
@@ -168,23 +168,23 @@ Case summary
 
       {{ caseProgress({
         id: "progress_1",
-        title: "Sentencing hearing",
-        description: "Thursday 30 June 2022. Court 2, morning session, Sheffield Magistrates' court",
+        title: "Hearing",
+        description: "Monday 18 July 2022. Court 2, morning session, Sheffield Magistrates' court",
         notes: progressNotes.progress_1
       }) }}
 
       {{ caseProgress({
-        id: "progress_2",
+        id: "progress_5",
         title: "Plea",
-        description: "Wednesday 15 June 2022. Court 1, morning session, Sheffield Magistrates' court",
-        notes: progressNotes.progress_2
+        description: "Friday 15 July 2022. Court 1, morning session, Sheffield Magistrates' court",
+        notes: progressNotes.progress_5
       }) }}
 
       {{ caseProgress({
-        id: "progress_3",
+        id: "progress_4",
         title: "First hearing",
-        description: "Friday 10 June 2022. Court 2, morning session, Sheffield Magistrates' court",
-        notes: progressNotes.progress_3
+        description: "Thursday 14 July 2022. Court 2, morning session, Sheffield Magistrates' court",
+        notes: progressNotes.progress_4
       }) }}
 
       <!-- End components -->

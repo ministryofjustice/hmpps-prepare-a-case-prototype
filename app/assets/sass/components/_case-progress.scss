@@ -1,0 +1,30 @@
+.app-case-progress {
+
+  &_wrapper {
+    border: 1px solid $govuk-border-colour;
+    @include govuk-responsive-margin(6, "bottom");
+  }
+
+  &_header {
+    background: govuk-colour("light-grey");
+    padding: 10px 10px 5px 10px;
+  }
+
+  &_heading {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  &_content {
+    padding: 10px 10px 0 10px;
+  }
+}
+
+.app-\!-no-border {
+  border: 0 !important;
+}
+
+.app-\!-width-full {
+  width: 100% !important;
+  max-width: 100% !important;
+}

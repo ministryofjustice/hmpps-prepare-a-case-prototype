@@ -8,19 +8,15 @@ Case summary
 {% block bodyStart %}
 
 {% block keyDetails %}
-
-{% include "includes/key_details/11_Hart-current.html" %}
+{% include "includes/key_details/1_Armstrong.html" %}
 {% endblock %}
 
 
 {% endblock %}
-
-
-
 
 
 {% block beforeContent %}
-<a href="/cases/day/2022-07-20/case-list.html" style="margin-bottom: 0;" class="govuk-back-link">Back to cases</a>
+<a href="/cases/day/2021-11-11/case-list" style="margin-bottom: 0;" class="govuk-back-link">Back to cases</a>
 {% endblock %}
 
 
@@ -59,7 +55,7 @@ Case summary
   <div class="govuk-grid-column-two-thirds">
     <div class="govuk-!-margin-bottom-8">
       <h2 class="govuk-heading-m">Appearance</h2>
-      <p class="govuk-body">Court 2, morning session, Wednesday 20 July.</p>
+      <p class="govuk-body">Court 1, morning session, Monday 8 March (1st listing).</p>
     </div>
     <!-- <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
     <div class="govuk-!-margin-bottom-7">
@@ -97,7 +93,7 @@ Case summary
     <div class="govuk-!-margin-bottom-8">
       <h2 class="govuk-heading-m">Offences</h2>
       <h3 class="govuk-heading-s govuk-!-margin-top-4">Common assault and battery</h3>
-      <p class="govuk-body govuk-!-margin-bottom-2">On Wednesday 15th June 2022 at Grey Lane, S10 1AG, assaulted Sarah
+      <p class="govuk-body govuk-!-margin-bottom-2">On Wednesday 15th February 2021 at Grey Lane, S10 1AG, assaulted Sarah
         Smith by beating her.</p>
       <p class="govuk-body secondary-text-col">Contrary to section 39 of the Criminal Justice Act 1988.</p>
     </div>
@@ -113,7 +109,7 @@ Case summary
             Name
           </dt>
           <dd class="govuk-summary-list__value">
-            Adam Armstrong
+            Harry Smith 
           </dd>
         </div>
         <div class="govuk-summary-list__row">
@@ -159,83 +155,51 @@ Case summary
 
  <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
     <div class="govuk-!-margin-bottom-8">
-      <h2 class="govuk-heading-m">Case progress</h2>
+      <h2 class="govuk-heading-m">Case documents</h2>
+      <p class="govuk-body govuk-!-margin-bottom-5">You can upload documents related to this case</p>
+     
 
-      <!-- Include the component -->
+      <dl class="govuk-summary-list govuk-summary-list--no-border">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            CPS pack
+          </dt>
+          <a href="#" class="govuk-link">
+            View
+          </a>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            DV logs
+          </dt>
+          <a href="#" class="govuk-link">
+            View
+          </a>
+        </div>
 
-      {% from "includes/case-progress/macro.njk" import caseProgress %}
 
-      <!-- Start components -->
 
-      {{ caseProgress({
-        id: "progress_1",
-        title: "Sentencing hearing",
-        description: "Thursday 30 June 2022. Court 2, morning session, Sheffield Magistrates' court",
-        notes: progressNotes.progress_1
-      }) }}
 
-      {{ caseProgress({
-        id: "progress_2",
-        title: "Plea",
-        description: "Wednesday 15 June 2022. Court 1, morning session, Sheffield Magistrates' court",
-        notes: progressNotes.progress_2
-      }) }}
 
-      {{ caseProgress({
-        id: "progress_3",
-        title: "First hearing",
-        description: "Friday 10 June 2022. Court 2, morning session, Sheffield Magistrates' court",
-        notes: progressNotes.progress_3
-      }) }}
 
-      <!-- End components -->
+
+
+
+        <div class="govuk-!-padding-bottom-6"></div>
+      <a href="uploaddocument.html" role="button" draggable="false" class="govuk-button" style="margin: 10px 0 0;" data-module="govuk-button">Upload files</a>
 
     </div>
 
-    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
-    <div class="govuk-!-margin-bottom-7">
-      <h2 class="govuk-heading-m">
-        Comments
-      </h2>
 
-    <form class="govuk-form-group" method="post" action="/cases/13/summary" novalidate>
-      </h1>
-      <div id="more-detail-hint" class="govuk-hint"> Add notes and observations about this case. Your colleagues who use Prepare a Case will be able to read them.
-        These comments will not be saved to NDelius.
-      </div>
-      <textarea class="govuk-textarea" id="comment" name="comment" rows="5" aria-describedby="more-detail-hint"></textarea>
 
-      <button class="govuk-button" data-module="govuk-button">Save</button>
-    </form>
 
-    <table class="govuk-table">
 
-      <thead class="govuk-table__head">
-        <tr class="govuk-table__row">
-          <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Details</th>
-          <th scope="col" class="govuk-table__header">Notes</th>
-        </tr>
-      </thead>
-      <tbody class="govuk-table__body">
 
-        {% for comment in comments %}
-          <tr class="govuk-table__row">
-            <td scope="row" class="govuk-table__cell">{{ comment.name }}<br>
-              <span style="padding-top:5px;" class="govuk-!-font-size-19 govuk-!-font-weight-regular">{{ comment.date}}</span>
-                <p style="padding-top: 10px;"><a href="">Delete</a></p>
-              </td>
-            <td class="govuk-table__cell">{{ comment.text }}</td>
-          </tr>
-        {% endfor %}
 
-      </tbody>
 
-    </table>
+
+
   </div>
-
-
-
-
   <div class="govuk-grid-column-one-third">
     <!-- <h2 class="govuk-heading-m">Recent case activity</h2>
     <div class="timeline">
@@ -268,7 +232,7 @@ Case summary
         <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
           Add progress report
         </button>
-      </li>
+      </li> 
        <li>
           <h2 class="timeline__title">Report received</h2>
           <p class="timeline__meta">

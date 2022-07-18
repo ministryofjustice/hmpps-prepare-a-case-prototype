@@ -10,6 +10,17 @@ const notesDefaults = {
     text: 'A note that you\'ve typed about this hearing'
   }],
   progress_3: [],
+  progress_4: [{
+    name: 'Anna Smith',
+    date: '14 July 2022 at 9:55am',
+    text: 'appears letter sent to Mr.Hart may have had the wrong telephone number on it. Will possibly have to be an on the day report. I am on my own on that date but will try to do the report'
+  }],
+
+  progress_5: [{
+    name: 'Anna Smith',
+    date: '15 July 2022 at 9:55am',
+    text: 'Pleaded guilty to the offence. PSR requested all option to be completed'
+  }],
 }
 
 const commentsDefaults = [

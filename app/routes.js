@@ -13,7 +13,7 @@ const notesDefaults = {
   progress_3: [
     {
       name: 'Mark Berridge',
-      date: '15 July 2022 at 9:55am',
+      date: '15 July 2022 at 9:40am',
       text: 'Needs a spanish translator'
     }
   ],
@@ -24,8 +24,8 @@ const commentsDefaults = [
  
   {
     name: 'Mark Berridge',
-    date: '16 June 2022 at 9:55am',
-    text: 'A domestic violence report is needed. Have requested one is completed before we can proceed.'
+    date: '15 July 2022 at 9:55am',
+    text: 'Case was adjourned because we need translator which has now been arranged, translator is Jose Garcias'
   } 
 ]
 

@@ -22,11 +22,7 @@ const notesDefaults = {
 
 const commentsDefaults = [
  
-  {
-    name: 'Mark Berridge',
-    date: '15 July 2022 at 9:55am',
-    text: 'Case was adjourned because we need translator which has now been arranged, translator is Jose Garcias'
-  } 
+  
 ]
 
 const monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']

@@ -6,7 +6,6 @@ const notesDefaults = {
   progress_1: [
   ],
   progress_2: [{
-
     name: 'Liam Taylor',
     date: '16 July 2022 at 9:55am',
     text: 'Pleaded guilty'
@@ -15,17 +14,10 @@ const notesDefaults = {
     name: 'Paul Smith',
     date: '15 July 2022 at 9:40am',
     text: 'Needs a spanish translator'
-  }
-
-  ],
-  
+  }],
 }
 
-const commentsDefaults = [
- 
-
-]
-
+const commentsDefaults = []
 const monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
 
 // Add your routes here - above the module.exports line
@@ -44,7 +36,7 @@ router.post('/cases/13/summary', (req, res, next) => {
   req.session.progressNotes = {
     ...notesDefaults
   }
-  req.session.comments = [].concat(commentsDefaults)
+  req.session.comments = (req.session.comments || []).concat(commentsDefaults)
   for (let i in req.body) {
     const updateObj = {
       name: 'Mark Berridge',

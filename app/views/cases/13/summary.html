@@ -208,29 +208,29 @@ Case summary
       <button class="govuk-button" data-module="govuk-button">Save</button>
     </form>
 
-    <table class="govuk-table" id="comments">
-
-      <thead class="govuk-table__head">
-        <tr class="govuk-table__row">
-          <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Details</th>
-          <th scope="col" class="govuk-table__header">Comments</th>
-        </tr>
-      </thead>
-      <tbody class="govuk-table__body">
-
-        {% for comment in comments %}
+    {% if comments | length %}
+      <table class="govuk-table" id="comments">
+        <thead class="govuk-table__head">
           <tr class="govuk-table__row">
-            <td scope="row" class="govuk-table__cell">{{ comment.name }}<br>
-              <span style="padding-top:5px;" class="govuk-!-font-size-19 govuk-!-font-weight-regular">{{ comment.date}}</span>
-                <p style="padding-top: 10px;"><a href="">Delete</a></p>
-              </td>
-            <td class="govuk-table__cell">{{ comment.text }}</td>
+            <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Details</th>
+            <th scope="col" class="govuk-table__header">Comments</th>
           </tr>
-        {% endfor %}
+        </thead>
+        <tbody class="govuk-table__body">
 
-      </tbody>
+          {% for comment in comments %}
+            <tr class="govuk-table__row">
+              <td scope="row" class="govuk-table__cell">{{ comment.name }}<br>
+                <span style="padding-top:5px;" class="govuk-!-font-size-19 govuk-!-font-weight-regular">{{ comment.date}}</span>
+                  <p style="padding-top: 10px;"><a href="">Delete</a></p>
+                </td>
+              <td class="govuk-table__cell">{{ comment.text }}</td>
+            </tr>
+          {% endfor %}
 
-    </table>
+        </tbody>
+      </table>
+    {% endif %}
   </div>
 
 

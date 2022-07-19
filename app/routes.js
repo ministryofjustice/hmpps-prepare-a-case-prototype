@@ -7,7 +7,7 @@ const notesDefaults = {
   ],
   progress_2: [{
     name: 'Liam Taylor',
-    date: '16 July 2022 at 9:55am',
+    date: '18 July 2022 at 9:55am',
     text: 'Pleaded guilty'
   }],
   progress_3: [{

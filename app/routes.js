@@ -3,8 +3,10 @@ const router = express.Router()
 const uploadRecallDocuments = require('./views/cases/12/uploadDocuments/recallUploadDocuments')
 
 const notesDefaults = {
-  progress_1: [],
+  progress_1: [
+  ],
   progress_2: [{
+
     name: 'Liam Taylor',
     date: '16 July 2022 at 9:55am',
     text: 'Pleaded guilty'
@@ -15,13 +17,13 @@ const notesDefaults = {
     text: 'Needs a spanish translator'
   }
 
-
   ],
   
 }
 
 const commentsDefaults = [
  
+
 ]
 
 const monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']

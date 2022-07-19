@@ -16,9 +16,9 @@
   }) }}
 {% endset %}
 
-<form class="app-case-progress_wrapper" method="post" action="/cases/13/summary" novalidate>
+<form class="app-case-progress_wrapper" method="post" action="/cases/13/summary#section_{{ params.id }}" novalidate>
 
-  <div class="app-case-progress_header">
+  <div class="app-case-progress_header" id="section_{{ params.id }}">
     <p class="app-case-progress_heading">{{ params.title }}</p>
     <p class="govuk-body">{{ params.description }}</p>
   </div>

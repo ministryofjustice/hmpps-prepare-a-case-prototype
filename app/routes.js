@@ -6,23 +6,24 @@ const notesDefaults = {
   progress_1: [
   ],
   progress_2: [{
-    name: 'Mark Berridge',
+
+    name: 'Liam Taylor',
     date: '16 July 2022 at 9:55am',
-    text: 'Pleaded guilty.'
+    text: 'Pleaded guilty'
   }],
-  progress_3: [
-    {
-      name: 'Mark Berridge',
-      date: '15 July 2022 at 9:40am',
-      text: 'Needs a spanish translator'
-    }
+  progress_3: [{
+    name: 'Paul Smith',
+    date: '15 July 2022 at 9:40am',
+    text: 'Needs a spanish translator'
+  }
+
   ],
   
 }
 
 const commentsDefaults = [
  
-  
+
 ]
 
 const monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']

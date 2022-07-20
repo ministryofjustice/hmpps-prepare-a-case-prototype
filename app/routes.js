@@ -31,7 +31,6 @@ router.get('/cases/13/summary', (req, res, next) => {
 })
 
 router.post('/cases/13/summary', (req, res, next) => {
-  const dateNow = new Date()
   if (!Object.keys(req.body).length) {
     req.session.progressNotes = { ...notesDefaults }
     req.session.comments = [].concat(commentsDefaults)
@@ -41,17 +40,18 @@ router.post('/cases/13/summary', (req, res, next) => {
       ...req.session.progressNotes
     }
     req.session.comments = (req.session.comments || []).concat(commentsDefaults)
-  }
-  for (let i in req.body) {
-    const updateObj = {
-      name: 'Mark Berridge',
-      date: `${dateNow.getDate()} ${monthNames[dateNow.getMonth()]} ${dateNow.getFullYear()} at ${dateNow.getHours()}:${dateNow.getMinutes()}`,
-      text: req.body[i]
-    }
-    if (i.includes('progress')) {
-      req.session.progressNotes[i].unshift(updateObj)
-    } else {
-      req.session.comments.unshift(updateObj)
+    const dateNow = new Date()
+    for (let i in req.body) {
+      const updateObj = {
+        name: 'Mark Berridge',
+        date: `${dateNow.getDate()} ${monthNames[dateNow.getMonth()]} ${dateNow.getFullYear()} at ${dateNow.getHours()}:${dateNow.getMinutes()}`,
+        text: req.body[i]
+      }
+      if (i.includes('progress')) {
+        req.session.progressNotes[i].unshift(updateObj)
+      } else {
+        req.session.comments.unshift(updateObj)
+      }
     }
   }
   next()

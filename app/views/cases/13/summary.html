@@ -221,7 +221,9 @@ Case summary
             <tr class="govuk-table__row">
               <td scope="row" class="govuk-table__cell">{{ comment.name }}<br>
                 <span style="padding-top:5px;" class="govuk-!-font-size-19 govuk-!-font-weight-regular">{{ comment.date}}</span>
-                  <p style="padding-top: 10px;"><a href="">Delete</a></p>
+                  <form style="padding-top: 10px;" method="post" action="/cases/13/summary" novalidate>
+                    <a href="javascript:void(0);" onclick="this.closest('form').submit();return false;">Delete</a>
+                  </form>
                 </td>
               <td class="govuk-table__cell">{{ comment.text }}</td>
             </tr>

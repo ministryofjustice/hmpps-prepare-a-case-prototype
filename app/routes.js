@@ -3,8 +3,7 @@ const router = express.Router()
 const uploadRecallDocuments = require('./views/cases/12/uploadDocuments/recallUploadDocuments')
 
 const notesDefaults = {
-  progress_1: [
-  ],
+  progress_1: [],
   progress_2: [{
     name: 'Liam Taylor',
     date: '18 July 2022 at 9:55am',
@@ -33,10 +32,17 @@ router.get('/cases/13/summary', (req, res, next) => {
 
 router.post('/cases/13/summary', (req, res, next) => {
   const dateNow = new Date()
-  req.session.progressNotes = {
-    ...notesDefaults
+  console.info(req.body)
+  if (!Object.keys(req.body).length) {
+    req.session.progressNotes = { ...notesDefaults }
+    req.session.comments = [].concat(commentsDefaults)
+  } else {
+    req.session.progressNotes = {
+      ...notesDefaults,
+      ...req.session.progressNotes
+    }
+    req.session.comments = (req.session.comments || []).concat(commentsDefaults)
   }
-  req.session.comments = (req.session.comments || []).concat(commentsDefaults)
   for (let i in req.body) {
     const updateObj = {
       name: 'Mark Berridge',

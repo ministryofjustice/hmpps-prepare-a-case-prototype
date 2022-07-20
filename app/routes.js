@@ -34,6 +34,8 @@ router.post('/cases/13/summary', (req, res, next) => {
   if (!Object.keys(req.body).length) {
     req.session.progressNotes = { ...notesDefaults }
     req.session.comments = [].concat(commentsDefaults)
+    res.locals.progressNotes = req.session.progressNotes
+    res.locals.comments = req.session.comments
   } else {
     req.session.progressNotes = {
       ...notesDefaults,

@@ -32,7 +32,6 @@ router.get('/cases/13/summary', (req, res, next) => {
 
 router.post('/cases/13/summary', (req, res, next) => {
   const dateNow = new Date()
-  console.info(req.body)
   if (!Object.keys(req.body).length) {
     req.session.progressNotes = { ...notesDefaults }
     req.session.comments = [].concat(commentsDefaults)

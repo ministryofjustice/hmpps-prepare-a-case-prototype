@@ -4,16 +4,9 @@ const uploadRecallDocuments = require('./views/cases/12/uploadDocuments/recallUp
 
 const notesDefaults = {
   progress_1: [],
-  progress_2: [{
-    name: 'Liam Taylor',
-    date: '18 July 2022 at 9:55am',
-    text: 'Pleaded guilty'
-  }],
-  progress_3: [{
-    name: 'Paul Smith',
-    date: '15 July 2022 at 9:40am',
-    text: 'Needs a spanish translator'
-  }],
+  progress_2: [
+  ],
+  progress_3: [],
 }
 
 const commentsDefaults = []

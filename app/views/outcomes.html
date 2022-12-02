@@ -1,0 +1,160 @@
+{% extends "layout.html" %}
+{% block head %}
+{% include "includes/head-noprimary.html" %}
+{% endblock %}
+{% block pageTitle %}
+Select a court
+{% endblock %}
+{% block beforeContent %}
+{% endblock %}
+{% block content %}
+
+
+
+<h1 class="govuk-heading-l">Outcomes</h1>
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+       
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-half">
+            <div class="govuk-form-group">
+                <label class="govuk-label" for="sort">
+                  Sort by 2
+                </label>
+                <select class="govuk-select" id="sort" name="sort">
+                  <option value="published">Recently published</option>
+                  <option value="updated" selected>Recently updated</option>
+                  <option value="views">Most views</option>
+                  <option value="comments">Most comments</option>
+                </select>
+              </div>
+        </div>
+        <div class="govuk-grid-column-one-half">
+            <div class="govuk-form-group">
+                <label class="govuk-label" for="sort">
+                  Sort by 3
+                </label>
+                <select class="govuk-select" id="sort" name="sort">
+                  <option value="published">Recently published</option>
+                  <option value="updated" selected>Recently updated</option>
+                  <option value="views">Most views</option>
+                  <option value="comments">Most comments</option>
+                </select>
+              </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+ <table class="govuk-table" data-module="moj-sortable-table">
+
+    <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+  
+        <th scope="col" class="govuk-table__header" aria-sort="ascending">Name</th>
+  
+        <th scope="col" class="govuk-table__header" aria-sort="none">Elevation</th>
+  
+        <th scope="col" class="govuk-table__header" aria-sort="none">Continent</th>
+  
+        <th scope="col" class="govuk-table__header govuk-table__header--numeric" aria-sort="none">First summit</th>
+  
+      </tr>
+    </thead>
+  
+    <tbody class="govuk-table__body">
+  
+      <tr class="govuk-table__row">
+  
+        <td class="govuk-table__cell">Aconcagua</td>
+  
+        <td class="govuk-table__cell" data-sort-value="6961">6,961 meters</td>
+  
+        <td class="govuk-table__cell">South America</td>
+  
+        <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="1897">1897</td>
+  
+      </tr>
+  
+      <tr class="govuk-table__row">
+  
+        <td class="govuk-table__cell">Denali</td>
+  
+        <td class="govuk-table__cell" data-sort-value="6194">6,194 meters</td>
+  
+        <td class="govuk-table__cell">North America</td>
+  
+        <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="1913">1913</td>
+  
+      </tr>
+  
+      <tr class="govuk-table__row">
+  
+        <td class="govuk-table__cell">Elbrus</td>
+  
+        <td class="govuk-table__cell" data-sort-value="5642">5,642 meters</td>
+  
+        <td class="govuk-table__cell">Europe</td>
+  
+        <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="1874">1874</td>
+  
+      </tr>
+  
+      <tr class="govuk-table__row">
+  
+        <td class="govuk-table__cell">Everest</td>
+  
+        <td class="govuk-table__cell" data-sort-value="8850">8,850 meters</td>
+  
+        <td class="govuk-table__cell">Asia</td>
+  
+        <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="1953">1953</td>
+  
+      </tr>
+  
+      <tr class="govuk-table__row">
+  
+        <td class="govuk-table__cell">Kilimanjaro</td>
+  
+        <td class="govuk-table__cell" data-sort-value="5895">5,895 meters</td>
+  
+        <td class="govuk-table__cell">Africa</td>
+  
+        <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="1889">1889</td>
+  
+      </tr>
+  
+      <tr class="govuk-table__row">
+  
+        <td class="govuk-table__cell">Puncak Jaya</td>
+  
+        <td class="govuk-table__cell" data-sort-value="4884">4,884 meters</td>
+  
+        <td class="govuk-table__cell">Australia</td>
+  
+        <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="1962">1962</td>
+  
+      </tr>
+  
+      <tr class="govuk-table__row">
+  
+        <td class="govuk-table__cell">Vinson</td>
+  
+        <td class="govuk-table__cell" data-sort-value="4897">4,897 meters</td>
+  
+        <td class="govuk-table__cell">Antarctica</td>
+  
+        <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="1966">1966</td>
+  
+      </tr>
+  
+    </tbody>
+  </table>
+</div>
+</div>
+  
+  {% endblock %}

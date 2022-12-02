@@ -18,11 +18,26 @@
 
 <form class="app-case-progress_wrapper" method="post" action="/cases/13/summary#section_{{ params.id }}" novalidate>
 
+
+
   <div class="app-case-progress_header" id="section_{{ params.id }}">
     <p class="app-case-progress_heading">{{ params.title }}</p>
     <p class="govuk-body">{{ params.description }}</p>
   </div>
   <div class="app-case-progress_content">
+
+  <div class="govuk-form-group">
+        <label class="govuk-label" for="sort">
+          Outcome
+        </label>
+        <select class="govuk-select" id="sort" name="sort">
+          <option value="published">None</option>
+          <option value="updated" selected>Adjourned</option>
+          <option value="views">Nill</option>
+          <option value="comments">Most comments</option>
+        </select>
+      </div>
+  
 
     {% if params.notes | length %}
       {% for note in params.notes %}
@@ -45,6 +60,10 @@
         <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible app-!-width-full">
       {% endfor %}
     {% endif %}
+
+
+
+
 
     {{ govukDetails({
       summaryText: "Add a note",

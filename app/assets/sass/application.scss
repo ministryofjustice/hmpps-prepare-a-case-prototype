@@ -4,33 +4,24 @@ $govuk-global-styles: true;
 // We can't mount GOV.UK Frontend's assets at root as it's done automatically by the extensions framework.
 $govuk-assets-path: '/govuk/assets/';
 
-// Import GOV.UK Frontend and any extension styles if extensions have been configured
-@import "lib/extensions/extensions";
-
 // Patterns that aren't in Frontend
-@import "patterns/step-by-step-navigation";
-@import "patterns/task-list";
 @import "patterns/related-items";
+@import "patterns/moj-header";
+// @import "patterns/step-by-step-navigation";
+// @import "patterns/task-list";
+// @import "patterns/contents-list";
+// @import "patterns/mainstream-guide";
+// @import "patterns/pagination";
+// @import "components/button";
+// @import "components/case-progress";
+// @import "components/cookie-banner";
+// @import "components/filter";
+// @import "components/timeline";
 
-// Components that aren't in Frontend
-@import "components/button";
-@import "components/case-progress";
-@import "components/cookie-banner";
-@import "components/filter";
-@import "components/timeline";
+$govuk-border-colour: red;
 
-// Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
-
-// @media (min-width: 40.0625em) {
-// .govuk-main-wrapper--auto-spacing:first-child, .govuk-main-wrapper--l {
-//     padding-top: 40px;
-//     }
-// }
-
-// SERVICE HEADER
-// .moj-header {
-//     border-bottom: none !important;
-// }
+// Import GOV.UK Frontend and any extension styles if extensions have been configured
+@import ".tmp/sass/extensions";
 
 // SERVICE NAME AND PHASE BANNER CONTAINER
 .moj-header__link--service-name--wrapper {
@@ -47,50 +38,16 @@ $govuk-assets-path: '/govuk/assets/';
     }
 }
 
-// MENU TOP RIGHT
-// a.moj-header__navigation-link {
-//     font-size: 16px;
-//     font-weight: bold;
-// }
-
-// PHASE BANNER IN MOJ HEADER
-// .app-phase-tag {
-//     position: relative;
-//     top: 3px;
-//     margin-left: 2px;
-// }
-
 .govuk-phase-banner {
     border-bottom: none;
 }
-
-// PRIMARY NAV
-// .moj-primary-navigation {
-//     background-color: #0b0c0c;
-//   }
-//   .moj-primary-navigation__link {
-//     padding-top: 5px;
-//   }
-//   .moj-primary-navigation__link[aria-current] {
-//     color: #ffffff;
-// }
-// .moj-primary-navigation__link:link, .moj-primary-navigation__link:visited {
-//     color: #ffffff;
-// }
-// .moj-primary-navigation__link[aria-current]:before {
-//     background-color: #ffffff;
-// }
 
 // ORG TITLE IN PRIMARY NAV BAR
 .app-organisation-nav-title {
     float: right;
     padding-top: 19px;
 }
-// .app-organisation-nav-title .govuk-body-s {
-//     color: #ffffff;
-// }
 
-// IMAGES
 // Search toggle icon
 .moj-search-toggle__button:after {
     background-image: url(/public/images/icon-search-blue.svg) !important;
@@ -345,11 +302,6 @@ td ul {
 .moj-badge-wrapper .moj-badge {
     margin-right: 5px;
 }
-// .moj-badge {
-//     white-space: nowrap;
-// }
-
-
 
 .card .govuk-inset-text {
     border-left: 5px solid #b1b4b6;
@@ -387,8 +339,6 @@ td ul {
     background-color: govuk-colour("blue");
 }
 .key-details-bar .key-details-bar__key-details {
-    // max-width: 1200px;
-    // margin: 0 auto;
     padding: 20px 0;
     position: relative;
 }
@@ -407,8 +357,6 @@ td ul {
     margin-inline-start: 0;
 }
 .key-details-bar .key-details-bar__key-details .key-details-bar__bottom-block {
-    // border-top: 1px solid rgba(255, 255, 255, 0.3);
-    // content: ' ';
     padding-top: 10px;
     margin-top: 6px;
 }
@@ -440,12 +388,7 @@ td ul {
     padding: 0 15px 0 0;
 }
 @media (min-width: 40.0625em) {
-    // .key-details-bar .key-details-bar__key-details {
-    //     margin: 0 auto;
-    // }
     .key-details-bar .key-details-bar__key-details .key-details-bar__name {
-        // font-size: 36px;
-        // font-size: 2.25rem;
         font-size: 1.675rem;
         line-height: 1.11111;
     }
@@ -936,4 +879,25 @@ a.morelink:visited {
     @extend %govuk-link;
     color: $govuk-link-colour;
     text-align: left;
+}
+
+
+//Rich added in not sure if the stuff above is used or needed since updating
+//the prototype from version 9
+
+.moj-width-container {
+  max-width: 1220px;
+  margin: 0 15px
+}
+
+@media(min-width: 40.0625em) {
+  .moj-width-container {
+      margin:0 30px
+  }
+}
+
+@media(min-width: 1280px) {
+  .moj-width-container {
+      margin:0 auto
+  }
 }

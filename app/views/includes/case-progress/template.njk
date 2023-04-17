@@ -10,20 +10,17 @@
       text: "Add a note"
     }
   }) }}
-
   {{ govukButton({
     text: "Save"
   }) }}
 {% endset %}
 
 <form class="app-case-progress_wrapper" method="post" action="/cases/13/summary#section_{{ params.id }}" novalidate>
-
   <div class="app-case-progress_header" id="section_{{ params.id }}">
     <p class="app-case-progress_heading">{{ params.title }}</p>
     <p class="govuk-body">{{ params.description }}</p>
   </div>
   <div class="app-case-progress_content">
-
     {% if params.notes | length %}
       {% for note in params.notes %}
         <table class="govuk-table govuk-!-margin-bottom-0">
@@ -37,21 +34,16 @@
             </td>
           </tr>
         </table>
-
         <p class="govuk-body govuk-body-s">
           <a class="govuk-link" href="javascript:void(0);">Delete</a>
         </p>
-
         <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible app-!-width-full">
       {% endfor %}
     {% endif %}
-
     {{ govukDetails({
       summaryText: "Add a note",
       html: innerHtml,
       classes: "govuk-!-margin-bottom-2"
     }) }}
-
   </div>
-
 </form>

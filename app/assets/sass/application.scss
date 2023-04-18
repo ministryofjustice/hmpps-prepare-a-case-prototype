@@ -5,20 +5,18 @@ $govuk-global-styles: true;
 $govuk-assets-path: '/govuk/assets/';
 
 // Patterns that aren't in Frontend
-@import "patterns/related-items";
 @import "patterns/moj-header";
-// @import "patterns/step-by-step-navigation";
-// @import "patterns/task-list";
-// @import "patterns/contents-list";
-// @import "patterns/mainstream-guide";
-// @import "patterns/pagination";
-// @import "components/button";
-// @import "components/case-progress";
-// @import "components/cookie-banner";
-// @import "components/filter";
-// @import "components/timeline";
-
-$govuk-border-colour: red;
+@import "patterns/step-by-step-navigation";
+@import "patterns/task-list";
+// @import "patterns/contents-list"; Does not exist on live
+// @import "patterns/mainstream-guide"; Does not exist on live
+@import "patterns/pagination";
+@import "components/button";
+@import "components/case-progress";
+@import "components/cookie-banner";
+@import "components/filter";
+@import "components/primary-navigation";
+@import "components/timeline";
 
 // Import GOV.UK Frontend and any extension styles if extensions have been configured
 @import ".tmp/sass/extensions";
@@ -91,7 +89,159 @@ $govuk-border-colour: red;
 
 // CASE PAGINIATION
 
-.app-pagination{display:block;list-style:none;margin-right:-15px}.app-pagination__list{padding-left:0;margin:0}.app-pagination__list-item{display:block}.app-pagination__link{display:block;padding:7px 15px;text-decoration:none}.app-pagination__link:active,.app-pagination__link:hover,.app-pagination__link:link,.app-pagination__link:visited{color:#1d70b8}.app-pagination__link:hover{background-color:#f3f2f1}.app-pagination__link-title{font-size:16px;font-size:1rem;line-height:1.25;display:block;font-weight:700}@media print{.app-pagination__link-title{font-family:sans-serif}}@media (min-width:40.0625em){.app-pagination__link-title{font-size:19px;font-size:1.1875rem;line-height:1.31579}}@media print{.app-pagination__link-title{font-size:14pt;line-height:1.15}}.app-pagination__link-text{display:inline;text-decoration:none}.app-pagination__list-item--next .app-pagination__link-text,.app-pagination__list-item--prev .app-pagination__link-text{margin-left:10px}.app-pagination__link-icon{font-family:Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-weight:400;font-size:18px;font-size:1.125rem;line-height:1.11111;float:left;height:1em;position:relative;top:1px;width:.63em}@media print{.app-pagination__link-icon{font-family:sans-serif}}@media (min-width:40.0625em){.app-pagination__link-icon{font-size:24px;font-size:1.5rem;line-height:1.25}}@media print{.app-pagination__link-icon{font-size:18pt;line-height:1.15}}.app-pagination__link-divider{position:absolute!important;width:1px!important;height:1px!important;margin:0!important;padding:0!important;overflow:hidden!important;clip:rect(0 0 0 0)!important;-webkit-clip-path:inset(50%)!important;clip-path:inset(50%)!important;border:0!important;white-space:nowrap!important}.app-pagination__link-label{font-family:Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-weight:400;font-size:14px;font-size:.875rem;line-height:1.14286;display:inline-block;text-decoration:underline;margin-left:25px;margin-top:.1em}@media print{.app-pagination__link-label{font-family:sans-serif}}@media (min-width:40.0625em){.app-pagination__link-label{font-size:16px;font-size:1rem;line-height:1.25}}@media print{.app-pagination__link-label{font-size:14pt;line-height:1.2}}.app-pagination--inline .app-pagination__list-item{display:inline-block}.app-pagination--inline .app-pagination__link{display:block}.app-pagination--inline .app-pagination__link-text{font-weight:400}.app-pagination--inline .app-pagination__list-item--next .app-pagination__link-text{margin-left:0;margin-right:10px}.app-pagination--inline .app-pagination__list-item--next .app-pagination__link-icon{float:right}.app-pagination--inline .app-pagination__list-item--next .app-pagination__link-label{margin-left:0}
+.app-pagination{
+  display:block;
+  list-style:none;
+  margin: 0;
+}
+.app-pagination__list{
+  padding-left:0;
+  margin:0
+}
+.app-pagination__list-item{
+  display:block
+}
+.app-pagination__link{
+  display:block;
+  padding:7px 15px;
+  text-decoration:none
+}
+.app-pagination__link:active,
+.app-pagination__link:hover,
+.app-pagination__link:link,
+.app-pagination__link:visited{
+  color:#1d70b8
+}
+.app-pagination__link:hover{
+  background-color:#f3f2f1
+}
+.app-pagination__link-title{
+  font-size:16px;
+  font-size:1rem;
+  line-height:1.25;
+  display:block;
+  font-weight:700;
+  border:none;
+}
+@media print{
+  .app-pagination__link-title{
+    font-family:sans-serif
+  }
+}
+@media (min-width:40.0625em){
+  .app-pagination__link-title{
+    font-size:19px;
+    font-size:1.1875rem;
+    line-height:1.31579
+  }
+}
+
+.app-pagination__link-title{
+  padding: 0;
+}
+
+.app-pagination__link-text{
+  display:inline;
+  text-decoration:none;
+  margin:0;
+}
+.app-pagination__list-item--next .app-pagination__link-text,
+.app-pagination__list-item--prev .app-pagination__link-text{
+  margin-left:10px
+}
+.app-pagination__link-icon{
+  font-family:Inter,system-ui,sans-serif;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  font-weight:400;
+  font-size:18px;
+  font-size:1.125rem;
+  line-height:1.11111;
+  float:left;
+  height:1em;
+  position:relative;
+  top:1px;
+  width:.63em
+}
+@media print{
+  .app-pagination__link-icon{
+    font-family:sans-serif
+  }
+}
+@media (min-width:40.0625em){
+  .app-pagination__link-icon{
+    font-size:24px;
+    font-size:1.5rem;
+    line-height:1.25
+  }
+}
+@media print{
+  .app-pagination__link-icon{
+    font-size:18pt;
+    line-height:1.15
+  }
+}
+.app-pagination__link-divider{
+  position:absolute!important;
+  width:1px!important;
+  height:1px!important;
+  margin:0!important;
+  padding:0!important;
+  overflow:hidden!important;
+  clip:rect(0 0 0 0)!important;
+  -webkit-clip-path:inset(50%)!important;
+  clip-path:inset(50%)!important;
+  border:0!important;
+  white-space:nowrap!important
+}
+.app-pagination__link-label{
+  font-family:Inter,system-ui,sans-serif;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  font-weight:400;
+  font-size:14px;
+  font-size:.875rem;
+  line-height:1.14286;
+  display:inline-block;
+  text-decoration:underline;
+  margin-left:25px;
+  margin-top:.1em
+}
+@media print{
+  .app-pagination__link-label{
+    font-family:sans-serif
+  }
+}
+@media (min-width:40.0625em){
+  .app-pagination__link-label{
+    font-size:16px;
+    font-size:1rem;
+    line-height:1.25
+  }
+}
+@media print{
+  .app-pagination__link-label{
+    font-size:14pt;line-height:1.2
+  }
+}
+.app-pagination--inline .app-pagination__list-item{
+  display:inline-block
+}
+.app-pagination--inline .app-pagination__link{
+  display:block
+}
+.app-pagination--inline .app-pagination__link-text{
+  font-weight:400
+}
+.app-pagination--inline .app-pagination__list-item--next .app-pagination__link-text{
+  margin-left:0;margin-right:10px
+}
+.app-pagination--inline .app-pagination__list-item--next .app-pagination__link-icon{
+  float:right
+}
+.app-pagination--inline .app-pagination__list-item--next .app-pagination__link-label{
+  margin-left:0
+}
 
 
 // 7 DAY NAV
@@ -103,9 +253,9 @@ $govuk-border-colour: red;
     color: #ffffff;
 }
 @media (max-width: 40.0625em) {
-    .calendar-nav-link-active, .calendar-nav-link {
-        padding: 7px 10px;
-    }
+  .calendar-nav-link-active, .calendar-nav-link {
+      padding: 7px 10px;
+  }
 }
 .calendar-nav-link-active, .calendar-nav-link-active:hover {
     background-color: #1d70b8;
@@ -118,7 +268,7 @@ $govuk-border-colour: red;
     border-color:#1d70b8 ;
 }
 
-// CASELIST UPDATE TIMESTAMPS
+//CASELIST UPDATE TIMESTAMPS
 .app-case-updates {
     // float: none;
     margin-bottom: 25px;

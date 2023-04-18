@@ -1,21 +1,15 @@
-const express = require('express')
-const router = express.Router()
-const uploadRecallDocuments = require('./views/cases/12/uploadDocuments/recallUploadDocuments')
+//
+// For guidance on how to create routes see:
+// https://prototype-kit.service.gov.uk/docs/create-routes
+//
 
-const notesDefaults = {
-  progress_1: [],
-  progress_2: [
-  ],
-  progress_3: [],
-}
+const govukPrototypeKit = require('govuk-prototype-kit')
+const router = govukPrototypeKit.requests.setupRouter()
 
-const commentsDefaults = []
-const monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+// Add your routes here
 
-// Add your routes here - above the module.exports line
-
-router.get('/cases/12/upload_documents_drag_drop', uploadRecallDocuments.get)
-router.post('/cases/12/upload_documents_drag_drop', uploadRecallDocuments.post)
+// router.get('/cases/12/upload_documents_drag_drop', uploadRecallDocuments.get)
+// router.post('/cases/12/upload_documents_drag_drop', uploadRecallDocuments.post)
 
 router.get('/cases/13/summary', (req, res, next) => {
   res.locals.progressNotes = req.session.progressNotes || notesDefaults
@@ -51,5 +45,3 @@ router.post('/cases/13/summary', (req, res, next) => {
   }
   next()
 })
-
-module.exports = router

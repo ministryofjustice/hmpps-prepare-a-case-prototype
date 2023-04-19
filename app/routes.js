@@ -8,6 +8,16 @@ const router = govukPrototypeKit.requests.setupRouter()
 
 // Add your routes here
 
+const notesDefaults = {
+  progress_1: [],
+  progress_2: [
+  ],
+  progress_3: [],
+}
+const commentsDefaults = []
+const monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+
+
 // router.get('/cases/12/upload_documents_drag_drop', uploadRecallDocuments.get)
 // router.post('/cases/12/upload_documents_drag_drop', uploadRecallDocuments.post)
 

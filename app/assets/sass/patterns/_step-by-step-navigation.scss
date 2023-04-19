@@ -2,7 +2,7 @@
 // Note - this code for prototype purposes only. It is not production code,
 // nor an example of the best way to use GOV.UK Frontend
 
-$govuk-border-colour: pink;
+// $govuk-border-colour: pink;
 
 .app-step-nav-header {
   position: relative;
@@ -12,15 +12,15 @@ $govuk-border-colour: pink;
   border-bottom: solid 1px $govuk-border-colour;
 }
 
-// .app-step-nav-header__part-of {
-//   @include govuk-font(16, $weight: bold);
-//   display: block;
-//   padding-bottom: 0.2em;
-// }
+.app-step-nav-header__part-of {
+  @include govuk-font(16, $weight: bold);
+  display: block;
+  padding-bottom: 0.2em;
+}
 
-// .app-step-nav-header__title {
-//   @include govuk-font(24, $weight: bold);
-// }
+.app-step-nav-header__title {
+  @include govuk-font(24, $weight: bold);
+}
 
 .app-step-nav-related {
   border-top: 2px solid $govuk-link-colour;

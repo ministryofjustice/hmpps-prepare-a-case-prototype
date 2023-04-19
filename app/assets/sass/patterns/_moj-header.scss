@@ -11,17 +11,17 @@
   }
 
   .moj-header__container {
-    // @include moj-width-container;
-    // @include govuk-clearfix;
+    @include moj-width-container;
+    @include govuk-clearfix;
     position: relative;
   }
 
   .moj-header__logo {
     padding-bottom: govuk-spacing(1);
 
-    // @include govuk-media-query($from: desktop) {
-    //   float: left;
-    // }
+    @include govuk-media-query($from: desktop) {
+      float: left;
+    }
 
   }
 
@@ -43,15 +43,15 @@
   .moj-header__content {
     padding-bottom: govuk-spacing(2);
 
-    // @include govuk-media-query($from: desktop) {
-    //   float: right;
-    // }
+    @include govuk-media-query($from: desktop) {
+      float: right;
+    }
 
   }
 
   .moj-header__link, .moj-header__link > a {
-    // @include govuk-link-common;
-    // @include govuk-link-style-default;
+    @include govuk-link-common;
+    @include govuk-link-style-default;
     border-bottom: 1px solid transparent;
     color: govuk-colour("white");
     display: inline-block;
@@ -78,7 +78,7 @@
     }
 
     &--organisation-name {
-      // @include govuk-font($size: 24, $weight: "bold");
+      @include govuk-font($size: 24, $weight: "bold");
       vertical-align: middle;
       &:hover {
         border-color: transparent;
@@ -87,14 +87,14 @@
 
     &--service-name {
       vertical-align: middle;
-      // @include govuk-font($size: 24, $weight: "normal");
+      @include govuk-font($size: 24, $weight: "normal");
 
-      // @include govuk-media-query($until: desktop) {
-      //   display: block;
-      // }
-      // @include govuk-media-query($from: desktop) {
-      //   margin-left: govuk-spacing(1);
-      // }
+      @include govuk-media-query($until: desktop) {
+        display: block;
+      }
+      @include govuk-media-query($from: desktop) {
+        margin-left: govuk-spacing(1);
+      }
       &:hover {
         border-color: transparent;
       }
@@ -109,10 +109,10 @@
       border-color: govuk-colour("white");
     }
 
-    // @include govuk-media-query($until: desktop) {
-    //   vertical-align: middle;
-    //   margin-bottom: -1px;
-    // }
+    @include govuk-media-query($until: desktop) {
+      vertical-align: middle;
+      margin-bottom: -1px;
+    }
   }
 
 
@@ -147,8 +147,8 @@
   }
 
   .moj-header__navigation-link {
-    // @include govuk-link-common;
-    // @include govuk-link-style-default;
+    @include govuk-link-common;
+    @include govuk-link-style-default;
 
     &:link,
     &:visited,

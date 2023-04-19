@@ -43,7 +43,7 @@ spec:
   selector:
     app: prototype
 ---
-apiVersion: networking.k8s.io/v1beta1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: prototype-ingress
@@ -61,5 +61,7 @@ spec:
       paths:
       - path: /
         backend:
-          serviceName: nginx-service
-          servicePort: 3000
+          service:
+            name: nginx-service
+            port:
+              number: 3000

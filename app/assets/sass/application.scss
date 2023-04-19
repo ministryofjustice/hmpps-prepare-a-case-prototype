@@ -4,33 +4,23 @@ $govuk-global-styles: true;
 // We can't mount GOV.UK Frontend's assets at root as it's done automatically by the extensions framework.
 $govuk-assets-path: '/govuk/assets/';
 
-// Import GOV.UK Frontend and any extension styles if extensions have been configured
-@import "lib/extensions/extensions";
-
 // Patterns that aren't in Frontend
+@import "patterns/moj-header";
 @import "patterns/step-by-step-navigation";
 @import "patterns/task-list";
-@import "patterns/related-items";
-
-// Components that aren't in Frontend
+// @import "patterns/contents-list"; Does not exist on live
+// @import "patterns/mainstream-guide"; Does not exist on live
+@import "patterns/pagination";
+@import "components/badge";
 @import "components/button";
 @import "components/case-progress";
 @import "components/cookie-banner";
 @import "components/filter";
+@import "components/primary-navigation";
 @import "components/timeline";
 
-// Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
-
-// @media (min-width: 40.0625em) {
-// .govuk-main-wrapper--auto-spacing:first-child, .govuk-main-wrapper--l {
-//     padding-top: 40px;
-//     }
-// }
-
-// SERVICE HEADER
-// .moj-header {
-//     border-bottom: none !important;
-// }
+// Import GOV.UK Frontend and any extension styles if extensions have been configured
+@import ".tmp/sass/extensions";
 
 // SERVICE NAME AND PHASE BANNER CONTAINER
 .moj-header__link--service-name--wrapper {
@@ -47,50 +37,16 @@ $govuk-assets-path: '/govuk/assets/';
     }
 }
 
-// MENU TOP RIGHT
-// a.moj-header__navigation-link {
-//     font-size: 16px;
-//     font-weight: bold;
-// }
-
-// PHASE BANNER IN MOJ HEADER
-// .app-phase-tag {
-//     position: relative;
-//     top: 3px;
-//     margin-left: 2px;
-// }
-
 .govuk-phase-banner {
     border-bottom: none;
 }
-
-// PRIMARY NAV
-// .moj-primary-navigation {
-//     background-color: #0b0c0c;
-//   }
-//   .moj-primary-navigation__link {
-//     padding-top: 5px;
-//   }
-//   .moj-primary-navigation__link[aria-current] {
-//     color: #ffffff;
-// }
-// .moj-primary-navigation__link:link, .moj-primary-navigation__link:visited {
-//     color: #ffffff;
-// }
-// .moj-primary-navigation__link[aria-current]:before {
-//     background-color: #ffffff;
-// }
 
 // ORG TITLE IN PRIMARY NAV BAR
 .app-organisation-nav-title {
     float: right;
     padding-top: 19px;
 }
-// .app-organisation-nav-title .govuk-body-s {
-//     color: #ffffff;
-// }
 
-// IMAGES
 // Search toggle icon
 .moj-search-toggle__button:after {
     background-image: url(/public/images/icon-search-blue.svg) !important;
@@ -134,7 +90,159 @@ $govuk-assets-path: '/govuk/assets/';
 
 // CASE PAGINIATION
 
-.app-pagination{display:block;list-style:none;margin-right:-15px}.app-pagination__list{padding-left:0;margin:0}.app-pagination__list-item{display:block}.app-pagination__link{display:block;padding:7px 15px;text-decoration:none}.app-pagination__link:active,.app-pagination__link:hover,.app-pagination__link:link,.app-pagination__link:visited{color:#1d70b8}.app-pagination__link:hover{background-color:#f3f2f1}.app-pagination__link-title{font-size:16px;font-size:1rem;line-height:1.25;display:block;font-weight:700}@media print{.app-pagination__link-title{font-family:sans-serif}}@media (min-width:40.0625em){.app-pagination__link-title{font-size:19px;font-size:1.1875rem;line-height:1.31579}}@media print{.app-pagination__link-title{font-size:14pt;line-height:1.15}}.app-pagination__link-text{display:inline;text-decoration:none}.app-pagination__list-item--next .app-pagination__link-text,.app-pagination__list-item--prev .app-pagination__link-text{margin-left:10px}.app-pagination__link-icon{font-family:Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-weight:400;font-size:18px;font-size:1.125rem;line-height:1.11111;float:left;height:1em;position:relative;top:1px;width:.63em}@media print{.app-pagination__link-icon{font-family:sans-serif}}@media (min-width:40.0625em){.app-pagination__link-icon{font-size:24px;font-size:1.5rem;line-height:1.25}}@media print{.app-pagination__link-icon{font-size:18pt;line-height:1.15}}.app-pagination__link-divider{position:absolute!important;width:1px!important;height:1px!important;margin:0!important;padding:0!important;overflow:hidden!important;clip:rect(0 0 0 0)!important;-webkit-clip-path:inset(50%)!important;clip-path:inset(50%)!important;border:0!important;white-space:nowrap!important}.app-pagination__link-label{font-family:Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-weight:400;font-size:14px;font-size:.875rem;line-height:1.14286;display:inline-block;text-decoration:underline;margin-left:25px;margin-top:.1em}@media print{.app-pagination__link-label{font-family:sans-serif}}@media (min-width:40.0625em){.app-pagination__link-label{font-size:16px;font-size:1rem;line-height:1.25}}@media print{.app-pagination__link-label{font-size:14pt;line-height:1.2}}.app-pagination--inline .app-pagination__list-item{display:inline-block}.app-pagination--inline .app-pagination__link{display:block}.app-pagination--inline .app-pagination__link-text{font-weight:400}.app-pagination--inline .app-pagination__list-item--next .app-pagination__link-text{margin-left:0;margin-right:10px}.app-pagination--inline .app-pagination__list-item--next .app-pagination__link-icon{float:right}.app-pagination--inline .app-pagination__list-item--next .app-pagination__link-label{margin-left:0}
+.app-pagination{
+  display:block;
+  list-style:none;
+  margin: 0;
+}
+.app-pagination__list{
+  padding-left:0;
+  margin:0
+}
+.app-pagination__list-item{
+  display:block
+}
+.app-pagination__link{
+  display:block;
+  padding:7px 15px;
+  text-decoration:none
+}
+.app-pagination__link:active,
+.app-pagination__link:hover,
+.app-pagination__link:link,
+.app-pagination__link:visited{
+  color:#1d70b8
+}
+.app-pagination__link:hover{
+  background-color:#f3f2f1
+}
+.app-pagination__link-title{
+  font-size:16px;
+  font-size:1rem;
+  line-height:1.25;
+  display:block;
+  font-weight:700;
+  border:none;
+}
+@media print{
+  .app-pagination__link-title{
+    font-family:sans-serif
+  }
+}
+@media (min-width:40.0625em){
+  .app-pagination__link-title{
+    font-size:19px;
+    font-size:1.1875rem;
+    line-height:1.31579
+  }
+}
+
+.app-pagination__link-title{
+  padding: 0;
+}
+
+.app-pagination__link-text{
+  display:inline;
+  text-decoration:none;
+  margin:0;
+}
+.app-pagination__list-item--next .app-pagination__link-text,
+.app-pagination__list-item--prev .app-pagination__link-text{
+  margin-left:10px
+}
+.app-pagination__link-icon{
+  font-family:Inter,system-ui,sans-serif;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  font-weight:400;
+  font-size:18px;
+  font-size:1.125rem;
+  line-height:1.11111;
+  float:left;
+  height:1em;
+  position:relative;
+  top:1px;
+  width:.63em
+}
+@media print{
+  .app-pagination__link-icon{
+    font-family:sans-serif
+  }
+}
+@media (min-width:40.0625em){
+  .app-pagination__link-icon{
+    font-size:24px;
+    font-size:1.5rem;
+    line-height:1.25
+  }
+}
+@media print{
+  .app-pagination__link-icon{
+    font-size:18pt;
+    line-height:1.15
+  }
+}
+.app-pagination__link-divider{
+  position:absolute!important;
+  width:1px!important;
+  height:1px!important;
+  margin:0!important;
+  padding:0!important;
+  overflow:hidden!important;
+  clip:rect(0 0 0 0)!important;
+  -webkit-clip-path:inset(50%)!important;
+  clip-path:inset(50%)!important;
+  border:0!important;
+  white-space:nowrap!important
+}
+.app-pagination__link-label{
+  font-family:Inter,system-ui,sans-serif;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  font-weight:400;
+  font-size:14px;
+  font-size:.875rem;
+  line-height:1.14286;
+  display:inline-block;
+  text-decoration:underline;
+  margin-left:25px;
+  margin-top:.1em
+}
+@media print{
+  .app-pagination__link-label{
+    font-family:sans-serif
+  }
+}
+@media (min-width:40.0625em){
+  .app-pagination__link-label{
+    font-size:16px;
+    font-size:1rem;
+    line-height:1.25
+  }
+}
+@media print{
+  .app-pagination__link-label{
+    font-size:14pt;line-height:1.2
+  }
+}
+.app-pagination--inline .app-pagination__list-item{
+  display:inline-block
+}
+.app-pagination--inline .app-pagination__link{
+  display:block
+}
+.app-pagination--inline .app-pagination__link-text{
+  font-weight:400
+}
+.app-pagination--inline .app-pagination__list-item--next .app-pagination__link-text{
+  margin-left:0;margin-right:10px
+}
+.app-pagination--inline .app-pagination__list-item--next .app-pagination__link-icon{
+  float:right
+}
+.app-pagination--inline .app-pagination__list-item--next .app-pagination__link-label{
+  margin-left:0
+}
 
 
 // 7 DAY NAV
@@ -146,9 +254,9 @@ $govuk-assets-path: '/govuk/assets/';
     color: #ffffff;
 }
 @media (max-width: 40.0625em) {
-    .calendar-nav-link-active, .calendar-nav-link {
-        padding: 7px 10px;
-    }
+  .calendar-nav-link-active, .calendar-nav-link {
+      padding: 7px 10px;
+  }
 }
 .calendar-nav-link-active, .calendar-nav-link-active:hover {
     background-color: #1d70b8;
@@ -161,9 +269,9 @@ $govuk-assets-path: '/govuk/assets/';
     border-color:#1d70b8 ;
 }
 
-// CASELIST UPDATE TIMESTAMPS
+//CASELIST UPDATE TIMESTAMPS
 .app-case-updates {
-    // float: none;
+    float: none;
     margin-bottom: 25px;
 }
 @media (min-width: 1100px) {
@@ -345,11 +453,6 @@ td ul {
 .moj-badge-wrapper .moj-badge {
     margin-right: 5px;
 }
-// .moj-badge {
-//     white-space: nowrap;
-// }
-
-
 
 .card .govuk-inset-text {
     border-left: 5px solid #b1b4b6;
@@ -387,8 +490,6 @@ td ul {
     background-color: govuk-colour("blue");
 }
 .key-details-bar .key-details-bar__key-details {
-    // max-width: 1200px;
-    // margin: 0 auto;
     padding: 20px 0;
     position: relative;
 }
@@ -407,8 +508,6 @@ td ul {
     margin-inline-start: 0;
 }
 .key-details-bar .key-details-bar__key-details .key-details-bar__bottom-block {
-    // border-top: 1px solid rgba(255, 255, 255, 0.3);
-    // content: ' ';
     padding-top: 10px;
     margin-top: 6px;
 }
@@ -440,12 +539,7 @@ td ul {
     padding: 0 15px 0 0;
 }
 @media (min-width: 40.0625em) {
-    // .key-details-bar .key-details-bar__key-details {
-    //     margin: 0 auto;
-    // }
     .key-details-bar .key-details-bar__key-details .key-details-bar__name {
-        // font-size: 36px;
-        // font-size: 2.25rem;
         font-size: 1.675rem;
         line-height: 1.11111;
     }
@@ -936,4 +1030,25 @@ a.morelink:visited {
     @extend %govuk-link;
     color: $govuk-link-colour;
     text-align: left;
+}
+
+
+//Rich added in not sure if the stuff above is used or needed since updating
+//the prototype from version 9
+
+.moj-width-container {
+  max-width: 1220px;
+  margin: 0 15px
+}
+
+@media(min-width: 40.0625em) {
+  .moj-width-container {
+      margin:0 30px
+  }
+}
+
+@media(min-width: 1280px) {
+  .moj-width-container {
+      margin:0 auto
+  }
 }

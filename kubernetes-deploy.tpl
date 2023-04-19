@@ -59,8 +59,7 @@ spec:
   - host: ${PROTOTYPE_NAME}.apps.live.cloud-platform.service.justice.gov.uk
     http:
       paths:
-      - path: {{ $ingressPath }}
-        pathType: ImplementationSpecific
+      - path: /
         backend:
           service:
             name: prototype-ingress

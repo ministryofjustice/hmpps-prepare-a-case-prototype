@@ -48,15 +48,15 @@ kind: Ingress
 metadata:
   name: prototype-ingress
   annotations:
-    external-dns.alpha.kubernetes.io/set-identifier: prototype-ingress-${PROTOTYPE_NAME}-green
+    external-dns.alpha.kubernetes.io/set-identifier: prototype-ingress-hmpps-prepare-a-case-prototype-green
     external-dns.alpha.kubernetes.io/aws-weight: "100"
 spec:
   ingressClassName: modsec
   tls:
   - hosts:
-    - ${PROTOTYPE_NAME}.apps.live.cloud-platform.service.justice.gov.uk
+    - hmpps-prepare-a-case-prototype.apps.live.cloud-platform.service.justice.gov.uk
   rules:
-  - host: ${PROTOTYPE_NAME}.apps.live.cloud-platform.service.justice.gov.uk
+  - host: hmpps-prepare-a-case-prototype.apps.live.cloud-platform.service.justice.gov.uk
     http:
       paths:
       - path: /

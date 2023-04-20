@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: moj-prototype
+  name: moj-prototype-${BRANCH}
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: prototype
+      app: prototype-${BRANCH}
   template:
     metadata:
       labels:
-        app: prototype
+        app: prototype-${BRANCH}
     spec:
       containers:
-      - name: nginx
+      - name: prototype
         image: 754256621582.dkr.ecr.eu-west-2.amazonaws.com/${ECR_NAME}:${IMAGE_TAG}
         env:
           - name: USERNAME
@@ -32,37 +32,37 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: nginx-service
+  name: prototype-service-${BRANCH}
   labels:
-    app: nginx-service
+    app: prototype-service-${BRANCH}
 spec:
   ports:
   - port: 3000
     name: http
     targetPort: 3000
   selector:
-    app: prototype
+    app: prototype-${BRANCH}
 ---
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: prototype-ingress
+  name: prototype-ingress-${BRANCH}
   annotations:
-    external-dns.alpha.kubernetes.io/set-identifier: prototype-ingress-hmpps-prepare-a-case-prototype-green
+    external-dns.alpha.kubernetes.io/set-identifier: prototype-ingress-${BRANCH}-${KUBE_NAMESPACE}-green
     external-dns.alpha.kubernetes.io/aws-weight: "100"
 spec:
-  ingressClassName: modsec
+  ingressClassName: default
   tls:
   - hosts:
-    - hmpps-prepare-a-case-prototype.apps.live.cloud-platform.service.justice.gov.uk
+    - ${KUBE_NAMESPACE}-${BRANCH}.apps.live.cloud-platform.service.justice.gov.uk
   rules:
-  - host: hmpps-prepare-a-case-prototype.apps.live.cloud-platform.service.justice.gov.uk
+  - host: ${KUBE_NAMESPACE}-${BRANCH}.apps.live.cloud-platform.service.justice.gov.uk
     http:
       paths:
       - path: /
         pathType: ImplementationSpecific
         backend:
           service:
-            name: prototype-ingress
+            name: prototype-service-${BRANCH}
             port:
               number: 3000

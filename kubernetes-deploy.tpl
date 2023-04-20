@@ -65,4 +65,4 @@ spec:
           service:
             name: prototype-ingress
             port:
-              number: 3000
+              name: http

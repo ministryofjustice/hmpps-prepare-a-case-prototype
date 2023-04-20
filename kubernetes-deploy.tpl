@@ -46,23 +46,23 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: prototype-ingress-${BRANCH}
+  name: prototype-ingress
   annotations:
-    external-dns.alpha.kubernetes.io/set-identifier: prototype-ingress-${BRANCH}-${KUBE_NAMESPACE}-green
+    external-dns.alpha.kubernetes.io/set-identifier: prototype-ingress-${PROTOTYPE_NAME}-green
     external-dns.alpha.kubernetes.io/aws-weight: "100"
 spec:
-  ingressClassName: default
+  ingressClassName: modsec
   tls:
   - hosts:
-    - ${KUBE_NAMESPACE}-${BRANCH}.apps.live.cloud-platform.service.justice.gov.uk
+    - ${PROTOTYPE_NAME}.apps.live.cloud-platform.service.justice.gov.uk
   rules:
-  - host: ${KUBE_NAMESPACE}-${BRANCH}.apps.live.cloud-platform.service.justice.gov.uk
+  - host: ${PROTOTYPE_NAME}.apps.live.cloud-platform.service.justice.gov.uk
     http:
       paths:
       - path: /
         pathType: ImplementationSpecific
         backend:
           service:
-            name: prototype-service-${BRANCH}
+            name: prototype-ingress
             port:
               number: 3000

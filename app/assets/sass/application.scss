@@ -20,7 +20,7 @@ $govuk-assets-path: '/govuk/assets/';
 @import "components/timeline";
 
 // Import GOV.UK Frontend and any extension styles if extensions have been configured
-@import ".tmp/sass/extensions";
+// @import ".tmp/sass/extensions";
 
 // SERVICE NAME AND PHASE BANNER CONTAINER
 .moj-header__link--service-name--wrapper {

@@ -1,15 +1,13 @@
-FROM node:16.14-bullseye-slim
+FROM node:18-alpine
 
 ENV NODE_ENV=production
 
-RUN addgroup --gid 1017 --system appgroup \
-  && adduser --uid 1017 --system appuser --gid 1017
+RUN addgroup -g 1017 -S appgroup \
+  && adduser -u 1017 -S appuser -G appgroup \
+  && apk update \
+  && apk add build-base
 
 WORKDIR /app
-
-RUN apt-get update && \
-    apt-get upgrade -y && \
-    apt-get install -y make python g++
 
 COPY . .
 

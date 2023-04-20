@@ -13,14 +13,13 @@ env:
   ECR_NAME: ${{ secrets.ECR_NAME }}
   KUBE_CLUSTER: ${{ secrets.KUBE_CLUSTER }}
   KUBE_NAMESPACE: ${{ secrets.KUBE_NAMESPACE }}
-  PROTOTYPE_NAME: ${{ secrets.PROTOTYPE_NAME }}
 
 jobs:
   main:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Build
         run: docker build -t foo .
       - name: Push to ECR
@@ -32,8 +31,8 @@ jobs:
           region: eu-west-2
           local-image: foo
           image: ${ECR_NAME}:${{ github.sha }}
-      - name: Update image tag
-        run: export IMAGE_TAG=${{ github.sha }} && cat kubernetes-deploy.tpl | envsubst > kubernetes-deploy.yaml
+      - name: Update image tag and branch name
+        run: export IMAGE_TAG=${{ github.sha }} && export BRANCH=${GITHUB_REF##*/} && cat kubernetes-deploy-${GITHUB_REF##*/}.tpl | envsubst > kubernetes-deploy.yaml
       - name: Authenticate to the cluster
         env:
           KUBE_CERT: ${{ secrets.KUBE_CERT }}

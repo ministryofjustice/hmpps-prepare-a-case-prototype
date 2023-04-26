@@ -1,0 +1,18 @@
+// SERVICE NAME AND PHASE BANNER CONTAINER
+.moj-header__link--service-name--wrapper {
+  display: inline-block;
+}
+@media (max-width: 48.0525em) {
+  .moj-header__link--service-name--wrapper {
+  display: block;
+  }
+}
+@media (max-width: 48.0525em) {
+.moj-header__link--service-name {
+  display: inline-block;
+  }
+}
+
+.govuk-phase-banner {
+  border-bottom: none;
+}

@@ -1,0 +1,17 @@
+// MATCHER
+
+.app-match-probation-records {
+  border-left: 2px solid #ccc;
+  padding-left: 60px;
+  width: 55%;
+}
+.app-match-defendant-details {
+  padding-right: 60px;
+  width: 45%;
+}
+
+
+.app-possible-probation-record .govuk-table__cell, .app-possible-probation-record .govuk-table__header {
+  border-bottom: none;
+  padding-bottom: 0;
+}

@@ -1,0 +1,23 @@
+// 7 DAY NAV
+
+.calendar-nav-title {
+  text-align: center;
+}
+.calendar-nav-text-active {
+  color: #ffffff;
+}
+@media (max-width: 40.0625em) {
+  .calendar-nav-link-active, .calendar-nav-link {
+    padding: 7px 10px;
+  }
+}
+.calendar-nav-link-active, .calendar-nav-link-active:hover {
+  background-color: #1d70b8;
+}
+
+//13 DAY NAV
+.calendar-nav-link-today{
+  border-style:solid;
+  border-width: thin;
+  border-color:#1d70b8 ;
+}

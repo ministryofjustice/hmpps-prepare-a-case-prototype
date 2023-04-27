@@ -1,0 +1,16 @@
+// Search toggle icon
+.moj-search-toggle__button:after {
+  background-image: url(/public/images/icon-search-blue.svg) !important;
+}
+// Document icon
+.moj-timeline__document-link {
+  background-image: url(/public/images/icon-document.svg) !important;
+}
+// Button menu toggle chevron icon
+.moj-button-menu__toggle-button--secondary:after {
+  background-image: url(/public/images/icon-arrow-black-down.svg) !important;
+}
+
+.moj-button-menu__toggle-button--secondary {
+  color: #000000 !important;
+}

@@ -3,6 +3,7 @@
   Cases
 {% endblock %}
 {% block beforeContent %}
+  {% include "../../../includes/head-main.html" %}
 {% endblock %}
 {% block content %}
   <header class="govuk-grid-row govuk-!-margin-bottom-7">
@@ -109,7 +110,7 @@
     </div>
   </div>
   {% block courtList %}
-    {% include "includes/2021-11-11-court-list.html" %}
+    {% include "../../../includes/2021-11-11-court-list.html" %}
   {% endblock %}
   <nav class="moj-pagination" id="pagination-label">
     <p class="govuk-visually-hidden" aria-labelledby="pagination-label">

@@ -21,13 +21,13 @@ const monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'Jul
 // router.get('/cases/12/upload_documents_drag_drop', uploadRecallDocuments.get)
 // router.post('/cases/12/upload_documents_drag_drop', uploadRecallDocuments.post)
 
-router.get('/cases/13/summary', (req, res, next) => {
+router.get('/sprint-14/cases/13/summary', (req, res, next) => {
   res.locals.progressNotes = req.session.progressNotes || notesDefaults
   res.locals.comments = req.session.comments || commentsDefaults
   next()
 })
 
-router.post('/cases/13/summary', (req, res, next) => {
+router.post('/sprint-14/cases/13/summary', (req, res, next) => {
   if (!Object.keys(req.body).length) {
     req.session.progressNotes = { ...notesDefaults }
     req.session.comments = [].concat(commentsDefaults)

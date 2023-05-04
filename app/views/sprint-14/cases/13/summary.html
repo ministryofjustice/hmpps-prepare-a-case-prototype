@@ -135,7 +135,7 @@
         <h2 class="govuk-heading-m">
           Comments
         </h2>
-        <form class="govuk-form-group govuk-!-margin-bottom-0" method="post" action="/sprint-14/cases/13/summary#comments" novalidate>      </h1>
+        <form class="govuk-form-group govuk-!-margin-bottom-0" method="post" action="summary#comments" novalidate>      </h1>
         <div id="more-detail-hint" class="govuk-hint"> Add notes and observations about this case. Your colleagues who use Prepare a Case will be able to read them.
           These comments will not be saved to NDelius.
         </div>
@@ -155,7 +155,7 @@
               <tr class="govuk-table__row">
                 <td scope="row" class="govuk-table__cell">{{ comment.name }}<br>
                   <span style="padding-top:5px;" class="govuk-!-font-size-19 govuk-!-font-weight-regular">{{ comment.date}}</span>
-                    <form style="padding-top: 10px;" method="post" action="/sprint-14/cases/13/summary" novalidate>
+                    <form style="padding-top: 10px;" method="post" action="summary" novalidate>
                       <a href="javascript:void(0);" onclick="this.closest('form').submit();return false;">Delete</a>
                     </form>
                   </td>
@@ -166,8 +166,5 @@
         </table>
       {% endif %}
     </div>
-    <div class="govuk-grid-column-one-third">
-    </div>
   </div>
-
 {% endblock %}

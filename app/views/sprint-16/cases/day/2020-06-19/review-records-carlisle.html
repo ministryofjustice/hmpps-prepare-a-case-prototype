@@ -1,0 +1,145 @@
+{% extends "layout.html" %}
+
+
+{% block pageTitle %}
+Review possible nDelius records
+{% endblock %}
+
+
+
+{% block beforeContent %}
+<a href="javascript:history.back();" class="govuk-back-link">Back</a>
+{% endblock %}
+
+
+{% block content %}
+
+<h1 class="govuk-heading-l">
+  <span class="govuk-caption-l">Tom Andrew Carlisle</span>
+  Review possible nDelius records
+</h1>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <p class="govuk-body govuk-!-margin-bottom-6">Compare details and confirm the correct record for the defendant.</p>
+    <div class="govuk-inset-text">
+      Details that match the defendant are highlighted.
+    </div>
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-half app-match-defendant-details">
+        <h2 class="govuk-heading-m">Defendant details</h2>
+
+        <div class="govuk-!-margin-bottom-0 app-possible-probation-record" style="
+        border-left: 4px solid #ccc;
+        border-bottom: 1px solid #ccc;
+        background: #f8f8f8;
+        padding: 0 20px;
+        padding-bottom: 15px;
+        padding-top: 5px;">
+          <table class="govuk-table" style="margin-bottom: 0;">
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header" style="width: 40%;">Name</th>
+                <td class="govuk-table__cell">Tom Andrew Carlisle</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Date of birth</th>
+                <td class="govuk-table__cell">21 October 1974</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Address</th>
+                <td class="govuk-table__cell">72 Linacre Road, Manchester, M1 1FR</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="govuk-grid-column-one-half app-match-probation-records">
+        <h2 class="govuk-heading-m">1 nDelius record found</h2>
+        <div class="govuk-form-group govuk-!-margin-bottom-0">
+          <fieldset class="govuk-fieldset">
+            <div class="govuk-radios">
+              <div class="govuk-radios__item" style="margin-bottom: 20px;">
+                <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio"
+                  value="england">
+                <label class="govuk-label govuk-radios__label" for="where-do-you-live"
+                  style="padding-top: 0; padding-right: 0;">
+                  <div class="govuk-!-margin-bottom-0 app-possible-probation-record" style="
+                  border-left: 4px solid #ccc;
+                  border-bottom: 1px solid #ccc;
+                  background: #f8f8f8;
+                  padding: 0 20px;
+                  padding-bottom: 15px;
+                  padding-top: 5px;">
+                    <table class="govuk-table" style="margin-bottom: 0;">
+                      <tbody class="govuk-table__body">
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-table__header" style="width: 40%;">Name</th>
+                          <td class="govuk-table__cell">Tommy Robert Carlyle</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-table__header">Date of birth</th>
+                          <td class="govuk-table__cell"><span class="highlight">21 October</span> 1957</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-table__header">Address</th>
+                          <td class="govuk-table__cell">4 Forest Street, Newcastle, NE2 8DW</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-table__header">CRN</th>
+                          <td class="govuk-table__cell">M7889292</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-table__header">PNC</th>
+                          <td class="govuk-table__cell">2014/89303028D</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-table__header">Probation status</th>
+                          <td class="govuk-table__cell">Previously known</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-table__header">Most recent event</th>
+                          <td class="govuk-table__cell">13 April 2016 - ORA Community Order (12 Months)</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<details class="govuk-details govuk-!-margin-bottom-4">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text" id="incorrect_vehicle_details_reveal">Can't see the correct record?
+    </span>
+  </summary>
+  <div class="govuk-details__text">
+    <p>If the defendant is unknown to probation, you must <a class="govuk-link govuk-link--no-visited-state" href="/cases/day/2020-06-19/defendants-with-possible-records">confirm they have
+        no record</a>.</p>
+    <p>If they have an nDelius record, you can <a class="govuk-link govuk-link--no-visited-state"
+      href="/cases/day/2020-06-19/defendants-with-possible-records">link it to them with a case reference number</a>.</p>
+  </div>
+</details>
+<p class="govuk-body" style="margin-bottom: 0;"><a href="/cases/day/2020-06-19/defendants-with-possible-records" role="button" draggable="false"
+  class="govuk-button govuk-!-margin-right-1" data-module="govuk-button">
+  Confirm record
+</a></p>
+<p class="govuk-body"><a class="govuk-link govuk-link--no-visited-state" href="/cases/day/2020-06-19/defendants-with-possible-records">
+  Cancel
+</a></p>
+
+
+
+
+
+
+</div>
+
+
+
+
+{% endblock %}

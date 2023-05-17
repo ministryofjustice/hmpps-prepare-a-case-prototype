@@ -1,0 +1,193 @@
+{% extends "layout.html" %}
+
+
+{% block pageTitle %}
+Review possible nDelius records
+{% endblock %}
+
+
+
+{% block beforeContent %}
+<a href="javascript:history.back();" class="govuk-back-link">Back</a>
+{% endblock %}
+
+
+{% block content %}
+
+<h1 class="govuk-heading-l">
+  <span class="govuk-caption-l">Muhammed Riyan</span>
+  Review possible nDelius records
+</h1>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <p class="govuk-body">Compare details and confirm the correct record for the defendant.</p>
+    <div class="govuk-inset-text">
+      Details that match the defendant are highlighted.
+    </div>
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-half app-match-defendant-details">
+        <h2 class="govuk-heading-m">Defendant details</h2>
+        <div class="govuk-!-margin-bottom-0 app-possible-probation-record" style="
+                border-left: 4px solid #ccc;
+        border-bottom: 1px solid #ccc;
+        background: #f8f8f8;
+        padding: 0 20px;
+        padding-bottom: 15px;
+        padding-top: 5px;">
+          <table class="govuk-table" style="margin-bottom: 0;">
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header" style="width: 40%;">Name</th>
+                <td class="govuk-table__cell">Muhammed Riyan</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Date of birth</th>
+                <td class="govuk-table__cell">17 October 1981</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Address</th>
+                <td class="govuk-table__cell">72 Waynecroft Road, Hull, HU5 9AE</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="govuk-grid-column-one-half app-match-probation-records">
+        <h2 class="govuk-heading-m">2 nDelius records found</h2>
+        <div class="govuk-form-group govuk-!-margin-bottom-0">
+          <fieldset class="govuk-fieldset">
+            <div class="govuk-radios">
+              <div class="govuk-radios__item" style="margin-bottom: 20px;">
+                <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio"
+                  value="england">
+                <label class="govuk-label govuk-radios__label" for="where-do-you-live"
+                  style="padding-top: 0; padding-right: 0;">
+                  <div class="govuk-!-margin-bottom-0 app-possible-probation-record" style="
+                          border-left: 4px solid #ccc;
+        border-bottom: 1px solid #ccc;
+                  background: #f8f8f8;
+                  padding: 0 20px;
+                  padding-bottom: 15px;
+                  padding-top: 5px;">
+                    <table class="govuk-table" style="margin-bottom: 0;">
+                      <tbody class="govuk-table__body">
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-table__header" style="width: 40%;">Name</th>
+                          <td class="govuk-table__cell">Mohamed <span class="highlight">Riyan</span></td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-table__header">Date of birth</th>
+                          <td class="govuk-table__cell"><span class="highlight">17 October 1981</span></td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-table__header">Address</th>
+                          <td class="govuk-table__cell">Champion House, Pilcher Lane, Oxford. OX21 4TG</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-table__header">CRN</th>
+                          <td class="govuk-table__cell">T5463755</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-table__header">PNC</th>
+                          <td class="govuk-table__cell">2001/23153046Q</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-table__header">Probation status</th>
+                          <td class="govuk-table__cell">Previously known</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-table__header">Most recent event</th>
+                          <td class="govuk-table__cell">16 August 2005 - CJA Std Determinate Custody (12 Months)</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </label>
+              </div>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio"
+                value="wales">
+              <label class="govuk-label govuk-radios__label" for="where-do-you-live-2"
+                style="padding-top:0; padding-right: 0;">
+                <div class="govuk-!-margin-bottom-0 app-possible-probation-record" style="
+                        border-left: 4px solid #ccc;
+        border-bottom: 1px solid #ccc;
+                background: #f8f8f8;
+                padding: 0 20px;
+                padding-bottom: 15px;
+                padding-top: 5px;">
+                  <table class="govuk-table" style="margin-bottom: 0;">
+                    <tbody class="govuk-table__body">
+                      <tr class="govuk-table__row">
+                        <th scope="row" class="govuk-table__header" style="width: 40%;">Name</th>
+                        <td class="govuk-table__cell">Mohamed <span class="highlight">Riyan</span></td>
+                      </tr>
+                      <tr class="govuk-table__row">
+                        <th scope="row" class="govuk-table__header">Date of birth</th>
+                        <td class="govuk-table__cell"><span class="highlight">17 October 1981</span></td>
+                      </tr>
+                      <tr class="govuk-table__row">
+                        <th scope="row" class="govuk-table__header">Address</th>
+                        <td class="govuk-table__cell">Flat 9, Perth Court, 60 Athens Road South, Manchester, M23 8RH
+                        </td>
+                      </tr>
+                      <tr class="govuk-table__row">
+                        <th scope="row" class="govuk-table__header">CRN</th>
+                        <td class="govuk-table__cell">P1241903</td>
+                      </tr>
+                      <tr class="govuk-table__row">
+                        <th scope="row" class="govuk-table__header">PNC</th>
+                        <td class="govuk-table__cell">2001/23153046Q</td>
+                      </tr>
+                      <tr class="govuk-table__row">
+                        <th scope="row" class="govuk-table__header">Probation status</th>
+                        <td class="govuk-table__cell">Previously known</td>
+                      </tr>
+                      <tr class="govuk-table__row">
+                        <th scope="row" class="govuk-table__header">Most recent event</th>
+                        <td class="govuk-table__cell">08 January 2005 - CJA Community Order (6 Months)</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </label>
+            </div>
+
+          </fieldset>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<details class="govuk-details govuk-!-margin-bottom-4">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text" id="incorrect_vehicle_details_reveal">Can't see the correct record?
+    </span>
+  </summary>
+  <div class="govuk-details__text">
+    <p>If the defendant is unknown to probation, you must <a class="govuk-link govuk-link--no-visited-state" href="/cases/day/2020-06-19/defendants-with-possible-records">confirm they have
+        no record</a>.</p>
+    <p>If they have an nDelius record, you can <a class="govuk-link govuk-link--no-visited-state"
+      href="/cases/day/2020-06-19/defendants-with-possible-records">link it to them with a case reference number</a>.</p>
+  </div>
+</details>
+<p class="govuk-body" style="margin-bottom: 0;"><a href="/cases/day/2020-06-19/defendants-with-possible-records" role="button" draggable="false"
+  class="govuk-button govuk-!-margin-right-1" data-module="govuk-button">
+  Confirm record
+</a></p>
+<p class="govuk-body"><a class="govuk-link govuk-link--no-visited-state" href="/cases/day/2020-06-19/defendants-with-possible-records">
+  Cancel
+</a></p>
+
+
+
+
+
+
+    </div>
+
+
+
+
+    {% endblock %}

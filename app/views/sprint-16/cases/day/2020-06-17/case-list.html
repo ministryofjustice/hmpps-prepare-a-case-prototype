@@ -1,0 +1,136 @@
+{% extends "layout-main.html" %}
+{% block pageTitle %}
+  Cases
+{% endblock %}
+{% block beforeContent %}
+  {% include "../../../includes/head-main.html" %}
+{% endblock %}
+{% block content %}
+  <header class="govuk-grid-row govuk-!-margin-bottom-7">
+    <div class="govuk-grid-column-full">
+      <h1 class="govuk-heading-l govuk-!-margin-bottom-4">
+        <time class="" datetime="2020-06-17">
+          Monday 8 March <span class="secondary-text-col">(Today)</span>
+        </time>
+      </h1>
+      <nav class="app-pagination app-pagination--inline app-print--hide" role="navigation" aria-label="Pagination">
+        <ul class="app-pagination__list">
+          <li class="app-pagination__list-item">
+            <a href="/cases/day/2020-06-17/case-list" class="app-pagination__link calendar-nav-link-active">
+              <span class="app-pagination__link-title calendar-nav-title">
+                <span class="app-pagination__link-text calendar-nav-text-active">Mon</span><br>
+                <span class="app-pagination__link-text calendar-nav-text-active govuk-!-font-weight-bold govuk-!-font-size-24">8</span>
+              </span>
+            </a>
+          </li>
+          <li class="app-pagination__list-item">
+            <a href="/cases/day/2020-06-18/case-list" class="app-pagination__link calendar-nav-link">
+              <span class="app-pagination__link-title calendar-nav-title">
+                <span class="app-pagination__link-text calendar-nav-text">Tue</span><br>
+                <span class="app-pagination__link-text calendar-nav-text govuk-!-font-weight-bold govuk-!-font-size-24">9</span>
+              </span>
+            </a>
+          </li>
+          <li class="app-pagination__list-item">
+            <a href="/cases/day/2020-06-19/case-list" class="app-pagination__link calendar-nav-link">
+              <span class="app-pagination__link-title calendar-nav-title">
+                <span class="app-pagination__link-text calendar-nav-text">Wed</span><br>
+                <span class="app-pagination__link-text calendar-nav-text govuk-!-font-weight-bold govuk-!-font-size-24">10</span>
+              </span>
+            </a>
+          </li>
+          <li class="app-pagination__list-item">
+            <a href="" class="app-pagination__link calendar-nav-link">
+              <span class="app-pagination__link-title calendar-nav-title">
+                <span class="app-pagination__link-text calendar-nav-text">Thu</span><br>
+                <span class="app-pagination__link-text calendar-nav-text govuk-!-font-weight-bold govuk-!-font-size-24">11</span>
+              </span>
+            </a>
+          </li>
+          <li class="app-pagination__list-item">
+            <a href="" class="app-pagination__link calendar-nav-link">
+              <span class="app-pagination__link-title calendar-nav-title">
+                <span class="app-pagination__link-text calendar-nav-text">Fri</span><br>
+                <span class="app-pagination__link-text calendar-nav-text govuk-!-font-weight-bold govuk-!-font-size-24">12</span>
+              </span>
+            </a>
+          </li>
+          <li class="app-pagination__list-item">
+            <a href="" class="app-pagination__link calendar-nav-link">
+              <span class="app-pagination__link-title calendar-nav-title">
+                <span class="app-pagination__link-text calendar-nav-text">Sat</span><br>
+                <span class="app-pagination__link-text calendar-nav-text govuk-!-font-weight-bold govuk-!-font-size-24">13</span>
+              </span>
+            </a>
+          </li>
+          <li class="app-pagination__list-item">
+            <a href="/cases/day/2020-06-24/case-list" class="app-pagination__link calendar-nav-link">
+              <span class="app-pagination__link-title calendar-nav-title">
+                <span class="app-pagination__link-text calendar-nav-text">Mon</span><br>
+                <span class="app-pagination__link-text calendar-nav-text govuk-!-font-weight-bold govuk-!-font-size-24">15</span>
+              </span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <div class="govuk-tabs" data-module="govuk-tabs">
+    <div class="app-case-updates">
+      <p class="govuk-body-s govuk-!-margin-bottom-1 app-last-updated-stamp"><span class="govuk-!-font-weight-bold">List status:</span> Updated today at 8:43am</p>
+      <p class="govuk-body-s govuk-!-margin-bottom-0 app-next-update-stamp"><span class="govuk-!-font-weight-bold">Next update:</span> Today between 9.30–9.45am</p>
+    </div>
+    <ul class="govuk-tabs__list">
+      <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+        <a class="govuk-tabs__tab" href="case-list.html">
+          Case list
+        </a>
+      </li>
+      <li class="govuk-tabs__list-item">
+        <a class="govuk-tabs__tab" href="recent-updates.html">
+          Recent updates (6)
+        </a>
+      </li>
+      <li class="govuk-tabs__list-item">
+        <a class="govuk-tabs__tab" href="recently-added.html">
+          Recently added (6)
+        </a>
+      </li>
+    </ul>
+  </div>
+  {% block filter %}
+    {% include "includes/filter.html" %}
+  {% endblock %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-half">
+      <span class="govuk-heading-m">187 cases</span>
+    </div>
+    <div class="govuk-grid-column-one-half">
+      <span class="align-right">
+    </div>
+  </div>
+  {% block courtList %}
+    {% include "../../../includes/2021-11-11-court-list.html" %}
+  {% endblock %}
+  <nav class="moj-pagination" id="pagination-label">
+    <p class="govuk-visually-hidden" aria-labelledby="pagination-label">
+      Pagination navigation</p>
+    <ul class="moj-pagination__list">
+      <li class="moj-pagination__item  moj-pagination__item--prev">
+        <a class="moj-pagination__link" href="">Previous<span class="govuk-visually-hidden">
+          set of pages</span></a>
+      </li>
+      <li class="moj-pagination__item moj-pagination__item--active">1</li>
+      <li class="moj-pagination__item"><a class="moj-pagination__link" href="">2</a></li>
+      <li class="moj-pagination__item"><a class="moj-pagination__link" href="">3</a></li>
+      <li class="moj-pagination__item"><a class="moj-pagination__link" href="">4</a></li>
+      <li class="moj-pagination__item"><a class="moj-pagination__link" href="">5</a></li>
+      <li class="moj-pagination__item  moj-pagination__item--next">
+        <a class="moj-pagination__link" href="">Next<span class="govuk-visually-hidden">
+          set of pages</span></a>
+      </li>
+    </ul>
+    <p class="moj-pagination__results">Showing <b>1</b> to <b>12</b> of <b>187
+      </b> cases</p>
+  </nav>
+{% endblock %}

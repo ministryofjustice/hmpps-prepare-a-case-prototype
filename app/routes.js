@@ -15,3 +15,4 @@ const router = govukPrototypeKit.requests.setupRouter()
 // router.post('/cases/12/upload_documents_drag_drop', uploadRecallDocuments.post)
 
 require('./routes/sprint-14/routes.js')(router);
+require('./routes/sprint-16/routes.js')(router);

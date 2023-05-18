@@ -16,7 +16,7 @@ module.exports = function (router) {
     next()
   })
 
-  router.post('/sprint-14/cases/13/summary', (req, res, next) => {
+  router.post('/sprint-16/cases/13/summary', (req, res, next) => {
     if (!Object.keys(req.body).length) {
       req.session.progressNotes = { ...notesDefaults }
       req.session.comments = [].concat(commentsDefaults)

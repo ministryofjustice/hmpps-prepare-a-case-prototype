@@ -1,0 +1,52 @@
+{% extends "layout-main.html" %}
+{% block pageTitle %}
+  Cases
+{% endblock %}
+{% block beforeContent %}
+  {% include "../includes/head-main.html" %}
+{% endblock %}
+{% block content %}
+  <div class="govuk-error-summary" data-module="govuk-error-summary">
+    <div role="alert">
+      <h2 class="govuk-error-summary__title">
+        There is a problem
+      </h2>
+      <div class="govuk-error-summary__body">
+        <ul class="govuk-list govuk-error-summary__list">
+          <li>
+            <a href="#no-results-error">0 search results for {{data['search-term'] | default("Norman Osbourne")}}</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <main class="govuk-grid-row govuk-!-margin-bottom-7">
+    <div class="govuk-grid-column-full">
+      <section class="app-filter-card govuk-!-margin-bottom-6">
+        <h2 class="govuk-heading-m govuk-!-margin-bottom-3">Search</h2>
+        <form name="app-search" id="app-search" method="post" action="../../../case-search">
+          <div class="search-group">
+            <label class="govuk-label govuk-!-margin-bottom-3" for="search-term">
+              Enter CRN or defendant name.</label>
+            <input class="govuk-input govuk-!-width-one-third" id="search-term" name="term" type="text" value="{{data['search-term'] | default("Norman Osbourne")}}">
+            <button class="govuk-button govuk-!-margin-bottom-1 govuk-!-margin-left-3" data-module="govuk-button" type="submit">
+              Search</button>
+          </div>
+        </form>
+      </section>
+      <div class="govuk-form-group govuk-form-group--error">
+        <p id="no-results-error" class="govuk-error-message">
+          <h3 class="govuk-heading-m">
+            <span class="govuk-visually-hidden">Error:</span> 0 search results
+            for {{data['search-term'] | default("Norman Osbourne")}}</h3>
+          <p class="govuk-body">Improve your search by:</p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>double-checking the spelling</li>
+            <li>searching for a CRN instead of a name</li>
+          </ul>
+        </p>
+      </div>
+    </div>
+  </main>
+
+{% endblock %}

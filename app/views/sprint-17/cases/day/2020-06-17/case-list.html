@@ -8,6 +8,18 @@
 {% block content %}
   <header class="govuk-grid-row govuk-!-margin-bottom-7">
     <div class="govuk-grid-column-full">
+      <section class="app-filter-card govuk-!-margin-bottom-6">
+        <h2 class="govuk-heading-m govuk-!-margin-bottom-3">Search</h2>
+        <form name="app-search" id="app-search" method="post" action="../../../search/case-search-results">
+          <div class="search-group">
+            <label class="govuk-label govuk-!-margin-bottom-3" for="search-term">
+              Enter CRN or defendant name.</label>
+            <input class="govuk-input govuk-!-width-one-third" id="search-term" name="search-term" type="text" value="{{data['search-term']}}">
+            <button class="govuk-button govuk-!-margin-bottom-1 govuk-!-margin-left-3" data-module="govuk-button" type="submit">
+              Search</button>
+          </div>
+        </form>
+      </section>
       <h1 class="govuk-heading-l govuk-!-margin-bottom-4">
         <time class="" datetime="2020-06-17">
           Monday 8 March <span class="secondary-text-col">(Today)</span>

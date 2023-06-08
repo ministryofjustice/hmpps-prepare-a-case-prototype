@@ -1,0 +1,120 @@
+{% extends "layout.html" %}
+
+
+{% block pageTitle %}
+Case summary
+{% endblock %}
+
+{% block bodyStart %}
+
+{% block keyDetails %}
+{% include "includes/key_details/6_Houghton.html" %}
+{% endblock %}
+
+
+{% endblock %}
+
+
+{% block beforeContent %}
+  <a href="#" onclick="javascript:history.go(-1)" class="govuk-back-link">Back to cases</a>
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+    <nav class="moj-sub-navigation" aria-label="Sub navigation">
+
+      <ul class="moj-sub-navigation__list">
+        <li class="moj-sub-navigation__item">
+          <a class="moj-sub-navigation__link govuk-link--no-visited-state" aria-current="page"
+            href="/cases/6/summary.html">Case summary</a>
+        </li>
+        <li class="moj-sub-navigation__item">
+          <a class="moj-sub-navigation__link govuk-link--no-visited-state"
+            href="/cases/6/probationrecord.html">Probation record</a>
+        </li>
+        <li class="moj-sub-navigation__item">
+          <a class="moj-sub-navigation__link govuk-link--no-visited-state" href="/cases/6/risk.html">Risk register</a>
+        </li>
+      </ul>
+      </ul>
+
+    </nav>
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <h1 class="govuk-heading-l govuk-!-margin-bottom-7">Case summary</h1>
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-!-margin-bottom-8">
+      <h2 class="govuk-heading-m">Appearance</h2>
+      <p class="govuk-body">Court 1, morning session, Monday 8 March (1st listing).</p>
+    </div>
+    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+    <div class="govuk-!-margin-bottom-8">
+      <h2 class="govuk-heading-m">Offences</h2>
+      <h3 class="govuk-heading-s">Attempt theft from shop</h3>
+      <p class="govuk-body govuk-!-margin-bottom-2">On Wednesday 15th January at Red Street, Walker attempted to
+        steal various food items and alchohol spirits to a value of £74.00 belonging to Asda.</p>
+      <p class="govuk-body secondary-text-col">Contrary to section 1(1) of the Criminal Attempts Act 1981. </p>
+    </div>
+    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+    <div class="govuk-!-margin-bottom-7">
+      <h2 class="govuk-heading-m">
+        Defendant details
+      </h2>
+      <dl class="govuk-summary-list govuk-summary-list--no-border">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Name
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Rhys John Houghton
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Gender
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Male
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Date of birth
+          </dt>
+          <dd class="govuk-summary-list__value">
+            01 June 1987 (33 years old)
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Nationality
+          </dt>
+          <dd class="govuk-summary-list__value">
+            British
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Address
+          </dt>
+          <dd class="govuk-summary-list__value">
+            No fixed abode
+          </dd>
+        </div>
+      </dl>
+    </div>
+  </div>
+</div>
+</div>
+{% endblock %}

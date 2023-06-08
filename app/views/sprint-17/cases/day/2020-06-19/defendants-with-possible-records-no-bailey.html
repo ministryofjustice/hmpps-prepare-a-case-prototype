@@ -1,0 +1,92 @@
+{% extends "layout.html" %}
+
+
+{% block pageTitle %}
+Defendants with possible nDelius records
+{% endblock %}
+
+
+
+{% block beforeContent %}
+  <a href="#" onclick="javascript:history.go(-1)" class="govuk-back-link">Back to cases</a>
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <div class="moj-banner moj-banner--success">
+          <svg class="moj-banner__icon" fill="currentColor" role="presentation" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" height="25" width="25">
+          <path d="M25,6.2L8.7,23.2L0,14.1l4-4.2l4.7,4.9L21,2L25,6.2z" /></svg>
+          <div class="moj-banner__message">
+          <span class="moj-banner__assistive">Success</span>You have successfully confirmed a record for Stewart Bailey.</div>
+          </div>
+    </div>
+  </div>
+
+<h1 class="govuk-heading-l">
+  Defendants with possible nDelius records
+</h1>
+<h2 class='govuk-heading-m'>5 defendants partially match with existing records.
+</h2>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <p class="govuk-body">Review and confirm the correct record for each defendant.</p>
+    <table class="govuk-table" style="max-width: 600px;">
+
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Defendant</th>
+          <th scope="col" class="govuk-table__header govuk-table__header--numeric">nDelius records found</th>
+          <th scope="col" class="govuk-table__header">Action</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Brian Ball</td>
+          <td class="govuk-table__cell govuk-table__cell--numeric">2</td>
+          <td class="govuk-table__cell"><a href="/cases/day/2020-06-19/review-records-ball" class="govuk-link govuk-link--no-visited-state">Review records</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">
+            Ian Bell</td>
+          <td class="govuk-table__cell govuk-table__cell--numeric">2</td>
+          <td class="govuk-table__cell"><a href="/cases/day/2020-06-19/review-records-bell" class="govuk-link govuk-link--no-visited-state">Review records</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Tom Andrew Carlisle</td>
+          <td class="govuk-table__cell govuk-table__cell--numeric">1</td>
+          <td class="govuk-table__cell"><a href="/cases/day/2020-06-19/review-records-carlisle" class="govuk-link govuk-link--no-visited-state">Review records</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Paul Grey</td>
+          <td class="govuk-table__cell govuk-table__cell--numeric">2</td>
+          <td class="govuk-table__cell"><a href="/cases/day/2020-06-19/review-records-grey" class="govuk-link govuk-link--no-visited-state">Review records</a></td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Muhammed Riyan</td>
+          <td class="govuk-table__cell govuk-table__cell--numeric">2</td>
+          <td class="govuk-table__cell"><a href="/cases/day/2020-06-19/review-records-riyan" class="govuk-link govuk-link--no-visited-state">Review records</a></td>
+        </tr>
+      </tbody>
+    </table>
+
+
+
+    </div>
+    <div class="govuk-grid-column-one-third"></div>
+  </div>
+</div>
+
+
+
+
+
+</div>
+
+
+
+
+{% endblock %}

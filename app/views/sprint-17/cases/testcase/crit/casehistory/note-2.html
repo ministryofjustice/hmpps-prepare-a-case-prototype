@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+
+
+{% block pageTitle %}
+Progress report
+{% endblock %}
+
+{% block bodyStart %}
+
+{% block keyDetails %}
+{% include "includes/key_details/7_Test--no-action.html" %}
+{% endblock %}
+
+
+{% endblock %}
+
+
+{% block beforeContent %}
+<a href="/cases/testcase/crit/summary-2" class="govuk-back-link">Back to case summary</a>
+{% endblock %}
+
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <h1 class="govuk-heading-l govuk-!-margin-bottom-7">Case note</h1>
+
+  </div>
+</div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <p class="govuk-body govuk-hint govuk-!-margin-bottom-4">
+      Added by Sally Reinhart (PSO) on 17 April 2020 at 10.08 am
+    </p>
+    <div class="govuk-!-margin-bottom-9">
+      <p class="govuk-body">
+        Plead guilty. Seems v upset, claiming police didn't listen to him. Bereavement (brother) led to
+        drinking again and girlfriend kicked him out of family home. Alcohol , child concern risk factors increased.
+        Possible DV need to request callouts.</p>
+    </div>
+
+  </div>
+</div>
+</div>
+
+
+{% endblock %}

@@ -31,7 +31,7 @@ module.exports = function (router) {
       const dateNow = new Date()
       for (let i in req.body) {
         const updateObj = {
-          name: 'Mark Berridge',
+          name: 'Jo Wade',
           date: `${dateNow.getDate()} ${monthNames[dateNow.getMonth()]} ${dateNow.getFullYear()} at ${dateNow.getHours()}:${dateNow.getMinutes()}`,
           text: req.body[i]
         }

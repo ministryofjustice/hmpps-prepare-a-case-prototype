@@ -6,20 +6,6 @@
   {% include "../includes/head-main.html" %}
 {% endblock %}
 {% block content %}
-  <div class="govuk-error-summary" data-module="govuk-error-summary">
-    <div role="alert">
-      <h2 class="govuk-error-summary__title">
-        There is a problem
-      </h2>
-      <div class="govuk-error-summary__body">
-        <ul class="govuk-list govuk-error-summary__list">
-          <li>
-            <a href="#no-results-error">0 search results for {{data['search-term'] | default("Norman Osbourne")}}</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
   <main class="govuk-grid-row govuk-!-margin-bottom-7">
     <div class="govuk-grid-column-full">
       <section class="app-filter-card govuk-!-margin-bottom-6">
@@ -34,7 +20,7 @@
           </div>
         </form>
       </section>
-      <div class="govuk-form-group govuk-form-group--error">
+      <div class="govuk-form-group">
         <p id="no-results-error" class="govuk-error-message">
           <h3 class="govuk-heading-m">
             <span class="govuk-visually-hidden">Error:</span> 0 search results

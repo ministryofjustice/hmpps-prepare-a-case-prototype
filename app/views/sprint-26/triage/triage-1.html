@@ -1,0 +1,65 @@
+{% extends "layout.html" %}
+
+{% block head %}
+  {% include "../includes/head-psr.html" %}
+{% endblock %}
+
+{% block pageTitle %}
+  Case summary
+{% endblock %}
+
+{% block bodyStart %}
+  {% block keyDetails %}
+    {% include "../includes/key_details/11_Hart-current.html" %}
+  {% endblock %}
+{% endblock %}
+
+{% block beforeContent %}
+  <a href="#" onclick="javascript:history.go(-1)" class="govuk-back-link">Back to cases</a>
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <h1 class="govuk-heading-l govuk-!-margin-bottom-7">TRIAGE</h1>
+    </div>
+  </div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form action="triage-1" method="post" novalidate>
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                Is the most serious offence in scope for probation?
+              </h1>
+            </legend>
+            <div class="govuk-radios" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="offence-in-probation-scope" name="offence-in-probation-scope" type="radio" value="Yes, it's in scope for probation">
+                <label class="govuk-label govuk-radios__label" for="offence-in-probation-scope">
+                  Yes, it's in scope for probation
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="offence-in-probation-scope-2" name="offence-in-probation-scope" type="radio" value="No, it's non-imprisonable">
+                <label class="govuk-label govuk-radios__label" for="offence-in-probation-scope-2">
+                  No, it's non-imprisonable
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="offence-in-probation-scope-3" name="offence-in-probation-scope" type="radio" value="No, it's indictable only">
+                <label class="govuk-label govuk-radios__label" for="offence-in-probation-scope-3">
+                  No, it's indictable only
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+        <button class="govuk-button" data-module="govuk-button">
+          Continue
+        </button>
+      </form>
+    </div>
+  </div>
+{% endblock %}

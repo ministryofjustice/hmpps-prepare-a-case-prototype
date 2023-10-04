@@ -1,0 +1,139 @@
+{% extends "layout.html" %}
+
+
+{% block pageTitle %}
+Case summary
+{% endblock %}
+
+{% block bodyStart %}
+
+{% block keyDetails %}
+{% include "includes/key_details/10_Thornton-correct-crn.html" %}
+{% endblock %}
+
+
+{% endblock %}
+
+
+{% block beforeContent %}
+  <a href="#" onclick="javascript:history.go(-1)" class="govuk-back-link">Back to cases</a>
+{% endblock %}
+
+
+{% block content %}
+
+<div class="moj-banner moj-banner--success">
+
+    <svg class="moj-banner__icon" fill="currentColor" role="presentation" focusable="false"
+      xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" height="25" width="25">
+      <path d="M25,6.2L8.7,23.2L0,14.1l4-4.2l4.7,4.9L21,2L25,6.2z" /></svg>
+
+    <div class="moj-banner__message">
+      <span class="moj-banner__assistive">Success</span>You have successfully linked an nDelius record to Naomi Thornton.</div>
+
+  </div>
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+    <nav class="moj-sub-navigation" aria-label="Sub navigation">
+
+      <ul class="moj-sub-navigation__list">
+        <li class="moj-sub-navigation__item">
+          <a class="moj-sub-navigation__link govuk-link--no-visited-state" aria-current="page"
+            href="/cases/8/summary.html">Case summary</a>
+        </li>
+        <li class="moj-sub-navigation__item">
+          <a class="moj-sub-navigation__link govuk-link--no-visited-state"
+            href="/cases/8/probationrecord.html">Probation record</a>
+        </li>
+        <li class="moj-sub-navigation__item">
+          <a class="moj-sub-navigation__link govuk-link--no-visited-state" href="">Risk register</a>
+        </li>
+      </ul>
+      </ul>
+
+    </nav>
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <h1 class="govuk-heading-l govuk-!-margin-bottom-7">Case summary</h1>
+  </div>
+</div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-!-margin-bottom-8">
+      <h2 class="govuk-heading-m">Appearance</h2>
+      <p class="govuk-body">Court 1, morning session, Monday 8 March 2020 (1st listing).</p>
+    </div>
+    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+    <div class="govuk-!-margin-bottom-8">
+      <h2 class="govuk-heading-m">Offences</h2>
+      <h3 class="govuk-heading-s govuk-!-margin-top-4">Arrest by a constable for breaking / likely to break bail conditions - duty to surrender into the custody of a court</h3>
+      <p class="govuk-body govuk-!-margin-bottom-2">On 21 January 2021 at 123 Ellesemere Avenue, S1 9BC having being arrested by a constable for breaking a bail condition, namely by breaching her curfew by returning home on the 22nd of JANUARY 2021 at 0300hrs, being a person released on 17/01/2021 by Sheffield Magistrates' Court being under a duty to surrender into the custody of a court.</p>
+      <p class="govuk-body secondary-text-col">Contrary to section 7(3)(b), (4) and (5) of the Bail Act 1976.</p>
+    </div>
+    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+    <div class="govuk-!-margin-bottom-7">
+      <h2 class="govuk-heading-m">
+        Defendant details
+      </h2>
+      <dl class="govuk-summary-list govuk-summary-list--no-border">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Name
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Naomi Thornton
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Gender
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Female
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Date of birth
+          </dt>
+          <dd class="govuk-summary-list__value">
+            13 June 1993 (27 years old)
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Nationality
+          </dt>
+          <dd class="govuk-summary-list__value">
+            British
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Address
+          </dt>
+          <dd class="govuk-summary-list__value">
+            24 Bannon Court<br> Sheffield<br> South Yorkshire<br> S4 5TJ
+          </dd>
+        </div>
+      </dl>
+    </div>
+
+
+
+  </div>
+  <div class="govuk-grid-column-one-third">
+
+  </div>
+
+</div>
+</div>
+
+
+{% endblock %}

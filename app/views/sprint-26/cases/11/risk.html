@@ -1,0 +1,80 @@
+{% extends "layout.html" %}
+
+
+{% block pageTitle %}
+Risk
+{% endblock %}
+
+{% block bodyStart %}
+<div class="govuk-width-container">
+  <a href="#" onclick="javascript:history.go(-1)" class="govuk-back-link">Back to cases</a>
+</div>
+{% block keyDetails %}
+{% include "includes/key_details/11_Hart-new-presentence.html" %}
+{% endblock %}
+{% endblock %}
+
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <nav class="moj-sub-navigation" aria-label="Sub navigation">
+
+      <ul class="moj-sub-navigation__list">
+        <li class="moj-sub-navigation__item">
+          <a class="moj-sub-navigation__link govuk-link--no-visited-state" href="/cases/11/summary.html">Case summary</a>
+        </li>
+        <li class="moj-sub-navigation__item">
+          <a class="moj-sub-navigation__link govuk-link--no-visited-state" href="/cases/11/probationrecord.html">Probation
+            record</a>
+        </li>
+        <li class="moj-sub-navigation__item">
+          <a class="moj-sub-navigation__link govuk-link--no-visited-state" aria-current="page" href="/cases/11/risk.html">Risk register</a>
+        </li>
+      </ul>
+
+    </nav>
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <div class="govuk-!-margin-bottom-9">
+      <h1 class="govuk-heading-l govuk-!-margin-bottom-7">
+        Risk register
+    </h1>
+
+      <div class="govuk-tabs" data-module="govuk-tabs">
+        <h2 class="govuk-tabs__title">
+          Contents
+        </h2>
+        <ul class="govuk-tabs__list">
+          <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+            <a class="govuk-tabs__tab" href="#active">
+              Active (0)
+            </a>
+          </li>
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab" href="#inactive">
+              Inactive (0)
+            </a>
+          </li>
+        </ul>
+        <section class="govuk-tabs__panel" id="active">
+          <h2 class="govuk-heading-m">Active registrations</h2>
+          <p class="govuk-body">There are no active registrations.</p>
+
+        </section>
+        <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="inactive">
+          <h2 class="govuk-heading-m">Inactive registrations</h2>
+          <p class="govuk-body">There are no inactive registrations.</p>
+        </section>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}

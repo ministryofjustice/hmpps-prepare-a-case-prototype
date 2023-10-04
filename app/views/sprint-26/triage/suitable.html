@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block head %}
+  {% include "../includes/head-psr.html" %}
+{% endblock %}
+
+{% block pageTitle %}
+  Case summary
+{% endblock %}
+
+{% block bodyStart %}
+  {% block keyDetails %}
+    {% include "../includes/key_details/11_Hart-current.html" %}
+  {% endblock %}
+{% endblock %}
+
+{% block beforeContent %}
+  <a href="#" onclick="javascript:history.go(-1)" class="govuk-back-link">Back to cases</a>
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <h1 class="govuk-heading-l govuk-!-margin-bottom-7">TRIAGE Completed</h1>
+    </div>
+  </div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <p class="govuk-body">
+        Congratulations this is suitable for a verification report.
+      </p>
+      <p class="govuk-body">
+        Perhaps this is a link to assign the report to a person?
+      </p>
+    </div>
+  </div>
+{% endblock %}

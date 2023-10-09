@@ -44,7 +44,7 @@
             </a>
           </li>
           <li class="app-pagination__list-item">
-            <a href"#" class="app-pagination__link calendar-nav-link">
+            <a href="#" class="app-pagination__link calendar-nav-link">
               <span class="app-pagination__link-title calendar-nav-title">
                 <span class="app-pagination__link-text calendar-nav-text">Wed</span><br>
                 <span class="app-pagination__link-text calendar-nav-text govuk-!-font-weight-bold govuk-!-font-size-24">10</span>
@@ -75,6 +75,14 @@
               </span>
             </a>
           </li>
+          <li class="app-pagination__list-item app-pagination__disabled">
+            <span href="#" class="app-pagination__link calendar-nav-link">
+              <span class="app-pagination__link-title calendar-nav-title">
+                <span class="app-pagination__link-text calendar-nav-text">Sunday</span><br>
+                <span class="app-pagination__link-text calendar-nav-text govuk-!-font-weight-bold govuk-!-font-size-24">14</span>
+              </span>
+            </span>
+          </li>
           <li class="app-pagination__list-item">
             <a href="#" class="app-pagination__link calendar-nav-link">
               <span class="app-pagination__link-title calendar-nav-title">
@@ -83,42 +91,72 @@
               </span>
             </a>
           </li>
+          <li class="app-pagination__list-item">
+            <a href="#" class="app-pagination__link calendar-nav-link">
+              <span class="app-pagination__link-title calendar-nav-title">
+                <span class="app-pagination__link-text calendar-nav-text">Tue</span><br>
+                <span class="app-pagination__link-text calendar-nav-text govuk-!-font-weight-bold govuk-!-font-size-24">16</span>
+              </span>
+            </a>
+          </li>
+          <li class="app-pagination__list-item">
+            <a href="#" class="app-pagination__link calendar-nav-link">
+              <span class="app-pagination__link-title calendar-nav-title">
+                <span class="app-pagination__link-text calendar-nav-text">Wed</span><br>
+                <span class="app-pagination__link-text calendar-nav-text govuk-!-font-weight-bold govuk-!-font-size-24">17</span>
+              </span>
+            </a>
+          </li>
+          <li class="app-pagination__list-item">
+            <a href="#" class="app-pagination__link calendar-nav-link">
+              <span class="app-pagination__link-title calendar-nav-title">
+                <span class="app-pagination__link-text calendar-nav-text">Wed</span><br>
+                <span class="app-pagination__link-text calendar-nav-text govuk-!-font-weight-bold govuk-!-font-size-24">18</span>
+              </span>
+            </a>
+          </li>
+          <li class="app-pagination__list-item">
+            <a href="#" class="app-pagination__link calendar-nav-link">
+              <span class="app-pagination__link-title calendar-nav-title">
+                <span class="app-pagination__link-text calendar-nav-text">Thu</span><br>
+                <span class="app-pagination__link-text calendar-nav-text govuk-!-font-weight-bold govuk-!-font-size-24">19</span>
+              </span>
+            </a>
+          </li>
+          <li class="app-pagination__list-item">
+            <a href="" class="app-pagination__link calendar-nav-link">
+              <span class="app-pagination__link-title calendar-nav-title">
+                <span class="app-pagination__link-text calendar-nav-text">Fri</span><br>
+                <span class="app-pagination__link-text calendar-nav-text govuk-!-font-weight-bold govuk-!-font-size-24">20</span>
+              </span>
+            </a>
+          </li>
+          <li class="app-pagination__list-item">
+            <a href="#" class="app-pagination__link calendar-nav-link">
+              <span class="app-pagination__link-title calendar-nav-title">
+                <span class="app-pagination__link-text calendar-nav-text">Sat</span><br>
+                <span class="app-pagination__link-text calendar-nav-text govuk-!-font-weight-bold govuk-!-font-size-24">21</span>
+              </span>
+            </a>
+          </li>
+          <li class="app-pagination__list-item app-pagination__disabled">
+            <span href="#" class="app-pagination__link calendar-nav-link">
+              <span class="app-pagination__link-title calendar-nav-title">
+                <span class="app-pagination__link-text calendar-nav-text">Sunday</span><br>
+                <span class="app-pagination__link-text calendar-nav-text govuk-!-font-weight-bold govuk-!-font-size-24">22</span>
+              </span>
+            </span>
+          </li>
         </ul>
       </nav>
     </div>
   </header>
-  <div class="govuk-tabs" data-module="govuk-tabs">
-    <div class="app-case-updates">
-      <p class="govuk-body-s govuk-!-margin-bottom-1 app-last-updated-stamp"><span class="govuk-!-font-weight-bold">List status:</span> Updated today at 8:43am</p>
-      <p class="govuk-body-s govuk-!-margin-bottom-0 app-next-update-stamp"><span class="govuk-!-font-weight-bold">Next update:</span> Today between 9.30–9.45am</p>
-    </div>
-    <ul class="govuk-tabs__list">
-      <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-        <a class="govuk-tabs__tab" href="case-list.html">
-          Case list
-        </a>
-      </li>
-      <li class="govuk-tabs__list-item">
-        <a class="govuk-tabs__tab" href="recent-updates.html">
-          Recent updates (6)
-        </a>
-      </li>
-      <li class="govuk-tabs__list-item">
-        <a class="govuk-tabs__tab" href="recently-added.html">
-          Recently added (6)
-        </a>
-      </li>
-    </ul>
-  </div>
   {% block filter %}
     {% include "includes/filter.html" %}
   {% endblock %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-one-half">
       <span class="govuk-heading-m">187 cases</span>
-    </div>
-    <div class="govuk-grid-column-one-half">
-      <span class="align-right">
     </div>
   </div>
   <table class="govuk-table case-list-table govuk-table-xl">

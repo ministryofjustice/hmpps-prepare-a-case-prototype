@@ -25,8 +25,9 @@ module.exports = function (router) {
   router.post('/' + version + '/reports/verification-report/confirm-suitability', function (req, res) {
     const suitableForVerificationReport = req.session.data['suitable-for-verification-report']
 
-    if (suitableForVerificationReport == 'Yes'){
-      res.redirect('yes-suitable')
+    if (suitableForVerificationReport == 'Verification report'){
+      req.session.data.dylanAdamArmstrongReport = 'Verification report'
+      res.redirect('case-list')
     } else {
       res.redirect('what-other-advice')
     }

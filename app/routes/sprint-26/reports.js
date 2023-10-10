@@ -28,8 +28,17 @@ module.exports = function (router) {
     if (suitableForVerificationReport == 'Yes'){
       res.redirect('yes-suitable')
     } else {
-      res.redirect('no-not-suitable')
+      res.redirect('what-other-advice')
     }
+  });
+
+  router.get('/' + version + '/reports/verification-report/what-other-advice', function (req, res) {
+    res.render(version + '/reports/verification-report/what-other-advice')
+  });
+
+  router.post('/' + version + '/reports/verification-report/what-other-advice', function (req, res) {
+    req.session.data.dylanAdamArmstrongComplete = 'True'
+    res.redirect('case-list')
   });
 
 }

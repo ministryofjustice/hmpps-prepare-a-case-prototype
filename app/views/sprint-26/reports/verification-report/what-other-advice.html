@@ -1,0 +1,56 @@
+{% extends "layout-main.html" %}
+
+{% block pageTitle %}
+  Further advice
+{% endblock %}
+
+{% block header %}
+  {% include "../../includes/head-noprimary.html" %}
+{% endblock %}
+
+{% block content %}
+  <form action="what-other-advice" method="post" novalidate>
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+        <div class="govuk-form-group">
+          <h1 class="govuk-heading-l">Further advice</h1>
+          <p class="govuk-body">If a verification report is unsuitable then
+            you should consider what other advice could be needed for this
+            case.</p>
+        </div>
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+              <h2 class="govuk-fieldset__heading">What advice should be given?</h2>
+            </legend>
+              <div class="govuk-radios" data-module="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="what-other-advice" name="what-other-advice" type="radio" value="Pre-sentence report" {{ checked("what-other-advice", "Pre-sentence report") }}>
+                  <label class="govuk-label govuk-radios__label" for="what-other-advice">
+                    Pre-sentence report
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="what-other-advice-2" name="what-other-advice" type="radio" value="No" {{ checked("what-other-advice", "No advice is needed") }}>
+                  <label class="govuk-label govuk-radios__label" for="what-other-advice-2">
+                    No advice is needed
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+        </div>
+        <div class="govuk-form-group">
+          <h2 class="govuk-label-wrapper">
+            <label class="govuk-label govuk-label--m" for="advice-rationale">
+              Explain your rationale
+            </label>
+          </h2>
+          <textarea class="govuk-textarea" id="advice-rationale" name="advice-rationale" rows="3" aria-describedby="advice-rationale-hint">{{data ['advice-rationale']}}</textarea>
+        </div>
+        <button class="govuk-button" data-module="govuk-button">
+          Continue
+        </button>
+      </div>
+    </div>
+  </form>
+{% endblock %}

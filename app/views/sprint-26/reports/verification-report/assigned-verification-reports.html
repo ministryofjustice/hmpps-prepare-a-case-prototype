@@ -1,0 +1,86 @@
+{% extends "layout-main.html" %}
+
+{% block pageTitle %}
+  Verification Reports
+{% endblock %}
+
+{% block header %}
+  {% include "../../includes/head-main-report.html" %}
+  <div class="govuk-width-container">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+        <nav class="moj-sub-navigation" aria-label="Sub navigation">
+          <ul class="moj-sub-navigation__list">
+            <li class="moj-sub-navigation__item">
+              <a class="moj-sub-navigation__link" aria-current="page" href="case-list">Verification reports</a>
+            </li>
+            <li class="moj-sub-navigation__item">
+              <a class="moj-sub-navigation__link" href="assigned-verification-reports">Assigned verification reports</a>
+            </li>
+            <li class="moj-sub-navigation__item">
+              <a class="moj-sub-navigation__link" href="../pre-sentence-report/case-list">Pre-sentence reports</a>
+            </li>
+            <li class="moj-sub-navigation__item">
+              <a class="moj-sub-navigation__link" href="TODO">Assigned pre-sentence reports</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+
+{% block content %}
+  <form action="case-list" method="post" novalidate>
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+          <h1 class="govuk-heading-l govuk-!-margin-bottom-4">
+            Assigned Verification reports
+          </h1>
+        </div>
+    </div>
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+        <table class="govuk-table govuk-table__full-width govuk-!-margin-bottom-9">
+          <caption class="govuk-table__caption govuk-table__caption--m">
+            <h2 class="govuk-heading-m govuk-!-margin-bottom-0">14 October2023</h2>
+          </caption>
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Defendant (CRN)</th>
+              <th scope="col" class="govuk-table__header">Probation status</th>
+              <th scope="col" class="govuk-table__header app-cell-width-restricted">
+                Offence</th>
+              <th scope="col" class="govuk-table__header">Assigned to</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            {% if (data['dylanAdamArmstrongReport'] == 'Verification report')  %}
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header"><a href="../../13/summary.html" class="govuk-link">
+                Dylan Adam Armstrong</a><br /><span class="govuk-hint">
+                  V654123</span></th>
+              <td class="govuk-table__cell">Current</td>
+              <td class="govuk-table__cell">Common assault and battery</td>
+              <td class="govuk-table__cell">Peter Parker</td>
+            </tr>
+            {% endif %}
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header"><a href="../../13/summary.html" class="govuk-link">
+                Otto Octavius</a><br /><span class="govuk-hint">
+                  Y748645</span></th>
+              <td class="govuk-table__cell"><span class="moj-badge moj-badge--black pac-badge">
+                Psr</span><br>Previously
+                known <span class="govuk-caption-m">Order ended 1 June 2023
+                </span></td>
+              <td class="govuk-table__cell">Aggravated assault</td>
+              <td class="govuk-table__cell">Eddie Brock</td>
+            </tr>
+          </tbody>
+        </table>
+        <h2 class="govuk-heading-m govuk-!-margin-bottom-0">No more assigned
+          pre-sentence reports</h2>
+      </div>
+    </div>
+  </form>
+{% endblock %}

@@ -19,3 +19,4 @@ require('./routes/sprint-16/routes.js')(router);
 require('./routes/sprint-17/routes.js')(router);
 require('./routes/sprint-26/routes.js')(router);
 require('./routes/sprint-26/triage.js')(router);
+require('./routes/sprint-26/reports.js')(router);

@@ -1,0 +1,44 @@
+{% extends "layout-main.html" %}
+
+{% block pageTitle %}
+  Is Dylan Adam Armstrong suitable for a verification report?
+{% endblock %}
+
+{% block header %}
+  {% include "../../includes/head-noprimary.html" %}
+{% endblock %}
+
+{% block content %}
+  <form action="confirm-suitability" method="post" novalidate>
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                Is Dylan Adam Armstrong suitable for a verification report?
+              </h1>
+            </legend>
+              <div class="govuk-radios" data-module="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="suitable-for-verification-report" name="suitable-for-verification-report" type="radio" value="Yes" {{ checked("suitable-for-verification-report", "Yes") }}>
+                  <label class="govuk-label govuk-radios__label" for="suitable-for-verification-report">
+                    Yes
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="suitable-for-verification-report-2" name="suitable-for-verification-report" type="radio" value="No" {{ checked("suitable-for-verification-report", "No") }}>
+                  <label class="govuk-label govuk-radios__label" for="suitable-for-verification-report-2">
+                    No
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+        </div>
+        <button class="govuk-button" data-module="govuk-button">
+          Continue
+        </button>
+      </div>
+    </div>
+  </form>
+{% endblock %}

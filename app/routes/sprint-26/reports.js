@@ -37,7 +37,15 @@ module.exports = function (router) {
   });
 
   router.post('/' + version + '/reports/verification-report/what-other-advice', function (req, res) {
-    req.session.data.dylanAdamArmstrongComplete = 'True'
+    const whatOtherAdvice = req.session.data['what-other-advice']
+
+    if (whatOtherAdvice == 'Pre-sentence report'){
+      req.session.data.dylanAdamArmstrongReport = 'Pre-sentence report'
+    } else if (whatOtherAdvice == 'No advice needed') {
+      req.session.data.dylanAdamArmstrongReport = 'No advice needed'
+    }
+
+
     res.redirect('case-list')
   });
 

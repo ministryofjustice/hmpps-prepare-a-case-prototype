@@ -1,0 +1,46 @@
+{% extends "layout-main.html" %}
+{% block pageTitle %}
+  Cases
+{% endblock %}
+{% block header %}
+  {% include "../includes/head-main.html" %}
+{% endblock %}
+{% block content %}
+  <div class="govuk-error-summary" data-module="govuk-error-summary">
+    <div role="alert">
+      <h2 class="govuk-error-summary__title">
+        There is a problem
+      </h2>
+      <div class="govuk-error-summary__body">
+        <ul class="govuk-list govuk-error-summary__list">
+          <li>
+            <a href="#error-validate-characters">Enter a CRN in the format one letter followed by 6 numbers, for example A123456.</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <main class="govuk-grid-row govuk-!-margin-bottom-7">
+    <div class="govuk-grid-column-full">
+      <section class="app-filter-card">
+        <div class="govuk-form-group--error">
+          <h2 class="govuk-heading-m govuk-!-margin-bottom-3">Search</h2>
+          <form name="app-search" id="app-search" method="post" action="../../../case-search">
+            <div class="search-group">
+              <p id="error-validate-characters" class="govuk-error-message">
+                <span class="govuk-visually-hidden">Error:</span> Enter a CRN in
+                the format one letter followed by 6 numbers, for example A123456.
+              </p>
+              <label class="govuk-label govuk-!-margin-bottom-3" for="search-term">
+                Enter CRN or defendant name.</label>
+              <input class="govuk-input govuk-!-width-one-third" id="search-term" name="term" type="text" value="{{data['search-term'] | default("Norman Osbourne")}}">
+              <button class="govuk-button govuk-!-margin-bottom-1 govuk-!-margin-left-3" data-module="govuk-button" type="submit">
+                Search</button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </div>
+  </main>
+
+{% endblock %}

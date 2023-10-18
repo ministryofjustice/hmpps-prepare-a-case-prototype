@@ -1,7 +1,12 @@
 {% extends "layout.html" %}
 
+{% block head %}
+  {{ super() }}
+  {% include "../../includes/head-psr.html" %}
+{% endblock %}
+
 {% block pageTitle %}
-  Probation record
+  Case summary
 {% endblock %}
 
 {% block beforeContent %}
@@ -15,22 +20,26 @@
       <nav class="moj-sub-navigation" aria-label="Sub navigation">
         <ul class="moj-sub-navigation__list">
           <li class="moj-sub-navigation__item">
-            <a class="moj-sub-navigation__link govuk-link--no-visited-state" href="summary">
+            <a class="moj-sub-navigation__link govuk-link--no-visited-state" href="case-summary">
               Case summary</a>
           </li>
           <li class="moj-sub-navigation__item">
-            <a class="moj-sub-navigation__link govuk-link--no-visited-state" aria-current="page" href="probationrecord">
+            <a class="moj-sub-navigation__link govuk-link--no-visited-state" aria-current="page" href="probation-record">
               Probation record</a>
           </li>
           <li class="moj-sub-navigation__item">
-            <a class="moj-sub-navigation__link govuk-link--no-visited-state" href="risk">
+            <a class="moj-sub-navigation__link govuk-link--no-visited-state" href="risk-register">
               Risk register</a>
           </li>
+          <li class="moj-sub-navigation__item">
+            <a class="moj-sub-navigation__link govuk-link--no-visited-state" href="cps-pack">
+              CPS Pack</a>
+          </li>
+        </ul>
         </ul>
       </nav>
     </div>
   </div>
-
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
       <h1 class="govuk-heading-l govuk-!-margin-bottom-7">Probation record</h1>

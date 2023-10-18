@@ -5,23 +5,23 @@
 {% endblock %}
 
 {% block header %}
-  {% include "../../includes/head-main-report.html" %}
+  {% include "../includes/head-main-report.html" %}
   <div class="govuk-width-container">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-full">
         <nav class="moj-sub-navigation" aria-label="Sub navigation">
           <ul class="moj-sub-navigation__list">
             <li class="moj-sub-navigation__item">
-              <a class="moj-sub-navigation__link" href="../verification-report/case-list">Verification reports</a>
+              <a class="moj-sub-navigation__link" href="unassigned-verification-reports">Unassigned verification reports</a>
             </li>
             <li class="moj-sub-navigation__item">
-              <a class="moj-sub-navigation__link" href="../verification-report/assigned-verification-reports">Assigned verification reports</a>
+              <a class="moj-sub-navigation__link" aria-current="page" href="unassigned-pre-sentence-reports">Unassigned pre-sentence reports</a>
             </li>
             <li class="moj-sub-navigation__item">
-              <a class="moj-sub-navigation__link" aria-current="page" href="case-list">Pre-sentence reports</a>
+              <a class="moj-sub-navigation__link" href="assigned-reports">Assigned reports</a>
             </li>
             <li class="moj-sub-navigation__item">
-              <a class="moj-sub-navigation__link" href="TODO">Assigned pre-sentence reports</a>
+              <a class="moj-sub-navigation__link" href="TODO">No advice needed</a>
             </li>
           </ul>
         </nav>
@@ -70,7 +70,7 @@
             </tbody>
           </table>
         {% endif %}
-        <h2 class="govuk-heading-m govuk-!-margin-bottom-0">No more reports</h2>
+        <h2 class="govuk-heading-m">No more reports</h2>
       </div>
     </div>
   </form>

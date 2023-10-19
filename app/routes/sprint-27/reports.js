@@ -27,7 +27,7 @@ module.exports = function (router) {
 
     if (suitableForVerificationReport == 'Verification report'){
       req.session.data.dylanAdamArmstrongReport = 'Verification report'
-      res.redirect('case-list')
+      res.redirect('../unassigned-verification-reports')
     } else {
       res.redirect('what-other-advice')
     }

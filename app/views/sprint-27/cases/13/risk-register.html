@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+
+{% block head %}
+  {{ super() }}
+  {% include "../../includes/head-psr.html" %}
+{% endblock %}
+
+{% block pageTitle %}
+  Risk register
+{% endblock %}
+
+{% block beforeContent %}
+  {% block keyDetails %}
+    {% include "../../includes/key_details/1_Armstrong.html" %}
+  {% endblock %}
+  <a href="#" onclick="javascript:history.go(-1)" class="govuk-back-link">Back
+    to cases</a>
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <nav class="moj-sub-navigation" aria-label="Sub navigation">
+        <ul class="moj-sub-navigation__list">
+          <li class="moj-sub-navigation__item">
+            <a class="moj-sub-navigation__link govuk-link--no-visited-state" href="case-summary">
+              Case summary</a>
+          </li>
+          <li class="moj-sub-navigation__item">
+            <a class="moj-sub-navigation__link govuk-link--no-visited-state" href="probation-record">
+              Probation record</a>
+          </li>
+          <li class="moj-sub-navigation__item">
+            <a class="moj-sub-navigation__link govuk-link--no-visited-state" aria-current="page" href="risk-register">
+              Risk register</a>
+          </li>
+          <li class="moj-sub-navigation__item">
+            <a class="moj-sub-navigation__link govuk-link--no-visited-state" href="cps-pack">
+              CPS Pack</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  {% include "../../includes/case-information/adam-armstrong/risk-register-content.html" %}
+{% endblock %}

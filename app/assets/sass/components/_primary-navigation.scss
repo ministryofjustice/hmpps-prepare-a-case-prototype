@@ -1,12 +1,17 @@
 .moj-primary-navigation {
   background-color: govuk-colour("light-grey");
+  margin-bottom: govuk-spacing(4);
+}
+
+.moj-primary-navigation .moj-primary-navigation {
+  margin-bottom: govuk-spacing(0);
 }
 
 .moj-primary-navigation__container {
   @include moj-width-container;
   font-size: 0; // Hide whitespace between elements
   text-align: justify; // Trick to remove the need for floats
-
+  max-width: 1220px;
   &:after {
     content: '';
     display: inline-block;

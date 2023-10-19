@@ -2,12 +2,12 @@ module.exports = function (router) {
 
   var version = "sprint-27";
 
-  router.get('/' + version + '/reports/verification-report/case-list', function (req, res) {
-    res.render(version + '/reports/verification-report/case-list')
+  router.get('/' + version + '/reports/unassigned-verification-reports', function (req, res) {
+    res.render(version + '/reports/unassigned-verification-reports')
   });
 
-  router.post('/' + version + '/reports/verification-report/case-list', function (req, res) {
-      res.redirect('check-suitability')
+  router.post('/' + version + '/reports/unassigned-verification-reports', function (req, res) {
+      res.redirect('verification-report/check-suitability')
   });
 
   router.get('/' + version + '/reports/verification-report/check-suitability', function (req, res) {
@@ -45,7 +45,7 @@ module.exports = function (router) {
     } else if (whatOtherAdvice == 'No advice needed') {
       req.session.data.dylanAdamArmstrongReport = 'No advice needed'
     }
-    res.redirect('case-list')
+    res.redirect('../unassigned-verification-reports')
   });
 
 }

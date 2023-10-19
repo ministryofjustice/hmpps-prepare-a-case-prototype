@@ -45,7 +45,7 @@ module.exports = function (router) {
     } else if (whatOtherAdvice == 'No advice needed') {
       req.session.data.dylanAdamArmstrongReport = 'No advice needed'
     }
-    res.redirect('case-list')
+    res.redirect('../unassigned-verification-reports')
   });
 
 }

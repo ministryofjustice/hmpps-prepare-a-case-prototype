@@ -31,60 +31,80 @@
 {% endblock %}
 
 {% block content %}
-  <form action="check-suitability" method="post" novalidate>
-    <div class="govuk-grid-row">
-      <div class="govuk-grid-column-full">
-        <span class="govuk-caption-l">Previously known | PNC: 2001/A123456 |
-          CRN: V654123</span>
-        <h1 class="govuk-heading-l govuk-!-margin-bottom-4">Review Dylan Adam
-          Armstrong's information</h1>
-      </div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <span class="govuk-caption-l">Previously known | PNC: 2001/A123456 |
+        CRN: V654123</span>
+      <h1 class="govuk-heading-l govuk-!-margin-bottom-4">Review Dylan Adam
+        Armstrong's information</h1>
     </div>
-    <div class="govuk-grid-row">
-      <div class="govuk-grid-column-full">
-        <div class="govuk-tabs" data-module="govuk-tabs">
-          <h2 class="govuk-tabs__title">
-            Contents
-          </h2>
-          <ul class="govuk-tabs__list">
-            <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-              <a class="govuk-tabs__tab" href="#case-summary">
-                Case summary
-              </a>
-            </li>
-            <li class="govuk-tabs__list-item">
-              <a class="govuk-tabs__tab" href="#probation-record">
-                Probation record
-              </a>
-            </li>
-            <li class="govuk-tabs__list-item">
-              <a class="govuk-tabs__tab" href="#risk-register">
-                Risk register
-              </a>
-            </li>
-            <li class="govuk-tabs__list-item">
-              <a class="govuk-tabs__tab" href="#cps-pack">
-                CPS pack
-              </a>
-            </li>
-          </ul>
-          <div class="govuk-tabs__panel" id="case-summary">
-            {% include "../../includes/case-information/adam-armstrong/case-summary-content.html" %}
-          </div>
-          <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="probation-record">
-            {% include "../../includes/case-information/adam-armstrong/probation-record-content.html" %}
-          </div>
-          <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="risk-register">
-            {% include "../../includes/case-information/adam-armstrong/risk-register-content.html" %}
-          </div>
-          <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="cps-pack">
-            {% include "../../includes/case-information/adam-armstrong/cps-pack-content.html" %}
-          </div>
+  </div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <div class="govuk-tabs" data-module="govuk-tabs">
+        <h2 class="govuk-tabs__title">
+          Contents
+        </h2>
+        <ul class="govuk-tabs__list">
+          <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+            <a class="govuk-tabs__tab" href="#case-summary">
+              Case summary
+            </a>
+          </li>
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab" href="#probation-record">
+              Probation record
+            </a>
+          </li>
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab" href="#risk-register">
+              Risk register
+            </a>
+          </li>
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab" href="#cps-pack">
+              CPS pack
+            </a>
+          </li>
+        </ul>
+        <div class="govuk-tabs__panel" id="case-summary">
+          {% include "../../includes/case-information/adam-armstrong/case-summary-content.html" %}
         </div>
+        <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="probation-record">
+          {% include "../../includes/case-information/adam-armstrong/probation-record-content.html" %}
+        </div>
+        <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="risk-register">
+          {% include "../../includes/case-information/adam-armstrong/risk-register-content.html" %}
+        </div>
+        <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="cps-pack">
+          <form action="cps-pack-content" method="post" novalidate>
+            <div class="govuk-grid-row">
+              <div class="govuk-grid-column-full">
+                <div class="govuk-!-margin-bottom-9">
+                  <h1 class="govuk-heading-l govuk-!-margin-bottom-7">Review CPS pack</h1>
+                  <p class="govuk-body">
+                    The CPS pack consists of one or more documents. It should record the
+                    anticipated plea.
+                  </p>
+                  <p class="govuk-body govuk-!-margin-bottom-9">
+                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="govuk-link" rel="noreferrer noopener" target="_blank">
+                      View CPS pack (opens in new tab)</a>
+                  </p>
+                  <h2 class="govuk-heading-l govuk-!-margin-bottom-7">Anticipated plea</h2>
+                  <p class="govuk-body">
+                    Their anticipated plea is guilty.
+                  </p>                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <form action="check-suitability" method="post" novalidate>
         <button class="govuk-button" data-module="govuk-button">
           Continue
         </button>
-      </div>
+      </form>
+    </form>
     </div>
-  </form>
+  </div>
 {% endblock %}

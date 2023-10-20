@@ -56,4 +56,19 @@ module.exports = function (router) {
     res.redirect('../unassigned-verification-reports')
   });
 
+  router.get('/' + version + '/reports/no-advice-needed', function (req, res) {
+    res.render(version + '/reports/no-advice-needed')
+  });
+
+  router.post('/' + version + '/reports/no-advice-needed', function (req, res) {
+      res.redirect('request-advice')
+  });
+
+  router.get('/' + version + '/reports/request-advice', function (req, res) {
+    res.render(version + '/reports/request-advice')
+  });
+
+  router.post('/' + version + '/reports/request-advice', function (req, res) {
+      res.redirect('no-advice-needed')
+  });
 }

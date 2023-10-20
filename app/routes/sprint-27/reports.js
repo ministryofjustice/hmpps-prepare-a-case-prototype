@@ -27,10 +27,18 @@ module.exports = function (router) {
 
     if (suitableForVerificationReport == 'Verification report'){
       req.session.data.dylanAdamArmstrongReport = 'Verification report'
-      res.redirect('case-list')
+      res.redirect('assign-user')
     } else {
       res.redirect('what-other-advice')
     }
+  });
+
+  router.get('/' + version + '/reports/verification-report/assign-user', function (req, res) {
+    res.render(version + '/reports/verification-report/assign-user')
+  });
+
+  router.post('/' + version + '/reports/verification-report/assign-user', function (req, res) {
+      res.redirect('../unassigned-verification-reports')
   });
 
   router.get('/' + version + '/reports/verification-report/what-other-advice', function (req, res) {
@@ -48,4 +56,19 @@ module.exports = function (router) {
     res.redirect('../unassigned-verification-reports')
   });
 
+  router.get('/' + version + '/reports/no-advice-needed', function (req, res) {
+    res.render(version + '/reports/no-advice-needed')
+  });
+
+  router.post('/' + version + '/reports/no-advice-needed', function (req, res) {
+      res.redirect('request-advice')
+  });
+
+  router.get('/' + version + '/reports/request-advice', function (req, res) {
+    res.render(version + '/reports/request-advice')
+  });
+
+  router.post('/' + version + '/reports/request-advice', function (req, res) {
+      res.redirect('no-advice-needed')
+  });
 }

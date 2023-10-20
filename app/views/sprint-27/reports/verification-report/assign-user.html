@@ -1,7 +1,7 @@
 {% extends "layout-main.html" %}
 
 {% block pageTitle %}
-  Is Dylan Adam Armstrong suitable for a verification report?
+  Assign user
 {% endblock %}
 
 {% block header %}
@@ -31,34 +31,22 @@
 {% endblock %}
 
 {% block content %}
-  <form action="confirm-suitability" method="post" novalidate>
+  <form action="assign-user" method="post" novalidate>
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-full">
         <div class="govuk-form-group">
-          <fieldset class="govuk-fieldset">
-            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-              <h1 class="govuk-fieldset__heading">
-                Is Dylan Adam Armstrong suitable for a verification report?
-              </h1>
-            </legend>
-              <div class="govuk-radios" data-module="govuk-radios">
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="suitable-for-verification-report" name="suitable-for-verification-report" type="radio" value="Verification report" {{ checked("suitable-for-verification-report", "verification-report") }}>
-                  <label class="govuk-label govuk-radios__label" for="suitable-for-verification-report">
-                    Yes
-                  </label>
-                </div>
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="suitable-for-verification-report-2" name="suitable-for-verification-report" type="radio" value="No" {{ checked("suitable-for-verification-report", "No") }}>
-                  <label class="govuk-label govuk-radios__label" for="suitable-for-verification-report-2">
-                    No
-                  </label>
-                </div>
-              </div>
-            </fieldset>
+          <h1 class="govuk-label-wrapper">
+            <label class="govuk-label govuk-label--l" for="event-name">
+              Assign a person to prepare this report
+            </label>
+          </h1>
+          <div id="signIn-hint" class="govuk-hint">
+            Enter their name or email address.
+          </div>
+          <input class="govuk-input govuk-input--width-30" id="assigned-user" name=assigned-user" type="text" value="{{data['assign-user']}}" >
         </div>
         <button class="govuk-button" data-module="govuk-button">
-          Confirm suitability
+          Assign report
         </button>
       </div>
     </div>

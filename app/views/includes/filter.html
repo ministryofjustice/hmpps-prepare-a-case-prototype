@@ -128,8 +128,8 @@
   </div>
 
   <div class="app-filter-container">
-    <button id="button-cps" type="button" class="app-filter-button" data-controls="cps-selection" onclick="event.stopPropagation(); toggleFilter(this)" style="width:250px;">CPS Pack</button>
-    <div id="cps-selection" class="app-filter-selection govuk-visually-hidden">
+    <button id="button-cps" type="button" class="app-filter-button" data-controls="anticipated-plea-selection" onclick="event.stopPropagation(); toggleFilter(this)" style="width:250px;">Anticipated plea</button>
+    <div id="anticipated-plea-selection" class="app-filter-selection govuk-visually-hidden">
 
       {{ govukCheckboxes({
         idPrefix: "checkbox-session",
@@ -144,24 +144,16 @@
         },
         items: [
           {
-            value: "Due",
-            text: "Due"
+            value: "No anticipated plea",
+            text: "No anticipated plea"
           },
           {
-            value: "Available",
-            text: "Available"
+            value: "Guilty anticipated plea",
+            text: "Guilty anticipated plea"
           },
           {
-            value: "Unavailable",
-            text: "Unavailable"
-          },
-          {
-            value: "GAP",
-            text: "GAP"
-          },
-          {
-            value: "NGAP",
-            text: "NGAP"
+            value: "Not guilty anticipated plea",
+            text: "Not guilty anticipated plea"
           }
         ]
       }) }}

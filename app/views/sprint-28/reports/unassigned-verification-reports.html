@@ -1,0 +1,286 @@
+{% extends "layout-main.html" %}
+
+{% block pageTitle %}
+  Unassigned Reports
+{% endblock %}
+
+{% block header %}
+  {% include "../includes/head-main-report.html" %}
+  <div class="govuk-width-container">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+        <nav class="moj-sub-navigation" aria-label="Sub navigation">
+          <ul class="moj-sub-navigation__list">
+            <li class="moj-sub-navigation__item">
+              <a class="moj-sub-navigation__link" aria-current="page" href="unassigned-verification-reports">Unassigned verification reports</a>
+            </li>
+            <li class="moj-sub-navigation__item">
+              <a class="moj-sub-navigation__link" href="unassigned-pre-sentence-reports">Unassigned pre-sentence reports</a>
+            </li>
+            <li class="moj-sub-navigation__item">
+              <a class="moj-sub-navigation__link" href="assigned-reports">Assigned reports</a>
+            </li>
+            <li class="moj-sub-navigation__item">
+              <a class="moj-sub-navigation__link" href="no-advice-needed">No advice needed</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+
+{% block content %}
+  <form action="unassigned-verification-reports" method="post" novalidate>
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+        <h1 class="govuk-heading-l govuk-!-margin-bottom-4">
+          Unassigned verification reports
+        </h1>
+      </div>
+    </div>
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+        <table class="govuk-table govuk-table__full-width govuk-!-margin-bottom-9">
+          <caption class="govuk-table__caption govuk-table__caption--m">
+            <h2 class="govuk-heading-m govuk-!-margin-bottom-0">14 October 2023</h2>
+          </caption>
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Defendant (CRN)</th>
+              <th scope="col" class="govuk-table__header">Probation status</th>
+              <th scope="col" class="govuk-table__header app-cell-width-restricted">
+                Offence</th>
+              <th scope="col" class="govuk-table__header">Action</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            {% if (data['dylanAdamArmstrongReport'] == null)  %}
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header"><a href="../../13/summary.html" class="govuk-link">
+                Dylan Adam Armstrong</a><br /><span class="govuk-hint">
+                  V654123</span></th>
+              <td class="govuk-table__cell">Current</td>
+              <td class="govuk-table__cell">Common assault and battery</td>
+              <td class="govuk-table__cell"><button class="govuk-button" data-module="govuk-button">
+                Check suitability for verification report</button></td>
+            </tr>
+            {% endif %}
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header"><a href="../../13/summary.html" class="govuk-link">
+                Harry Smith</a><br /><span class="govuk-hint">
+                  B456123</span></th>
+              <td class="govuk-table__cell">Current</td>
+              <td class="govuk-table__cell">Theft from a shop</td>
+              <td class="govuk-table__cell"><button class="govuk-button" data-module="govuk-button">
+                Check suitability for verification report</button></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header"><a href="../../13/summary.html" class="govuk-link">
+                Andrei Edwards</a><br /><span class="govuk-hint">
+                  DX1234FF</span></th>
+              <td class="govuk-table__cell">Current</td>
+              <td class="govuk-table__cell">Use threatening / abusive / insulting
+                words / behaviour with intent to cause fear of / provoke unlawful
+                violence</td>
+              <td class="govuk-table__cell"><button class="govuk-button" data-module="govuk-button">
+                Check suitability for verification report</button></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header"><a href="../../13/summary.html" class="govuk-link">
+                Hannah Francis</a><br /><span class="govuk-hint">
+                  X664857</span></th>
+              <td class="govuk-table__cell"><span class="moj-badge moj-badge--black pac-badge">
+                Psr</span><br>Previously
+                known <span class="govuk-caption-m">Order ended 27 October 2019
+                </span></td>
+              <td class="govuk-table__cell">Drove motor vehicle when alcohol level
+                above limit</td>
+              <td class="govuk-table__cell"><button class="govuk-button" data-module="govuk-button">
+                Check suitability for verification report</button></td>
+            </tr>
+          </tbody>
+        </table>
+        <table class="govuk-table govuk-table__full-width govuk-!-margin-bottom-9">
+          <caption class="govuk-table__caption govuk-table__caption--m">
+            <h2 class="govuk-heading-m govuk-!-margin-bottom-0">15 October 2023</h2>
+          </caption>
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Defendant (CRN)</th>
+              <th scope="col" class="govuk-table__header">Probation status</th>
+              <th scope="col" class="govuk-table__header app-cell-width-restricted">
+                Offence</th>
+              <th scope="col" class="govuk-table__header">Action</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header"><a href="../../13/summary.html" class="govuk-link">
+                Rhys John Houghton</a><br /><span class="govuk-hint">
+                  DX12341T</span></th>
+              <td class="govuk-table__cell"><div><span class="moj-badge moj-badge--black pac-badge">
+                Breach</span></div>Current</td>
+              <td class="govuk-table__cell">Attempted theft from a shop</td>
+              <td class="govuk-table__cell"><button class="govuk-button" data-module="govuk-button">
+                  Check suitability for verification report</button></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header"><a href="../../13/summary.html" class="govuk-link">
+                Klara McDonald</a><br /><span class="govuk-hint">
+                HD18745F</span></th>
+              <td class="govuk-table__cell"><span class="moj-badge moj-badge--red pac-badge">
+                Possible NDelius Record</span></td>
+              <td class="govuk-table__cell">Common assault and battery</td>
+              <td class="govuk-table__cell"><button class="govuk-button" data-module="govuk-button">
+                  Check suitability for verification report</button></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header"><a href="../../13/summary.html" class="govuk-link">
+                Ava Ryan</a><br /><span class="govuk-hint">F847388</span></th>
+              <td class="govuk-table__cell">Current</td>
+              <td class="govuk-table__cell">Sexual assault on a male</td>
+              <td class="govuk-table__cell"><button class="govuk-button" data-module="govuk-button">
+                  Check suitability for verification report</button></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header"><a href="../../13/summary.html" class="govuk-link">
+                Gary Hart</a><br /><span class="govuk-hint">No CRN</span></th>
+              <td class="govuk-table__cell">No record</td>
+              <td class="govuk-table__cell">Common assault and battery</td>
+              <td class="govuk-table__cell"><button class="govuk-button" data-module="govuk-button">
+                  Check suitability for verification report</button></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header"><a href="../../13/summary.html" class="govuk-link">
+                Naomi Thornton</a><br /><span class="govuk-hint">
+                  J478183</span></th>
+              <td class="govuk-table__cell">Previously known
+                <span data-cy="previously-known-termination-date" class="govuk-caption-m">
+                  Order ended 24 November 2016</span></td>
+              <td class="govuk-table__cell">Arrest by a constable for breaking /
+                likely to break bail conditions - duty to surrender into the
+                custody of a court</td>
+              <td class="govuk-table__cell"><button class="govuk-button" data-module="govuk-button">
+                  Check suitability for verification report</button></td>
+            </tr>
+          </tbody>
+        </table>
+        <table class="govuk-table govuk-table__full-width govuk-!-margin-bottom-9">
+          <caption class="govuk-table__caption govuk-table__caption--m">
+            <h2 class="govuk-heading-m govuk-!-margin-bottom-0">16 October 2023</h2>
+          </caption>
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Defendant (CRN)</th>
+              <th scope="col" class="govuk-table__header">Probation status</th>
+              <th scope="col" class="govuk-table__header app-cell-width-restricted">
+                Offence</th>
+              <th scope="col" class="govuk-table__header">Action</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header"><a href="../../13/summary.html" class="govuk-link">
+                Declan Dennis Bradley</a><br /><span class="govuk-hint">
+                  No CRN</span></th>
+              <td class="govuk-table__cell">No record</td>
+              <td class="govuk-table__cell">
+                <ol class="govuk-list govuk-list--number">
+                  <li>Obstruct / resist a constable in execution of duty</li>
+                  <li>Use a handheld mobile phone / device while driving a motor
+                    vehicle on a road - endorsable offence</li>
+                  <li>Use a motor vehicle on a road / public place without third
+                    party insurance</li>
+                  <liDrive a motor vehicle otherwise than in accordance with a
+                    licence - endorsable offence</li>
+                </ol>
+              </td>
+              <td class="govuk-table__cell"><button class="govuk-button" data-module="govuk-button">
+                  Check suitability for verification report</button></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header"><a href="../../13/summary.html" class="govuk-link">
+                Noah Harvey</a><br /><span class="govuk-hint">No CRN</span></th>
+              <td class="govuk-table__cell">No record</td>
+              <td class="govuk-table__cell">
+                <ol class="govuk-list govuk-list--number">
+                  <li>Possession of a controlled drug of Class B - Amphetamine</li>
+                  <li>Drunk and disorderly in a public place</li>
+                </ol>
+              </td>
+              <td class="govuk-table__cell"><button class="govuk-button" data-module="govuk-button">
+                  Check suitability for verification report</button></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header"><a href="../../13/summary.html" class="govuk-link">
+                Zane Harris Smith</a><br /><span class="govuk-hint">
+                  C445638</span></th>
+              <td class="govuk-table__cell">Previously known
+                <span data-cy="previously-known-termination-date" class="govuk-caption-m">
+                  Order ended 22 June 2019</span></td>
+              <td class="govuk-table__cell">Possession of a class C controlled
+                drug</td>
+              <td class="govuk-table__cell"><button class="govuk-button" data-module="govuk-button">
+                  Check suitability for verification report</button></td>
+            </tr>
+          </tbody>
+        </table>
+        <table class="govuk-table govuk-table__full-width govuk-!-margin-bottom-9">
+          <caption class="govuk-table__caption govuk-table__caption--m">
+            <h2 class="govuk-heading-m govuk-!-margin-bottom-0">17 October 2023</h2>
+          </caption>
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Defendant (CRN)</th>
+              <th scope="col" class="govuk-table__header">Probation status</th>
+              <th scope="col" class="govuk-table__header app-cell-width-restricted">
+                Offence</th>
+              <th scope="col" class="govuk-table__header">Action</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header"><a href="../../13/summary.html" class="govuk-link">
+                Susan Smithson</a><br /><span class="govuk-hint">
+                  F658243</span></th>
+              <td class="govuk-table__cell">Previously known
+                <span data-cy="previously-known-termination-date" class="govuk-caption-m">
+                  Order ended 09 April 2001</span></td>
+              <td class="govuk-table__cell">Obstruct / resist a constable in
+                execution of duty</td>
+              <td class="govuk-table__cell"><button class="govuk-button" data-module="govuk-button">
+                  Check suitability for verification report</button></td>
+            </tr>
+          </tbody>
+        </table>
+        <table class="govuk-table govuk-table__full-width govuk-!-margin-bottom-9">
+          <caption class="govuk-table__caption govuk-table__caption--m">
+            <h2 class="govuk-heading-m govuk-!-margin-bottom-0">18 October 2023</h2>
+          </caption>
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Defendant (CRN)</th>
+              <th scope="col" class="govuk-table__header">Probation status</th>
+              <th scope="col" class="govuk-table__header app-cell-width-restricted">
+                Offence</th>
+              <th scope="col" class="govuk-table__header">Action</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header"><a href="../../13/summary.html" class="govuk-link">
+                Norbet Xavier</a><br /><span class="govuk-hint">
+                  No CRN</span></th>
+              <td class="govuk-table__cell">No record</td>
+              <td class="govuk-table__cell">Drunk and disorderly in a public place</td>
+              <td class="govuk-table__cell"><button class="govuk-button" data-module="govuk-button">
+                  Check suitability for verification report</button></td>
+            </tr>
+          </tbody>
+        </table>
+        <h2 class="govuk-heading-m">No more reports</h2>
+      </div>
+    </div>
+  </form>
+{% endblock %}

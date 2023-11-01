@@ -7,15 +7,15 @@
   <div class="govuk-grid-column-two-thirds">
     <div class="govuk-!-margin-bottom-8">
       <h2 class="govuk-heading-m">Appearance</h2>
-      <p class="govuk-body">Court 2, morning session,Friday 29 July 2022.</p>
+      <p class="govuk-body">Court 1, morning session, 8 March 2023.</p>
     </div>
     <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
     <div class="govuk-!-margin-bottom-8">
       <h2 class="govuk-heading-m">Offences</h2>
-      <h3 class="govuk-heading-s govuk-!-margin-top-4">Common assault and battery</h3>
-      <p class="govuk-body govuk-!-margin-bottom-2">On 10 July 2022 at Grey Lane, S10 1AG, assaulted Joe
-        Bloggs by beating him.</p>
-      <p class="govuk-body secondary-text-col">Contrary to section 39 of the Criminal Justice Act 1988.</p>
+      <h3 class="govuk-heading-s govuk-!-margin-top-4">Possess a controlled drug
+        of Class B</h3>
+      <p class="govuk-body govuk-!-margin-bottom-2">On 10 July 2022 at Grey Lane,
+        S10 1AG, found in posession of a Call B controlled substance.</p>
     </div>
     <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
     <div class="govuk-!-margin-bottom-7">
@@ -28,7 +28,7 @@
             Name
           </dt>
           <dd class="govuk-summary-list__value">
-            Adam Armstrong
+            Dylan Adam Armstrong
           </dd>
         </div>
         <div class="govuk-summary-list__row">
@@ -44,7 +44,7 @@
             Date of birth
           </dt>
           <dd class="govuk-summary-list__value">
-            27 September 1984 (36 years old)
+            12 December 1995 (28 years old)
           </dd>
         </div>
         <div class="govuk-summary-list__row">
@@ -70,21 +70,10 @@
       <h2 class="govuk-heading-m">Case progress</h2>
       {% from "/includes/case-progress/macro.njk" import caseProgress %}
       {{ caseProgress({
-        id: "progress_1",
-        title: "Sentencing hearing",
-        description: "Friday 29 July 2022. Court 2, morning session, Sheffield Magistrates' court",
-        notes: progressNotes.progress_1
-      }) }}
-      {{ caseProgress({
-        id: "progress_2",
-        title: "Plea",
-        description: "Monday 18 July. Court 1, morning session, Sheffield Magistrates' court",
-        notes: progressNotes.progress_2
-      }) }}
-      {{ caseProgress({
         id: "progress_3",
         title: "First hearing",
-        description: "Friday 15 July 2022. Court 2, morning session, Sheffield Magistrates' court",
+        description: "8 march July 2023. Court 1, morning session, Magistrates'
+        court",
         notes: progressNotes.progress_3
       }) }}
     </div>
@@ -93,9 +82,10 @@
       <h2 class="govuk-heading-m">
         Comments
       </h2>
-      <form class="govuk-form-group govuk-!-margin-bottom-0" method="post" action="summary#comments" novalidate>      </h1>
-      <div id="more-detail-hint" class="govuk-hint"> Add notes and observations about this case. Your colleagues who use Prepare a Case will be able to read them.
-        These comments will not be saved to NDelius.
+      <form class="govuk-form-group govuk-!-margin-bottom-0" method="post" action="summary#comments" novalidate>
+      <div id="more-detail-hint" class="govuk-hint"> Add notes and observations
+        about this case. Your colleagues who use Prepare a Case will be able to
+        read them. These comments will not be saved to NDelius.
       </div>
       <textarea class="govuk-textarea" id="comment" name="comment" rows="5" aria-describedby="more-detail-hint"></textarea>
       <button class="govuk-button" data-module="govuk-button">Save</button>

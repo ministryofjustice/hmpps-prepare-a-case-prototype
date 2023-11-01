@@ -93,28 +93,27 @@
           </thead>
           <tbody class="govuk-table__body">
             {% if (data['dylanAdamArmstrongReport'] == null)  %}
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Dylan Adam Armstrong</th>
+                <td class="govuk-table__cell">No record</td>
+                <td class="govuk-table__cell">Possess a controlled drug of Class B</td>
+                <td class="govuk-table__cell"><button class="govuk-button" data-module="govuk-button" name="unassigned-report-defendant" value="Dylan Adam Armstrong">
+                  Check suitability for verification report</button></td>
+              </tr>
+            {% endif %}
+            {% if (data['matthewGreenReport'] == null)  %}
             <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__header"><a href="../../13/summary.html" class="govuk-link">
-                Dylan Adam Armstrong</a><br /><span class="govuk-hint">
+              <th scope="row" class="govuk-table__header">
+                Matthew Green<br /><span class="govuk-hint">
                   V654123</span></th>
-              <td class="govuk-table__cell">Current</td>
-              <td class="govuk-table__cell">Common assault and battery</td>
-              <td class="govuk-table__cell"><button class="govuk-button" data-module="govuk-button">
+              <td class="govuk-table__cell">Previously known</td>
+              <td class="govuk-table__cell">Possess a controlled drug of Class B</td>
+              <td class="govuk-table__cell"><button class="govuk-button" data-module="govuk-button" name="unassigned-report-defendant" value="Matthew Green">
                 Check suitability for verification report</button></td>
             </tr>
             {% endif %}
             <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__header"><a href="../../13/summary.html" class="govuk-link">
-                Harry Smith</a><br /><span class="govuk-hint">
-                  B456123</span></th>
-              <td class="govuk-table__cell">Current</td>
-              <td class="govuk-table__cell">Theft from a shop</td>
-              <td class="govuk-table__cell"><button class="govuk-button" data-module="govuk-button">
-                Check suitability for verification report</button></td>
-            </tr>
-            <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__header"><a href="../../13/summary.html" class="govuk-link">
-                Andrei Edwards</a><br /><span class="govuk-hint">
+              <th scope="row" class="govuk-table__header">Andrei Edwards<br /><span class="govuk-hint">
                   DX1234FF</span></th>
               <td class="govuk-table__cell">Current</td>
               <td class="govuk-table__cell">Use threatening / abusive / insulting
@@ -124,8 +123,7 @@
                 Check suitability for verification report</button></td>
             </tr>
             <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__header"><a href="../../13/summary.html" class="govuk-link">
-                Hannah Francis</a><br /><span class="govuk-hint">
+              <th scope="row" class="govuk-table__header">Hannah Francis<br /><span class="govuk-hint">
                   X664857</span></th>
               <td class="govuk-table__cell"><span class="moj-badge moj-badge--black pac-badge">
                 Psr</span><br>Previously

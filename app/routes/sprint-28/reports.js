@@ -7,7 +7,13 @@ module.exports = function (router) {
   });
 
   router.post('/' + version + '/reports/unassigned-verification-reports', function (req, res) {
+    const unassignedReportDefendant = req.session.data['unassigned-report-defendant']
+
+    if (unassignedReportDefendant == 'Matthew Green'){
+      res.redirect('verification-report/check-suitability-matthew-green')
+    } else {
       res.redirect('verification-report/check-suitability')
+    }
   });
 
   router.get('/' + version + '/reports/verification-report/check-suitability', function (req, res) {
@@ -15,7 +21,13 @@ module.exports = function (router) {
   });
 
   router.post('/' + version + '/reports/verification-report/check-suitability', function (req, res) {
+    const unassignedReportDefendant = req.session.data['unassigned-report-defendant']
+
+    if (unassignedReportDefendant == 'Matthew Green'){
+      res.redirect('confirm-suitability-matthew-green')
+    } else {
       res.redirect('confirm-suitability')
+    }
   });
 
   router.get('/' + version + '/reports/verification-report/confirm-suitability', function (req, res) {
@@ -24,12 +36,23 @@ module.exports = function (router) {
 
   router.post('/' + version + '/reports/verification-report/confirm-suitability', function (req, res) {
     const suitableForVerificationReport = req.session.data['suitable-for-verification-report']
+    const unassignedReportDefendant = req.session.data['unassigned-report-defendant']
 
-    if (suitableForVerificationReport == 'Verification report'){
-      req.session.data.dylanAdamArmstrongReport = 'Verification report'
-      res.redirect('assign-user')
+    if (unassignedReportDefendant == 'Matthew Green'){
+      if (suitableForVerificationReport == 'Verification report'){
+        res.redirect('assign-user-matthew-green')
+      } else {
+        req.session.data.matthewGreenReport = 'Pre-sentence report'
+        res.redirect('what-other-advice-matthew-green')
+      }
+      res.redirect('confirm-suitability-matthew-green')
     } else {
-      res.redirect('what-other-advice')
+      if (suitableForVerificationReport == 'Verification report'){
+        req.session.data.dylanAdamArmstrongReport = 'Verification report'
+        res.redirect('assign-user')
+      } else {
+        res.redirect('what-other-advice')
+      }
     }
   });
 

@@ -52,22 +52,27 @@
             <th scope="col" class="govuk-table__header app-cell-width-restricted">
               Offence</th>
             <th scope="col" class="govuk-table__header">Report type</th>
+            <th scope="col" class="govuk-table__header">Assigned to</th>
           </tr>
         </thead>
         <tbody class="govuk-table__body">
+          {% if (data['dylanAdamArmstrongReport'] == 'Verification report')  %}
           <tr class="govuk-table__row">
             <th scope="row" class="govuk-table__header"><a href="../../13/summary.html" class="govuk-link">
               Dylan Adam Armstrong</a><br /><span class="govuk-hint">
                 V654123</span></th>
             <td class="govuk-table__cell">Common assault and battery</td>
             <td class="govuk-table__cell">Verification report</td>
+            <td class="govuk-table__cell">{{data['assigned-user']}}</td>
           </tr>
+          {% endif %}
           <tr class="govuk-table__row">
             <th scope="row" class="govuk-table__header"><a href="../../13/summary.html" class="govuk-link">
-              PERSON 2</a><br /><span class="govuk-hint">
+              Chon Li</a><br /><span class="govuk-hint">
                 V654123</span></th>
             <td class="govuk-table__cell">OFFENCE 2</td>
             <td class="govuk-table__cell">Pre-sentence report</td>
+            <td class="govuk-table__cell">Kamala Khan</td>
           </tr>
         </tbody>
       </table>

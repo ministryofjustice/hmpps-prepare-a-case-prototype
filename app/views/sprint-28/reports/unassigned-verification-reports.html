@@ -1,0 +1,142 @@
+{% extends "layout-main.html" %}
+
+{% block pageTitle %}
+  Unassigned Reports
+{% endblock %}
+
+{% block header %}
+  {% include "../includes/head-main-report.html" %}
+  <div class="govuk-width-container">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+        <nav class="moj-sub-navigation" aria-label="Sub navigation">
+          <ul class="moj-sub-navigation__list">
+            <li class="moj-sub-navigation__item">
+              <a class="moj-sub-navigation__link" aria-current="page" href="unassigned-verification-reports">Unassigned verification reports</a>
+            </li>
+            <li class="moj-sub-navigation__item">
+              <a class="moj-sub-navigation__link" href="unassigned-pre-sentence-reports">Unassigned pre-sentence reports</a>
+            </li>
+            <li class="moj-sub-navigation__item">
+              <a class="moj-sub-navigation__link" href="assigned-reports">Assigned reports</a>
+            </li>
+            <li class="moj-sub-navigation__item">
+              <a class="moj-sub-navigation__link" href="no-advice-needed">No advice needed</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+
+{% block content %}
+  {% if (data['assigned-user'] ) %}
+  <div class="govuk-notification-banner govuk-notification-banner--success" role="alert" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+    <div class="govuk-notification-banner__header">
+      <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+        Success
+      </h2>
+    </div>
+    <div class="govuk-notification-banner__content">
+      <h3 class="govuk-notification-banner__heading">
+        Report has been assigned
+      </h3>
+    </div>
+  </div>
+  {% endif %}
+  <form action="unassigned-verification-reports" method="post" novalidate>
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+        <h1 class="govuk-heading-l govuk-!-margin-bottom-4">
+          Unassigned verification reports
+        </h1>
+        <p class="govuk-body">Review the case records and use your professional
+          judgement to confirm the best advice type. Once cases have been
+          reviewed and assigned, they will show within 'Assigned reports'.</p>
+        <details class="govuk-details" data-module="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              Criteria for automatically sorting cases
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+            <p class="govuk-body">Cases appearing in court for the first
+              hearing, with a guilty anticipated plea (GAP) entered, are
+              automatically categorised by suggested advice type.</p>
+            <p class="govuk-body">This is based on  eligibility criteria which
+              takes into account:</p>
+            <ul class="govuk-list govuk-list--bullet">
+              <li>offence severity</li>
+              <li>known risks</li>
+              <li>priority cohort information</li>
+              <li>release dates</li>
+            </ul>
+          </div>
+        </details>
+      </div>
+    </div>
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+        <table class="govuk-table govuk-table__full-width govuk-!-margin-bottom-9">
+          <caption class="govuk-table__caption govuk-table__caption--m">
+            <h2 class="govuk-heading-m govuk-!-margin-bottom-0">14 October 2023</h2>
+          </caption>
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Defendant (CRN)</th>
+              <th scope="col" class="govuk-table__header">Probation status</th>
+              <th scope="col" class="govuk-table__header app-cell-width-restricted">
+                Offence</th>
+              <th scope="col" class="govuk-table__header">Action</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            {% if (data['dylanAdamArmstrongReport'] == null)  %}
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Dylan Adam Armstrong</th>
+                <td class="govuk-table__cell">No record</td>
+                <td class="govuk-table__cell">Possess a controlled drug of Class B</td>
+                <td class="govuk-table__cell"><button class="govuk-button" data-module="govuk-button" name="unassigned-report-defendant" value="Dylan Adam Armstrong">
+                  Check suitability for verification report</button></td>
+              </tr>
+            {% endif %}
+            {% if (data['matthewGreenReport'] == null)  %}
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+                Matthew Green<br /><span class="govuk-hint">
+                  V654123</span></th>
+              <td class="govuk-table__cell">Previously known</td>
+              <td class="govuk-table__cell">Possess a controlled drug of Class B</td>
+              <td class="govuk-table__cell"><button class="govuk-button" data-module="govuk-button" name="unassigned-report-defendant" value="Matthew Green">
+                Check suitability for verification report</button></td>
+            </tr>
+            {% endif %}
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Andrei Edwards<br /><span class="govuk-hint">
+                  DX1234FF</span></th>
+              <td class="govuk-table__cell">Current</td>
+              <td class="govuk-table__cell">Use threatening / abusive / insulting
+                words / behaviour with intent to cause fear of / provoke unlawful
+                violence</td>
+              <td class="govuk-table__cell"><button class="govuk-button" data-module="govuk-button">
+                Check suitability for verification report</button></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Hannah Francis<br /><span class="govuk-hint">
+                  X664857</span></th>
+              <td class="govuk-table__cell"><span class="moj-badge moj-badge--black pac-badge">
+                Psr</span><br>Previously
+                known <span class="govuk-caption-m">Order ended 27 October 2019
+                </span></td>
+              <td class="govuk-table__cell">Drove motor vehicle when alcohol level
+                above limit</td>
+              <td class="govuk-table__cell"><button class="govuk-button" data-module="govuk-button">
+                Check suitability for verification report</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </form>
+{% endblock %}

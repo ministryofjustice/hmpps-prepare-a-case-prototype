@@ -1,0 +1,78 @@
+{% extends "layout-main.html" %}
+
+{% block pageTitle %}
+  Pre-Sentence reports
+{% endblock %}
+
+{% block header %}
+  {% include "../includes/head-main-report.html" %}
+  <div class="govuk-width-container">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+        <nav class="moj-sub-navigation" aria-label="Sub navigation">
+          <ul class="moj-sub-navigation__list">
+            <li class="moj-sub-navigation__item">
+              <a class="moj-sub-navigation__link" href="unassigned-verification-reports">Unassigned verification reports</a>
+            </li>
+            <li class="moj-sub-navigation__item">
+              <a class="moj-sub-navigation__link" aria-current="page" href="unassigned-pre-sentence-reports">Unassigned pre-sentence reports</a>
+            </li>
+            <li class="moj-sub-navigation__item">
+              <a class="moj-sub-navigation__link" href="assigned-reports">Assigned reports</a>
+            </li>
+            <li class="moj-sub-navigation__item">
+              <a class="moj-sub-navigation__link" href="no-advice-needed">No advice needed</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+
+{% block content %}
+  <form action="case-list" method="post" novalidate>
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+          <h1 class="govuk-heading-l govuk-!-margin-bottom-4">
+            Pre-Sentence reports
+          </h1>
+          <p class="govuk-body">Check the suitability of each defendant for a
+            pre-sentence report.</p>
+        </div>
+    </div>
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+        {% if (data['what-other-advice-matthew-green'] == 'Pre-sentence report')  %}
+          <table class="govuk-table govuk-table__full-width govuk-!-margin-bottom-9">
+            <caption class="govuk-table__caption govuk-table__caption--m">
+              <h2 class="govuk-heading-m govuk-!-margin-bottom-0">14 October 2023</h2>
+            </caption>
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header">Defendant (CRN)</th>
+                <th scope="col" class="govuk-table__header">Probation status</th>
+                <th scope="col" class="govuk-table__header app-cell-width-restricted">
+                  Offence</th>
+                <th scope="col" class="govuk-table__header">Action</th>
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">
+                  Matthew Green<br /><span class="govuk-hint">
+                    V654123</span></th>
+                <td class="govuk-table__cell">Previously known</td>
+                <td class="govuk-table__cell">Possess a controlled drug of Class B</td>
+                <td class="govuk-table__cell"><button class="govuk-button" data-module="govuk-button" name="unassigned-report-defendant" value="Matthew Green">
+                  Check suitability for Pre-sentence report</button></td>
+              </tr>
+            </tbody>
+          </table>
+        {% else %}
+          <h2 class="govuk-heading-m">No reports</h2>
+        {% endif %}
+      </div>
+    </div>
+  </form>
+{% endblock %}

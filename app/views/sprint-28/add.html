@@ -1,0 +1,94 @@
+{% extends "layout.html" %}
+
+
+{% block pageTitle %}
+Defendant's details
+{% endblock %}
+
+{% block beforeContent %}
+<a href="cases.html" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">Defendant's details
+    </h1>
+    <p class="govuk-body-l">These details will be searched against probation records in nDelius to see if the defendant
+      is known to probation.</p>
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="surname">
+        Surname
+      </label>
+      <input class="govuk-input govuk-input--width-20" id="surname" name="surname" type="text">
+    </div>
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="forename">
+        First name
+      </label>
+      <input class="govuk-input govuk-input--width-20" id="forename" name="forename" type="text">
+    </div>
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+        <legend class="govuk-fieldset__legend">
+          <h1 class="govuk-fieldset__heading">
+            Date of birth
+          </h1>
+        </legend>
+        <span id="passport-issued-hint" class="govuk-hint">
+          For example, 12 11 2007
+        </span>
+        <div class="govuk-date-input" id="passport-issued">
+          <div class="govuk-date-input__item">
+            <div class="govuk-form-group">
+              <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                Day
+              </label>
+              <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day"
+                name="passport-issued-day" type="number" pattern="[0-9]*">
+            </div>
+          </div>
+          <div class="govuk-date-input__item">
+            <div class="govuk-form-group">
+              <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                Month
+              </label>
+              <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month"
+                name="passport-issued-month" type="number" pattern="[0-9]*">
+            </div>
+          </div>
+          <div class="govuk-date-input__item">
+            <div class="govuk-form-group">
+              <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                Year
+              </label>
+              <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year"
+                name="passport-issued-year" type="number" pattern="[0-9]*">
+            </div>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="event-name">
+        PNC
+      </label>
+      <span id="event-name-hint" class="govuk-hint">
+        If available
+      </span>
+      <input class="govuk-input govuk-input--width-10" id="event-name" name="event-name" type="text"
+        aria-describedby="event-name-hint">
+    </div>
+    <a href="match-cards.html" role="button" draggable="false" class="govuk-button moj-button-menu__item  "
+      data-module="govuk-button">
+      Search probation records
+    </a>
+
+
+
+  </div>
+</div>
+
+{% endblock %}

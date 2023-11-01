@@ -1,0 +1,79 @@
+{% extends "layout-main.html" %}
+
+{% block pageTitle %}
+  Assigned reports
+{% endblock %}
+
+{% block header %}
+  {% include "../includes/head-main-report.html" %}
+  <div class="govuk-width-container">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+        <nav class="moj-sub-navigation" aria-label="Sub navigation">
+          <ul class="moj-sub-navigation__list">
+            <li class="moj-sub-navigation__item">
+              <a class="moj-sub-navigation__link" href="unassigned-verification-reports">Unassigned verification reports</a>
+            </li>
+            <li class="moj-sub-navigation__item">
+              <a class="moj-sub-navigation__link" href="unassigned-pre-sentence-reports">Unassigned pre-sentence reports</a>
+            </li>
+            <li class="moj-sub-navigation__item">
+              <a class="moj-sub-navigation__link" aria-current="page" href="assigned-reports">Assigned reports</a>
+            </li>
+            <li class="moj-sub-navigation__item">
+              <a class="moj-sub-navigation__link" href="no-advice-needed">No advice needed</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+
+{% block content %}
+  <form action="assigned-reports" method="post" novalidate>
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+        <h1 class="govuk-heading-l govuk-!-margin-bottom-4">
+          Assigned reports
+        </h1>
+    </div>
+    <div class="govuk-grid-column-full">
+      <table class="govuk-table govuk-table__full-width govuk-!-margin-bottom-9">
+        <caption class="govuk-table__caption govuk-table__caption--m">
+          <h2 class="govuk-heading-m govuk-!-margin-bottom-0">14 October2023</h2>
+        </caption>
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Defendant (CRN)</th>
+            <th scope="col" class="govuk-table__header app-cell-width-restricted">
+              Offence</th>
+            <th scope="col" class="govuk-table__header">Report type</th>
+            <th scope="col" class="govuk-table__header">Assigned to</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          {% if (data['dylanAdamArmstrongReport'] == 'Verification report')  %}
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header"><a href="../../13/summary.html" class="govuk-link">
+              Dylan Adam Armstrong</a><br /><span class="govuk-hint">
+                V654123</span></th>
+            <td class="govuk-table__cell">Common assault and battery</td>
+            <td class="govuk-table__cell">Verification report</td>
+            <td class="govuk-table__cell">{{data['assigned-user']}}</td>
+          </tr>
+          {% endif %}
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header"><a href="../../13/summary.html" class="govuk-link">
+              Chon Li</a><br /><span class="govuk-hint">
+                V654123</span></th>
+            <td class="govuk-table__cell">OFFENCE 2</td>
+            <td class="govuk-table__cell">Pre-sentence report</td>
+            <td class="govuk-table__cell">Kamala Khan</td>
+          </tr>
+        </tbody>
+      </table>
+      <h2 class="govuk-heading-m">No more reports</h2>
+    </div>
+  </form>
+{% endblock %}

@@ -44,4 +44,12 @@ module.exports = function (router) {
     }
     next()
   })
+
+  router.get('/' + version + '/cases/13/anticipated-plea', function (req, res) {
+    res.render(version + '/cases/13/anticipated-plea')
+  });
+
+  router.post('/' + version + '/cases/13/anticipated-plea', function (req, res) {
+    res.redirect('anticipated-plea')
+  });
 }

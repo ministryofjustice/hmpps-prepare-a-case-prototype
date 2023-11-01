@@ -77,27 +77,42 @@
           {% include "../../includes/case-information/adam-armstrong/risk-register-content.html" %}
         </div>
         <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="anticipated-plea">
-          <form action="cps-pack-content" method="post" novalidate>
-            <div class="govuk-grid-row">
-              <div class="govuk-grid-column-full">
-                <div class="govuk-!-margin-bottom-9">
-                  <h1 class="govuk-heading-l govuk-!-margin-bottom-7">Review CPS pack</h1>
-                  <p class="govuk-body">
-                    The CPS pack consists of one or more documents. It should record the
-                    anticipated plea.
-                  </p>
-                  <p class="govuk-body govuk-!-margin-bottom-9">
-                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="govuk-link" rel="noreferrer noopener" target="_blank">
-                      View CPS pack (opens in new tab)</a>
-                  </p>
-                  <h2 class="govuk-heading-l govuk-!-margin-bottom-7">Anticipated plea</h2>
-                  <p class="govuk-body">
-                    Their anticipated plea is guilty.
-                  </p>
-                </div>
+          <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+              <h1 class="govuk-heading-l govuk-!-margin-bottom-7">Record anticipated plea</h1>
+              <p class="govuk-body">The anticipated plea can be found within:</p>
+              <ul class="govuk-list govuk-list--bullet">
+                <li>the charge sheet within the <a href="https://docs.google.com/document/d/1JG0cPP88K-SxGs-yxLNTfRnBmwxm_7mYhXNur1n9bsM/edit?usp=sharing" class="govuk-link" rel="noreferrer noopener" target="_blank">
+                  CPS pack (opens in new tab)</a></li>
+                <li>the court sitting schedule</li>
+                <li>information from the defence solicitor</li>
+              </ul>
+              <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset">
+                  <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                    What is Dylan Adam Armstrong's anticipated plea?
+                  </legend>
+                  <div class="govuk-radios" data-module="govuk-radios">
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="anticipated-plea" name="anticipated-plea" type="radio" value="Guilty" {{checked("anticipated-plea", "Guilty") }}>
+                      <label class="govuk-label govuk-radios__label" for="anticipated-plea">
+                        Guilty
+                      </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="anticipated-plea-2" name="anticipated-plea" type="radio" value="Not guilty" {{checked("anticipated-plea", "Not guilty") }}>
+                      <label class="govuk-label govuk-radios__label" for="anticipated-plea-2">
+                        Not guilty
+                      </label>
+                    </div>
+                  </div>
+                </fieldset>
               </div>
+              <button class="govuk-button" data-module="govuk-button">
+                Save plea
+              </button>
             </div>
-          </form>
+          </div>
         </div>
       </div>
       <form action="check-suitability" method="post" novalidate>

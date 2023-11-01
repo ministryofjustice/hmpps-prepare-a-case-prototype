@@ -6,18 +6,35 @@
 {% endblock %}
 
 {% block pageTitle %}
-  CPS pack
+  Record anticipated plea
 {% endblock %}
 
-{% block beforeContent %}
+{% block bodyStart %}
   {% block keyDetails %}
     {% include "../../includes/key_details/1_Armstrong.html" %}
   {% endblock %}
+{% endblock %}
+
+{% block beforeContent %}
   <a href="#" onclick="javascript:history.go(-1)" class="govuk-back-link">Back
     to cases</a>
 {% endblock %}
 
 {% block content %}
+  {% if (data['dylan-anticipated-plea'] == 'Guilty') or (data['dylan-anticipated-plea'] == 'Not guilty') %}
+    <div class="govuk-notification-banner govuk-notification-banner--success" role="alert" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+      <div class="govuk-notification-banner__header">
+        <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+          Success
+        </h2>
+      </div>
+      <div class="govuk-notification-banner__content">
+        <h3 class="govuk-notification-banner__heading">
+          Anticipated plea recorded
+        </h3>
+      </div>
+    </div>
+  {% endif %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
       <nav class="moj-sub-navigation" aria-label="Sub navigation">
@@ -42,5 +59,5 @@
       </nav>
     </div>
   </div>
-  {% include "../../includes/case-information/adam-armstrong/cps-pack-content.html" %}
+  {% include "../../includes/case-information/adam-armstrong/anticipated-plea-content.html" %}
 {% endblock %}

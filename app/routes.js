@@ -25,3 +25,4 @@ require('./routes/sprint-27/triage.js')(router);
 require('./routes/sprint-27/reports.js')(router);
 require('./routes/sprint-28/reports.js')(router);
 require('./routes/sprint-28/triage.js')(router);
+require('./routes/sprint-28/routes.js')(router);

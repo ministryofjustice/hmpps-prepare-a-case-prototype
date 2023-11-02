@@ -43,21 +43,21 @@
     </div>
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-full">
-        {% if (data['what-other-advice-matthew-green'] == 'Pre-sentence report')  %}
-          <table class="govuk-table govuk-table__full-width govuk-!-margin-bottom-9">
-            <caption class="govuk-table__caption govuk-table__caption--m">
-              <h2 class="govuk-heading-m govuk-!-margin-bottom-0">14 October 2023</h2>
-            </caption>
-            <thead class="govuk-table__head">
-              <tr class="govuk-table__row">
-                <th scope="col" class="govuk-table__header">Defendant (CRN)</th>
-                <th scope="col" class="govuk-table__header">Probation status</th>
-                <th scope="col" class="govuk-table__header app-cell-width-restricted">
-                  Offence</th>
-                <th scope="col" class="govuk-table__header">Action</th>
-              </tr>
-            </thead>
-            <tbody class="govuk-table__body">
+        <table class="govuk-table govuk-table__full-width govuk-!-margin-bottom-9">
+          <caption class="govuk-table__caption govuk-table__caption--m">
+            <h2 class="govuk-heading-m govuk-!-margin-bottom-0">14 October 2023</h2>
+          </caption>
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Defendant (CRN)</th>
+              <th scope="col" class="govuk-table__header">Probation status</th>
+              <th scope="col" class="govuk-table__header app-cell-width-restricted">
+                Offence</th>
+              <th scope="col" class="govuk-table__header">Action</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            {% if (data['what-other-advice-matthew-green'] == 'Pre-sentence report')  %}
               <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header">
                   Matthew Green<br /><span class="govuk-hint">
@@ -67,11 +67,17 @@
                 <td class="govuk-table__cell"><button class="govuk-button" data-module="govuk-button" name="unassigned-report-defendant" value="Matthew Green">
                   Check suitability for Pre-sentence report</button></td>
               </tr>
+            {% endif %}
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Angelica White</th>
+                <td class="govuk-table__cell">No record</td>
+                <td class="govuk-table__cell">Theft from shop - value of goods
+                  above £3000</td>
+                <td class="govuk-table__cell"><button class="govuk-button" data-module="govuk-button">
+                  Check suitability for verification report</button></td>
+              </tr>
             </tbody>
           </table>
-        {% else %}
-          <h2 class="govuk-heading-m">No reports</h2>
-        {% endif %}
       </div>
     </div>
   </form>

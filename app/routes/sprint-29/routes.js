@@ -46,10 +46,19 @@ module.exports = function (router) {
   })
 
   router.get('/' + version + '/cases/13/anticipated-plea', function (req, res) {
+    if (req.session.data['banner-anticipated-plea-visible'] == 'True'){
+      req.session.data['banner-anticipated-plea-visible'] = 'False'
+    }
+
     res.render(version + '/cases/13/anticipated-plea')
   });
 
   router.post('/' + version + '/cases/13/anticipated-plea', function (req, res) {
+    const dylanAnticipatedPlea = req.session.data['dylan-anticipated-plea']
+    if (dylanAnticipatedPlea){
+      req.session.data['banner-anticipated-plea-visible'] = 'True'
+    }
+
     res.redirect('anticipated-plea')
   });
 }

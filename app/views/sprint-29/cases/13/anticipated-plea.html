@@ -21,7 +21,7 @@
 {% endblock %}
 
 {% block content %}
-  {% if (data['dylan-anticipated-plea'] == 'Guilty') or (data['dylan-anticipated-plea'] == 'Not guilty') %}
+  {% if (data['banner-anticipated-plea-visible'] == 'True') %}
     <div class="govuk-notification-banner govuk-notification-banner--success" role="alert" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
       <div class="govuk-notification-banner__header">
         <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">

@@ -1,0 +1,125 @@
+{% extends "layout-main.html" %}
+
+{% block pageTitle %}
+  Check their information and confirm suitability for report
+{% endblock %}
+
+{% block header %}
+  {% include "../../includes/head-main-report.html" %}
+  <div class="govuk-width-container">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+        <nav class="moj-sub-navigation" aria-label="Sub navigation">
+          <ul class="moj-sub-navigation__list">
+            <li class="moj-sub-navigation__item">
+              <a class="moj-sub-navigation__link" aria-current="page" href="../unassigned-verification-reports">Unassigned verification reports</a>
+            </li>
+            <li class="moj-sub-navigation__item">
+              <a class="moj-sub-navigation__link" href="../unassigned-pre-sentence-reports">Unassigned pre-sentence reports</a>
+            </li>
+            <li class="moj-sub-navigation__item">
+              <a class="moj-sub-navigation__link" href="../assigned-reports">Assigned reports</a>
+            </li>
+            <li class="moj-sub-navigation__item">
+              <a class="moj-sub-navigation__link" href="../no-advice-needed">No advice needed</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <span class="govuk-caption-l">No record</span>
+      <h1 class="govuk-heading-l govuk-!-margin-bottom-4">Review Dylan Adam
+        Armstrong's information</h1>
+    </div>
+  </div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <div class="govuk-tabs" data-module="govuk-tabs">
+        <h2 class="govuk-tabs__title">
+          Contents
+        </h2>
+        <ul class="govuk-tabs__list">
+          <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+            <a class="govuk-tabs__tab" href="#case-summary">
+              Case summary
+            </a>
+          </li>
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab" href="#probation-record">
+              Probation record
+            </a>
+          </li>
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab" href="#risk-register">
+              Risk register
+            </a>
+          </li>
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab" href="#anticipated-plea">
+              Anticipated plea
+            </a>
+          </li>
+        </ul>
+        <div class="govuk-tabs__panel" id="case-summary">
+          {% include "../../includes/case-information/adam-armstrong/case-summary-content.html" %}
+        </div>
+        <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="probation-record">
+          {% include "../../includes/case-information/adam-armstrong/probation-record-content.html" %}
+        </div>
+        <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="risk-register">
+          {% include "../../includes/case-information/adam-armstrong/risk-register-content.html" %}
+        </div>
+        <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="anticipated-plea">
+          <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+              <h1 class="govuk-heading-l govuk-!-margin-bottom-7">Record anticipated plea</h1>
+              <p class="govuk-body">The anticipated plea can be found within:</p>
+              <ul class="govuk-list govuk-list--bullet">
+                <li>the charge sheet within the <a href="https://drive.google.com/file/d/16xrU9KoiThb8HH2n27xOBEVQ6ZwgaOgF/view?usp=sharing" class="govuk-link" rel="noreferrer noopener" target="_blank">
+                  CPS pack (opens in new tab)</a></li>
+                <li>the court sitting schedule</li>
+                <li>information from the defence solicitor</li>
+              </ul>
+              <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset">
+                  <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                    What is Dylan Adam Armstrong's anticipated plea?
+                  </legend>
+                  <div class="govuk-radios" data-module="govuk-radios">
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="dylan-anticipated-plea" name="dylan-anticipated-plea" type="radio" value="Guilty" {{checked("dylan-anticipated-plea", "Guilty") }}>
+                      <label class="govuk-label govuk-radios__label" for="dylan-anticipated-plea">
+                        Guilty
+                      </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="dylan-anticipated-plea-2" name="dylan-anticipated-plea" type="radio" value="Not guilty" {{checked("dylan-anticipated-plea", "Not guilty") }}>
+                      <label class="govuk-label govuk-radios__label" for="dylan-anticipated-plea-2">
+                        Not guilty
+                      </label>
+                    </div>
+                  </div>
+                </fieldset>
+              </div>
+              <button class="govuk-button" data-module="govuk-button">
+                Save plea
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <form action="check-suitability" method="post" novalidate>
+        <button class="govuk-button" data-module="govuk-button">
+          Continue
+        </button>
+      </form>
+    </form>
+    </div>
+  </div>
+{% endblock %}

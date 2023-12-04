@@ -1,0 +1,147 @@
+{% extends "layout.html" %}
+
+
+{% block pageTitle %}
+Dashboard
+{% endblock %}
+
+{% block beforeContent %}
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <span class="govuk-caption-xl">Dashboard </span>
+    <h1 class="govuk-heading-xl govuk-!-margin-bottom-2">Today</h1>
+    <nav class="app-pagination app-pagination--inline app-print--hide" role="navigation" aria-label="Pagination">
+      <ul class="app-pagination__list">
+          <li class="app-pagination__list-item app-pagination__list-item--prev">
+            <a href="#" class="app-pagination__link" rel="prev">
+              <span class="app-pagination__link-title">
+                <svg class="app-pagination__link-icon" xmlns="http://www.w3.org/2000/svg" height="13" width="17" viewBox="0 0 17 13">
+                  <path fill="currentColor" d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z"></path>
+                </svg>
+                <span class="app-pagination__link-text">Previous day</span>
+              </span>
+    
+            </a>
+          </li>
+    
+          <li class="app-pagination__list-item">
+            <a href="#" class="app-pagination__link">
+              <span class="app-pagination__link-title">
+                <span class="app-pagination__link-text">Today</span>
+              </span>
+            </a>
+          </li>
+    
+          <li class="app-pagination__list-item app-pagination__list-item--next">
+            <a href="#" class="app-pagination__link" rel="next">
+              <span class="app-pagination__link-title">
+                <svg class="app-pagination__link-icon" xmlns="http://www.w3.org/2000/svg" height="13" width="17" viewBox="0 0 17 13">
+                  <path fill="currentColor" d="m10.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+                </svg>
+                <span class="app-pagination__link-text">Next day</span>
+              </span>
+    
+            </a>
+          </li>
+      </ul>
+    </nav>
+    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+  </div>
+</div>
+<div class="govuk-grid-row govuk-!-margin-bottom-7">
+  <div class="govuk-grid-column-full">
+  <h2 class="govuk-heading-m govuk-!-margin-bottom-2">Caseload</h2>
+  </div>
+
+  <div class="govuk-grid-column-one-quarter">
+    
+    <div class="card card-total">
+      <a href="#" class="govuk-link--no-visited-state"><span class="card__heading">74</span>
+      <p>total cases</p></a>
+    </div>
+
+  </div>
+
+  <div class="govuk-grid-column-one-quarter">
+
+    <div class="card card-total-subset">
+      <span class="card__heading">12</span>
+      <p>current</p>
+    </div>
+  </div>
+
+  <div class="govuk-grid-column-one-quarter">
+
+    </h3>
+    <div class="card card-total-subset">
+      <span class="card__heading">9</span>
+      <p>previously known </p>
+    </div>
+  </div>
+
+  <div class="govuk-grid-column-one-quarter">
+
+    </h3>
+    <div class="card card-total-subset">
+      <span class="card__heading">50</span>
+      <p>not known </p>
+    </div>
+  </div>
+
+</div>
+
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+<div class="govuk-grid-row govuk-!-margin-bottom-7">
+  <div class="govuk-grid-column-full">
+  <h2 class="govuk-heading-m govuk-!-margin-bottom-2">To do</h2>
+  </div>
+  <div class="govuk-grid-column-one-half">
+
+    <div class="card card-todo">
+      <p class=""><a class="" href="">4 defendants with
+        multiple possible
+        records</a></p>
+    </div>
+  </div>
+
+  <div class="govuk-grid-column-one-half">
+
+    <div class="card card-todo">
+      <p class=""><a class="" href="">1 Offender
+        Manager update request outstanding </a></p>
+    </div>
+  
+  </div>
+
+
+</div>
+
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+<div class="govuk-grid-row govuk-!-margin-bottom-7">
+  <div class="govuk-grid-column-full">
+  <h2 class="govuk-heading-m govuk-!-margin-bottom-2">Recent activity</h2>
+  </div>
+
+
+
+</div>
+
+
+
+
+
+<div class="govuk-grid-row govuk-!-margin-bottom-9">
+
+
+
+</div>
+
+
+{% endblock %}

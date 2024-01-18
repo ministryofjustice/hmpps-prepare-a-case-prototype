@@ -1,0 +1,54 @@
+{% extends "layout-main.html" %}
+
+{% block pageTitle %}
+  Assign user
+{% endblock %}
+
+{% block header %}
+  {% include "../../includes/head-main-report.html" %}
+  <div class="govuk-width-container">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+        <nav class="moj-sub-navigation" aria-label="Sub navigation">
+          <ul class="moj-sub-navigation__list">
+            <li class="moj-sub-navigation__item">
+              <a class="moj-sub-navigation__link" aria-current="page" href="../unassigned-verification-reports">Unassigned verification reports</a>
+            </li>
+            <li class="moj-sub-navigation__item">
+              <a class="moj-sub-navigation__link" href="../unassigned-pre-sentence-reports">Unassigned pre-sentence reports</a>
+            </li>
+            <li class="moj-sub-navigation__item">
+              <a class="moj-sub-navigation__link" href="../assigned-reports">Assigned reports</a>
+            </li>
+            <li class="moj-sub-navigation__item">
+              <a class="moj-sub-navigation__link" href="../no-advice-needed">No advice needed</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+
+{% block content %}
+  <form action="assign-user" method="post" novalidate>
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+        <div class="govuk-form-group">
+          <h1 class="govuk-label-wrapper">
+            <label class="govuk-label govuk-label--l" for="event-name">
+              Assign a person to prepare this report
+            </label>
+          </h1>
+          <div id="signIn-hint" class="govuk-hint">
+            Enter their name or email address.
+          </div>
+          <input class="govuk-input govuk-input--width-30" id="assigned-user" name="assigned-user" type="text" value="{{data['assign-user']}}" >
+        </div>
+        <button class="govuk-button" data-module="govuk-button">
+          Assign report
+        </button>
+      </div>
+    </div>
+  </form>
+{% endblock %}

@@ -21,6 +21,7 @@ $govuk-assets-path: '/govuk/assets/';
 @import "components/key-details-bar";
 @import "components/primary-navigation";
 @import "components/phase-banner";
+@import "components/select";
 @import "components/table";
 @import "components/timeline";
 @import "components/matcher";
@@ -502,4 +503,10 @@ a.morelink:visited {
   .moj-width-container {
       margin:0 auto
   }
+}
+
+//missing light blue tag
+.govuk-tag--light-blue {
+  color: #0c2d4a;
+  background-color: #e8f1f8;
 }

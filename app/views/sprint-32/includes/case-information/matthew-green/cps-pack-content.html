@@ -1,0 +1,47 @@
+<form action="cps-pack-content" method="post" novalidate>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <div class="govuk-!-margin-bottom-9">
+        <h1 class="govuk-heading-l govuk-!-margin-bottom-7">Review CPS pack</h1>
+        <p class="govuk-body">
+          The CPS pack consists of one or more documents. It should record the
+          anticipated plea.
+        </p>
+        <p class="govuk-body govuk-!-margin-bottom-9">
+          <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="govuk-link" rel="noreferrer noopener" target="_blank">
+            View CPS pack (opens in new tab)</a>
+        </p>
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+              What is Dylan Adam Armstrong's anticipated plea?
+            </legend>
+            <div class="govuk-radios" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="anticipated-plea" name="anticipated-plea" type="radio" value="Guilty" {{checked("anticipated-plea", "Guilty") }}>
+                <label class="govuk-label govuk-radios__label" for="anticipated-plea">
+                  Guilty
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="anticipated-plea-2" name="anticipated-plea" type="radio" value="Not guilty" {{checked("anticipated-plea", "Not guilty") }}>
+                <label class="govuk-label govuk-radios__label" for="anticipated-plea-2">
+                  Not guilty
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="anticipated-plea-3" name="anticipated-plea" type="radio" value="Unknown or other" {{checked("anticipated-plea", "Unknown or other") }}>
+                <label class="govuk-label govuk-radios__label" for="anticipated-plea-3">
+                  Unknown or other
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+        <button class="govuk-button" data-module="govuk-button">
+          Save plea
+        </button>
+      </div>
+    </div>
+  </div>
+</form>

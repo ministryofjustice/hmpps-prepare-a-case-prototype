@@ -1,0 +1,29 @@
+.govuk-select.govuk-select--tag{
+  border: 0 none;
+  outline: 2px solid transparent;
+  outline-offset: -2px;
+  padding: 2px 5px 2px 2px;
+  width: auto;
+  min-width: auto;
+  height: auto;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: "GDS Transport", arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.govuk-select.govuk-select--tag.govuk-select--tag--grey{
+  background-color: govuk-colour("light-grey");
+  color: #383f43;
+}
+
+.govuk-select.govuk-select--tag.govuk-select--tag--light-blue{
+  color: #0c2d4a;
+  background-color: #e8f1f8;
+}
+
+.govuk-select.govuk-select--tag.govuk-select--tag--turquoise{
+  color: #10403c;
+  background-color: #d4ecea;
+}

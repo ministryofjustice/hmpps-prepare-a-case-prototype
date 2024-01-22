@@ -1,0 +1,69 @@
+{% extends "layout-main.html" %}
+
+{% block pageTitle %}
+  Request Advice
+{% endblock %}
+
+{% block header %}
+  {% include "../includes/head-main-report.html" %}
+  <div class="govuk-width-container">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+        <nav class="moj-sub-navigation" aria-label="Sub navigation">
+          <ul class="moj-sub-navigation__list">
+            <li class="moj-sub-navigation__item">
+              <a class="moj-sub-navigation__link" href="unassigned-verification-reports">Unassigned verification reports</a>
+            </li>
+            <li class="moj-sub-navigation__item">
+              <a class="moj-sub-navigation__link" href="unassigned-pre-sentence-reports">Unassigned pre-sentence reports</a>
+            </li>
+            <li class="moj-sub-navigation__item">
+              <a class="moj-sub-navigation__link" href="assigned-reports">Assigned reports</a>
+            </li>
+            <li class="moj-sub-navigation__item">
+              <a class="moj-sub-navigation__link" aria-current="page" href="no-advice-needed">No advice needed</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+
+{% block content %}
+  <form action="request-advice" method="post" novalidate>
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="request-advice-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                Request advice
+              </h1>
+            </legend>
+            <div id="request-advice-hint" class="govuk-hint">
+              Maybe something to explain how they choose one or the other?
+            </div>
+              <div class="govuk-radios" data-module="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="requested-advice" name="requested-advice" type="radio" value="Verification report" {{ checked("requested-advice", "verification-report") }}>
+                  <label class="govuk-label govuk-radios__label" for="requested-advice">
+                    Verification report
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="requested-advice-2" name="requested-advice" type="radio" value="Pre-sentence report" {{ checked("requested-advice", "Pre-sentence report") }}>
+                  <label class="govuk-label govuk-radios__label" for="requested-advice-2">
+                    Pre-Sentence report
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+        </div>
+        <button class="govuk-button" data-module="govuk-button">
+          Continue
+        </button>
+      </div>
+    </div>
+  </form>
+{% endblock %}

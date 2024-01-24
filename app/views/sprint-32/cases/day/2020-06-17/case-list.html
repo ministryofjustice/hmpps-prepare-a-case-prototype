@@ -6,6 +6,8 @@
   {% include "../../../includes/head-main.html" %}
 {% endblock %}
 {% block content %}
+<script type="module" src="/public/javascripts/jquery.js"></script>
+<script type="module" src="/public/javascripts/all.js"></script>
   <header class="govuk-grid-row govuk-!-margin-bottom-7">
     <div class="govuk-grid-column-full">
       <section class="app-filter-card govuk-!-margin-bottom-6">
@@ -155,8 +157,20 @@
     {% include "includes/filter.html" %}
   {% endblock %}
   <div class="govuk-grid-row">
-    <div class="govuk-grid-column-one-half">
+    <div class="govuk-grid-column-two-thirds">
       <span class="govuk-heading-m">187 cases</span>
+    </div>
+    <div class="govuk-grid-column-one-third">
+      <div class="moj-button-menu" style="float: right;">
+        <div class="moj-button-menu__wrapper">
+          <a href="#" role="button" draggable="false" class="govuk-button moj-button-menu__item govuk-button--secondary" data-module="govuk-button">
+            Assign to me</a>
+          <a href="#" role="button" draggable="false" class="govuk-button moj-button-menu__item govuk-button--secondary" data-module="govuk-button">
+            Put on hold</a>
+          <a href="#" role="button" draggable="false" class="govuk-button moj-button-menu__item govuk-button--secondary" data-module="govuk-button">
+            Something else</a>
+        </div>
+      </div>
     </div>
   </div>
   <table class="govuk-table case-list-table govuk-table-xl" data-module="moj-multi-select" data-multi-select-checkbox="#select-all">

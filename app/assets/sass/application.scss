@@ -27,6 +27,7 @@ $govuk-assets-path: '/govuk/assets/';
 @import "components/timeline";
 @import "components/matcher";
 
+@import "node_modules/govuk-frontend/govuk/base";
 // Import GOV.UK Frontend and any extension styles if extensions have been configured
 // @import ".tmp/sass/extensions";
 

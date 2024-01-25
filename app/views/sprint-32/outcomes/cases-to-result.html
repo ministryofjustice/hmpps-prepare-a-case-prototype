@@ -43,7 +43,7 @@
       </li>
     </ul>
     <div class="govuk-tabs__panel" id="cases-to-result">
-      <h2 class="govuk-heading-l">Past day</h2>
+      <h2 class="govuk-heading-l">Cases to result</h2>
       <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds">
           <span class="govuk-heading-m">187 cases</span>
@@ -66,17 +66,12 @@
           <tr class="govuk-table__row govuk-table__row">
             <th class="govuk-table__header" scope="col" id="select-all"></th>
             <th scope="col" class="govuk-table__header custom-defendant-width" aria-sort="none">Defendant (CRN)</th>
-            <th scope="col" class="govuk-table__header custom-delius-record-width" aria-sort="none">
-              Probation status
-            </th>
             <th scope="col" class="govuk-table__header" aria-sort="none">Offence</th>
             <th scope="col" class="govuk-table__header" aria-sort="none">Listing</th>
             <th scope="col" class="govuk-table__header custom-session-width" aria-sort="none">
               Session</th>
             <th scope="col" class="govuk-table__header govuk-table__header--numeric" aria-sort="none">
               Court</th>
-            <th scope="col" class="govuk-table__header govuk-table__header--numeric" aria-sort="none">
-              Prep status</th>
           </tr>
         </thead>
         <tbody class="govuk-table__body">
@@ -93,21 +88,10 @@
               <a href="../../13/case-summary.html" class="govuk-link">Dylan Adam
                 Armstrong</a>
             </td>
-            <td class="govuk-table__cell">
-              {% if (data['dylan-anticipated-plea'] == 'Guilty') %}
-                <div><span class="moj-badge moj-badge--black pac-badge">Guilty anticipated plea</span></div>
-              {% elseif (data['dylan-anticipated-plea'] == 'Not guilty') %}
-                <div><span class="moj-badge moj-badge--black pac-badge">Not guilty anticipated plea</span></div>
-              {% else %}
-                <div><span class="moj-badge moj-badge--black pac-badge">No anticipated plea</span></div>
-              {% endif %}
-              No record
-            </td>
             <td class="govuk-table__cell">Possess a controlled drug of Class B</td>
             <td class="govuk-table__cell">1st</td>
             <td class="govuk-table__cell">Morning</td>
             <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="1">1</td>
-            <td class="govuk-table__cell govuk-table__cell--numeric">Not started</td>
           </tr>
           <tr class="govuk-table__row">
             <td class="govuk-table__cell">
@@ -123,18 +107,11 @@
               <br />
               <span class="govuk-hint govuk-!-font-size-16">V654123</span>
             </td>
-            <td class="govuk-table__cell">
-              <div><span class="moj-badge moj-badge--black pac-badge">Guilty anticipated plea</span></div>
-              <ul>
-                <li class="govuk-!-margin-bottom-1">Current</li>
-              </ul>
-            </td>
             <td class="govuk-table__cell">Common assault and battery</td>
             <td class="govuk-table__cell">1st </td>
             <td class="govuk-table__cell">Morning</td>
             <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="1">
               1</td>
-            <td class="govuk-table__cell govuk-table__cell--numeric">In progress</td>
           </tr>
           <tr class="govuk-table__row">
             <td class="govuk-table__cell">
@@ -150,14 +127,12 @@
               <br />
               <span class="govuk-hint govuk-!-font-size-16">DX1234FF</span>
             </td>
-            <td class="govuk-table__cell">Current</td>
             <td class="govuk-table__cell">Use threatening / abusive / insulting words
               / behaviour with intent to cause fear of / provoke unlawful violence</td>
             <td class="govuk-table__cell">1st </td>
             <td class="govuk-table__cell">Morning</td>
             <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="1">
               1</td>
-            <td class="govuk-table__cell govuk-table__cell--numeric">Complete</td>
           </tr>
           <tr class="govuk-table__row">
             <td class="govuk-table__cell">
@@ -173,20 +148,12 @@
               <br />
               <span class="govuk-hint govuk-!-font-size-16">X664857</span>
             </td>
-            <td class="govuk-table__cell">
-              <div><span class="moj-badge moj-badge--black pac-badge">Psr</span></div>
-              Previously known<span data-cy="previously-known-termination-date" class="govuk-caption-m">
-                Order ended 27 October 2019</span>
-            </td>
             <td class="govuk-table__cell">Drive motor vehicle when alcohol level
               above limit</td>
             <td class="govuk-table__cell">1st</td>
             <td class="govuk-table__cell">Morning</td>
             <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="1">
               1</td>
-            <td class="govuk-table__cell govuk-table__cell--numeric">
-              <strong class="govuk-tag govuk-tag--grey">Not started</strong>
-            </td>
           </tr>
           <tr class="govuk-table__row">
             <td class="govuk-table__cell">
@@ -200,7 +167,6 @@
             <td class="govuk-table__header">
               <a href="../../13/case-summary.html" class="govuk-link">Aiden Hill</a>
             </td>
-            <td class="govuk-table__cell">No record</td>
             <td class="govuk-table__cell">
               <ol>
                 <li>Fail to provide specimen for analysis - vehicle driver</li>
@@ -214,9 +180,6 @@
             <td class="govuk-table__cell">Morning</td>
             <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="1">
               1</td>
-            <td class="govuk-table__cell govuk-table__cell--numeric">
-              <strong class="govuk-tag govuk-tag--light-blue">In progress</strong>
-            </td>
           </tr>
           <tr class="govuk-table__row">
             <td class="govuk-table__cell">
@@ -232,18 +195,11 @@
               <br />
               <span class="govuk-hint govuk-!-font-size-16">DX12340X</span>
             </td>
-            <td class="govuk-table__cell">
-              <div><span class="moj-badge moj-badge--black pac-badge">Breach</span></div>
-              Current
-            </td>
             <td class="govuk-table__cell">Attempt theft from shop</td>
             <td class="govuk-table__cell">1st</td>
             <td class="govuk-table__cell">Morning</td>
             <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="1">
               1</td>
-            <td class="govuk-table__cell govuk-table__cell--numeric">
-              <strong class="govuk-tag govuk-tag--turquoise">Complete</strong>
-            </td>
           </tr>
           <tr class="govuk-table__row">
             <td class="govuk-table__cell">
@@ -259,22 +215,11 @@
               <br />
               <span class="govuk-hint govuk-!-font-size-16">HD18745F</span>
             </td>
-            <td class="govuk-table__cell">
-              <div><span class="moj-badge moj-badge--red pac-badge">Possible NDelius
-                Record</span></div>
-            </td>
             <td class="govuk-table__cell">Common assault and battery</td>
             <td class="govuk-table__cell">1st</td>
             <td class="govuk-table__cell">Morning</td>
             <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="1">
               1</td>
-            <td class="govuk-table__cell govuk-table__cell--numeric">
-              <select class="govuk-select govuk-select--tag govuk-select--tag govuk-select--tag--grey" id="sort" name="sort">
-                <option value="Not started">Not started</option>
-                <option value="In progress">In progress</option>
-                <option value="Complete">Complete</option>
-              </select>
-            </td>
           </tr>
           <tr class="govuk-table__row">
             <td class="govuk-table__cell">
@@ -290,22 +235,11 @@
               <br />
               <span class="govuk-hint govuk-!-font-size-16">F847388</span>
             </td>
-            <td class="govuk-table__cell">
-              <div><span class="moj-badge moj-badge--black pac-badge">Not guilty anticipated plea</span></div>
-              Current
-            </td>
             <td class="govuk-table__cell">Sexual assault on a male</td>
             <td class="govuk-table__cell">1st </td>
             <td class="govuk-table__cell">Morning</td>
             <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="1">
               1</td>
-            <td class="govuk-table__cell govuk-table__cell--numeric">
-              <select class="govuk-select govuk-select--tag govuk-select--tag govuk-select--tag--light-blue" id="sort" name="sort">
-                <option value="Not started">Not started</option>
-                <option value="In progress" selected>In progress</option>
-                <option value="Complete">Complete</option>
-              </select>
-            </td>
           </tr>
           <tr class="govuk-table__row">
             <td class="govuk-table__cell">
@@ -319,20 +253,12 @@
             <td class="govuk-table__header">
               <a href="../../13/case-summary.html" class="govuk-link">Gary Hart</a>
             </td>
-            <td class="govuk-table__cell">No record</td>
             <td class="govuk-table__cell">
               Common assault and battery</td>
             <td class="govuk-table__cell">1st</td>
             <td class="govuk-table__cell">Morning</td>
             <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="1">
               1</td>
-            <td class="govuk-table__cell govuk-table__cell--numeric">
-              <select class="govuk-select govuk-select--tag govuk-select--tag govuk-select--tag--turquoise" id="sort" name="sort">
-                <option value="Not started">Not started</option>
-                <option value="In progress">In progress</option>
-                <option value="Complete" selected>Complete</option>
-              </select>
-            </td>
           </tr>
           <tr class="govuk-table__row">
             <td class="govuk-table__cell">
@@ -348,10 +274,6 @@
               <br />
               <span class="govuk-hint govuk-!-font-size-16">J478183</span>
             </td>
-            <td class="govuk-table__cell">Previously known
-              <span data-cy="previously-known-termination-date" class="govuk-caption-m">
-                Order ended 24 November 2016</span>
-            </td>
             <td class="govuk-table__cell">Arrest by a constable for breaking / likely
               to break bail conditions - duty to surrender into the custody of a court
             </td>
@@ -359,9 +281,6 @@
             <td class="govuk-table__cell">Morning</td>
             <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="1">
               1</td>
-            <td class="govuk-table__cell govuk-table__cell--numeric">
-              <span id="notifications" class="moj-notification-badge">2 comments</span>
-            </td>
           </tr>
           <tr class="govuk-table__row">
             <td class="govuk-table__cell">
@@ -376,7 +295,6 @@
               <a href="../../13/case-summary.html" class="govuk-link">Declan Dennis Bradley
                 </a>
             </td>
-            <td class="govuk-table__cell">No record</td>
             <td class="govuk-table__cell">
               <ol>
                 <li>Obstruct / resist a constable in execution of duty</li>
@@ -393,9 +311,6 @@
             <td class="govuk-table__cell">Afternoon</td>
             <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="2">
               1</td>
-            <td class="govuk-table__cell govuk-table__cell--numeric">
-              <span id="notifications" class="moj-notification-badge">New comment</span>
-            </td>
           </tr>
           <tr class="govuk-table__row govuk-table__row">
             <td class="govuk-table__cell">
@@ -409,7 +324,6 @@
             <td class="govuk-table__header">
               <a href="../../13/case-summary.html" class="govuk-link">Noah Harvey</a>
             </td>
-            <td class="govuk-table__cell">No record</td>
             <td class="govuk-table__cell">
               <ol>
                 <li>Possess a controlled drug of Class B - Amphetamine</li>
@@ -436,10 +350,6 @@
               <br />
               <span class="govuk-hint govuk-!-font-size-16">C445638</span>
             </td>
-            <td class="govuk-table__cell">Previously known
-              <span data-cy="previously-known-termination-date" class="govuk-caption-m">
-                Order ended 22 June 2019</span>
-            </td>
             <td class="govuk-table__cell">Possess a class C controlled drug</td>
             <td class="govuk-table__cell">1st</td>
             <td class="govuk-table__cell">Afternoon</td>
@@ -460,7 +370,6 @@
               <br />
               <span class="govuk-hint govuk-!-font-size-16">V654123</span>
             </td>
-            <td class="govuk-table__cell">Current</td>
             <td class="govuk-table__cell">Common assault and battery</td>
             <td class="govuk-table__cell">1st</td>
             <td class="govuk-table__cell">Morning</td>
@@ -480,10 +389,6 @@
               <a href="../../13/case-summary.html" class="govuk-link">Tony Davis</a>
               <br />
               <span class="govuk-hint govuk-!-font-size-16">B948574</span>
-            </td>
-            <td class="govuk-table__cell">Previously known
-              <span data-cy="previously-known-termination-date" class="govuk-caption-m">
-                Order ended 5 July 2019</span>
             </td>
             <td class="govuk-table__cell">
               <ol>
@@ -510,7 +415,6 @@
               <br />
               <span class="govuk-hint govuk-!-font-size-16">DX1234FF</span>
             </td>
-            <td class="govuk-table__cell">Current</td>
             <td class="govuk-table__cell">Use threatening / abusive / insulting words
               / behaviour with intent to cause fear of / provoke unlawful violence</td>
             <td class="govuk-table__cell">1st </td>
@@ -531,11 +435,6 @@
               <a href="../../13/case-summary.html" class="govuk-link">Hannah Francis</a>
               <br />
               <span class="govuk-hint govuk-!-font-size-16">X664857</span>
-            </td>
-            <td class="govuk-table__cell">
-              <div><span class="moj-badge moj-badge--black pac-badge">Psr</span></div>
-              Previously known <span data-cy="previously-known-termination-date" class="govuk-caption-m">
-                Order ended 27 October 2019</span>
             </td>
             <td class="govuk-table__cell">Drive motor vehicle when alcohol level above
               limit</td>
@@ -558,7 +457,6 @@
               <br />
               <span class="govuk-hint govuk-!-font-size-16">KR1548UK</span>
             </td>
-            <td class="govuk-table__cell">No record</td>
             <td class="govuk-table__cell">
               <ol>
                 <li>Fail to provide specimen for analysis - vehicle driver</li>
@@ -587,10 +485,6 @@
               <br />
               <span class="govuk-hint govuk-!-font-size-16">DX12340X</span>
             </td>
-            <td class="govuk-table__cell">
-              <div><span class="moj-badge moj-badge--black pac-badge">Breach</span></div>
-              Current
-            </td>
             <td class="govuk-table__cell">Attempt theft from shop</td>
             <td class="govuk-table__cell">1st</td>
             <td class="govuk-table__cell">Morning</td>
@@ -608,10 +502,6 @@
             </td>
             <td class="govuk-table__header">
               <a href="../../13/case-summary.html" class="govuk-link">Naomi Thornton</a>
-            </td>
-            <td class="govuk-table__cell">
-              <div><span class="moj-badge moj-badge--red pac-badge">Possible NDelius
-                Record</span></div>
             </td>
             <td class="govuk-table__cell">Common assault and battery</td>
             <td class="govuk-table__cell">1st</td>

@@ -1,0 +1,98 @@
+<section class="app-filter-card govuk-!-margin-bottom-6" style="max-width: 100%; border: 0;">
+  <p class="govuk-heading-s">Filters</p>
+  <div class="app-filter-container">
+    <button id="button-session" type="button" class="app-filter-button" data-controls="session-selection" onclick="event.stopPropagation(); toggleFilter(this)" style="width: 250px;">
+      Outcome type</button>
+    <div id="session-selection" class="app-filter-selection govuk-visually-hidden">
+      {{ govukCheckboxes({
+        idPrefix: "checkbox-session",
+        name: "checkbox-session",
+        classes: "govuk-checkboxes--small",
+        fieldset: {
+          legend: {
+            text: "Outcome type",
+            isPageHeading: false,
+            classes: "govuk-fieldset__legend govuk-visually-hidden"
+          }
+        },
+        items: [
+          {
+            value: "morning",
+            text: "Morning"
+          },
+          {
+            value: "afternoon",
+            text: "Afternoon"
+          }
+        ]
+      }) }}
+    </div>
+  </div>
+  <div class="app-filter-container">
+    <button id="button-courtroom" type="button" class="app-filter-button" data-controls="courtroom-selection" onclick="event.stopPropagation(); toggleFilter(this)" style="width: 200px;">Courtroom</button>
+    <div id="courtroom-selection" class="app-filter-selection govuk-visually-hidden">
+      {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
+      {{ govukCheckboxes({
+        idPrefix: "checkbox-courtroom",
+        name: "checkbox-courtroom",
+        classes: "govuk-checkboxes--small",
+        fieldset: {
+            legend: {
+            text: "Courtroom",
+            isPageHeading: false,
+            classes: "govuk-fieldset__legend govuk-visually-hidden"
+          }
+        },
+        items: [
+          {
+            value: "1",
+            text: "1"
+          },
+          {
+            value: "2",
+            text: "2"
+          },
+          {
+            value: "3",
+            text: "3"
+          },
+          {
+            value: "4",
+            text: "4"
+          },
+          {
+            value: "5",
+            text: "5"
+          },
+          {
+            value: "6",
+            text: "6"
+          },
+          {
+            value: "7",
+            text: "7"
+          },
+          {
+            value: "8",
+            text: "8"
+          }
+        ]
+      }) }}
+    </div>
+  </div>
+  <button type="button" class="govuk-button app-apply-filters-button" onclick="applyFilters()">Apply filters</button>
+  <div class="selected-filters govuk-visually-hidden">
+    <p class="govuk-body"><span class="govuk-!-font-weight-bold">Applied filters
+      </span> <a href="#" class="govuk-body-s govuk-!-margin-left-2" onclick="event.preventDefault(); applyFilters(true)">
+        Clear all</a></p>
+    <p class="applied-record govuk-body-s govuk-!-margin-top-2 govuk-!-margin-bottom-0 app-selected-filters--label govuk-visually-hidden">
+      Probation status</p>
+    <div class="app-filters-applied-record"></div>
+    <p class="applied-courtroom govuk-body-s govuk-!-margin-top-2 govuk-!-margin-bottom-0 app-selected-filters--label govuk-visually-hidden">
+      Courtroom</p>
+    <div class="app-filters-applied-courtroom"></div>
+    <p class="applied-session govuk-body-s govuk-!-margin-top-2 govuk-!-margin-bottom-0 app-selected-filters--label govuk-visually-hidden">
+      Session</p>
+    <div class="app-filters-applied-session"></div>
+  </div>
+</section>

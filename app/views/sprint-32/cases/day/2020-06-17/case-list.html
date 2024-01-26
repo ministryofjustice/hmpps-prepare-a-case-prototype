@@ -6,6 +6,8 @@
   {% include "../../../includes/head-main.html" %}
 {% endblock %}
 {% block content %}
+<script type="module" src="/public/javascripts/jquery.js"></script>
+<script type="module" src="/public/javascripts/all.js"></script>
   <header class="govuk-grid-row govuk-!-margin-bottom-7">
     <div class="govuk-grid-column-full">
       <section class="app-filter-card govuk-!-margin-bottom-6">
@@ -155,13 +157,26 @@
     {% include "includes/filter.html" %}
   {% endblock %}
   <div class="govuk-grid-row">
-    <div class="govuk-grid-column-one-half">
+    <div class="govuk-grid-column-two-thirds">
       <span class="govuk-heading-m">187 cases</span>
     </div>
+    <div class="govuk-grid-column-one-third">
+      <div class="moj-button-menu" style="float: right;">
+        <div class="moj-button-menu__wrapper">
+          <a href="#" role="button" draggable="false" class="govuk-button moj-button-menu__item govuk-button--secondary" data-module="govuk-button">
+            Assign to me</a>
+          <a href="#" role="button" draggable="false" class="govuk-button moj-button-menu__item govuk-button--secondary" data-module="govuk-button">
+            Put on hold</a>
+          <a href="#" role="button" draggable="false" class="govuk-button moj-button-menu__item govuk-button--secondary" data-module="govuk-button">
+            Something else</a>
+        </div>
+      </div>
+    </div>
   </div>
-  <table class="govuk-table case-list-table govuk-table-xl">
+  <table class="govuk-table case-list-table govuk-table-xl" data-module="moj-multi-select" data-multi-select-checkbox="#select-all">
     <thead class="govuk-table__head">
       <tr class="govuk-table__row govuk-table__row">
+        <th class="govuk-table__header" scope="col" id="select-all"></th>
         <th scope="col" class="govuk-table__header custom-defendant-width" aria-sort="none">Defendant (CRN)</th>
         <th scope="col" class="govuk-table__header custom-delius-record-width" aria-sort="none">
           Probation status
@@ -178,6 +193,14 @@
     </thead>
     <tbody class="govuk-table__body">
       <tr class="govuk-table__row">
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
+            <input type="checkbox" class="govuk-checkboxes__input" id="case1">
+            <label class="govuk-label govuk-checkboxes__label" for="case1">
+              <span class="govuk-visually-hidden">Select Dylan Adam Armstrong</span>
+            </label>
+          </div>
+        </td>
         <td class="govuk-table__header">
           <a href="../../13/case-summary.html" class="govuk-link">Dylan Adam
             Armstrong</a>
@@ -196,9 +219,23 @@
         <td class="govuk-table__cell">1st</td>
         <td class="govuk-table__cell">Morning</td>
         <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="1">1</td>
-        <td class="govuk-table__cell govuk-table__cell--numeric">Not started</td>
+        <td class="govuk-table__cell govuk-table__cell--numeric">
+          <select class="govuk-select govuk-select--tag govuk-select--tag govuk-select--tag--light-blue" id="sort" name="sort">
+            <option value="Not started">Not started</option>
+            <option value="In progress" selected>In progress</option>
+            <option value="Complete">Complete</option>
+          </select>
+        </td>
       </tr>
       <tr class="govuk-table__row">
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
+            <input type="checkbox" class="govuk-checkboxes__input" id="case2">
+            <label class="govuk-label govuk-checkboxes__label" for="case2">
+              <span class="govuk-visually-hidden">Select Harry Smith</span>
+            </label>
+          </div>
+        </td>
         <td class="govuk-table__header">
           <a href="../../13/case-summary.html" class="govuk-link">Harry Smith</a>
           <br />
@@ -215,9 +252,23 @@
         <td class="govuk-table__cell">Morning</td>
         <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="1">
           1</td>
-        <td class="govuk-table__cell govuk-table__cell--numeric">In progress</td>
+        <td class="govuk-table__cell govuk-table__cell--numeric">
+          <select class="govuk-select govuk-select--tag govuk-select--tag govuk-select--tag--light-blue" id="sort" name="sort">
+            <option value="Not started">Not started</option>
+            <option value="In progress" selected>In progress</option>
+            <option value="Complete">Complete</option>
+          </select>
+        </td>
       </tr>
       <tr class="govuk-table__row">
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
+            <input type="checkbox" class="govuk-checkboxes__input" id="case3">
+            <label class="govuk-label govuk-checkboxes__label" for="case3">
+              <span class="govuk-visually-hidden">Select Andrei Edwards</span>
+            </label>
+          </div>
+        </td>
         <td class="govuk-table__header">
           <a href="../../13/case-summary.html" class="govuk-link">Andrei Edwards</a>
           <br />
@@ -230,9 +281,23 @@
         <td class="govuk-table__cell">Morning</td>
         <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="1">
           1</td>
-        <td class="govuk-table__cell govuk-table__cell--numeric">Complete</td>
+        <td class="govuk-table__cell govuk-table__cell--numeric">
+          <select class="govuk-select govuk-select--tag govuk-select--tag govuk-select--tag--light-blue" id="sort" name="sort">
+            <option value="Not started">Not started</option>
+            <option value="In progress" selected>In progress</option>
+            <option value="Complete">Complete</option>
+          </select>
+        </td>
       </tr>
       <tr class="govuk-table__row">
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
+            <input type="checkbox" class="govuk-checkboxes__input" id="case4">
+            <label class="govuk-label govuk-checkboxes__label" for="case4">
+              <span class="govuk-visually-hidden">Select Hannah Francis</span>
+            </label>
+          </div>
+        </td>
         <td class="govuk-table__header">
           <a href="../../13/case-summary.html" class="govuk-link">Hannah Francis</a>
           <br />
@@ -250,10 +315,22 @@
         <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="1">
           1</td>
         <td class="govuk-table__cell govuk-table__cell--numeric">
-          <strong class="govuk-tag govuk-tag--grey">Not started</strong>
+          <select class="govuk-select govuk-select--tag govuk-select--tag govuk-select--tag--turquoise" id="sort" name="sort">
+            <option value="Not started">Not started</option>
+            <option value="In progress">In progress</option>
+            <option value="Complete" selected>Complete</option>
+          </select>
         </td>
       </tr>
       <tr class="govuk-table__row">
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
+            <input type="checkbox" class="govuk-checkboxes__input" id="case5">
+            <label class="govuk-label govuk-checkboxes__label" for="case5">
+              <span class="govuk-visually-hidden">Select Aiden Hill</span>
+            </label>
+          </div>
+        </td>
         <td class="govuk-table__header">
           <a href="../../13/case-summary.html" class="govuk-link">Aiden Hill</a>
         </td>
@@ -272,10 +349,22 @@
         <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="1">
           1</td>
         <td class="govuk-table__cell govuk-table__cell--numeric">
-          <strong class="govuk-tag govuk-tag--light-blue">In progress</strong>
+          <select class="govuk-select govuk-select--tag govuk-select--tag govuk-select--tag--turquoise" id="sort" name="sort">
+            <option value="Not started">Not started</option>
+            <option value="In progress">In progress</option>
+            <option value="Complete" selected>Complete</option>
+          </select>
         </td>
       </tr>
       <tr class="govuk-table__row">
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
+            <input type="checkbox" class="govuk-checkboxes__input" id="case6">
+            <label class="govuk-label govuk-checkboxes__label" for="case6">
+              <span class="govuk-visually-hidden">Select Rhys John Houghton</span>
+            </label>
+          </div>
+        </td>
         <td class="govuk-table__header">
           <a href="../../13/case-summary.html" class="govuk-link">Rhys John Houghton</a>
           <br />
@@ -291,10 +380,22 @@
         <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="1">
           1</td>
         <td class="govuk-table__cell govuk-table__cell--numeric">
-          <strong class="govuk-tag govuk-tag--turquoise">Complete</strong>
+          <select class="govuk-select govuk-select--tag govuk-select--tag govuk-select--tag--grey" id="sort" name="sort">
+            <option value="Not started">Not started</option>
+            <option value="In progress">In progress</option>
+            <option value="Complete">Complete</option>
+          </select>
         </td>
       </tr>
       <tr class="govuk-table__row">
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
+            <input type="checkbox" class="govuk-checkboxes__input" id="case7">
+            <label class="govuk-label govuk-checkboxes__label" for="case7">
+              <span class="govuk-visually-hidden">Select Klara McDonald</span>
+            </label>
+          </div>
+        </td>
         <td class="govuk-table__header">
           <a href="../../13/case-summary.html" class="govuk-link">Klara McDonald</a>
           <br />
@@ -318,6 +419,14 @@
         </td>
       </tr>
       <tr class="govuk-table__row">
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
+            <input type="checkbox" class="govuk-checkboxes__input" id="case8">
+            <label class="govuk-label govuk-checkboxes__label" for="case8">
+              <span class="govuk-visually-hidden">Select Ava Ryan</span>
+            </label>
+          </div>
+        </td>
         <td class="govuk-table__header">
           <a href="../../13/case-summary.html" class="govuk-link">Ava Ryan</a>
           <br />
@@ -341,6 +450,14 @@
         </td>
       </tr>
       <tr class="govuk-table__row">
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
+            <input type="checkbox" class="govuk-checkboxes__input" id="case9">
+            <label class="govuk-label govuk-checkboxes__label" for="case9">
+              <span class="govuk-visually-hidden">Select Gary Hart</span>
+            </label>
+          </div>
+        </td>
         <td class="govuk-table__header">
           <a href="../../13/case-summary.html" class="govuk-link">Gary Hart</a>
         </td>
@@ -360,6 +477,14 @@
         </td>
       </tr>
       <tr class="govuk-table__row">
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
+            <input type="checkbox" class="govuk-checkboxes__input" id="case10">
+            <label class="govuk-label govuk-checkboxes__label" for="case10">
+              <span class="govuk-visually-hidden">Select Naomi Thornton</span>
+            </label>
+          </div>
+        </td>
         <td class="govuk-table__header">
           <a href="../../13/case-summary.html" class="govuk-link">Naomi Thornton</a>
           <br />
@@ -377,10 +502,18 @@
         <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="1">
           1</td>
         <td class="govuk-table__cell govuk-table__cell--numeric">
-          <span id="notifications" class="moj-notification-badge">2 comments</span>
+
         </td>
       </tr>
       <tr class="govuk-table__row">
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
+            <input type="checkbox" class="govuk-checkboxes__input" id="case11">
+            <label class="govuk-label govuk-checkboxes__label" for="case11">
+              <span class="govuk-visually-hidden">Select Declan Dennis Bradley</span>
+            </label>
+          </div>
+        </td>
         <td class="govuk-table__header">
           <a href="../../13/case-summary.html" class="govuk-link">Declan Dennis Bradley
             </a>
@@ -403,10 +536,18 @@
         <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="2">
           1</td>
         <td class="govuk-table__cell govuk-table__cell--numeric">
-          <span id="notifications" class="moj-notification-badge">New comment</span>
+
         </td>
       </tr>
       <tr class="govuk-table__row govuk-table__row">
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
+            <input type="checkbox" class="govuk-checkboxes__input" id="case12">
+            <label class="govuk-label govuk-checkboxes__label" for="case12">
+              <span class="govuk-visually-hidden">Select Noah Harvey</span>
+            </label>
+          </div>
+        </td>
         <td class="govuk-table__header">
           <a href="../../13/case-summary.html" class="govuk-link">Noah Harvey</a>
         </td>
@@ -423,8 +564,16 @@
           1</td>
       </tr>
       <tr class="govuk-table__row">
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
+            <input type="checkbox" class="govuk-checkboxes__input" id="case13">
+            <label class="govuk-label govuk-checkboxes__label" for="case13">
+              <span class="govuk-visually-hidden">Select Thomas Zane</span>
+            </label>
+          </div>
+        </td>
         <td class="govuk-table__header">
-          <a href="../../13/case-summary.html" class="govuk-link">Zane Harris
+          <a href="../../13/case-summary.html" class="govuk-link">Thomas Zane
             Smith</a>
           <br />
           <span class="govuk-hint govuk-!-font-size-16">C445638</span>
@@ -440,6 +589,14 @@
           1</td>
       </tr>
       <tr class="govuk-table__row">
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
+            <input type="checkbox" class="govuk-checkboxes__input" id="case14">
+            <label class="govuk-label govuk-checkboxes__label" for="case14">
+              <span class="govuk-visually-hidden">Select Dylan Adam Armstrong</span>
+            </label>
+          </div>
+        </td>
         <td class="govuk-table__header">
           <a href="../../13/case-summary.html" class="govuk-link">Dylan Adam Armstrong</a>
           <br />
@@ -453,6 +610,14 @@
           1</td>
       </tr>
       <tr class="govuk-table__row">
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
+            <input type="checkbox" class="govuk-checkboxes__input" id="case15">
+            <label class="govuk-label govuk-checkboxes__label" for="case15">
+              <span class="govuk-visually-hidden">Select Tony Davis</span>
+            </label>
+          </div>
+        </td>
         <td class="govuk-table__header">
           <a href="../../13/case-summary.html" class="govuk-link">Tony Davis</a>
           <br />
@@ -474,6 +639,14 @@
           1</td>
       </tr>
       <tr class="govuk-table__row">
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
+            <input type="checkbox" class="govuk-checkboxes__input" id="case16">
+            <label class="govuk-label govuk-checkboxes__label" for="case16">
+              <span class="govuk-visually-hidden">Select Andrei Edwards</span>
+            </label>
+          </div>
+        </td>
         <td class="govuk-table__header">
           <a href="../../13/case-summary.html" class="govuk-link">Andrei Edwards</a>
           <br />
@@ -488,6 +661,14 @@
           1</td>
       </tr>
       <tr class="govuk-table__row">
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
+            <input type="checkbox" class="govuk-checkboxes__input" id="case17">
+            <label class="govuk-label govuk-checkboxes__label" for="case17">
+              <span class="govuk-visually-hidden">Select Hannah Francis</span>
+            </label>
+          </div>
+        </td>
         <td class="govuk-table__header">
           <a href="../../13/case-summary.html" class="govuk-link">Hannah Francis</a>
           <br />
@@ -506,6 +687,14 @@
           1</td>
       </tr>
       <tr class="govuk-table__row">
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
+            <input type="checkbox" class="govuk-checkboxes__input" id="case18">
+            <label class="govuk-label govuk-checkboxes__label" for="case18">
+              <span class="govuk-visually-hidden">Select Aiden Hill</span>
+            </label>
+          </div>
+        </td>
         <td class="govuk-table__header">
           <a href="../../13/case-summary.html" class="govuk-link">Aiden Hill</a>
           <br />
@@ -527,6 +716,14 @@
           1</td>
       </tr>
       <tr class="govuk-table__row">
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
+            <input type="checkbox" class="govuk-checkboxes__input" id="case19">
+            <label class="govuk-label govuk-checkboxes__label" for="case19">
+              <span class="govuk-visually-hidden">Select Rhys John Houghton</span>
+            </label>
+          </div>
+        </td>
         <td class="govuk-table__header">
           <a href="../../13/case-summary.html" class="govuk-link">Rhys John Houghton</a>
           <br />
@@ -543,8 +740,16 @@
           1</td>
       </tr>
       <tr class="govuk-table__row">
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
+            <input type="checkbox" class="govuk-checkboxes__input" id="case20">
+            <label class="govuk-label govuk-checkboxes__label" for="case20">
+              <span class="govuk-visually-hidden">Select Naomi Thornton</span>
+            </label>
+          </div>
+        </td>
         <td class="govuk-table__header">
-          <a href="../../13/case-summary.html" class="govuk-link">Klara McDonald</a>
+          <a href="../../13/case-summary.html" class="govuk-link">Naomi Thornton</a>
         </td>
         <td class="govuk-table__cell">
           <div><span class="moj-badge moj-badge--red pac-badge">Possible NDelius
@@ -554,103 +759,6 @@
         <td class="govuk-table__cell">1st</td>
         <td class="govuk-table__cell">Morning</td>
         <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="1">
-          1</td>
-      </tr>
-      <tr class="govuk-table__row">
-        <td class="govuk-table__header">
-          <a href="../../13/case-summary.html" class="govuk-link">Ava Ryan</a>
-          <br />
-          <span class="govuk-hint govuk-!-font-size-16">F847388</span>
-        </td>
-        <td class="govuk-table__cell">Current</td>
-        <td class="govuk-table__cell">Sexual assault on a male</td>
-        <td class="govuk-table__cell">1st</td>
-        <td class="govuk-table__cell">Morning</td>
-        <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="1">
-          1</td>
-      </tr>
-      <tr class="govuk-table__row">
-        <td class="govuk-table__header">
-          <a href="../../13/case-summary.html" class="govuk-link">Vinnie Robert
-            Sanderson</a>
-          <br />
-          <span class="govuk-hint govuk-!-font-size-16">K8446384</span>
-        </td>
-        <td class="govuk-table__cell">Previously known <span data-cy="previously-known-termination-date" class="govuk-caption-m">
-          Order ended 7 August 2019</span></td>
-        <td class="govuk-table__cell">Assault by beating of an emergency worker</td>
-        <td class="govuk-table__cell">2nd</td>
-        <td class="govuk-table__cell">Morning</td>
-        <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="1">
-          1</td>
-      </tr>
-      <tr class="govuk-table__row">
-        <td class="govuk-table__header">
-          <a href="../../13/case-summary.html" class="govuk-link">Naomi Thornton</a>
-          <br />
-          <span class="govuk-hint govuk-!-font-size-16">J478183</span>
-        </td>
-        <td class="govuk-table__cell">Previously known<span data-cy="previously-known-termination-date" class="govuk-caption-m">
-          Order ended 24 November 2016</span></td>
-        <td class="govuk-table__cell">
-          Arrest by a constable for breaking / likely to break bail conditions -
-          duty to surrender into the custody of a court
-        </td>
-        <td class="govuk-table__cell">1st</td>
-        <td class="govuk-table__cell">Morning</td>
-        <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="1">
-          1</td>
-      </tr>
-      <tr class="govuk-table__row">
-        <td class="govuk-table__header">
-          <a href="../../13/case-summary.html" class="govuk-link">Declan Dennis Bradley</a>
-        </td>
-        <td class="govuk-table__cell">No record</td>
-        <td class="govuk-table__cell">
-          <ol>
-            <li>Obstruct/resist a constable in execution of duty</li>
-            <li>Use a handheld mobile phone / device while drivng a motor vehicle
-              on a road - endorsable offence</li>
-            <li>Use a motor vehicle on a road / public place without third party
-              insurance</li>
-            <li>Drive a motor vehicle otherwise than in accordance with a licence
-              - endorsable offence</li>
-          </ol>
-        </td>
-        <td class="govuk-table__cell">1st</td>
-        <td class="govuk-table__cell">Afternoon</td>
-        <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="2">
-          1</td>
-      </tr>
-      <tr class="govuk-table__row govuk-table__row">
-        <td class="govuk-table__header">
-          <a href="../../13/case-summary.html" class="govuk-link">Noah Harvey</a>
-        </td>
-        <td class="govuk-table__cell">No record</td>
-        <td class="govuk-table__cell">
-          <ol>
-            <li>Possess a controlled drug of Class B - Amphetamine</li>
-            <li>Drunk and disorderly in a public place</li>
-          </ol>
-        </td>
-        <td class="govuk-table__cell">1st</td>
-        <td class="govuk-table__cell">Afternoon</td>
-        <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="1">
-          1</td>
-      </tr>
-      <tr class="govuk-table__row">
-        <td class="govuk-table__header">
-          <a href="../../13/case-summary.html" class="govuk-link">Zane Harris
-            Smith</a>
-          <br />
-          <span class="govuk-hint govuk-!-font-size-16">C445638</span>
-        </td>
-        <td class="govuk-table__cell">Previously known <span data-cy="previously-known-termination-date" class="govuk-caption-m">
-          Order ended 22 June 2019</span></td>
-        <td class="govuk-table__cell">Possess a class C controlled drug</td>
-        <td class="govuk-table__cell">1st</td>
-        <td class="govuk-table__cell">Afternoon</td>
-        <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="2">
           1</td>
       </tr>
     </tbody>

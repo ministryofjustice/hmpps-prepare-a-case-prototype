@@ -1,0 +1,17 @@
+// .govuk-checkboxes__item.govuk-checkboxes--small.moj-multi-select__checkbox{
+//   .govuk-checkboxes--small.govuk-checkboxes__label{
+//     :before {
+//       top: 4px;
+//     }
+//   }
+// }
+
+.govuk-label.govuk-checkboxes__label.moj-multi-select__toggle-label:before,
+.govuk-checkboxes__item.govuk-checkboxes--small.moj-multi-select__checkbox .govuk-label.govuk-checkboxes__label:before {
+  top: 4px;
+}
+
+
+.govuk-checkboxes--small.moj-multi-select__checkbox .govuk-checkboxes__label:after{
+  top:11px;
+}

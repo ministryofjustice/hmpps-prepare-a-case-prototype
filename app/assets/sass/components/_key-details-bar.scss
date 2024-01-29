@@ -21,11 +21,18 @@
 
 .key-details-bar {
   background-color: govuk-colour("blue");
+  padding: 20px 0;
 }
+
+.key-details-bar .govuk-grid-column-two-thirds,
+.key-details-bar .govuk-grid-column-one-third{
+  padding: 0;
+}
+
 .key-details-bar .key-details-bar__key-details {
-  padding: 20px 20px;
   position: relative;
 }
+
 .key-details-bar .key-details-bar__key-details .key-details-bar__name {
   font-family: "GDS Transport", Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -63,7 +70,7 @@
   float: right;
   margin: 5px 0 0;
 }
-.key-details-bar .key-details-bar__key-details * {
+.key-details-bar .govuk-body, .key-details-bar .govuk-heading-l{
   color: #ffffff;
 }
 .key-details-bar_divider {

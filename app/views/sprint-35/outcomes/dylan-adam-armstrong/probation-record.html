@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+
+{% block head %}
+  {% include "../../includes/head-main-outcomes.html" %}
+{% endblock %}
+
+{% block pageTitle %}
+  Case summary
+{% endblock %}
+
+{% block bodyStart %}
+  {% block keyDetails %}
+    {% include "../../includes/key_details/1_Armstrong.html" %}
+  {% endblock %}
+{% endblock %}
+
+{% block beforeContent %}
+  <a href="../hearing-outcomes" class="govuk-back-link">Back to outcomes</a>
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <nav class="moj-sub-navigation" aria-label="Sub navigation">
+        <ul class="moj-sub-navigation__list">
+          <li class="moj-sub-navigation__item">
+            <a class="moj-sub-navigation__link govuk-link--no-visited-state" href="case-summary">
+              Case summary</a>
+          </li>
+          <li class="moj-sub-navigation__item">
+            <a class="moj-sub-navigation__link govuk-link--no-visited-state" aria-current="page" href="probation-record">
+              Probation record</a>
+          </li>
+          <li class="moj-sub-navigation__item">
+            <a class="moj-sub-navigation__link govuk-link--no-visited-state" href="risk-register">
+              Risk register</a>
+          </li>
+          <li class="moj-sub-navigation__item">
+            <a class="moj-sub-navigation__link govuk-link--no-visited-state" href="anticipated-plea">
+              Anticipated plea</a>
+          </li>
+        </ul>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  {% include "../../includes/case-information/adam-armstrong/probation-record-content.html" %}
+{% endblock %}

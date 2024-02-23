@@ -1,0 +1,100 @@
+{% extends "layout.html" %}
+
+
+{% block pageTitle %}
+Defendants with multiple possible records
+{% endblock %}
+
+{% block beforeContent %}
+<a href="dashboard.html" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+    <h1 class="govuk-heading-l">
+      Defendants with multiple possible records
+    </h1>
+    <p class="govuk-body-l">More than one possible Probation record exists for these defendants. Select a name to
+      manually confirm
+      the correct record.</p>
+    <div class="govuk-!-margin-bottom-9">
+      <table class="govuk-table" style="max-width:960px;">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row govuk-table__row">
+            <th scope="col" class="govuk-table__header custom-defendant-width" aria-sort="none">Defendant</th>
+            <th scope="col" class="govuk-table__header custom-delius-record-width" aria-sort="none">Probation
+              record
+            </th>
+            <th scope="col" class="govuk-table__header" aria-sort="none">Offence</th>
+            <th scope="col" class="govuk-table__header" aria-sort="none">Session</th>
+            <th scope="col" class="govuk-table__header" aria-sort="none">Court</th>
+
+          </tr>
+        </thead>
+
+        <tbody class="govuk-table__body">
+
+          <tr class="govuk-table__row govuk-table__row">
+            <td class="govuk-table__cell">
+              <a class="govuk-link--no-visited-state" href="match-cards-2.html">Klara McDonald</a>
+            </td>
+            <td class="govuk-table__cell">
+              <span class="moj-badge moj-badge--red">duplicate records</span>
+            </td>
+            <td class="govuk-table__cell">Common assault and battery</td>
+            <td class="govuk-table__cell">Morning</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">1</td>
+
+          </tr>
+
+          <tr class="govuk-table__row govuk-table__row">
+            <td class="govuk-table__cell">
+              <a class="govuk-link--no-visited-state" href=""> Noah Harvey</a>
+            </td>
+            <td class="govuk-table__cell">
+              <span class="moj-badge moj-badge--red">duplicate records</span>
+            </td>
+            <td class="govuk-table__cell">
+              <ol>
+                <li>Possess a controlled drug of Class B - Amphetamine</li>
+                <li>Drunk and disorderly in a public place</li>
+              </ol>
+            </td>
+            <td class="govuk-table__cell">Morning</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">2</td>
+          </tr>
+
+          <tr class="govuk-table__row govuk-table__row">
+            <td class="govuk-table__cell">
+              <a class="govuk-link--no-visited-state" href="">Stefan Andrew Sackur</a>
+            </td>
+            <td class="govuk-table__cell">
+              <span class="moj-badge moj-badge--red">duplicate records</span>
+            </td>
+            <td class="govuk-table__cell">Assault by beating of an emergency worker</td>
+            <td class="govuk-table__cell">Afternoon</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+          </tr>
+        </tbody>
+      </table>
+
+
+
+
+
+
+      <div class="moj-scrollable-pane">
+        <div class="moj-scrollable-pane__wrapper">
+
+
+        </div>
+      </div>
+
+
+
+
+
+      {% endblock %}

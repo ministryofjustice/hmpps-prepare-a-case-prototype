@@ -11,6 +11,12 @@
   font-family: "GDS Transport", arial, sans-serif;
   font-size: 1.1875rem;
   line-height: 1;
+
+  &:focus, &:focus-within{
+    outline: 3px solid #fd0;
+    outline-offset: 0;
+    box-shadow: inset 0 0 0 2px;
+  }
 }
 
 .govuk-select.govuk-select--tag.govuk-select--tag--grey{

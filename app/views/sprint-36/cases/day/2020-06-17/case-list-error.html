@@ -1,0 +1,109 @@
+{% extends "layout-main.html" %}
+
+
+{% block pageTitle %}
+Cases
+{% endblock %}
+
+{% block beforeContent %}
+
+{% endblock %}
+
+{% block content %}
+
+<div class="moj-banner">
+  <svg class="moj-banner__icon" fill="currentColor" role="presentation" focusable="false"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" height="25" width="25">
+    <path d="M13.7,18.5h-2.4v-2.4h2.4V18.5z M12.5,13.7c-0.7,0-1.2-0.5-1.2-1.2V7.7c0-0.7,0.5-1.2,1.2-1.2s1.2,0.5,1.2,1.2v4.8
+  C13.7,13.2,13.2,13.7,12.5,13.7z M12.5,0.5c-6.6,0-12,5.4-12,12s5.4,12,12,12s12-5.4,12-12S19.1,0.5,12.5,0.5z" /></svg>
+  <div class="moj-banner__message">
+    <h2 class="govuk-heading-m" style="max-width: none;">Today's case list cannot be updated. This list was created 2 days ago.</h2>
+  </div>
+</div>
+
+
+<header class="govuk-grid-row govuk-!-margin-bottom-7">
+  <div class="govuk-grid-column-two-thirds">
+    <span class="govuk-caption-xl">
+      Cases
+    </span>
+    <h1 class="govuk-heading-xl govuk-!-margin-bottom-2">
+      <time class="" datetime="2020-06-17">
+        Today
+      </time>
+
+    </h1>
+
+    <nav class="app-pagination app-pagination--inline app-print--hide" role="navigation" aria-label="Pagination">
+      <ul class="app-pagination__list">
+        <li class="app-pagination__list-item app-pagination__list-item--next">
+          <a href="/cases/day/2020-06-18/case-list" class="app-pagination__link" rel="next">
+            <span class="app-pagination__link-title">
+              <svg class="app-pagination__link-icon" xmlns="http://www.w3.org/2000/svg" height="13" width="17"
+                viewBox="0 0 17 13">
+                <path fill="currentColor"
+                  d="m10.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z">
+                </path>
+              </svg>
+              <span class="app-pagination__link-text">Next day</span>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <div class="govuk-grid-column-one-third">
+  </div>
+</header>
+<div class="govuk-tabs" data-module="govuk-tabs">
+  <div class="app-case-updates">
+    <p class="govuk-body-s govuk-!-margin-bottom-1 app-last-updated-stamp">List created: Thursday 16 July at 9:00am</p>
+    <p class="govuk-body-s govuk-!-margin-bottom-0 app-next-update-stamp">No further updates scheduled </p>
+  </div>
+  <ul class="govuk-tabs__list">
+    <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+      <a class="govuk-tabs__tab" href="">
+        Case list
+      </a>
+    </li>
+  </ul>
+</div>
+
+{% block filter %}
+{% include "includes/filter.html" %}
+{% endblock %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-half">
+    <span class="govuk-heading-m">187 cases</span>
+  </div>
+  <div class="govuk-grid-column-one-half">
+    <span class="align-right">
+  </div>
+</div>
+
+{% block courtList %}
+{% include "includes/2020-06-17-court-list.html" %}
+{% endblock %}
+
+<nav class="moj-pagination" id="pagination-label">
+  <p class="govuk-visually-hidden" aria-labelledby="pagination-label">Pagination navigation</p>
+  <ul class="moj-pagination__list">
+    <li class="moj-pagination__item  moj-pagination__item--prev">
+      <a class="moj-pagination__link" href="">Previous<span class="govuk-visually-hidden"> set of pages</span></a>
+    </li>
+    <li class="moj-pagination__item moj-pagination__item--active">1</li>
+    <li class="moj-pagination__item"><a class="moj-pagination__link" href="">2</a></li>
+    <li class="moj-pagination__item"><a class="moj-pagination__link" href="">3</a></li>
+    <li class="moj-pagination__item"><a class="moj-pagination__link" href="">4</a></li>
+    <li class="moj-pagination__item"><a class="moj-pagination__link" href="">5</a></li>
+    <li class="moj-pagination__item  moj-pagination__item--next">
+      <a class="moj-pagination__link" href="">Next<span class="govuk-visually-hidden"> set of pages</span></a>
+    </li>
+  </ul>
+  <p class="moj-pagination__results">Showing <b>1</b> to <b>12</b> of <b>187</b> cases</p>
+</nav>
+</div>
+</div>
+
+{% endblock %}

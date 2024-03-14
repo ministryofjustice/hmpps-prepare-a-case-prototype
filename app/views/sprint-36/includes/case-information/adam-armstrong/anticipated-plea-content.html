@@ -1,0 +1,40 @@
+<form action="anticipated-plea" method="post" novalidate>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <div class="govuk-!-margin-bottom-9">
+        <h1 class="govuk-heading-l govuk-!-margin-bottom-7">Record anticipated plea</h1>
+        <p class="govuk-body">The anticipated plea can be found within:</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>the charge sheet within the <a href="https://drive.google.com/file/d/16xrU9KoiThb8HH2n27xOBEVQ6ZwgaOgF/view?usp=sharing" class="govuk-link" rel="noreferrer noopener" target="_blank">
+            CPS pack (opens in new tab)</a></li>
+          <li>the court sitting schedule</li>
+          <li>information from the defence solicitor</li>
+        </ul>
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+              What is Dylan Adam Armstrong's anticipated plea?
+            </legend>
+            <div class="govuk-radios" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="dylan-anticipated-plea" name="dylan-anticipated-plea" type="radio" value="Guilty" {{checked("dylan-anticipated-plea", "Guilty") }}>
+                <label class="govuk-label govuk-radios__label" for="dylan-anticipated-plea">
+                  Guilty
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="dylan-anticipated-plea-2" name="dylan-anticipated-plea" type="radio" value="Not guilty" {{checked("dylan-anticipated-plea", "Not guilty") }}>
+                <label class="govuk-label govuk-radios__label" for="dylan-anticipated-plea-2">
+                  Not guilty
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+        <button class="govuk-button" data-module="govuk-button">
+          Save plea
+        </button>
+      </div>
+    </div>
+  </div>
+</form>

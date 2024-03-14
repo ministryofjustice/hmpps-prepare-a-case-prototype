@@ -1,0 +1,193 @@
+{% extends "layout.html" %}
+
+
+{% block pageTitle %}
+Case summary
+{% endblock %}
+
+{% block bodyStart %}
+
+{% block keyDetails %}
+
+{% include "includes/key_details/11_Hart-current.html" %}
+{% endblock %}
+
+
+{% endblock %}
+
+
+
+
+
+{% block beforeContent %}
+  <a href="#" onclick="javascript:history.go(-1)" class="govuk-back-link">Back to cases</a>
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+    <nav class="moj-sub-navigation" aria-label="Sub navigation">
+
+      <ul class="moj-sub-navigation__list">
+        <li class="moj-sub-navigation__item">
+          <a class="moj-sub-navigation__link govuk-link--no-visited-state" aria-current="page"
+            href="/cases/1/summary.html">Case summary</a>
+        </li>
+        <li class="moj-sub-navigation__item">
+          <a class="moj-sub-navigation__link govuk-link--no-visited-state"
+            href="/cases/1/probationrecord.html">Probation record</a>
+        </li>
+        <li class="moj-sub-navigation__item">
+          <a class="moj-sub-navigation__link govuk-link--no-visited-state" href="/cases/1/risk.html">Risk register</a>
+        </li>
+      </ul>
+      </ul>
+
+    </nav>
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <h1 class="govuk-heading-l govuk-!-margin-bottom-7">Case summary</h1>
+  </div>
+</div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-!-margin-bottom-8">
+      <h2 class="govuk-heading-m">Appearance</h2>
+      <p class="govuk-body">Court 2, morning session,Wednesday 27 July 2022.</p>
+    </div>
+    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+    <div class="govuk-!-margin-bottom-8">
+      <h2 class="govuk-heading-m">Offences</h2>
+      <h3 class="govuk-heading-s govuk-!-margin-top-4">Common assault and battery</h3>
+      <p class="govuk-body govuk-!-margin-bottom-2">On 10 July 2022 at Grey Lane, S10 1AG, assaulted Sarah
+        Smith by beating her.</p>
+      <p class="govuk-body secondary-text-col">Contrary to section 39 of the Criminal Justice Act 1988.</p>
+    </div>
+
+    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+    <div class="govuk-!-margin-bottom-7">
+      <h2 class="govuk-heading-m">
+        Defendant details
+      </h2>
+      <dl class="govuk-summary-list govuk-summary-list--no-border">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Name
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Adam Armstrong
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Gender
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Male
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Date of birth
+          </dt>
+          <dd class="govuk-summary-list__value">
+            27 September 1984 (36 years old)
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Nationality
+          </dt>
+          <dd class="govuk-summary-list__value">
+            British
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Address
+          </dt>
+          <dd class="govuk-summary-list__value">
+            1 Grey Lane<br> Sheffield<br> South Yorkshire<br> S10 1AG
+          </dd>
+        </div>
+      </dl>
+    </div>
+
+
+ <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+    <div class="govuk-!-margin-bottom-8">
+      <h2 class="govuk-heading-m">Case progress</h2>
+      {% from "includes/case-progress/macro.njk" import caseProgress %}
+
+      {{ caseProgress({
+        id: "progress_1",
+        title: "Sentencing hearing",
+        description: "Wednesday 27 July 2022. Court 2, morning session, Sheffield Magistrates' court",
+        notes: progressNotes.progress_1
+      }) }}
+
+      {{ caseProgress({
+        id: "progress_2",
+        title: "Plea",
+        description: "Monday 18 July. Court 1, morning session, Sheffield Magistrates' court",
+        notes: progressNotes.progress_2
+      }) }}
+
+      {{ caseProgress({
+        id: "progress_3",
+        title: "First hearing",
+        description: "Friday 15 July 2022. Court 2, morning session, Sheffield Magistrates' court",
+        notes: progressNotes.progress_3
+      }) }}
+    </div>
+
+    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+    <div class="govuk-!-margin-bottom-7"></div>
+      <h2 class="govuk-heading-m">
+        Comments
+      </h2>
+
+      <form class="govuk-form-group govuk-!-margin-bottom-0" method="post" action="/sprint-14/cases/13/summary#comments" novalidate>      </h1>
+      <div id="more-detail-hint" class="govuk-hint"> Add notes and observations about this case. Your colleagues who use Prepare a Case will be able to read them.
+        These comments will not be saved to NDelius.
+      </div>
+      <textarea class="govuk-textarea" id="comment" name="comment" rows="5" aria-describedby="more-detail-hint"></textarea>
+
+      <button class="govuk-button" data-module="govuk-button">Save</button>
+    </form>
+
+    {% if comments | length %}
+      <table class="govuk-table" id="comments">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Details</th>
+            <th scope="col" class="govuk-table__header">Comments</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+
+          {% for comment in comments %}
+            <tr class="govuk-table__row">
+              <td scope="row" class="govuk-table__cell">{{ comment.name }}<br>
+                <span style="padding-top:5px;" class="govuk-!-font-size-19 govuk-!-font-weight-regular">{{ comment.date}}</span>
+                  <form style="padding-top: 10px;" method="post" action="/sprint-14/cases/13/summary" novalidate>
+                    <a href="javascript:void(0);" onclick="this.closest('form').submit();return false;">Delete</a>
+                  </form>
+                </td>
+              <td class="govuk-table__cell">{{ comment.text }}</td>
+            </tr>
+          {% endfor %}
+
+        </tbody>
+      </table>
+    {% endif %}
+  </div>
+</div>
+</div>
+{% endblock %}

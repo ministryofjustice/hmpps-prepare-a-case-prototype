@@ -5,19 +5,6 @@
 </div>
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <div class="govuk-!-margin-bottom-8">
-      <h2 class="govuk-heading-m">Appearance</h2>
-      <p class="govuk-body">Court 1, morning session, 8 March 2023.</p>
-    </div>
-    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
-    <div class="govuk-!-margin-bottom-8">
-      <h2 class="govuk-heading-m">Offences</h2>
-      <h3 class="govuk-heading-s govuk-!-margin-top-4">Possess a controlled drug
-        of Class B</h3>
-      <p class="govuk-body govuk-!-margin-bottom-2">On 10 July 2022 at Grey Lane,
-        S10 1AG, found in possession of a Call B controlled substance.</p>
-    </div>
-    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
     <div class="govuk-!-margin-bottom-7">
       <h2 class="govuk-heading-m">
         Defendant details
@@ -63,7 +50,34 @@
             1 Grey Lane<br> Sheffield<br> South Yorkshire<br> S10 1AG
           </dd>
         </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Interpretation needs
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{data['interpreter-required']}}
+            {% if (data['interpreter-required'] == 'Yes, ') %}
+              {{data['preferred-languages-list']}}
+            {% endif %}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="interpretation-needs">Change<span class="govuk-visually-hidden"> Interpreter</span></a>
+          </dd>
+        </div>
       </dl>
+    </div>
+    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+    <div class="govuk-!-margin-bottom-8">
+      <h2 class="govuk-heading-m">Appearance</h2>
+      <p class="govuk-body">Court 1, morning session, 8 March 2023.</p>
+    </div>
+    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+    <div class="govuk-!-margin-bottom-8">
+      <h2 class="govuk-heading-m">Offences</h2>
+      <h3 class="govuk-heading-s govuk-!-margin-top-4">Possess a controlled drug
+        of Class B</h3>
+      <p class="govuk-body govuk-!-margin-bottom-2">On 10 July 2022 at Grey Lane,
+        S10 1AG, found in possession of a Call B controlled substance.</p>
     </div>
     <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
     <div class="govuk-!-margin-bottom-8">

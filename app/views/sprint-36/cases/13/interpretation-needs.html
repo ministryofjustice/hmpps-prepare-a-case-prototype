@@ -1,0 +1,68 @@
+{% extends "layout.html" %}
+
+{% block head %}
+  {{ super() }}
+  {% include "../../includes/head-psr.html" %}
+{% endblock %}
+
+{% block pageTitle %}
+  Interpretation needs
+{% endblock %}
+
+{% block bodyStart %}
+  {% block keyDetails %}
+    {% include "../../includes/key_details/1_Armstrong.html" %}
+  {% endblock %}
+{% endblock %}
+
+{% block beforeContent %}
+  <a href="case-summary" class="govuk-back-link">Back to
+    case summary</a>
+{% endblock %}
+
+{% block content %}
+  <form method="post" action="interpretation-needs">
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">Record interpretation needs</h1>
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+              <h2 class="govuk-fieldset__heading">
+                Do they require an interpreter?
+              </h2>
+            </legend>
+            <div class="govuk-radios" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="interpreter-required" name="interpreter-required" type="radio" value="Yes, " checked data-aria-controls="conditional-interpreter-required" {{ checked("interpreter-required", "Yes, ") }}>
+                <label class="govuk-label govuk-radios__label" for="interpreter-required">
+                  Yes
+                </label>
+              </div>
+              <div class="govuk-radios__conditional" id="conditional-interpreter-required">
+                {{ govukSelect({
+                  id: "preferred-languages-list",
+                  name: "preferred-languages-list",
+                  label: {
+                    html: "<h3 class='govuk-heading-s'>What is their preferred language?</h3>"
+                  },
+                  items: preferredLanguagesList
+                }) }}
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="interpreter-required-2" name="interpreter-required" type="radio" value="No" {{ checked("interpreter-required", "No") }}>
+                <label class="govuk-label govuk-radios__label" for="interpreter-required-2">
+                  No
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+        <button type="submit" class="govuk-button" data-module="govuk-button">
+          Save and return
+        </button>
+      </div>
+    </div>
+  </form>
+{% endblock %}

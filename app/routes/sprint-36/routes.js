@@ -61,4 +61,27 @@ module.exports = function (router) {
 
     res.redirect('anticipated-plea')
   });
+
+
+  router.get('/' + version + '/cases/13/interpretation-needs', function (req, res) {
+    const preferredLanguagesList = [
+      'Choose preferred language',
+      'British Sign Language',
+      'Estonian',
+      'Japanese'
+    ].map(item => {
+      return {
+        value: item,
+        text: item,
+        selected: item === req.session.data['preferred-languages-list']
+      }
+    })
+
+    res.render(version + '/cases/13/interpretation-needs' , {preferredLanguagesList})
+  });
+
+  router.post('/' + version + '/cases/13/interpretation-needs', function (req, res) {
+
+    res.redirect('case-summary')
+  });
 }

@@ -213,6 +213,9 @@
           {% else %}
             <div><span class="moj-badge moj-badge--black pac-badge">No anticipated plea</span></div>
           {% endif %}
+          {% if (data['interpreter-required'] == 'Yes, ') %}
+            <div><span class="moj-badge moj-badge--black pac-badge">Interpreter</span></div>
+          {% endif %}
           No record
         </td>
         <td class="govuk-table__cell">Possess a controlled drug of Class B</td>

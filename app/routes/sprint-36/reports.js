@@ -94,4 +94,14 @@ module.exports = function (router) {
   router.post('/' + version + '/reports/request-advice', function (req, res) {
       res.redirect('no-advice-needed')
   });
+
+  router.get('/' + version + '/reports/unassigned-pre-sentence-reports', function (req, res) {
+    showBanner = 'false'
+
+    res.render(version + '/reports/unassigned-pre-sentence-reports')
+  });
+
+  router.post('/' + version + '/reports/unassigned-pre-sentence-reports', function (req, res) {
+      res.redirect('no-advice-needed')
+  });
 }

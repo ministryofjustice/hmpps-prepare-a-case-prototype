@@ -38,4 +38,5 @@ require('./routes/sprint-32/routes.js')(router);
 require('./routes/sprint-35/triage.js')(router);
 require('./routes/sprint-35/routes.js')(router);
 require('./routes/sprint-36/triage.js')(router);
+require('./routes/sprint-36/reports.js')(router);
 require('./routes/sprint-36/routes.js')(router);
